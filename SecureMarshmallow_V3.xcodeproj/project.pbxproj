@@ -17,11 +17,13 @@
 		0E8409BD29E38D36005EB879 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8409BC29E38D36005EB879 /* SettingsCell.swift */; };
 		0E8409BF29E39258005EB879 /* SettingsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8409BE29E39258005EB879 /* SettingsItem.swift */; };
 		0EC93B6D29F913D200482E68 /* IconViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC93B6C29F913D200482E68 /* IconViewController.swift */; };
+		0EC93B7029F9181E00482E68 /* TodoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC93B6F29F9181E00482E68 /* TodoListViewController.swift */; };
+		0EC93B7229F9183F00482E68 /* TodoListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC93B7129F9183F00482E68 /* TodoListTableViewCell.swift */; };
+		0EC93B7A29F92D4800482E68 /* SecureMarshmallow_V3.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0EC93B7829F92D4800482E68 /* SecureMarshmallow_V3.xcdatamodeld */; };
 		0EC9B47B47968329BD9F41B6 /* Pods_SecureMarshmallow_V3_SecureMarshmallow_V3UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FBA3FD3EE3B33BE850B399D /* Pods_SecureMarshmallow_V3_SecureMarshmallow_V3UITests.framework */; };
 		0EEDC6E829F24CD200E3804D /* BaseST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEDC6E729F24CD200E3804D /* BaseST.swift */; };
 		0EFE31D229DF9EFE00725EEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFE31D129DF9EFE00725EEE /* AppDelegate.swift */; };
 		0EFE31D429DF9EFE00725EEE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFE31D329DF9EFE00725EEE /* SceneDelegate.swift */; };
-		0EFE31DC29DF9EFE00725EEE /* SecureMarshmallow_V3.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0EFE31DA29DF9EFE00725EEE /* SecureMarshmallow_V3.xcdatamodeld */; };
 		0EFE31E129DF9EFF00725EEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EFE31DF29DF9EFF00725EEE /* LaunchScreen.storyboard */; };
 		0EFE31EC29DF9F0000725EEE /* SecureMarshmallow_V3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFE31EB29DF9F0000725EEE /* SecureMarshmallow_V3Tests.swift */; };
 		0EFE31F629DF9F0000725EEE /* SecureMarshmallow_V3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFE31F529DF9F0000725EEE /* SecureMarshmallow_V3UITests.swift */; };
@@ -65,11 +67,13 @@
 		0E8409BC29E38D36005EB879 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
 		0E8409BE29E39258005EB879 /* SettingsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsItem.swift; sourceTree = "<group>"; };
 		0EC93B6C29F913D200482E68 /* IconViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconViewController.swift; sourceTree = "<group>"; };
+		0EC93B6F29F9181E00482E68 /* TodoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewController.swift; sourceTree = "<group>"; };
+		0EC93B7129F9183F00482E68 /* TodoListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListTableViewCell.swift; sourceTree = "<group>"; };
+		0EC93B7929F92D4800482E68 /* SecureMarshmallow_V2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SecureMarshmallow_V2.xcdatamodel; sourceTree = "<group>"; };
 		0EEDC6E729F24CD200E3804D /* BaseST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseST.swift; sourceTree = "<group>"; };
 		0EFE31CE29DF9EFE00725EEE /* SecureMarshmallow_V3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecureMarshmallow_V3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EFE31D129DF9EFE00725EEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0EFE31D329DF9EFE00725EEE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0EFE31DB29DF9EFE00725EEE /* SecureMarshmallow_V3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SecureMarshmallow_V3.xcdatamodel; sourceTree = "<group>"; };
 		0EFE31E029DF9EFF00725EEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0EFE31E229DF9EFF00725EEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0EFE31E729DF9F0000725EEE /* SecureMarshmallow_V3Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SecureMarshmallow_V3Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -170,6 +174,15 @@
 			path = IconViewController;
 			sourceTree = "<group>";
 		};
+		0EC93B6E29F917EA00482E68 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				0EC93B6F29F9181E00482E68 /* TodoListViewController.swift */,
+				0EC93B7129F9183F00482E68 /* TodoListTableViewCell.swift */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
 		0EFE31C529DF9EFE00725EEE = {
 			isa = PBXGroup;
 			children = (
@@ -258,7 +271,7 @@
 		0EFE320829DFA14100725EEE /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				0EFE31DA29DF9EFE00725EEE /* SecureMarshmallow_V3.xcdatamodeld */,
+				0EC93B7829F92D4800482E68 /* SecureMarshmallow_V3.xcdatamodeld */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -266,6 +279,7 @@
 		0EFE320929DFA18E00725EEE /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				0EC93B6E29F917EA00482E68 /* Demo */,
 				0EFE320C29DFA1C900725EEE /* Base */,
 				0EFE324829DFCEDE00725EEE /* Manager */,
 				0EFE323829DFC49700725EEE /* Tabbar */,
@@ -592,7 +606,7 @@
 				0E84099429E2D759005EB879 /* PasswordWriteViewController.swift in Sources */,
 				0EFE323D29DFCE4300725EEE /* ListPresenter.swift in Sources */,
 				0EEDC6E829F24CD200E3804D /* BaseST.swift in Sources */,
-				0EFE31DC29DF9EFE00725EEE /* SecureMarshmallow_V3.xcdatamodeld in Sources */,
+				0EC93B7229F9183F00482E68 /* TodoListTableViewCell.swift in Sources */,
 				0E8409BD29E38D36005EB879 /* SettingsCell.swift in Sources */,
 				0E8409BB29E38D26005EB879 /* SettingsItemType.swift in Sources */,
 				0E8409B429E38420005EB879 /* Passwords.swift in Sources */,
@@ -604,8 +618,10 @@
 				0EFE31D229DF9EFE00725EEE /* AppDelegate.swift in Sources */,
 				0EFE321029DFA1E700725EEE /* BaseNC.swift in Sources */,
 				0EFE323F29DFCE8200725EEE /* UserDefaultsManager.swift in Sources */,
+				0EC93B7029F9181E00482E68 /* TodoListViewController.swift in Sources */,
 				0EFE31D429DF9EFE00725EEE /* SceneDelegate.swift in Sources */,
 				0EFE323B29DFCDFB00725EEE /* ListViewController.swift in Sources */,
+				0EC93B7A29F92D4800482E68 /* SecureMarshmallow_V3.xcdatamodeld in Sources */,
 				0EFE320E29DFA1D000725EEE /* BaseVC.swift in Sources */,
 				0E8409B629E3843B005EB879 /* SavePassword.swift in Sources */,
 				0E8409BF29E39258005EB879 /* SettingsItem.swift in Sources */,
@@ -958,13 +974,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		0EFE31DA29DF9EFE00725EEE /* SecureMarshmallow_V3.xcdatamodeld */ = {
+		0EC93B7829F92D4800482E68 /* SecureMarshmallow_V3.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				0EFE31DB29DF9EFE00725EEE /* SecureMarshmallow_V3.xcdatamodel */,
+				0EC93B7929F92D4800482E68 /* SecureMarshmallow_V2.xcdatamodel */,
 			);
-			currentVersion = 0EFE31DB29DF9EFE00725EEE /* SecureMarshmallow_V3.xcdatamodel */;
-			path = SecureMarshmallow_V3.xcdatamodeld;
+			currentVersion = 0EC93B7929F92D4800482E68 /* SecureMarshmallow_V2.xcdatamodel */;
+			name = SecureMarshmallow_V3.xcdatamodeld;
+			path = "../../../../Projects/SecureMarshmallow/SecureMarshmallow-iOS/SecureMarshmallow_V2/SecureMarshmallow_V2/Resource/Supporting Files/CoreData/SecureMarshmallow_V3.xcdatamodeld";
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
