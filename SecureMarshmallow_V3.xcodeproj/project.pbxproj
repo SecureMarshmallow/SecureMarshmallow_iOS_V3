@@ -16,6 +16,7 @@
 		0E8409BB29E38D26005EB879 /* SettingsItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8409BA29E38D26005EB879 /* SettingsItemType.swift */; };
 		0E8409BD29E38D36005EB879 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8409BC29E38D36005EB879 /* SettingsCell.swift */; };
 		0E8409BF29E39258005EB879 /* SettingsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8409BE29E39258005EB879 /* SettingsItem.swift */; };
+		0EC93B6D29F913D200482E68 /* IconViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC93B6C29F913D200482E68 /* IconViewController.swift */; };
 		0EC9B47B47968329BD9F41B6 /* Pods_SecureMarshmallow_V3_SecureMarshmallow_V3UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FBA3FD3EE3B33BE850B399D /* Pods_SecureMarshmallow_V3_SecureMarshmallow_V3UITests.framework */; };
 		0EEDC6E829F24CD200E3804D /* BaseST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEDC6E729F24CD200E3804D /* BaseST.swift */; };
 		0EFE31D229DF9EFE00725EEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFE31D129DF9EFE00725EEE /* AppDelegate.swift */; };
@@ -63,6 +64,7 @@
 		0E8409BA29E38D26005EB879 /* SettingsItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsItemType.swift; sourceTree = "<group>"; };
 		0E8409BC29E38D36005EB879 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
 		0E8409BE29E39258005EB879 /* SettingsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsItem.swift; sourceTree = "<group>"; };
+		0EC93B6C29F913D200482E68 /* IconViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconViewController.swift; sourceTree = "<group>"; };
 		0EEDC6E729F24CD200E3804D /* BaseST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseST.swift; sourceTree = "<group>"; };
 		0EFE31CE29DF9EFE00725EEE /* SecureMarshmallow_V3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecureMarshmallow_V3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EFE31D129DF9EFE00725EEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -158,6 +160,14 @@
 				0E8409BE29E39258005EB879 /* SettingsItem.swift */,
 			);
 			path = Setting;
+			sourceTree = "<group>";
+		};
+		0EC93B6B29F913BE00482E68 /* IconViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0EC93B6C29F913D200482E68 /* IconViewController.swift */,
+			);
+			path = IconViewController;
 			sourceTree = "<group>";
 		};
 		0EFE31C529DF9EFE00725EEE = {
@@ -268,6 +278,7 @@
 		0EFE320A29DFA1A500725EEE /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				0EC93B6B29F913BE00482E68 /* IconViewController */,
 				0E8409B729E38CF8005EB879 /* Setting */,
 				0E8409AD29E383BC005EB879 /* Lock */,
 				0EFE323629DFC23600725EEE /* HomeViewController.swift */,
@@ -589,6 +600,7 @@
 				0E8409B929E38D06005EB879 /* SettingsViewController.swift in Sources */,
 				0E84099629E2D7B5005EB879 /* PasswordWritePresenter.swift in Sources */,
 				0EFE323729DFC23600725EEE /* HomeViewController.swift in Sources */,
+				0EC93B6D29F913D200482E68 /* IconViewController.swift in Sources */,
 				0EFE31D229DF9EFE00725EEE /* AppDelegate.swift in Sources */,
 				0EFE321029DFA1E700725EEE /* BaseNC.swift in Sources */,
 				0EFE323F29DFCE8200725EEE /* UserDefaultsManager.swift in Sources */,
@@ -764,8 +776,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7FEB6BDD0217C9658E753D11 /* Pods-SecureMarshmallow_V3.debug.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "OldAppIcon BlackAppIcon WhiteAppIcon";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 92YDTRVDUA;
@@ -794,8 +808,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 24C059779EAEFEC7EC8A1A39 /* Pods-SecureMarshmallow_V3.release.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "OldAppIcon BlackAppIcon WhiteAppIcon";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 92YDTRVDUA;
