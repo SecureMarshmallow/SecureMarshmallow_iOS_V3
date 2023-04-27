@@ -10,12 +10,8 @@
 		0E40E15029F3F36000615E86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E40E14F29F3F36000615E86 /* Assets.xcassets */; };
 		0E5686FC29FA341100EEEBD3 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5686FB29FA341100EEEBD3 /* CoreDataManager.swift */; };
 		0E5686FF29FA347300EEEBD3 /* SecureMarshmallow.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0E5686FD29FA347300EEEBD3 /* SecureMarshmallow.xcdatamodeld */; };
-		0E56870429FA361900EEEBD3 /* LockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E56870329FA361900EEEBD3 /* LockModel.swift */; };
-		0E56870729FA365100EEEBD3 /* LockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E56870629FA365100EEEBD3 /* LockViewModel.swift */; };
-		0E56870929FA36CD00EEEBD3 /* DemoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E56870829FA36CD00EEEBD3 /* DemoListViewController.swift */; };
-		0E56870B29FA371400EEEBD3 /* DemoLockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E56870A29FA371400EEEBD3 /* DemoLockView.swift */; };
-		0E56870E29FA377800EEEBD3 /* DemoLackCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E56870D29FA377800EEEBD3 /* DemoLackCollectionCell.swift */; };
 		0E56871029FA37E800EEEBD3 /* Extensions+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E56870F29FA37E800EEEBD3 /* Extensions+UIView.swift */; };
+		0E56871229FA39C000EEEBD3 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E56871129FA39C000EEEBD3 /* TaskModel.swift */; };
 		0E84099429E2D759005EB879 /* PasswordWriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E84099329E2D759005EB879 /* PasswordWriteViewController.swift */; };
 		0E84099629E2D7B5005EB879 /* PasswordWritePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E84099529E2D7B5005EB879 /* PasswordWritePresenter.swift */; };
 		0E8409B429E38420005EB879 /* Passwords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8409B329E38420005EB879 /* Passwords.swift */; };
@@ -65,12 +61,8 @@
 		0E40E14F29F3F36000615E86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Assets.xcassets/Assets.xcassets; sourceTree = "<group>"; };
 		0E5686FB29FA341100EEEBD3 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		0E5686FE29FA347300EEEBD3 /* SecureMarshmallow.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SecureMarshmallow.xcdatamodel; sourceTree = "<group>"; };
-		0E56870329FA361900EEEBD3 /* LockModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockModel.swift; sourceTree = "<group>"; };
-		0E56870629FA365100EEEBD3 /* LockViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LockViewModel.swift; path = Pods/LockViewModel.swift; sourceTree = SOURCE_ROOT; };
-		0E56870829FA36CD00EEEBD3 /* DemoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoListViewController.swift; sourceTree = "<group>"; };
-		0E56870A29FA371400EEEBD3 /* DemoLockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoLockView.swift; sourceTree = "<group>"; };
-		0E56870D29FA377800EEEBD3 /* DemoLackCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoLackCollectionCell.swift; sourceTree = "<group>"; };
 		0E56870F29FA37E800EEEBD3 /* Extensions+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIView.swift"; sourceTree = "<group>"; };
+		0E56871129FA39C000EEEBD3 /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
 		0E84099329E2D759005EB879 /* PasswordWriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordWriteViewController.swift; sourceTree = "<group>"; };
 		0E84099529E2D7B5005EB879 /* PasswordWritePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordWritePresenter.swift; sourceTree = "<group>"; };
 		0E8409B329E38420005EB879 /* Passwords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Passwords.swift; sourceTree = "<group>"; };
@@ -149,7 +141,6 @@
 		0E8409AD29E383BC005EB879 /* Lock */ = {
 			isa = PBXGroup;
 			children = (
-				0E56870629FA365100EEEBD3 /* LockViewModel.swift */,
 				0E8409AE29E383C7005EB879 /* PasswordModel */,
 				0EFE323929DFCDA200725EEE /* PasswordList */,
 				0E84099229E2D638005EB879 /* PasswordWrite */,
@@ -161,8 +152,8 @@
 			isa = PBXGroup;
 			children = (
 				0E8409B329E38420005EB879 /* Passwords.swift */,
-				0E56870329FA361900EEEBD3 /* LockModel.swift */,
 				0E8409B529E3843B005EB879 /* SavePassword.swift */,
+				0E56871129FA39C000EEEBD3 /* TaskModel.swift */,
 			);
 			path = PasswordModel;
 			sourceTree = "<group>";
@@ -333,9 +324,6 @@
 			children = (
 				0EFE323A29DFCDFB00725EEE /* ListViewController.swift */,
 				0EFE323C29DFCE4300725EEE /* ListPresenter.swift */,
-				0E56870829FA36CD00EEEBD3 /* DemoListViewController.swift */,
-				0E56870D29FA377800EEEBD3 /* DemoLackCollectionCell.swift */,
-				0E56870A29FA371400EEEBD3 /* DemoLockView.swift */,
 			);
 			path = PasswordList;
 			sourceTree = "<group>";
@@ -611,18 +599,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E84099429E2D759005EB879 /* PasswordWriteViewController.swift in Sources */,
-				0E56870729FA365100EEEBD3 /* LockViewModel.swift in Sources */,
+				0E56871229FA39C000EEEBD3 /* TaskModel.swift in Sources */,
 				0EFE323D29DFCE4300725EEE /* ListPresenter.swift in Sources */,
-				0E56870E29FA377800EEEBD3 /* DemoLackCollectionCell.swift in Sources */,
 				0EEDC6E829F24CD200E3804D /* BaseST.swift in Sources */,
 				0E8409BD29E38D36005EB879 /* SettingsCell.swift in Sources */,
-				0E56870429FA361900EEEBD3 /* LockModel.swift in Sources */,
 				0E8409BB29E38D26005EB879 /* SettingsItemType.swift in Sources */,
 				0E8409B429E38420005EB879 /* Passwords.swift in Sources */,
 				0EFE323529DFC22500725EEE /* TabbarViewController.swift in Sources */,
 				0E8409B929E38D06005EB879 /* SettingsViewController.swift in Sources */,
 				0E84099629E2D7B5005EB879 /* PasswordWritePresenter.swift in Sources */,
-				0E56870B29FA371400EEEBD3 /* DemoLockView.swift in Sources */,
 				0EFE323729DFC23600725EEE /* HomeViewController.swift in Sources */,
 				0EC93B6D29F913D200482E68 /* IconViewController.swift in Sources */,
 				0EFE31D229DF9EFE00725EEE /* AppDelegate.swift in Sources */,
@@ -636,7 +621,6 @@
 				0E8409B629E3843B005EB879 /* SavePassword.swift in Sources */,
 				0E5686FC29FA341100EEEBD3 /* CoreDataManager.swift in Sources */,
 				0E8409BF29E39258005EB879 /* SettingsItem.swift in Sources */,
-				0E56870929FA36CD00EEEBD3 /* DemoListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

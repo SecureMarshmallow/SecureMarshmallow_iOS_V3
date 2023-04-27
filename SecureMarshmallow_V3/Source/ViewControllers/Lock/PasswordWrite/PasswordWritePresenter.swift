@@ -33,21 +33,33 @@ final class PasswordWritePresenter {
     
     func didTapRightBarButton(contentsText: String) {
         
-        guard let passworrdd = passwords,
+//        guard let passworrdd = passwords,
+//              contentsText != contentsTextViewPlaceHolderText
+//        else { return }
+//
+//        let bookReview = SavePassword(
+//            title: passworrdd.title,
+//            contents: contentsText
+//        )
+//
+//        userDefaultsManager.setReview(bookReview)
+//
+        
+        guard let password = passwords,
               contentsText != contentsTextViewPlaceHolderText
         else { return }
         
-        let bookReview = SavePassword(
-            title: passworrdd.title,
+        let savePassword = SavePassword(
+            title: password.title,
             contents: contentsText
         )
         
-        userDefaultsManager.setReview(bookReview)
+        CoreDataManager.shared.saveTask(title: savePassword.title, details: savePassword.contents)
         
         viewController.close()
     }
     
-    func didTapBookTitleButton() {
+    func didTapTitleButton() {
         viewController.presentToSearchBookViewController()
     }
 }

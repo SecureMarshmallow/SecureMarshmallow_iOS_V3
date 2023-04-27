@@ -10,6 +10,7 @@ import UIKit
 
 final class ReviewWriteViewController: UIViewController {
     private lazy var presenter = PasswordWritePresenter(viewController: self)
+    private let viewModel = TaskViewModel()
     
     private lazy var titleButton: UIButton = {
         let button = UIButton()
@@ -17,7 +18,7 @@ final class ReviewWriteViewController: UIViewController {
         button.setTitleColor(.tertiaryLabel, for: .normal)
         button.contentHorizontalAlignment = .left
         button.titleLabel?.font = .systemFont(ofSize: 23.0, weight: .bold)
-        button.addTarget(self, action: #selector(didTapBookTitleButton), for: .touchUpInside)
+        button.addTarget(self, action: #selector(didTapTitleButton), for: .touchUpInside)
         
         return button
     }()
@@ -133,6 +134,7 @@ extension ReviewWriteViewController: PasswordWriteProtocol {
         titleButton.setTitle(title, for: .normal)
         titleButton.setTitleColor(.label, for: .normal)
         imageView.kf.setImage(with: imageURL)
+        
     }
 }
 
@@ -145,7 +147,7 @@ private extension ReviewWriteViewController {
         presenter.didTapRightBarButton(contentsText: contentsTextView.text)
     }
     
-    @objc func didTapBookTitleButton() {
-        presenter.didTapBookTitleButton()
+    @objc func didTapTitleButton() {
+        presenter.didTapTitleButton()
     }
 }
