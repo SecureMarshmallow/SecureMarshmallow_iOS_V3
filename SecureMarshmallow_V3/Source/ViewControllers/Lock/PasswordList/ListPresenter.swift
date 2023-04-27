@@ -30,12 +30,14 @@ final class ListPresenter: NSObject {
     }
     
     func viewDidLoad() {
+        tasks = coreDataManager.fetchTasks()
+        viewController.reloadTableView()
         viewController.setupNavigationBar()
         viewController.setupViews()
-        
     }
     
     func viewWillAppear() {
+        tasks = coreDataManager.fetchTasks()
         review = userDefaultManger.getReviews()
         viewController.reloadTableView()
     }

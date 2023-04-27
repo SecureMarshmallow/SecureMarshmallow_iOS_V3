@@ -10,17 +10,15 @@ import UIKit
 
 final class ReviewWriteViewController: UIViewController {
     private lazy var presenter = PasswordWritePresenter(viewController: self)
-    private let viewModel = TaskViewModel()
     
-    private lazy var titleButton: UIButton = {
-        let button = UIButton()
-        button.setTitle("비밀번호를 입력해주새요.", for: .normal)
-        button.setTitleColor(.tertiaryLabel, for: .normal)
-        button.contentHorizontalAlignment = .left
-        button.titleLabel?.font = .systemFont(ofSize: 23.0, weight: .bold)
-        button.addTarget(self, action: #selector(didTapTitleButton), for: .touchUpInside)
+    private lazy var titleTextField: UITextField = {
+        let textField = UITextField()
+        textField.placeholder = "비밀번호를 입력해주세요."
+        textField.textColor = .tertiaryLabel
+        textField.font = .systemFont(ofSize: 23.0, weight: .bold)
+        textField.addTarget(self, action: #selector(didTapTitleButton), for: .editingDidBegin)
         
-        return button
+        return textField
     }()
     
     private lazy var contentsTextView: UITextView = {
@@ -100,10 +98,10 @@ extension ReviewWriteViewController: PasswordWriteProtocol {
     func setupViews() {
         view.backgroundColor = .systemBackground
 
-        [titleButton, contentsTextView, imageView]
+        [titleTextField, contentsTextView, imageView]
             .forEach { view.addSubview($0) }
 
-        titleButton.snp.makeConstraints {
+        titleTextField.snp.makeConstraints {
             $0.leading.equalToSuperview().inset(20.0)
             $0.trailing.equalToSuperview().inset(20.0)
             $0.top.equalTo(view.safeAreaLayoutGuide).inset(20.0)
@@ -112,7 +110,7 @@ extension ReviewWriteViewController: PasswordWriteProtocol {
         contentsTextView.snp.makeConstraints {
             $0.leading.equalToSuperview().inset(16.0)
             $0.trailing.equalToSuperview().inset(16.0)
-            $0.top.equalTo(titleButton.snp.bottom).offset(16.0)
+            $0.top.equalTo(titleTextField.snp.bottom).offset(16.0)
         }
 
         imageView.snp.makeConstraints {
@@ -129,13 +127,6 @@ extension ReviewWriteViewController: PasswordWriteProtocol {
 //        let vc = UINavigationController(rootViewController: SearchBookViewController(searchBookDelegate: presenter))
 //        present(vc, animated: true)
     }
-    
-    func updateViews(title: String, imageURL: URL?) {
-        titleButton.setTitle(title, for: .normal)
-        titleButton.setTitleColor(.label, for: .normal)
-        imageView.kf.setImage(with: imageURL)
-        
-    }
 }
 
 private extension ReviewWriteViewController {
@@ -144,7 +135,7 @@ private extension ReviewWriteViewController {
     }
     
     @objc func didTapRightBarButton() {
-        presenter.didTapRightBarButton(contentsText: contentsTextView.text)
+        presenter.didTapRightBarButton(title: titleTextField.text!, contentsText: contentsTextView.text)
     }
     
     @objc func didTapTitleButton() {

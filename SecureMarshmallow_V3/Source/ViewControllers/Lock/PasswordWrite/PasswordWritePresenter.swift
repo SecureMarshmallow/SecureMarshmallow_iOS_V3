@@ -6,16 +6,13 @@ protocol PasswordWriteProtocol {
     func close()
     func setupViews()
     func presentToSearchBookViewController()
-    func updateViews(title: String, imageURL: URL?)
 }
 
 final class PasswordWritePresenter {
     private let viewController: PasswordWriteProtocol
     
     private let userDefaultsManager = UserDefaultsManager()
-    
-    private var passwords: Passwords?
-    
+        
     let contentsTextViewPlaceHolderText = "내용을 입력해주세요. "
     
     init(viewController: PasswordWriteProtocol) {
@@ -31,7 +28,7 @@ final class PasswordWritePresenter {
         viewController.showCloseAlertController()
     }
     
-    func didTapRightBarButton(contentsText: String) {
+    func didTapRightBarButton(title: String, contentsText: String) {
         
 //        guard let passworrdd = passwords,
 //              contentsText != contentsTextViewPlaceHolderText
@@ -45,12 +42,8 @@ final class PasswordWritePresenter {
 //        userDefaultsManager.setReview(bookReview)
 //
         
-        guard let password = passwords,
-              contentsText != contentsTextViewPlaceHolderText
-        else { return }
-        
         let savePassword = SavePassword(
-            title: password.title,
+            title: title,
             contents: contentsText
         )
         
