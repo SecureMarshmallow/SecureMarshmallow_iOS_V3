@@ -31,6 +31,4 @@ struct UserDefaultsManager: UserDefaultsManagerProtocol {
         UserDefaults.standard.setValue(try? PropertyListEncoder().encode(currentReviews),
                                        forKey: Key.review.rawValue)
     }
-    
-    
 }

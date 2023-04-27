@@ -9,18 +9,11 @@ import UIKit
 import CoreData
 import SnapKit
 
-@objc(Task)
-class Task: NSManagedObject {
-    @NSManaged var title: String
-    @NSManaged var isCompleted: Bool
-
-}
-
 class TodoListViewController: UIViewController {
 
     var tableView: UITableView!
     var addButton: UIButton!
-    var tasks: [Task] = []
+    var tasks: [Tasks] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,6 +60,7 @@ class TodoListViewController: UIViewController {
         let addAction = UIAlertAction(title: "Add", style: .default) { [weak self] _ in
             guard let self = self else { return }
             if let taskTitle = alertController.textFields?.first?.text, !taskTitle.isEmpty {
+                print("저장할 준비됨")
                 self.addTask(title: taskTitle)
             }
         }
@@ -78,7 +72,7 @@ class TodoListViewController: UIViewController {
 
     func addTask(title: String) {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        let task = Task(context: context)
+        let task = Tasks(context: context)
         task.title = title
         task.isCompleted = false
         (UIApplication.shared.delegate as! AppDelegate).saveContext()
@@ -86,12 +80,13 @@ class TodoListViewController: UIViewController {
         tableView.reloadData()
     }
 
-    func loadTasks() -> [Task] {
+
+    func loadTasks() -> [Tasks] {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "MyModule")
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Tasks")
         do {
-            let tasks = try context.fetch(fetchRequest) as! [Task]
+            let tasks = try context.fetch(fetchRequest) as! [Tasks]
             return tasks
         } catch let error as NSError {
             print("Could not fetch. \(error), \(error.userInfo)")
@@ -99,13 +94,13 @@ class TodoListViewController: UIViewController {
         }
     }
 
-    func updateTask(task: Task) {
+    func updateTask(task: Tasks) {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         (UIApplication.shared.delegate as! AppDelegate).saveContext()
         tableView.reloadData()
     }
 
-    func deleteTask(task: Task) {
+    func deleteTask(task: Tasks) {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         context.delete(task)
         (UIApplication.shared.delegate as! AppDelegate).saveContext()
