@@ -5,7 +5,6 @@
 //  Created by 박준하 on 2023/04/07.
 //
 import UIKit
-//import Kingfisher
 
 protocol ListProtocol{
     func setupNavigationBar()
@@ -49,21 +48,10 @@ final class ListPresenter: NSObject {
 
 extension ListPresenter: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-
-//        return 5
         return tasks.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: nil)
-//
-//        cell.textLabel?.text = "마쉬멜로 살리자"
-//        cell.detailTextLabel?.text = "열심히 열심히 하자"
-//
-//        cell.selectionStyle = .none
-//
-//        return cell
-        
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: nil)
         
         let task = tasks[indexPath.row]
@@ -73,5 +61,31 @@ extension ListPresenter: UITableViewDataSource {
         cell.selectionStyle = .none
         
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .delete
+    }
+
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let task = tasks[indexPath.row]
+            
+            let context = CoreDataManager.shared.persistentContainer.viewContext
+            context.delete(task)
+            
+            do {
+                try context.save()
+            } catch {
+                print("❌ Error saving context: \(error)")
+            }
+            
+            tasks.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
     }
 }

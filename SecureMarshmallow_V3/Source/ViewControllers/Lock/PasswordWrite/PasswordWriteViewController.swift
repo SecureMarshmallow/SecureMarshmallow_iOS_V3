@@ -16,7 +16,6 @@ final class ReviewWriteViewController: UIViewController {
         textField.placeholder = "비밀번호를 입력해주세요."
         textField.textColor = .tertiaryLabel
         textField.font = .systemFont(ofSize: 23.0, weight: .bold)
-        textField.addTarget(self, action: #selector(didTapTitleButton), for: .editingDidBegin)
         
         return textField
     }()
@@ -123,10 +122,6 @@ extension ReviewWriteViewController: PasswordWriteProtocol {
         }
     }
     
-    func presentToSearchBookViewController() {
-//        let vc = UINavigationController(rootViewController: SearchBookViewController(searchBookDelegate: presenter))
-//        present(vc, animated: true)
-    }
 }
 
 private extension ReviewWriteViewController {
@@ -137,8 +132,5 @@ private extension ReviewWriteViewController {
     @objc func didTapRightBarButton() {
         presenter.didTapRightBarButton(title: titleTextField.text!, contentsText: contentsTextView.text)
     }
-    
-    @objc func didTapTitleButton() {
-        presenter.didTapTitleButton()
-    }
+
 }

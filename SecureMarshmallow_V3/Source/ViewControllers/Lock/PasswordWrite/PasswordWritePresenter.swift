@@ -5,7 +5,6 @@ protocol PasswordWriteProtocol {
     func showCloseAlertController()
     func close()
     func setupViews()
-    func presentToSearchBookViewController()
 }
 
 final class PasswordWritePresenter {
@@ -52,7 +51,7 @@ final class PasswordWritePresenter {
         viewController.close()
     }
     
-    func didTapTitleButton() {
-        viewController.presentToSearchBookViewController()
-    }
+//    func didTapTitleButton() {
+//        viewController.presentToSearchBookViewController()
+//    }
 }
