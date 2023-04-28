@@ -88,3 +88,15 @@ enum SettingsItemType {
         }
     }
 }
+
+struct SettingsItem {
+    let type: SettingsItemType
+    let hasSwitch: Bool
+    let switchState: Bool
+    
+    init(type: SettingsItemType, hasSwitch: Bool = false, switchState: Bool = false) {
+        self.type = type
+        self.hasSwitch = hasSwitch
+        self.switchState = switchState
+    }
+}

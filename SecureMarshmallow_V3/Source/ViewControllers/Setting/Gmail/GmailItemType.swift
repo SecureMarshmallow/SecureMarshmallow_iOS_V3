@@ -31,14 +31,3 @@ struct GmailItem {
         self.switchState = switchState
     }
 }
-
-private extension GmailItemType {
-    var icon: UIImage? {
-        switch self {
-        case .restoreEmail:
-            return UIImage(systemName: "envelope")
-        case .deleteAccount:
-            return UIImage(systemName: "trash")
-        }
-    }
-}

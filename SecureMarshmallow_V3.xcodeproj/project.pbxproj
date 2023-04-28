@@ -19,7 +19,6 @@
 		0E8409B929E38D06005EB879 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8409B829E38D06005EB879 /* SettingsViewController.swift */; };
 		0E8409BB29E38D26005EB879 /* SettingsItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8409BA29E38D26005EB879 /* SettingsItemType.swift */; };
 		0E8409BD29E38D36005EB879 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8409BC29E38D36005EB879 /* SettingsCell.swift */; };
-		0E8409BF29E39258005EB879 /* SettingsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8409BE29E39258005EB879 /* SettingsItem.swift */; };
 		0EC93B6D29F913D200482E68 /* IconViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC93B6C29F913D200482E68 /* IconViewController.swift */; };
 		0EC9B47B47968329BD9F41B6 /* Pods_SecureMarshmallow_V3_SecureMarshmallow_V3UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FBA3FD3EE3B33BE850B399D /* Pods_SecureMarshmallow_V3_SecureMarshmallow_V3UITests.framework */; };
 		0ECEF8AA29FB930A008E848E /* GmailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECEF8A929FB930A008E848E /* GmailCell.swift */; };
@@ -76,7 +75,6 @@
 		0E8409B829E38D06005EB879 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		0E8409BA29E38D26005EB879 /* SettingsItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsItemType.swift; sourceTree = "<group>"; };
 		0E8409BC29E38D36005EB879 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
-		0E8409BE29E39258005EB879 /* SettingsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsItem.swift; sourceTree = "<group>"; };
 		0EC93B6C29F913D200482E68 /* IconViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconViewController.swift; sourceTree = "<group>"; };
 		0ECEF8A929FB930A008E848E /* GmailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GmailCell.swift; sourceTree = "<group>"; };
 		0ECEF8AB29FB932B008E848E /* GmailItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GmailItemType.swift; sourceTree = "<group>"; };
@@ -194,7 +192,6 @@
 				0E8409B829E38D06005EB879 /* SettingsViewController.swift */,
 				0E8409BA29E38D26005EB879 /* SettingsItemType.swift */,
 				0E8409BC29E38D36005EB879 /* SettingsCell.swift */,
-				0E8409BE29E39258005EB879 /* SettingsItem.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -667,7 +664,6 @@
 				0ECEF8B129FB98A2008E848E /* AppLogoViewController.swift in Sources */,
 				0E5686FC29FA341100EEEBD3 /* CoreDataManager.swift in Sources */,
 				0ECEF8AE29FB933F008E848E /* GmailInformationViewController.swift in Sources */,
-				0E8409BF29E39258005EB879 /* SettingsItem.swift in Sources */,
 				0ECEF8AA29FB930A008E848E /* GmailCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
