@@ -50,7 +50,5 @@ class BaseSC<T>: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configure(with item: T) {
-
-    }
+    func configure(with item: T) { }
 }

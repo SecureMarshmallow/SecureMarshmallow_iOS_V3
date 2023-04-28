@@ -89,12 +89,14 @@ enum SettingsItemType {
     }
 }
 
-struct SettingsItem {
-    let type: SettingsItemType
-    let hasSwitch: Bool
-    let switchState: Bool
+struct SettingsItem: CommonItemType {
+    typealias ItemType = SettingsItemType
     
-    init(type: SettingsItemType, hasSwitch: Bool = false, switchState: Bool = false) {
+    let type: ItemType
+    let hasSwitch: Bool
+    var switchState: Bool
+    
+    init(type: ItemType, hasSwitch: Bool = false, switchState: Bool = false) {
         self.type = type
         self.hasSwitch = hasSwitch
         self.switchState = switchState

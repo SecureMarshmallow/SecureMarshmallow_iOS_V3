@@ -20,12 +20,14 @@ enum GmailItemType {
     }
 }
 
-struct GmailItem {
-    let type: GmailItemType
-    let hasSwitch: Bool
-    let switchState: Bool
+struct GmailItem: CommonItemType {
+    typealias ItemType = GmailItemType
     
-    init(type: GmailItemType, hasSwitch: Bool = false, switchState: Bool = false) {
+    let type: ItemType
+    let hasSwitch: Bool
+    var switchState: Bool
+    
+    init(type: ItemType, hasSwitch: Bool = false, switchState: Bool = false) {
         self.type = type
         self.hasSwitch = hasSwitch
         self.switchState = switchState

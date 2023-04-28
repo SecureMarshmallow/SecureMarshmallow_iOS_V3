@@ -102,9 +102,9 @@ extension GmailInformationViewController: UITableViewDelegate {
         let item = gamilItems[indexPath.section][indexPath.row]
         switch item.type {
         case .restoreEmail:
-            print("restoreEmail")
+            print("복구 이메일")
         case .deleteAccount:
-            print("deleteAccount")
+            print("계정 삭제")
         }
     }
 }

@@ -28,6 +28,7 @@
 		0ECEF8B329FB98AF008E848E /* AppLogoItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECEF8B229FB98AF008E848E /* AppLogoItemType.swift */; };
 		0ECEF8B529FB98C6008E848E /* AppLogoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECEF8B429FB98C6008E848E /* AppLogoCell.swift */; };
 		0ECEF8BB29FBA771008E848E /* BaseSC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECEF8BA29FBA771008E848E /* BaseSC.swift */; };
+		0ECEF8C129FC22A9008E848E /* CommonItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECEF8C029FC22A9008E848E /* CommonItemType.swift */; };
 		0EFE31D229DF9EFE00725EEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFE31D129DF9EFE00725EEE /* AppDelegate.swift */; };
 		0EFE31D429DF9EFE00725EEE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFE31D329DF9EFE00725EEE /* SceneDelegate.swift */; };
 		0EFE31E129DF9EFF00725EEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EFE31DF29DF9EFF00725EEE /* LaunchScreen.storyboard */; };
@@ -83,6 +84,7 @@
 		0ECEF8B229FB98AF008E848E /* AppLogoItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLogoItemType.swift; sourceTree = "<group>"; };
 		0ECEF8B429FB98C6008E848E /* AppLogoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLogoCell.swift; sourceTree = "<group>"; };
 		0ECEF8BA29FBA771008E848E /* BaseSC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSC.swift; sourceTree = "<group>"; };
+		0ECEF8C029FC22A9008E848E /* CommonItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonItemType.swift; sourceTree = "<group>"; };
 		0EFE31CE29DF9EFE00725EEE /* SecureMarshmallow_V3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecureMarshmallow_V3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EFE31D129DF9EFE00725EEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0EFE31D329DF9EFE00725EEE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -346,6 +348,7 @@
 				0EFE320D29DFA1D000725EEE /* BaseVC.swift */,
 				0EFE320F29DFA1E700725EEE /* BaseNC.swift */,
 				0ECEF8BA29FBA771008E848E /* BaseSC.swift */,
+				0ECEF8C029FC22A9008E848E /* CommonItemType.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -638,6 +641,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E84099429E2D759005EB879 /* PasswordWriteViewController.swift in Sources */,
+				0ECEF8C129FC22A9008E848E /* CommonItemType.swift in Sources */,
 				0ECEF8AC29FB932B008E848E /* GmailItemType.swift in Sources */,
 				0E56871229FA39C000EEEBD3 /* TaskModel.swift in Sources */,
 				0EFE323D29DFCE4300725EEE /* ListPresenter.swift in Sources */,
