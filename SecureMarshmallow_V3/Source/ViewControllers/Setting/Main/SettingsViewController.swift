@@ -128,6 +128,9 @@ extension SettingsViewController: UITableViewDelegate {
             print("로그아웃")
             break
         case .changeAppIcon:
+            let applogoVC = AppLogoViewController()
+            applogoVC.modalPresentationStyle = .fullScreen
+            self.navigationController?.pushViewController(applogoVC, animated: true)
             print("앱 아이콘 변경")
         case .changeAppTheme:
             print("앱 테마 변경 클릭")

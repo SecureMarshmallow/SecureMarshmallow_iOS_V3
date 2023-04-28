@@ -14,7 +14,10 @@ class AppLogoCell: UICollectionViewCell {
     static var identifier = "AppLogoCell"
     
     var appLogoView = UIImageView().then {
-        $0.backgroundColor = .black
+        $0.backgroundColor = .clear
+        $0.layer.borderWidth = 1.5
+        $0.layer.borderColor = UIColor.black.cgColor
+        $0.layer.cornerRadius = 10
     }
     
     override init(frame: CGRect) {
