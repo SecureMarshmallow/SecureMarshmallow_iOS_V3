@@ -28,6 +28,7 @@
 		0ECEF8B129FB98A2008E848E /* AppLogoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECEF8B029FB98A2008E848E /* AppLogoViewController.swift */; };
 		0ECEF8B329FB98AF008E848E /* AppLogoItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECEF8B229FB98AF008E848E /* AppLogoItemType.swift */; };
 		0ECEF8B529FB98C6008E848E /* AppLogoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECEF8B429FB98C6008E848E /* AppLogoCell.swift */; };
+		0ECEF8BB29FBA771008E848E /* BaseSC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECEF8BA29FBA771008E848E /* BaseSC.swift */; };
 		0EFE31D229DF9EFE00725EEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFE31D129DF9EFE00725EEE /* AppDelegate.swift */; };
 		0EFE31D429DF9EFE00725EEE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFE31D329DF9EFE00725EEE /* SceneDelegate.swift */; };
 		0EFE31E129DF9EFF00725EEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EFE31DF29DF9EFF00725EEE /* LaunchScreen.storyboard */; };
@@ -83,6 +84,7 @@
 		0ECEF8B029FB98A2008E848E /* AppLogoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLogoViewController.swift; sourceTree = "<group>"; };
 		0ECEF8B229FB98AF008E848E /* AppLogoItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLogoItemType.swift; sourceTree = "<group>"; };
 		0ECEF8B429FB98C6008E848E /* AppLogoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLogoCell.swift; sourceTree = "<group>"; };
+		0ECEF8BA29FBA771008E848E /* BaseSC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSC.swift; sourceTree = "<group>"; };
 		0EFE31CE29DF9EFE00725EEE /* SecureMarshmallow_V3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecureMarshmallow_V3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EFE31D129DF9EFE00725EEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0EFE31D329DF9EFE00725EEE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -346,6 +348,7 @@
 			children = (
 				0EFE320D29DFA1D000725EEE /* BaseVC.swift */,
 				0EFE320F29DFA1E700725EEE /* BaseNC.swift */,
+				0ECEF8BA29FBA771008E848E /* BaseSC.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -658,6 +661,7 @@
 				0EFE323B29DFCDFB00725EEE /* ListViewController.swift in Sources */,
 				0E56871029FA37E800EEEBD3 /* Extensions+UIView.swift in Sources */,
 				0E5686FF29FA347300EEEBD3 /* SecureMarshmallow.xcdatamodeld in Sources */,
+				0ECEF8BB29FBA771008E848E /* BaseSC.swift in Sources */,
 				0EFE320E29DFA1D000725EEE /* BaseVC.swift in Sources */,
 				0E8409B629E3843B005EB879 /* SavePassword.swift in Sources */,
 				0ECEF8B129FB98A2008E848E /* AppLogoViewController.swift in Sources */,
