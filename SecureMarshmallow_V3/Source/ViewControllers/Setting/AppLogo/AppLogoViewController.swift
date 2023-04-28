@@ -31,6 +31,20 @@ class AppLogoViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.reloadData()
     }
+    
+    func changeAppIcon(to iconName: String?) {
+        if #available(iOS 10.3, *) {
+            if UIApplication.shared.supportsAlternateIcons {
+                UIApplication.shared.setAlternateIconName(iconName) { error in
+                    if let error = error {
+                        print("앱 아이콘을 바꾸는 것을 실패했습니다 ❌ \(error)")
+                    } else {
+                        print("앱 아이콘이 다음으로 변경됨 \(iconName ?? "BlackIcon")")
+                    }
+                }
+            }
+        }
+    }
 }
 
 extension AppLogoViewController: UICollectionViewDataSource {
@@ -44,15 +58,33 @@ extension AppLogoViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AppLogoCell.identifier, for: indexPath) as! AppLogoCell
+                
+        if indexPath.row == 0 {
+            cell.appLogoView.image = UIImage(named: "logo\(indexPath.row)")
+        }
         
-        cell.backgroundColor = .blue
-        cell.layer.cornerRadius = 15
-        cell.appLogoView.image = UIImage(named: "BlackAppIcon")
+        if indexPath.row == 1 {
+            cell.appLogoView.image = UIImage(named: "logo\(indexPath.row)")
+        }
+        
+        if indexPath.row == 2 {
+            cell.appLogoView.image = UIImage(named: "logo\(indexPath.row)")
+        }
         
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("1")
+        if indexPath.row == 0 {
+            changeAppIcon(to: "BlackAppIcon")
+        }
+        
+        if indexPath.row == 1 {
+            changeAppIcon(to: "WhiteAppIcon")
+        }
+        
+        if indexPath.row == 2 {
+            changeAppIcon(to: "OldAppIcon")
+        }
     }
 }
 

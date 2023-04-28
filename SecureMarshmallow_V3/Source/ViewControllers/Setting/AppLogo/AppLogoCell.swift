@@ -14,7 +14,7 @@ class AppLogoCell: UICollectionViewCell {
     static var identifier = "AppLogoCell"
     
     var appLogoView = UIImageView().then {
-        $0.backgroundColor = .red
+        $0.backgroundColor = .black
     }
     
     override init(frame: CGRect) {
