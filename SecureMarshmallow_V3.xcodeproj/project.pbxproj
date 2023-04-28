@@ -25,7 +25,6 @@
 		0ECEF8AC29FB932B008E848E /* GmailItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECEF8AB29FB932B008E848E /* GmailItemType.swift */; };
 		0ECEF8AE29FB933F008E848E /* GmailInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECEF8AD29FB933F008E848E /* GmailInformationViewController.swift */; };
 		0ECEF8B129FB98A2008E848E /* AppLogoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECEF8B029FB98A2008E848E /* AppLogoViewController.swift */; };
-		0ECEF8B329FB98AF008E848E /* AppLogoItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECEF8B229FB98AF008E848E /* AppLogoItemType.swift */; };
 		0ECEF8B529FB98C6008E848E /* AppLogoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECEF8B429FB98C6008E848E /* AppLogoCell.swift */; };
 		0ECEF8BB29FBA771008E848E /* BaseSC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECEF8BA29FBA771008E848E /* BaseSC.swift */; };
 		0ECEF8C129FC22A9008E848E /* CommonItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECEF8C029FC22A9008E848E /* CommonItemType.swift */; };
@@ -81,7 +80,6 @@
 		0ECEF8AB29FB932B008E848E /* GmailItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GmailItemType.swift; sourceTree = "<group>"; };
 		0ECEF8AD29FB933F008E848E /* GmailInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GmailInformationViewController.swift; sourceTree = "<group>"; };
 		0ECEF8B029FB98A2008E848E /* AppLogoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLogoViewController.swift; sourceTree = "<group>"; };
-		0ECEF8B229FB98AF008E848E /* AppLogoItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLogoItemType.swift; sourceTree = "<group>"; };
 		0ECEF8B429FB98C6008E848E /* AppLogoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLogoCell.swift; sourceTree = "<group>"; };
 		0ECEF8BA29FBA771008E848E /* BaseSC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSC.swift; sourceTree = "<group>"; };
 		0ECEF8C029FC22A9008E848E /* CommonItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonItemType.swift; sourceTree = "<group>"; };
@@ -212,7 +210,6 @@
 			isa = PBXGroup;
 			children = (
 				0ECEF8B029FB98A2008E848E /* AppLogoViewController.swift */,
-				0ECEF8B229FB98AF008E848E /* AppLogoItemType.swift */,
 				0ECEF8B429FB98C6008E848E /* AppLogoCell.swift */,
 			);
 			path = AppLogo;
@@ -653,7 +650,6 @@
 				0E8409B929E38D06005EB879 /* SettingsViewController.swift in Sources */,
 				0E84099629E2D7B5005EB879 /* PasswordWritePresenter.swift in Sources */,
 				0EFE323729DFC23600725EEE /* HomeViewController.swift in Sources */,
-				0ECEF8B329FB98AF008E848E /* AppLogoItemType.swift in Sources */,
 				0EC93B6D29F913D200482E68 /* IconViewController.swift in Sources */,
 				0EFE31D229DF9EFE00725EEE /* AppDelegate.swift in Sources */,
 				0EFE321029DFA1E700725EEE /* BaseNC.swift in Sources */,
