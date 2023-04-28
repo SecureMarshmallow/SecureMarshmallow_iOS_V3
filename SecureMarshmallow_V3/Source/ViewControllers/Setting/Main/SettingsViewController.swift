@@ -113,7 +113,9 @@ extension SettingsViewController: UITableViewDelegate {
         let item = settingsItems[indexPath.section][indexPath.row]
         switch item.type {
         case .gmailInformation:
-            print("gmail")
+            let gmailVC = GmailInformationViewController()
+            gmailVC.modalPresentationStyle = .fullScreen
+            self.navigationController?.pushViewController(gmailVC, animated: true)
             break
         case .idInformation:
             print("id")
