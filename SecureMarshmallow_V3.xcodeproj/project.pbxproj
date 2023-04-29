@@ -27,6 +27,16 @@
 		0ECEF8B529FB98C6008E848E /* AppLogoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECEF8B429FB98C6008E848E /* AppLogoCell.swift */; };
 		0ECEF8BB29FBA771008E848E /* BaseSC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECEF8BA29FBA771008E848E /* BaseSC.swift */; };
 		0ECEF8C129FC22A9008E848E /* CommonItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECEF8C029FC22A9008E848E /* CommonItemType.swift */; };
+		0ECEF8C329FCCA06008E848E /* MarshmallowWidgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECEF8C229FCCA06008E848E /* MarshmallowWidgetViewController.swift */; };
+		0ECEF8CA29FCCFCF008E848E /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ECEF8C929FCCFCE008E848E /* WidgetKit.framework */; };
+		0ECEF8CC29FCCFCF008E848E /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ECEF8CB29FCCFCF008E848E /* SwiftUI.framework */; };
+		0ECEF8CF29FCCFCF008E848E /* MarshmallowWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECEF8CE29FCCFCF008E848E /* MarshmallowWidgetBundle.swift */; };
+		0ECEF8D129FCCFCF008E848E /* MarshmallowWidgetLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECEF8D029FCCFCF008E848E /* MarshmallowWidgetLiveActivity.swift */; };
+		0ECEF8D329FCCFCF008E848E /* MarshmallowWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECEF8D229FCCFCF008E848E /* MarshmallowWidget.swift */; };
+		0ECEF8D629FCCFD0008E848E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0ECEF8D529FCCFD0008E848E /* Assets.xcassets */; };
+		0ECEF8D829FCCFD0008E848E /* MarshmallowWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 0ECEF8D429FCCFCF008E848E /* MarshmallowWidget.intentdefinition */; };
+		0ECEF8D929FCCFD0008E848E /* MarshmallowWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 0ECEF8D429FCCFCF008E848E /* MarshmallowWidget.intentdefinition */; };
+		0ECEF8DC29FCCFD0008E848E /* MarshmallowWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 0ECEF8C829FCCFCE008E848E /* MarshmallowWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0EFE31D229DF9EFE00725EEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFE31D129DF9EFE00725EEE /* AppDelegate.swift */; };
 		0EFE31D429DF9EFE00725EEE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFE31D329DF9EFE00725EEE /* SceneDelegate.swift */; };
 		0EFE31E129DF9EFF00725EEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EFE31DF29DF9EFF00725EEE /* LaunchScreen.storyboard */; };
@@ -45,6 +55,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		0ECEF8DA29FCCFD0008E848E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0EFE31C629DF9EFE00725EEE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0ECEF8C729FCCFCE008E848E;
+			remoteInfo = MarshmallowWidgetExtension;
+		};
 		0EFE31E829DF9F0000725EEE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0EFE31C629DF9EFE00725EEE /* Project object */;
@@ -60,6 +77,20 @@
 			remoteInfo = SecureMarshmallow_V3;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0ECEF8E029FCCFD0008E848E /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				0ECEF8DC29FCCFD0008E848E /* MarshmallowWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0E40E14F29F3F36000615E86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Assets.xcassets/Assets.xcassets; sourceTree = "<group>"; };
@@ -81,6 +112,16 @@
 		0ECEF8B429FB98C6008E848E /* AppLogoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLogoCell.swift; sourceTree = "<group>"; };
 		0ECEF8BA29FBA771008E848E /* BaseSC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSC.swift; sourceTree = "<group>"; };
 		0ECEF8C029FC22A9008E848E /* CommonItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonItemType.swift; sourceTree = "<group>"; };
+		0ECEF8C229FCCA06008E848E /* MarshmallowWidgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarshmallowWidgetViewController.swift; sourceTree = "<group>"; };
+		0ECEF8C829FCCFCE008E848E /* MarshmallowWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MarshmallowWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		0ECEF8C929FCCFCE008E848E /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		0ECEF8CB29FCCFCF008E848E /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		0ECEF8CE29FCCFCF008E848E /* MarshmallowWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarshmallowWidgetBundle.swift; sourceTree = "<group>"; };
+		0ECEF8D029FCCFCF008E848E /* MarshmallowWidgetLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarshmallowWidgetLiveActivity.swift; sourceTree = "<group>"; };
+		0ECEF8D229FCCFCF008E848E /* MarshmallowWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarshmallowWidget.swift; sourceTree = "<group>"; };
+		0ECEF8D429FCCFCF008E848E /* MarshmallowWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = MarshmallowWidget.intentdefinition; sourceTree = "<group>"; };
+		0ECEF8D529FCCFD0008E848E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0ECEF8D729FCCFD0008E848E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0EFE31CE29DF9EFE00725EEE /* SecureMarshmallow_V3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecureMarshmallow_V3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EFE31D129DF9EFE00725EEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0EFE31D329DF9EFE00725EEE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +151,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0ECEF8C529FCCFCE008E848E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0ECEF8CC29FCCFCF008E848E /* SwiftUI.framework in Frameworks */,
+				0ECEF8CA29FCCFCF008E848E /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0EFE31CB29DF9EFE00725EEE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -205,12 +255,26 @@
 			path = AppLogo;
 			sourceTree = "<group>";
 		};
+		0ECEF8CD29FCCFCF008E848E /* MarshmallowWidget */ = {
+			isa = PBXGroup;
+			children = (
+				0ECEF8CE29FCCFCF008E848E /* MarshmallowWidgetBundle.swift */,
+				0ECEF8D029FCCFCF008E848E /* MarshmallowWidgetLiveActivity.swift */,
+				0ECEF8D229FCCFCF008E848E /* MarshmallowWidget.swift */,
+				0ECEF8D429FCCFCF008E848E /* MarshmallowWidget.intentdefinition */,
+				0ECEF8D529FCCFD0008E848E /* Assets.xcassets */,
+				0ECEF8D729FCCFD0008E848E /* Info.plist */,
+			);
+			path = MarshmallowWidget;
+			sourceTree = "<group>";
+		};
 		0EFE31C529DF9EFE00725EEE = {
 			isa = PBXGroup;
 			children = (
 				0EFE31D029DF9EFE00725EEE /* SecureMarshmallow_V3 */,
 				0EFE31EA29DF9F0000725EEE /* SecureMarshmallow_V3Tests */,
 				0EFE31F429DF9F0000725EEE /* SecureMarshmallow_V3UITests */,
+				0ECEF8CD29FCCFCF008E848E /* MarshmallowWidget */,
 				0EFE31CF29DF9EFE00725EEE /* Products */,
 				70A38A9AD45FC96047AF881A /* Pods */,
 				7B43630EA84C2A9B46D6F3F0 /* Frameworks */,
@@ -223,6 +287,7 @@
 				0EFE31CE29DF9EFE00725EEE /* SecureMarshmallow_V3.app */,
 				0EFE31E729DF9F0000725EEE /* SecureMarshmallow_V3Tests.xctest */,
 				0EFE31F129DF9F0000725EEE /* SecureMarshmallow_V3UITests.xctest */,
+				0ECEF8C829FCCFCE008E848E /* MarshmallowWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -316,6 +381,7 @@
 				0E8409B729E38CF8005EB879 /* Setting */,
 				0E8409AD29E383BC005EB879 /* Lock */,
 				0EFE323629DFC23600725EEE /* HomeViewController.swift */,
+				0ECEF8C229FCCA06008E848E /* MarshmallowWidgetViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -384,6 +450,8 @@
 				40845CBE8C39C18514247C52 /* Pods_SecureMarshmallow_V3.framework */,
 				0FBA3FD3EE3B33BE850B399D /* Pods_SecureMarshmallow_V3_SecureMarshmallow_V3UITests.framework */,
 				53B53B99C8AF3C119336DB4A /* Pods_SecureMarshmallow_V3Tests.framework */,
+				0ECEF8C929FCCFCE008E848E /* WidgetKit.framework */,
+				0ECEF8CB29FCCFCF008E848E /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -391,6 +459,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0ECEF8C729FCCFCE008E848E /* MarshmallowWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0ECEF8DD29FCCFD0008E848E /* Build configuration list for PBXNativeTarget "MarshmallowWidgetExtension" */;
+			buildPhases = (
+				0ECEF8C429FCCFCE008E848E /* Sources */,
+				0ECEF8C529FCCFCE008E848E /* Frameworks */,
+				0ECEF8C629FCCFCE008E848E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MarshmallowWidgetExtension;
+			productName = MarshmallowWidgetExtension;
+			productReference = 0ECEF8C829FCCFCE008E848E /* MarshmallowWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		0EFE31CD29DF9EFE00725EEE /* SecureMarshmallow_V3 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0EFE31FB29DF9F0000725EEE /* Build configuration list for PBXNativeTarget "SecureMarshmallow_V3" */;
@@ -400,10 +485,12 @@
 				0EFE31CB29DF9EFE00725EEE /* Frameworks */,
 				0EFE31CC29DF9EFE00725EEE /* Resources */,
 				B52DB2B82EA54F574024DB61 /* [CP] Embed Pods Frameworks */,
+				0ECEF8E029FCCFD0008E848E /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0ECEF8DB29FCCFD0008E848E /* PBXTargetDependency */,
 			);
 			name = SecureMarshmallow_V3;
 			productName = SecureMarshmallow_V3;
@@ -459,6 +546,9 @@
 				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
+					0ECEF8C729FCCFCE008E848E = {
+						CreatedOnToolsVersion = 14.3;
+					};
 					0EFE31CD29DF9EFE00725EEE = {
 						CreatedOnToolsVersion = 14.3;
 					};
@@ -488,11 +578,20 @@
 				0EFE31CD29DF9EFE00725EEE /* SecureMarshmallow_V3 */,
 				0EFE31E629DF9F0000725EEE /* SecureMarshmallow_V3Tests */,
 				0EFE31F029DF9F0000725EEE /* SecureMarshmallow_V3UITests */,
+				0ECEF8C729FCCFCE008E848E /* MarshmallowWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0ECEF8C629FCCFCE008E848E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0ECEF8D629FCCFD0008E848E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0EFE31CC29DF9EFE00725EEE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -622,6 +721,17 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0ECEF8C429FCCFCE008E848E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0ECEF8D129FCCFCF008E848E /* MarshmallowWidgetLiveActivity.swift in Sources */,
+				0ECEF8D329FCCFCF008E848E /* MarshmallowWidget.swift in Sources */,
+				0ECEF8D829FCCFD0008E848E /* MarshmallowWidget.intentdefinition in Sources */,
+				0ECEF8CF29FCCFCF008E848E /* MarshmallowWidgetBundle.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0EFE31CA29DF9EFE00725EEE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -633,6 +743,7 @@
 				0EFE323D29DFCE4300725EEE /* ListPresenter.swift in Sources */,
 				0E8409BD29E38D36005EB879 /* SettingsCell.swift in Sources */,
 				0E8409BB29E38D26005EB879 /* SettingsItemType.swift in Sources */,
+				0ECEF8D929FCCFD0008E848E /* MarshmallowWidget.intentdefinition in Sources */,
 				0ECEF8B529FB98C6008E848E /* AppLogoCell.swift in Sources */,
 				0E8409B429E38420005EB879 /* Passwords.swift in Sources */,
 				0EFE323529DFC22500725EEE /* TabbarViewController.swift in Sources */,
@@ -652,6 +763,7 @@
 				0ECEF8B129FB98A2008E848E /* AppLogoViewController.swift in Sources */,
 				0E5686FC29FA341100EEEBD3 /* CoreDataManager.swift in Sources */,
 				0ECEF8AE29FB933F008E848E /* GmailInformationViewController.swift in Sources */,
+				0ECEF8C329FCCA06008E848E /* MarshmallowWidgetViewController.swift in Sources */,
 				0ECEF8AA29FB930A008E848E /* GmailCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -676,6 +788,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		0ECEF8DB29FCCFD0008E848E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0ECEF8C729FCCFCE008E848E /* MarshmallowWidgetExtension */;
+			targetProxy = 0ECEF8DA29FCCFD0008E848E /* PBXContainerItemProxy */;
+		};
 		0EFE31E929DF9F0000725EEE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 0EFE31CD29DF9EFE00725EEE /* SecureMarshmallow_V3 */;
@@ -700,6 +817,60 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		0ECEF8DE29FCCFD0008E848E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 92YDTRVDUA;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MarshmallowWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MarshmallowWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.SecureMarshmallow-V3.MarshmallowWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0ECEF8DF29FCCFD0008E848E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 92YDTRVDUA;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MarshmallowWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MarshmallowWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.SecureMarshmallow-V3.MarshmallowWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		0EFE31F929DF9F0000725EEE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -820,6 +991,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7FEB6BDD0217C9658E753D11 /* Pods-SecureMarshmallow_V3.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "OldAppIcon BlackAppIcon WhiteAppIcon";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -852,6 +1024,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 24C059779EAEFEC7EC8A1A39 /* Pods-SecureMarshmallow_V3.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "OldAppIcon BlackAppIcon WhiteAppIcon";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -963,6 +1136,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0ECEF8DD29FCCFD0008E848E /* Build configuration list for PBXNativeTarget "MarshmallowWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0ECEF8DE29FCCFD0008E848E /* Debug */,
+				0ECEF8DF29FCCFD0008E848E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		0EFE31C929DF9EFE00725EEE /* Build configuration list for PBXProject "SecureMarshmallow_V3" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

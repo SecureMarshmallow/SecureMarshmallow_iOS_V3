@@ -14,7 +14,7 @@ class AppLogoViewController: UIViewController {
         
         title = "앱 로고 변경"
         
-        view.backgroundColor = .white
+        view.backgroundColor = .systemBackground
         view.addSubview(collectionView)
         collectionView.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(20)
