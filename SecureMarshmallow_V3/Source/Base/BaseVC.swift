@@ -22,7 +22,8 @@ class BaseVC: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = .systemBackground
         self.bind()
-        self.configure()
+        self.configureUI()
+        self.configureItem()
         self.view.setNeedsUpdateConstraints()
     }
     
@@ -33,8 +34,10 @@ class BaseVC: UIViewController {
     }
     
     func touchEvent() { }
-    func configure() { }
+    func configureItem() { }
     func bind() { }
     func layout() { }
     func attribute() { }
+    func configureUI() { }
+    func configureTableView() { }
 }
