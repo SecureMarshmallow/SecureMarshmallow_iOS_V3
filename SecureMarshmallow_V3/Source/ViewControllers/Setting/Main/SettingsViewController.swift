@@ -1,10 +1,8 @@
 import UIKit
 
-class SettingsViewController: UIViewController {
+class SettingsViewController: BaseSV {
 
     // MARK: - Properties
-
-    private let tableView = UITableView(frame: .zero, style: .grouped)
     
     private var settingsItems: [[SettingsItem]] = []
 
@@ -13,38 +11,22 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
-        configureTableView()
         configureSettingsItems()
     }
 
     // MARK: - Helpers
 
-    private func configureUI() {
-        view.backgroundColor = .systemBackground
+    override func configureUI() {
+        super.configureUI()
         navigationItem.title = "Settings"
         navigationController?.navigationBar.prefersLargeTitles = true
     }
 
-    private func configureTableView() {
-        view.addSubview(tableView)
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.delegate = self
-        tableView.dataSource = self
+    override func configureItems() {
         tableView.register(SettingsCell.self, forCellReuseIdentifier: SettingsCell.reuseIdentifier)
-        tableView.tableFooterView = UIView()
-        tableView.separatorStyle = .none
-        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 20, right: 0)
-        tableView.snp.makeConstraints { make in
-            make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
-            make.leading.equalTo(view.snp.leading)
-            make.trailing.equalTo(view.snp.trailing)
-            make.bottom.equalTo(view.snp.bottom)
-        }
     }
 
     private func configureSettingsItems() {
-//        let section1 = [SettingsItem(type: .account),
-//                        SettingsItem(type: .notification, hasSwitch: true, switchState: true)]
         let section1 = [SettingsItem(type: .gmailInformation),
                         SettingsItem(type: .idInformation)]
         let section2 = [SettingsItem(type: .appPassword),
@@ -72,24 +54,20 @@ class SettingsViewController: UIViewController {
 
 // MARK: - UITableViewDataSource
 
-extension SettingsViewController: UITableViewDataSource {
+extension SettingsViewController {
 
-    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        return UIView()
-    }
-
-    func numberOfSections(in tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return settingsItems.count
     }
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return settingsItems[section].count
     }
 
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: SettingsCell.reuseIdentifier, for: indexPath) as! SettingsCell
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = super.tableView(tableView, cellForRowAt: indexPath)
         let item = settingsItems[indexPath.section][indexPath.row]
-        cell.configure(with: item)
+        cell.textLabel?.text = item.type.title
         return cell
     }
 
@@ -97,17 +75,11 @@ extension SettingsViewController: UITableViewDataSource {
 
 // MARK: - UITableViewDelegate
 
-extension SettingsViewController: UITableViewDelegate {
+extension SettingsViewController {
 
-    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 15
-    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        super.tableView(tableView, didSelectRowAt: indexPath)
 
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
-    }
-
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
 
         let item = settingsItems[indexPath.section][indexPath.row]
@@ -152,4 +124,5 @@ extension SettingsViewController: UITableViewDelegate {
             print("개발자 정보")
         }
     }
+
 }
