@@ -14,7 +14,7 @@ enum SupportItemType {
         switch self {
             
         case .support:
-            return "지원"
+            return "카카오뱅크 7777-01-5832634"
         }
     }
 }

@@ -107,6 +107,9 @@ extension SettingsViewController {
         case .changeAppTheme:
             print("앱 테마 변경 클릭")
         case .help:
+            let supportVC = SupportViewController()
+            supportVC.modalPresentationStyle = .fullScreen
+            self.navigationController?.pushViewController(supportVC, animated: true)
             print("지원")
         case .bugReport:
             print("버그 제보")
