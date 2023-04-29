@@ -48,10 +48,8 @@ class TapBarViewController: UITabBarController {
 
         var tabFrame = tabBar.frame
         if UIScreen.main.bounds.height <= 667 {
-            // iPhone 5s, SE
             tabFrame.size.height = 50
         } else {
-            // iPhone 6, 6s, 7, 8, X, Xs, 11 Pro
             tabFrame.size.height = 70
         }
         tabBar.frame = tabFrame

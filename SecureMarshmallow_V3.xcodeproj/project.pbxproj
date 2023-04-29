@@ -20,6 +20,7 @@
 		0E09A61029FD0FB600EC6AE1 /* SupportItmeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E09A60F29FD0FB600EC6AE1 /* SupportItmeType.swift */; };
 		0E09A61229FD0FC400EC6AE1 /* SupportCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E09A61129FD0FC400EC6AE1 /* SupportCell.swift */; };
 		0E09A61429FD110700EC6AE1 /* BaseSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E09A61329FD110700EC6AE1 /* BaseSV.swift */; };
+		0E09A61A29FD28DC00EC6AE1 /* TimeOfAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E09A61929FD28DC00EC6AE1 /* TimeOfAppViewController.swift */; };
 		0E40E15029F3F36000615E86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E40E14F29F3F36000615E86 /* Assets.xcassets */; };
 		0E5686FC29FA341100EEEBD3 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5686FB29FA341100EEEBD3 /* CoreDataManager.swift */; };
 		0E5686FF29FA347300EEEBD3 /* SecureMarshmallow.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0E5686FD29FA347300EEEBD3 /* SecureMarshmallow.xcdatamodeld */; };
@@ -109,6 +110,7 @@
 		0E09A60F29FD0FB600EC6AE1 /* SupportItmeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportItmeType.swift; sourceTree = "<group>"; };
 		0E09A61129FD0FC400EC6AE1 /* SupportCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportCell.swift; sourceTree = "<group>"; };
 		0E09A61329FD110700EC6AE1 /* BaseSV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSV.swift; sourceTree = "<group>"; };
+		0E09A61929FD28DC00EC6AE1 /* TimeOfAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeOfAppViewController.swift; sourceTree = "<group>"; };
 		0E40E14F29F3F36000615E86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Assets.xcassets/Assets.xcassets; sourceTree = "<group>"; };
 		0E5686FB29FA341100EEEBD3 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		0E5686FE29FA347300EEEBD3 /* SecureMarshmallow.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SecureMarshmallow.xcdatamodel; sourceTree = "<group>"; };
@@ -220,6 +222,14 @@
 			path = Support;
 			sourceTree = "<group>";
 		};
+		0E09A61B29FD2C2600EC6AE1 /* TimeOfApp */ = {
+			isa = PBXGroup;
+			children = (
+				0E09A61929FD28DC00EC6AE1 /* TimeOfAppViewController.swift */,
+			);
+			path = TimeOfApp;
+			sourceTree = "<group>";
+		};
 		0E84099229E2D638005EB879 /* PasswordWrite */ = {
 			isa = PBXGroup;
 			children = (
@@ -252,6 +262,7 @@
 		0E8409B729E38CF8005EB879 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
+				0E09A61B29FD2C2600EC6AE1 /* TimeOfApp */,
 				0E09A60C29FD0F3F00EC6AE1 /* Support */,
 				0ECEF8AF29FB9890008E848E /* AppLogo */,
 				0ECEF8A729FB9249008E848E /* Main */,
@@ -781,6 +792,7 @@
 				0E09A61429FD110700EC6AE1 /* BaseSV.swift in Sources */,
 				0EFE323B29DFCDFB00725EEE /* ListViewController.swift in Sources */,
 				0E56871029FA37E800EEEBD3 /* Extensions+UIView.swift in Sources */,
+				0E09A61A29FD28DC00EC6AE1 /* TimeOfAppViewController.swift in Sources */,
 				0E5686FF29FA347300EEEBD3 /* SecureMarshmallow.xcdatamodeld in Sources */,
 				0ECEF8BB29FBA771008E848E /* BaseSC.swift in Sources */,
 				0E09A61229FD0FC400EC6AE1 /* SupportCell.swift in Sources */,

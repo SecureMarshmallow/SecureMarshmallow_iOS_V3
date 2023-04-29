@@ -97,7 +97,9 @@ extension SettingsViewController {
         case .appPassword:
             break
         case .appTracking:
-            print("로그아웃")
+            let timeOfAppVC = TimeOfAppViewController()
+            timeOfAppVC.modalPresentationStyle = .fullScreen
+            self.navigationController?.pushViewController(timeOfAppVC, animated: true)
             break
         case .changeAppIcon:
             let applogoVC = AppLogoViewController()
