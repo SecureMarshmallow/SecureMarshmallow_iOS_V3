@@ -20,5 +20,4 @@ class SupportCell: BaseSC<SupportItem> {
         switchControl.isOn = item.switchState
         switchControl.isHidden = !item.hasSwitch
     }
-
 }

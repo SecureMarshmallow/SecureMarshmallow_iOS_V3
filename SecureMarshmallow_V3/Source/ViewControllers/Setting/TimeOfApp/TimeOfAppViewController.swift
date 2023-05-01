@@ -8,6 +8,9 @@ class TimeOfAppViewController: UIViewController, UITableViewDelegate, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationController?.navigationBar.prefersLargeTitles = false
+        title = "앱 열기 추적"
+        
         // Set up table view
         tableView.delegate = self
         tableView.dataSource = self

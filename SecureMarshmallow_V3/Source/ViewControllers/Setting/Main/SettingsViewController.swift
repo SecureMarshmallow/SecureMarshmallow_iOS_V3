@@ -127,6 +127,9 @@ extension SettingsViewController {
             print("사용 방법")
         case .developerIformation:
             print("개발자 정보")
+            let devlopersVC = DevelopersViewController()
+            devlopersVC.modalPresentationStyle = .fullScreen
+            self.navigationController?.pushViewController(devlopersVC, animated: true)
         }
     }
 

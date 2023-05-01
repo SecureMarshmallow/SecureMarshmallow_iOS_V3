@@ -21,6 +21,10 @@
 		0E09A61229FD0FC400EC6AE1 /* SupportCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E09A61129FD0FC400EC6AE1 /* SupportCell.swift */; };
 		0E09A61429FD110700EC6AE1 /* BaseSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E09A61329FD110700EC6AE1 /* BaseSV.swift */; };
 		0E09A61A29FD28DC00EC6AE1 /* TimeOfAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E09A61929FD28DC00EC6AE1 /* TimeOfAppViewController.swift */; };
+		0E09A61E29FD7D0600EC6AE1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0E09A62029FD7D0600EC6AE1 /* Localizable.strings */; };
+		0E09A62529FF7DB600EC6AE1 /* DevelopersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E09A62429FF7DB600EC6AE1 /* DevelopersViewController.swift */; };
+		0E09A62729FF7DCA00EC6AE1 /* DevelopersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E09A62629FF7DCA00EC6AE1 /* DevelopersTableViewCell.swift */; };
+		0E09A62929FF7E5B00EC6AE1 /* Extensions+NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E09A62829FF7E5B00EC6AE1 /* Extensions+NSObject.swift */; };
 		0E40E15029F3F36000615E86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E40E14F29F3F36000615E86 /* Assets.xcassets */; };
 		0E5686FC29FA341100EEEBD3 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5686FB29FA341100EEEBD3 /* CoreDataManager.swift */; };
 		0E5686FF29FA347300EEEBD3 /* SecureMarshmallow.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0E5686FD29FA347300EEEBD3 /* SecureMarshmallow.xcdatamodeld */; };
@@ -111,6 +115,11 @@
 		0E09A61129FD0FC400EC6AE1 /* SupportCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportCell.swift; sourceTree = "<group>"; };
 		0E09A61329FD110700EC6AE1 /* BaseSV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSV.swift; sourceTree = "<group>"; };
 		0E09A61929FD28DC00EC6AE1 /* TimeOfAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeOfAppViewController.swift; sourceTree = "<group>"; };
+		0E09A61F29FD7D0600EC6AE1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0E09A62129FD7D4100EC6AE1 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0E09A62429FF7DB600EC6AE1 /* DevelopersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevelopersViewController.swift; sourceTree = "<group>"; };
+		0E09A62629FF7DCA00EC6AE1 /* DevelopersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevelopersTableViewCell.swift; sourceTree = "<group>"; };
+		0E09A62829FF7E5B00EC6AE1 /* Extensions+NSObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+NSObject.swift"; sourceTree = "<group>"; };
 		0E40E14F29F3F36000615E86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Assets.xcassets/Assets.xcassets; sourceTree = "<group>"; };
 		0E5686FB29FA341100EEEBD3 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		0E5686FE29FA347300EEEBD3 /* SecureMarshmallow.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SecureMarshmallow.xcdatamodel; sourceTree = "<group>"; };
@@ -230,6 +239,15 @@
 			path = TimeOfApp;
 			sourceTree = "<group>";
 		};
+		0E09A62A29FF947200EC6AE1 /* DeveloperIntroduction */ = {
+			isa = PBXGroup;
+			children = (
+				0E09A62429FF7DB600EC6AE1 /* DevelopersViewController.swift */,
+				0E09A62629FF7DCA00EC6AE1 /* DevelopersTableViewCell.swift */,
+			);
+			path = DeveloperIntroduction;
+			sourceTree = "<group>";
+		};
 		0E84099229E2D638005EB879 /* PasswordWrite */ = {
 			isa = PBXGroup;
 			children = (
@@ -262,6 +280,7 @@
 		0E8409B729E38CF8005EB879 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
+				0E09A62A29FF947200EC6AE1 /* DeveloperIntroduction */,
 				0E09A61B29FD2C2600EC6AE1 /* TimeOfApp */,
 				0E09A60C29FD0F3F00EC6AE1 /* Support */,
 				0ECEF8AF29FB9890008E848E /* AppLogo */,
@@ -374,6 +393,7 @@
 				0EFE320729DFA13500725EEE /* Assets */,
 				0EFE31D129DF9EFE00725EEE /* AppDelegate.swift */,
 				0EFE31D329DF9EFE00725EEE /* SceneDelegate.swift */,
+				0E09A62029FD7D0600EC6AE1 /* Localizable.strings */,
 				0EFE31E229DF9EFF00725EEE /* Info.plist */,
 			);
 			path = "Supporting Files";
@@ -423,6 +443,7 @@
 			isa = PBXGroup;
 			children = (
 				0E56870F29FA37E800EEEBD3 /* Extensions+UIView.swift */,
+				0E09A62829FF7E5B00EC6AE1 /* Extensions+NSObject.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -603,6 +624,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ko,
 			);
 			mainGroup = 0EFE31C529DF9EFE00725EEE;
 			productRefGroup = 0EFE31CF29DF9EFE00725EEE /* Products */;
@@ -631,6 +653,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E40E15029F3F36000615E86 /* Assets.xcassets in Resources */,
+				0E09A61E29FD7D0600EC6AE1 /* Localizable.strings in Resources */,
 				0EFE31E129DF9EFF00725EEE /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -788,17 +811,20 @@
 				0EFE31D229DF9EFE00725EEE /* AppDelegate.swift in Sources */,
 				0EFE321029DFA1E700725EEE /* BaseNC.swift in Sources */,
 				0EFE323F29DFCE8200725EEE /* UserDefaultsManager.swift in Sources */,
+				0E09A62729FF7DCA00EC6AE1 /* DevelopersTableViewCell.swift in Sources */,
 				0EFE31D429DF9EFE00725EEE /* SceneDelegate.swift in Sources */,
 				0E09A61429FD110700EC6AE1 /* BaseSV.swift in Sources */,
 				0EFE323B29DFCDFB00725EEE /* ListViewController.swift in Sources */,
 				0E56871029FA37E800EEEBD3 /* Extensions+UIView.swift in Sources */,
 				0E09A61A29FD28DC00EC6AE1 /* TimeOfAppViewController.swift in Sources */,
 				0E5686FF29FA347300EEEBD3 /* SecureMarshmallow.xcdatamodeld in Sources */,
+				0E09A62529FF7DB600EC6AE1 /* DevelopersViewController.swift in Sources */,
 				0ECEF8BB29FBA771008E848E /* BaseSC.swift in Sources */,
 				0E09A61229FD0FC400EC6AE1 /* SupportCell.swift in Sources */,
 				0E09A60529FD0A3500EC6AE1 /* MarshmallowWidget.intentdefinition in Sources */,
 				0EFE320E29DFA1D000725EEE /* BaseVC.swift in Sources */,
 				0E8409B629E3843B005EB879 /* SavePassword.swift in Sources */,
+				0E09A62929FF7E5B00EC6AE1 /* Extensions+NSObject.swift in Sources */,
 				0ECEF8B129FB98A2008E848E /* AppLogoViewController.swift in Sources */,
 				0E5686FC29FA341100EEEBD3 /* CoreDataManager.swift in Sources */,
 				0ECEF8AE29FB933F008E848E /* GmailInformationViewController.swift in Sources */,
@@ -846,6 +872,15 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		0E09A62029FD7D0600EC6AE1 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0E09A61F29FD7D0600EC6AE1 /* en */,
+				0E09A62129FD7D4100EC6AE1 /* ko */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		0EFE31DF29DF9EFF00725EEE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -915,6 +950,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -976,6 +1012,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
