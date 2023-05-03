@@ -10,6 +10,8 @@ import Then
 
 class ImageCollectionViewCell: UICollectionViewCell {
     
+    static var identifier = "ImageCollectionViewCell"
+    
     let imageView = UIImageView().then {
         $0.contentMode = .scaleAspectFill
         $0.clipsToBounds = true

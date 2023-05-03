@@ -5,7 +5,7 @@ import Then
 class ImageCollectionViewController: UIViewController {
     let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout()).then {
         $0.backgroundColor = .white
-        $0.register(ImageCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+        $0.register(ImageCollectionViewCell.self, forCellWithReuseIdentifier: ImageCollectionViewCell.identifier)
     }
     
     var images = [UIImage(named: "BlackLogo"), UIImage(named: "BlackLogo"), UIImage(named: "BlackLogo"), UIImage(named: "BlackLogo")]
@@ -71,7 +71,7 @@ extension ImageCollectionViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! ImageCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImageCollectionViewCell.identifier, for: indexPath) as! ImageCollectionViewCell
         cell.imageView.image = images[indexPath.row]
         return cell
     }
