@@ -25,6 +25,8 @@
 		0E09A62529FF7DB600EC6AE1 /* DevelopersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E09A62429FF7DB600EC6AE1 /* DevelopersViewController.swift */; };
 		0E09A62729FF7DCA00EC6AE1 /* DevelopersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E09A62629FF7DCA00EC6AE1 /* DevelopersTableViewCell.swift */; };
 		0E09A62929FF7E5B00EC6AE1 /* Extensions+NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E09A62829FF7E5B00EC6AE1 /* Extensions+NSObject.swift */; };
+		0E09A62C2A01EDF800EC6AE1 /* ImageCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E09A62B2A01EDF800EC6AE1 /* ImageCollectionViewController.swift */; };
+		0E09A62F2A01F70300EC6AE1 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E09A62E2A01F70300EC6AE1 /* ImageCollectionViewCell.swift */; };
 		0E40E15029F3F36000615E86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E40E14F29F3F36000615E86 /* Assets.xcassets */; };
 		0E5686FC29FA341100EEEBD3 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5686FB29FA341100EEEBD3 /* CoreDataManager.swift */; };
 		0E5686FF29FA347300EEEBD3 /* SecureMarshmallow.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0E5686FD29FA347300EEEBD3 /* SecureMarshmallow.xcdatamodeld */; };
@@ -120,6 +122,8 @@
 		0E09A62429FF7DB600EC6AE1 /* DevelopersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevelopersViewController.swift; sourceTree = "<group>"; };
 		0E09A62629FF7DCA00EC6AE1 /* DevelopersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevelopersTableViewCell.swift; sourceTree = "<group>"; };
 		0E09A62829FF7E5B00EC6AE1 /* Extensions+NSObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+NSObject.swift"; sourceTree = "<group>"; };
+		0E09A62B2A01EDF800EC6AE1 /* ImageCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewController.swift; sourceTree = "<group>"; };
+		0E09A62E2A01F70300EC6AE1 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		0E40E14F29F3F36000615E86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Assets.xcassets/Assets.xcassets; sourceTree = "<group>"; };
 		0E5686FB29FA341100EEEBD3 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		0E5686FE29FA347300EEEBD3 /* SecureMarshmallow.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SecureMarshmallow.xcdatamodel; sourceTree = "<group>"; };
@@ -246,6 +250,15 @@
 				0E09A62629FF7DCA00EC6AE1 /* DevelopersTableViewCell.swift */,
 			);
 			path = DeveloperIntroduction;
+			sourceTree = "<group>";
+		};
+		0E09A62D2A01F6F200EC6AE1 /* Photo */ = {
+			isa = PBXGroup;
+			children = (
+				0E09A62B2A01EDF800EC6AE1 /* ImageCollectionViewController.swift */,
+				0E09A62E2A01F70300EC6AE1 /* ImageCollectionViewCell.swift */,
+			);
+			path = Photo;
 			sourceTree = "<group>";
 		};
 		0E84099229E2D638005EB879 /* PasswordWrite */ = {
@@ -430,6 +443,7 @@
 		0EFE320A29DFA1A500725EEE /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				0E09A62D2A01F6F200EC6AE1 /* Photo */,
 				0E8409B729E38CF8005EB879 /* Setting */,
 				0E8409AD29E383BC005EB879 /* Lock */,
 				0EFE323629DFC23600725EEE /* HomeViewController.swift */,
@@ -812,12 +826,14 @@
 				0EFE321029DFA1E700725EEE /* BaseNC.swift in Sources */,
 				0EFE323F29DFCE8200725EEE /* UserDefaultsManager.swift in Sources */,
 				0E09A62729FF7DCA00EC6AE1 /* DevelopersTableViewCell.swift in Sources */,
+				0E09A62C2A01EDF800EC6AE1 /* ImageCollectionViewController.swift in Sources */,
 				0EFE31D429DF9EFE00725EEE /* SceneDelegate.swift in Sources */,
 				0E09A61429FD110700EC6AE1 /* BaseSV.swift in Sources */,
 				0EFE323B29DFCDFB00725EEE /* ListViewController.swift in Sources */,
 				0E56871029FA37E800EEEBD3 /* Extensions+UIView.swift in Sources */,
 				0E09A61A29FD28DC00EC6AE1 /* TimeOfAppViewController.swift in Sources */,
 				0E5686FF29FA347300EEEBD3 /* SecureMarshmallow.xcdatamodeld in Sources */,
+				0E09A62F2A01F70300EC6AE1 /* ImageCollectionViewCell.swift in Sources */,
 				0E09A62529FF7DB600EC6AE1 /* DevelopersViewController.swift in Sources */,
 				0ECEF8BB29FBA771008E848E /* BaseSC.swift in Sources */,
 				0E09A61229FD0FC400EC6AE1 /* SupportCell.swift in Sources */,
