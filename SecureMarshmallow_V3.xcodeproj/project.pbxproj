@@ -53,6 +53,7 @@
 		0EDB05A32A0CD06F009E46A8 /* ExplanationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDB05A22A0CD06F009E46A8 /* ExplanationCollectionViewCell.swift */; };
 		0EDB05A52A0D0191009E46A8 /* BaseEP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDB05A42A0D0191009E46A8 /* BaseEP.swift */; };
 		0EDB05A82A0D05C8009E46A8 /* OSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDB05A72A0D05C8009E46A8 /* OSViewController.swift */; };
+		0EDB05B32A0DADB9009E46A8 /* FileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDB05B22A0DADB9009E46A8 /* FileViewController.swift */; };
 		0EFE31D229DF9EFE00725EEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFE31D129DF9EFE00725EEE /* AppDelegate.swift */; };
 		0EFE31D429DF9EFE00725EEE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFE31D329DF9EFE00725EEE /* SceneDelegate.swift */; };
 		0EFE31E129DF9EFF00725EEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EFE31DF29DF9EFF00725EEE /* LaunchScreen.storyboard */; };
@@ -154,6 +155,7 @@
 		0EDB05A22A0CD06F009E46A8 /* ExplanationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplanationCollectionViewCell.swift; sourceTree = "<group>"; };
 		0EDB05A42A0D0191009E46A8 /* BaseEP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseEP.swift; sourceTree = "<group>"; };
 		0EDB05A72A0D05C8009E46A8 /* OSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSViewController.swift; sourceTree = "<group>"; };
+		0EDB05B22A0DADB9009E46A8 /* FileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileViewController.swift; sourceTree = "<group>"; };
 		0EFE31CE29DF9EFE00725EEE /* SecureMarshmallow_V3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecureMarshmallow_V3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EFE31D129DF9EFE00725EEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0EFE31D329DF9EFE00725EEE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -371,12 +373,12 @@
 			path = ExplanationCollectionViewCell;
 			sourceTree = "<group>";
 		};
-		0EDB05AB2A0D53E2009E46A8 /* NavigationViewController */ = {
+		0EDB05AB2A0D53E2009E46A8 /* BaseNavigationViewController */ = {
 			isa = PBXGroup;
 			children = (
 				0EFE320F29DFA1E700725EEE /* BaseNC.swift */,
 			);
-			path = NavigationViewController;
+			path = BaseNavigationViewController;
 			sourceTree = "<group>";
 		};
 		0EDB05AC2A0D5402009E46A8 /* BaseSettingViewController */ = {
@@ -419,6 +421,14 @@
 				0ECEF8C029FC22A9008E848E /* CommonItemType.swift */,
 			);
 			path = BaseSettingType;
+			sourceTree = "<group>";
+		};
+		0EDB05B12A0DADAC009E46A8 /* File */ = {
+			isa = PBXGroup;
+			children = (
+				0EDB05B22A0DADB9009E46A8 /* FileViewController.swift */,
+			);
+			path = File;
 			sourceTree = "<group>";
 		};
 		0EFE31C529DF9EFE00725EEE = {
@@ -531,6 +541,7 @@
 		0EFE320A29DFA1A500725EEE /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				0EDB05B12A0DADAC009E46A8 /* File */,
 				0EDB05A62A0D05B9009E46A8 /* OS */,
 				0EDB059D2A0CC228009E46A8 /* Battery */,
 				0E09A62D2A01F6F200EC6AE1 /* Photo */,
@@ -558,7 +569,7 @@
 			children = (
 				0EDB05A92A0D53AF009E46A8 /* BaseViewController */,
 				0EDB05AA2A0D53D0009E46A8 /* ExplanationCollectionViewCell */,
-				0EDB05AB2A0D53E2009E46A8 /* NavigationViewController */,
+				0EDB05AB2A0D53E2009E46A8 /* BaseNavigationViewController */,
 				0EDB05AD2A0D5424009E46A8 /* BaseSetting */,
 				0EDB05AF2A0D5476009E46A8 /* ExplanationViewController */,
 			);
@@ -917,6 +928,7 @@
 				0EFE31D229DF9EFE00725EEE /* AppDelegate.swift in Sources */,
 				0EFE321029DFA1E700725EEE /* BaseNC.swift in Sources */,
 				0EFE323F29DFCE8200725EEE /* UserDefaultsManager.swift in Sources */,
+				0EDB05B32A0DADB9009E46A8 /* FileViewController.swift in Sources */,
 				0E09A62729FF7DCA00EC6AE1 /* DevelopersTableViewCell.swift in Sources */,
 				0E09A62C2A01EDF800EC6AE1 /* ImageCollectionViewController.swift in Sources */,
 				0EFE31D429DF9EFE00725EEE /* SceneDelegate.swift in Sources */,
