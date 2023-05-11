@@ -21,7 +21,6 @@
 		0E09A61229FD0FC400EC6AE1 /* SupportCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E09A61129FD0FC400EC6AE1 /* SupportCell.swift */; };
 		0E09A61429FD110700EC6AE1 /* BaseSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E09A61329FD110700EC6AE1 /* BaseSV.swift */; };
 		0E09A61A29FD28DC00EC6AE1 /* TimeOfAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E09A61929FD28DC00EC6AE1 /* TimeOfAppViewController.swift */; };
-		0E09A61E29FD7D0600EC6AE1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0E09A62029FD7D0600EC6AE1 /* Localizable.strings */; };
 		0E09A62529FF7DB600EC6AE1 /* DevelopersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E09A62429FF7DB600EC6AE1 /* DevelopersViewController.swift */; };
 		0E09A62729FF7DCA00EC6AE1 /* DevelopersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E09A62629FF7DCA00EC6AE1 /* DevelopersTableViewCell.swift */; };
 		0E09A62929FF7E5B00EC6AE1 /* Extensions+NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E09A62829FF7E5B00EC6AE1 /* Extensions+NSObject.swift */; };
@@ -117,8 +116,6 @@
 		0E09A61129FD0FC400EC6AE1 /* SupportCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportCell.swift; sourceTree = "<group>"; };
 		0E09A61329FD110700EC6AE1 /* BaseSV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSV.swift; sourceTree = "<group>"; };
 		0E09A61929FD28DC00EC6AE1 /* TimeOfAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeOfAppViewController.swift; sourceTree = "<group>"; };
-		0E09A61F29FD7D0600EC6AE1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		0E09A62129FD7D4100EC6AE1 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0E09A62429FF7DB600EC6AE1 /* DevelopersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevelopersViewController.swift; sourceTree = "<group>"; };
 		0E09A62629FF7DCA00EC6AE1 /* DevelopersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevelopersTableViewCell.swift; sourceTree = "<group>"; };
 		0E09A62829FF7E5B00EC6AE1 /* Extensions+NSObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+NSObject.swift"; sourceTree = "<group>"; };
@@ -406,7 +403,6 @@
 				0EFE320729DFA13500725EEE /* Assets */,
 				0EFE31D129DF9EFE00725EEE /* AppDelegate.swift */,
 				0EFE31D329DF9EFE00725EEE /* SceneDelegate.swift */,
-				0E09A62029FD7D0600EC6AE1 /* Localizable.strings */,
 				0EFE31E229DF9EFF00725EEE /* Info.plist */,
 			);
 			path = "Supporting Files";
@@ -667,7 +663,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E40E15029F3F36000615E86 /* Assets.xcassets in Resources */,
-				0E09A61E29FD7D0600EC6AE1 /* Localizable.strings in Resources */,
 				0EFE31E129DF9EFF00725EEE /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -888,15 +883,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		0E09A62029FD7D0600EC6AE1 /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0E09A61F29FD7D0600EC6AE1 /* en */,
-				0E09A62129FD7D4100EC6AE1 /* ko */,
-			);
-			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
 		0EFE31DF29DF9EFF00725EEE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

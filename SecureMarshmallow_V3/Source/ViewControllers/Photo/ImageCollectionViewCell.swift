@@ -20,6 +20,7 @@ class ImageCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         contentView.addSubview(imageView)
+        imageView.layer.cornerRadius = 10
         imageView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }

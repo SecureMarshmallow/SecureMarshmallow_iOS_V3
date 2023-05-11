@@ -23,6 +23,7 @@ class SettingsViewController: BaseSV {
     }
 
     override func configureItems() {
+//        super.configureItems()
         tableView.register(SettingsCell.self, forCellReuseIdentifier: SettingsCell.reuseIdentifier)
     }
 
@@ -68,6 +69,18 @@ extension SettingsViewController {
         let cell = super.tableView(tableView, cellForRowAt: indexPath)
         let item = settingsItems[indexPath.section][indexPath.row]
         cell.textLabel?.text = item.type.title
+        
+        // 셀의 둥근 모서리를 위한 UIBezierPath 생성
+        let path = UIBezierPath(roundedRect: cell.bounds,
+                                byRoundingCorners: [.topLeft, .topRight, .bottomLeft, .bottomRight],
+                                cornerRadii: CGSize(width: 10, height: 10))
+
+        // CAShapeLayer를 사용하여 둥근 모서리 적용
+        let shape = CAShapeLayer()
+        shape.path = path.cgPath
+        cell.layer.mask = shape
+        
+        // contentView에 여백 적용
         return cell
     }
 

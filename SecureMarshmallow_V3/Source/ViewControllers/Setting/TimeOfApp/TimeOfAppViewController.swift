@@ -18,12 +18,10 @@ class TimeOfAppViewController: UIViewController, UITableViewDelegate, UITableVie
         view.addSubview(tableView)
         tableView.frame = view.bounds
         
-        // Load times from UserDefaults
         if let savedTimes = UserDefaults.standard.stringArray(forKey: "times") {
             times = savedTimes
         }
         
-        // Add current time to times array
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         let currentTime = formatter.string(from: Date())

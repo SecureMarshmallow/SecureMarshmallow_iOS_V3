@@ -87,6 +87,7 @@ enum SettingsItemType {
             return UIImage(systemName: "info.circle")
         }
     }
+    
 }
 
 struct SettingsItem: CommonItemType {
@@ -96,9 +97,12 @@ struct SettingsItem: CommonItemType {
     let hasSwitch: Bool
     var switchState: Bool
     
-    init(type: ItemType, hasSwitch: Bool = false, switchState: Bool = false) {
+    var cornerRadius: CGFloat = 0 
+    
+    init(type: ItemType, hasSwitch: Bool = false, switchState: Bool = false, cornerRadius: CGFloat = 0) {
         self.type = type
         self.hasSwitch = hasSwitch
         self.switchState = switchState
+        self.cornerRadius = cornerRadius
     }
 }
