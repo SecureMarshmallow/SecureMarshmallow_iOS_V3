@@ -20,6 +20,13 @@ class SettingsViewController: BaseSV {
         super.configureUI()
         navigationItem.title = "Settings"
         navigationController?.navigationBar.prefersLargeTitles = true
+        
+        if let font = UIFont(name: "HelveticaNeue-Bold", size: 24) {
+            navigationController?.navigationBar.largeTitleTextAttributes = [
+                NSAttributedString.Key.font: font,
+                NSAttributedString.Key.foregroundColor: UIColor.black
+            ]
+        }
     }
 
     override func configureItems() {
@@ -70,17 +77,14 @@ extension SettingsViewController {
         let item = settingsItems[indexPath.section][indexPath.row]
         cell.textLabel?.text = item.type.title
         
-        // 셀의 둥근 모서리를 위한 UIBezierPath 생성
         let path = UIBezierPath(roundedRect: cell.bounds,
                                 byRoundingCorners: [.topLeft, .topRight, .bottomLeft, .bottomRight],
                                 cornerRadii: CGSize(width: 10, height: 10))
 
-        // CAShapeLayer를 사용하여 둥근 모서리 적용
         let shape = CAShapeLayer()
         shape.path = path.cgPath
         cell.layer.mask = shape
         
-        // contentView에 여백 적용
         return cell
     }
 
