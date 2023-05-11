@@ -5,6 +5,12 @@ import UIKit
 final class ListViewController: UIViewController {
     private lazy var presenter = ListPresenter(viewController: self)
     
+    private lazy var navLabel = UILabel().then {
+        $0.textColor = UIColor.black
+        $0.text = "메모"
+        $0.font = .systemFont(ofSize: 24.0, weight: .bold)
+    }
+    
     private lazy var tableView = UITableView().then {
         $0.dataSource = presenter
     }
@@ -24,8 +30,11 @@ final class ListViewController: UIViewController {
 
 extension ListViewController: ListProtocol {
     func setupNavigationBar() {
-        navigationItem.title = "SecureMarshmallow"
-        navigationController?.navigationBar.prefersLargeTitles = true
+//        navigationItem.title = "SecureMarshmallow"
+//        navigationController?.navigationBar.prefersLargeTitles = true
+        
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(customView: navLabel)
+        self.navigationItem.leftItemsSupplementBackButton = true
         
         let rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(didTapRightBarButtonItem))
         navigationItem.rightBarButtonItem = rightBarButtonItem

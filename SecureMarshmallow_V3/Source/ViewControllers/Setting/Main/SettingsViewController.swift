@@ -1,10 +1,18 @@
 import UIKit
+import Then
 
 class SettingsViewController: BaseSV {
 
     // MARK: - Properties
     
     private var settingsItems: [[SettingsItem]] = []
+    
+    private lazy var navLabel = UILabel().then {
+        $0.textColor = UIColor.black
+        $0.text = "설정"
+        $0.font = .systemFont(ofSize: 24.0, weight: .bold)
+    }
+    
 
     // MARK: - Lifecycle
 
@@ -18,15 +26,8 @@ class SettingsViewController: BaseSV {
 
     override func configureUI() {
         super.configureUI()
-        navigationItem.title = "Settings"
-        navigationController?.navigationBar.prefersLargeTitles = true
-        
-        if let font = UIFont(name: "HelveticaNeue-Bold", size: 24) {
-            navigationController?.navigationBar.largeTitleTextAttributes = [
-                NSAttributedString.Key.font: font,
-                NSAttributedString.Key.foregroundColor: UIColor.black
-            ]
-        }
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(customView: navLabel)
+        self.navigationItem.leftItemsSupplementBackButton = true
     }
 
     override func configureItems() {
