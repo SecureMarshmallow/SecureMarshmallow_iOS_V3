@@ -9,20 +9,22 @@ import SnapKit
 import UIKit
 import Kingfisher
 
-class BatteryCollectionViewCell: UICollectionViewCell {
+class ExplanationCollectionViewCell: UICollectionViewCell {
     static var height: CGFloat { 70.0 }
     
-    static let identifier = "BatteryCollectionViewCell"
+    static let identifier = "ExplanationCollectionViewCell"
 
     var titleLabel = UILabel().then {
         $0.text = "안녕"
-        $0.font = .systemFont(ofSize: 14.0, weight: .bold)
-        $0.textColor = .red
+        $0.font = .systemFont(ofSize: 17.0, weight: .semibold)
+        $0.textColor = .black
         $0.numberOfLines = 2
     }
 
      var descriptionLabel = UILabel().then {
-         $0.font = .systemFont(ofSize: 12.0, weight: .semibold)
+         $0.text = "흐흐흐흐"
+         $0.numberOfLines = 1
+         $0.font = .systemFont(ofSize: 17.0, weight: .semibold)
          $0.textColor = .secondaryLabel
      }
     
@@ -39,9 +41,8 @@ class BatteryCollectionViewCell: UICollectionViewCell {
         }
 
         descriptionLabel.snp.makeConstraints {
-            $0.leading.equalTo(titleLabel.snp.leading)
-            $0.trailing.equalTo(titleLabel.snp.trailing)
-            $0.top.equalTo(titleLabel.snp.bottom).offset(5.0)
+            $0.centerY.equalToSuperview()
+            $0.trailing.equalToSuperview().inset(20.0)
         }
     }
 }

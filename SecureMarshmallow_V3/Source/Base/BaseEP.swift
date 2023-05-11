@@ -1,17 +1,17 @@
 //
-//  BatteryViewController.swift
+//  BaseIN.swift
 //  SecureMarshmallow_V3
 //
 //  Created by 박준하 on 2023/05/11.
 //
 
 import UIKit
-import SnapKit
 import Then
+import SnapKit
 
-class BatteryViewController: UIViewController {
+class BaseEP: BaseVC {
     
-    private lazy var collectionView: UICollectionView = {
+    internal lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         layout.minimumLineSpacing = 60.0
@@ -39,43 +39,45 @@ class BatteryViewController: UIViewController {
         return collectionView
     }()
     
-    private lazy var batteryImageView = UIImageView().then {
+    internal lazy var customImageView = UIImageView().then {
         $0.image = UIImage(named: "Battery")
     }
-
-    private lazy var backgroundView = UIView().then {
+    
+    internal lazy var backgroundView = UIView().then {
         $0.backgroundColor = .BackGray
     }
-
-    private lazy var nameLabel = UILabel().then {
-        $0.text = "배터리"
+    
+    internal lazy var nameLabel = UILabel().then {
+        $0.text = "이름을 입력해주세요"
         $0.font = .systemFont(ofSize: 20, weight: .bold)
         $0.numberOfLines = 1
         $0.textColor = .black
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        view.backgroundColor = .white
-        
+        view.backgroundColor = .white // 추가
+        updateWith(self)
+    }
+    
+    func updateWith(_ controller: UIViewController) {
         [
-            batteryImageView,
+            customImageView,
             backgroundView,
             nameLabel,
             collectionView
         ].forEach { view.addSubview($0) }
-
+        
         backgroundView.layer.cornerRadius = 20.0
 
-        batteryImageView.snp.makeConstraints {
+        customImageView.snp.makeConstraints {
             $0.height.width.equalTo(200.0)
             $0.centerX.equalToSuperview()
             $0.top.equalTo(view.safeAreaLayoutGuide).offset(50.0)
         }
 
         backgroundView.snp.makeConstraints {
-            $0.top.equalTo(batteryImageView.snp.bottom).offset(95.0)
+            $0.top.equalTo(customImageView.snp.bottom).offset(95.0)
             $0.leading.trailing.equalToSuperview()
             $0.width.equalToSuperview()
             $0.height.equalTo(430.0)
@@ -94,13 +96,14 @@ class BatteryViewController: UIViewController {
     }
 }
 
-extension BatteryViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
-
+extension BaseEP: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 6
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ExplanationCollectionViewCell.identifier, for: indexPath) as? ExplanationCollectionViewCell
         
         cell?.layer.cornerRadius = 20.0
@@ -112,18 +115,18 @@ extension BatteryViewController: UICollectionViewDelegateFlowLayout, UICollectio
         
         return cell ?? UICollectionViewCell()
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         CGSize(
-            width: collectionView.frame.width - 60.0,
+            width: collectionView.frame.width - 60,
             height: ExplanationCollectionViewCell.height
         )
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 30.0
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
