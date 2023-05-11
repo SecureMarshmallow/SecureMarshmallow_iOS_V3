@@ -25,6 +25,13 @@ class ImageCollectionViewController: UIViewController {
             $0.edges.equalToSuperview()
         }
         
+//        let layout = UICollectionViewFlowLayout()
+//        let itemSize = CGSize(width: 185, height: 185)
+//        layout.itemSize = itemSize
+//        layout.minimumInteritemSpacing = 20
+//        layout.minimumLineSpacing = 20
+//        collectionView.collectionViewLayout = layout
+        
         collectionView.dataSource = self
         collectionView.delegate = self
         
@@ -99,26 +106,18 @@ extension ImageCollectionViewController: UIImagePickerControllerDelegate, UINavi
     }
 }
 
+extension ImageCollectionViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let image = images[indexPath.row]
+    }
+}
+
 extension ImageCollectionViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+    }
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = (view.frame.width - 30) / 2
-        
-        return CGSize(width: width, height: width)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 10
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 10
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: 50)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: 50)
+        return CGSize(width: 165, height: 165)
     }
 }
