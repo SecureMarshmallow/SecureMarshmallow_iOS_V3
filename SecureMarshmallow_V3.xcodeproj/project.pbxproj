@@ -355,6 +355,72 @@
 			path = OS;
 			sourceTree = "<group>";
 		};
+		0EDB05A92A0D53AF009E46A8 /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0EFE320D29DFA1D000725EEE /* BaseVC.swift */,
+			);
+			path = BaseViewController;
+			sourceTree = "<group>";
+		};
+		0EDB05AA2A0D53D0009E46A8 /* ExplanationCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				0EDB05A22A0CD06F009E46A8 /* ExplanationCollectionViewCell.swift */,
+			);
+			path = ExplanationCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		0EDB05AB2A0D53E2009E46A8 /* NavigationViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0EFE320F29DFA1E700725EEE /* BaseNC.swift */,
+			);
+			path = NavigationViewController;
+			sourceTree = "<group>";
+		};
+		0EDB05AC2A0D5402009E46A8 /* BaseSettingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0E09A61329FD110700EC6AE1 /* BaseSV.swift */,
+			);
+			path = BaseSettingViewController;
+			sourceTree = "<group>";
+		};
+		0EDB05AD2A0D5424009E46A8 /* BaseSetting */ = {
+			isa = PBXGroup;
+			children = (
+				0EDB05B02A0D549E009E46A8 /* BaseSettingType */,
+				0EDB05AC2A0D5402009E46A8 /* BaseSettingViewController */,
+				0EDB05AE2A0D5436009E46A8 /* BaseSettingCell */,
+			);
+			path = BaseSetting;
+			sourceTree = "<group>";
+		};
+		0EDB05AE2A0D5436009E46A8 /* BaseSettingCell */ = {
+			isa = PBXGroup;
+			children = (
+				0ECEF8BA29FBA771008E848E /* BaseSC.swift */,
+			);
+			path = BaseSettingCell;
+			sourceTree = "<group>";
+		};
+		0EDB05AF2A0D5476009E46A8 /* ExplanationViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0EDB05A42A0D0191009E46A8 /* BaseEP.swift */,
+			);
+			path = ExplanationViewController;
+			sourceTree = "<group>";
+		};
+		0EDB05B02A0D549E009E46A8 /* BaseSettingType */ = {
+			isa = PBXGroup;
+			children = (
+				0ECEF8C029FC22A9008E848E /* CommonItemType.swift */,
+			);
+			path = BaseSettingType;
+			sourceTree = "<group>";
+		};
 		0EFE31C529DF9EFE00725EEE = {
 			isa = PBXGroup;
 			children = (
@@ -466,7 +532,6 @@
 			isa = PBXGroup;
 			children = (
 				0EDB05A62A0D05B9009E46A8 /* OS */,
-				0EDB05A22A0CD06F009E46A8 /* ExplanationCollectionViewCell.swift */,
 				0EDB059D2A0CC228009E46A8 /* Battery */,
 				0E09A62D2A01F6F200EC6AE1 /* Photo */,
 				0E8409B729E38CF8005EB879 /* Setting */,
@@ -491,12 +556,11 @@
 		0EFE320C29DFA1C900725EEE /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				0EFE320D29DFA1D000725EEE /* BaseVC.swift */,
-				0EFE320F29DFA1E700725EEE /* BaseNC.swift */,
-				0ECEF8BA29FBA771008E848E /* BaseSC.swift */,
-				0E09A61329FD110700EC6AE1 /* BaseSV.swift */,
-				0ECEF8C029FC22A9008E848E /* CommonItemType.swift */,
-				0EDB05A42A0D0191009E46A8 /* BaseEP.swift */,
+				0EDB05A92A0D53AF009E46A8 /* BaseViewController */,
+				0EDB05AA2A0D53D0009E46A8 /* ExplanationCollectionViewCell */,
+				0EDB05AB2A0D53E2009E46A8 /* NavigationViewController */,
+				0EDB05AD2A0D5424009E46A8 /* BaseSetting */,
+				0EDB05AF2A0D5476009E46A8 /* ExplanationViewController */,
 			);
 			path = Base;
 			sourceTree = "<group>";

@@ -56,7 +56,7 @@ class BaseEP: BaseVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white // 추가
+        view.backgroundColor = .white
         updateWith(self)
     }
     
