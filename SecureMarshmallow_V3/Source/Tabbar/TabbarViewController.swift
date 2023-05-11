@@ -3,7 +3,7 @@ import UIKit
 class TapBarViewController: UITabBarController {
     private lazy var homeViewController: UINavigationController = {
         let viewController = SecureMarshmallow_V3.HomeViewController()
-        let tabBarItem = UITabBarItem(title: "HOME", image: UIImage(systemName: "house.fill"), tag: 0)
+        let tabBarItem = UITabBarItem(title: "", image: UIImage(named: "Home_TapBar_Gray"), tag: 0)
         viewController.tabBarItem = tabBarItem
         let navigationView = UINavigationController(rootViewController: viewController)
         return navigationView
@@ -11,7 +11,7 @@ class TapBarViewController: UITabBarController {
     
     private lazy var LockViewController: UIViewController = {
         let viewController = ListViewController()
-        let tabBarItem = UITabBarItem(title: "lock", image: UIImage(systemName: "lock"), tag: 1)
+        let tabBarItem = UITabBarItem(title: "", image: UIImage(named: "Password_TapBar_Gray"), tag: 1)
         viewController.tabBarItem = tabBarItem
         let navigationView = UINavigationController(rootViewController: viewController)
         return navigationView
@@ -19,7 +19,7 @@ class TapBarViewController: UITabBarController {
     
     private lazy var PhotoViewController: UIViewController = {
         let viewController = ImageCollectionViewController()
-        let tabBarItem = UITabBarItem(title: "photo", image: UIImage(systemName: "photo.fill"), tag: 2)
+        let tabBarItem = UITabBarItem(title: "", image: UIImage(named: "Photo_TapBar_Gray"), tag: 2)
         viewController.tabBarItem = tabBarItem
         let navigationView = UINavigationController(rootViewController: viewController)
         return navigationView
@@ -27,7 +27,7 @@ class TapBarViewController: UITabBarController {
     
     private lazy var SettingsViewController: UIViewController = {
         let viewController = SecureMarshmallow_V3.SettingsViewController()
-        let tabBarItem = UITabBarItem(title: "setting", image: UIImage(systemName: "gear"), tag: 2)
+        let tabBarItem = UITabBarItem(title: "", image: UIImage(named: "Setting_TapBar_Gray"), tag: 3)
         viewController.tabBarItem = tabBarItem
         let navigationView = UINavigationController(rootViewController: viewController)
         return navigationView
