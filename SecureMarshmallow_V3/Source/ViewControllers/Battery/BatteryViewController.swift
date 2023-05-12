@@ -9,98 +9,53 @@ import UIKit
 import SnapKit
 import Then
 
-class BatteryViewController: UIViewController {
+class BatteryViewController: BaseEP {
     
-    private lazy var collectionView: UICollectionView = {
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .horizontal
-        layout.minimumLineSpacing = 60.0
-        layout.minimumInteritemSpacing = 0.0
-        layout.sectionInset = UIEdgeInsets(top: 10.0, left: 30.0, bottom: 10.0, right: 30.0)
-
-        let collectionView = UICollectionView(
-            frame: .zero,
-            collectionViewLayout: layout
-        )
-        
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        collectionView.backgroundColor = .BackGray
-        collectionView.showsHorizontalScrollIndicator = true
-        collectionView.isScrollEnabled = true
-        collectionView.isPagingEnabled = true
-        collectionView.showsHorizontalScrollIndicator = true
-        
-        collectionView.register(
-            ExplanationCollectionViewCell.self,
-            forCellWithReuseIdentifier: ExplanationCollectionViewCell.identifier
-        )
-
-        return collectionView
-    }()
-    
-    private lazy var batteryImageView = UIImageView().then {
-        $0.image = UIImage(named: "Battery")
-    }
-
-    private lazy var backgroundView = UIView().then {
-        $0.backgroundColor = .BackGray
-    }
-
-    private lazy var nameLabel = UILabel().then {
-        $0.text = "배터리"
-        $0.font = .systemFont(ofSize: 20, weight: .bold)
-        $0.numberOfLines = 1
-        $0.textColor = .black
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        view.backgroundColor = .white
         
-        [
-            batteryImageView,
-            backgroundView,
-            nameLabel,
-            collectionView
-        ].forEach { view.addSubview($0) }
-
-        backgroundView.layer.cornerRadius = 20.0
-
-        batteryImageView.snp.makeConstraints {
-            $0.height.width.equalTo(200.0)
-            $0.centerX.equalToSuperview()
-            $0.top.equalTo(view.safeAreaLayoutGuide).offset(50.0)
+        updateWith(self)
+        collectionView.dataSource = self
+        
+        let battery = UIDevice.current
+        
+        NotificationCenter.default.addObserver(forName: UIDevice.batteryStateDidChangeNotification, object: battery, queue: nil) { (notification) in
+            let batteryState = UIDevice.current.batteryState
+            switch batteryState {
+            case .unknown:
+                print("배터리 상태가 변경됨: unknown")
+            case .unplugged:
+                print("배터리 상태가 변경됨: unplugged")
+            case .charging:
+                print("배터리 상태가 변경됨: charging")
+            case .full:
+                print("배터리 상태가 변경됨: full")
+            @unknown default:
+                fatalError()
+            }
         }
-
-        backgroundView.snp.makeConstraints {
-            $0.top.equalTo(batteryImageView.snp.bottom).offset(95.0)
-            $0.leading.trailing.equalToSuperview()
-            $0.width.equalToSuperview()
-            $0.height.equalTo(430.0)
-        }
-
-        nameLabel.snp.makeConstraints {
-            $0.top.equalTo(backgroundView.snp.top).offset(15.0)
-            $0.leading.equalToSuperview().offset(20.0)
-        }
-
-        collectionView.snp.makeConstraints {
-            $0.leading.trailing.equalToSuperview()
-            $0.height.equalTo(ExplanationCollectionViewCell.height * 5)
-            $0.top.equalTo(nameLabel.snp.bottom).offset(5.0)
+        
+        // 배터리 관련 알림 받기
+        NotificationCenter.default.addObserver(forName: UIDevice.batteryLevelDidChangeNotification, object: battery, queue: nil) { (notification) in
+            let batteryLevel = UIDevice.current.batteryLevel
+            print("배터리 레벨이 변경됨: \(batteryLevel)")
         }
     }
-}
-
-extension BatteryViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
-
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 6
+    
+    override func updateWith(_ controller: UIViewController) {
+        super.updateWith(controller)
+        
+        nameLabel.text = "iOS"
+        customImageView.image = UIImage(named: "Battery")
     }
-
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        return 4
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ExplanationCollectionViewCell.identifier, for: indexPath) as? ExplanationCollectionViewCell
         
         cell?.layer.cornerRadius = 20.0
@@ -108,23 +63,52 @@ extension BatteryViewController: UICollectionViewDelegateFlowLayout, UICollectio
         cell?.layer.shadowOffset = CGSize(width: 10, height: 10)
         cell?.layer.shadowOpacity = 0.1
         
+        if indexPath.row == 0 {
+            cell?.titleLabel.text = "저전력 모드"
+            let isLowPowerMode = ProcessInfo.processInfo.isLowPowerModeEnabled
+            cell?.descriptionLabel.text = "\(isLowPowerMode)"
+        }
+        if indexPath.row == 1 {
+            cell?.titleLabel.text = "OS 이름"
+            let batteryLevel = UIDevice.current.batteryLevel
+            let batteryLevelPercentage = Int(batteryLevel * 100)
+            cell?.descriptionLabel.text = "\(abs(batteryLevelPercentage))%"
+        }
+        if indexPath.row == 2 {
+            cell?.titleLabel.text = "근접 모니터링"
+            let isMonitoring = UIDevice.current.isProximityMonitoringEnabled
+            cell?.descriptionLabel.text = "\(isMonitoring)"
+        }
+        if indexPath.row == 3 {
+            cell?.titleLabel.text = "배터리 상태"
+            
+            let batteryState = UIDevice.current.batteryState
+            
+            var nowBatteryState: String = ""
+            
+            switch batteryState {
+            case .unknown:
+                print("배터리 상태: unknown")
+                nowBatteryState = "unknown"
+            case .unplugged:
+                print("배터리 상태: unplugged")
+                nowBatteryState = "unplugged"
+            case .charging:
+                print("배터리 상태: charging")
+                nowBatteryState = "charging"
+            case .full:
+                print("배터리 상태: full")
+                nowBatteryState = "full"
+
+            @unknown default:
+                fatalError()
+            }
+            
+            cell?.descriptionLabel.text = "\(nowBatteryState)"
+        }
+        
         cell?.layout()
         
         return cell ?? UICollectionViewCell()
-    }
-
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        CGSize(
-            width: collectionView.frame.width - 60.0,
-            height: ExplanationCollectionViewCell.height
-        )
-    }
-
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 30.0
-    }
-
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
     }
 }

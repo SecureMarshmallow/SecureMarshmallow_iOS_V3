@@ -11,7 +11,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             window = UIWindow(frame: UIScreen.main.bounds)
             window?.windowScene = windowScene
                 
-        self.window?.rootViewController = BaseNC(rootViewController: OSViewController())
+        self.window?.rootViewController = BaseNC(rootViewController: BatteryViewController())
         self.window?.makeKeyAndVisible()
     }
 
