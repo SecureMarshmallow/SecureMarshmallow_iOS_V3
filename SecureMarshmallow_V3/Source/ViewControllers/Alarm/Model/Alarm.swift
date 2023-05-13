@@ -5,7 +5,6 @@
 //  Created by 박준하 on 2023/05/13.
 //
 
-
 import Foundation
 import MediaPlayer
 
@@ -23,11 +22,11 @@ struct Alarm: ObjectPropertyReflectable {
     var onSnooze: Bool = false
     
     init(){
-        self.propertyDictRepresentation = [:] // propertyDictRepresentation 초기화
+        self.propertyDictRepresentation = [:]
     }
 
     init(date:Date, enabled:Bool, snoozeEnabled:Bool, repeatWeekdays:[Int], uuid:String, mediaID:String, mediaLabel:String, label:String, onSnooze: Bool){
-        self.propertyDictRepresentation = [:] // propertyDictRepresentation 초기화
+        self.propertyDictRepresentation = [:]
         self.date = date
         self.enabled = enabled
         self.snoozeEnabled = snoozeEnabled
@@ -63,12 +62,10 @@ extension Alarm {
     }
 }
 
-//This can be considered as a viewModel
 class Alarms: Persistable {
     let uf: UserDefaults = UserDefaults.standard
     let pk: String = "myAlarmKey"
     var alarms: [Alarm] = [] {
-        //observer, sync with UserDefaults
         didSet{
             persist()
         }
@@ -97,7 +94,6 @@ class Alarms: Persistable {
         return alarms.count
     }
     
-    //helper, get all alarms from Userdefaults
     private func getAlarms() -> [Alarm] {
         let array = UserDefaults.standard.array(forKey: pk)
         guard let alarmArray = array else{

@@ -43,6 +43,8 @@
 		0E8409B929E38D06005EB879 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8409B829E38D06005EB879 /* SettingsViewController.swift */; };
 		0E8409BB29E38D26005EB879 /* SettingsItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8409BA29E38D26005EB879 /* SettingsItemType.swift */; };
 		0E8409BD29E38D36005EB879 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8409BC29E38D36005EB879 /* SettingsCell.swift */; };
+		0EC03D5D2A0FBB04007CD53C /* Extensions+UIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC03D5C2A0FBB04007CD53C /* Extensions+UIWindow.swift */; };
+		0EC03D5F2A0FBB48007CD53C /* Extensions+NSNotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC03D5E2A0FBB48007CD53C /* Extensions+NSNotificationName.swift */; };
 		0EC9B47B47968329BD9F41B6 /* Pods_SecureMarshmallow_V3_SecureMarshmallow_V3UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FBA3FD3EE3B33BE850B399D /* Pods_SecureMarshmallow_V3_SecureMarshmallow_V3UITests.framework */; };
 		0ECEF8AA29FB930A008E848E /* GmailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECEF8A929FB930A008E848E /* GmailCell.swift */; };
 		0ECEF8AC29FB932B008E848E /* GmailItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECEF8AB29FB932B008E848E /* GmailItemType.swift */; };
@@ -150,6 +152,8 @@
 		0E8409B829E38D06005EB879 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		0E8409BA29E38D26005EB879 /* SettingsItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsItemType.swift; sourceTree = "<group>"; };
 		0E8409BC29E38D36005EB879 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
+		0EC03D5C2A0FBB04007CD53C /* Extensions+UIWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIWindow.swift"; sourceTree = "<group>"; };
+		0EC03D5E2A0FBB48007CD53C /* Extensions+NSNotificationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+NSNotificationName.swift"; sourceTree = "<group>"; };
 		0ECEF8A929FB930A008E848E /* GmailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GmailCell.swift; sourceTree = "<group>"; };
 		0ECEF8AB29FB932B008E848E /* GmailItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GmailItemType.swift; sourceTree = "<group>"; };
 		0ECEF8AD29FB933F008E848E /* GmailInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GmailInformationViewController.swift; sourceTree = "<group>"; };
@@ -610,6 +614,8 @@
 				0E56870F29FA37E800EEEBD3 /* Extensions+UIView.swift */,
 				0E09A62829FF7E5B00EC6AE1 /* Extensions+NSObject.swift */,
 				0EDB05A02A0CC4E0009E46A8 /* Extensions+UIColor.swift */,
+				0EC03D5C2A0FBB04007CD53C /* Extensions+UIWindow.swift */,
+				0EC03D5E2A0FBB48007CD53C /* Extensions+NSNotificationName.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -962,6 +968,7 @@
 				0EDB05A52A0D0191009E46A8 /* BaseEP.swift in Sources */,
 				0E84099429E2D759005EB879 /* PasswordWriteViewController.swift in Sources */,
 				0ECEF8C129FC22A9008E848E /* CommonItemType.swift in Sources */,
+				0EC03D5D2A0FBB04007CD53C /* Extensions+UIWindow.swift in Sources */,
 				0ECEF8AC29FB932B008E848E /* GmailItemType.swift in Sources */,
 				0E56871229FA39C000EEEBD3 /* TaskModel.swift in Sources */,
 				0EFE323D29DFCE4300725EEE /* ListPresenter.swift in Sources */,
@@ -981,6 +988,7 @@
 				0EFE323F29DFCE8200725EEE /* UserDefaultsManager.swift in Sources */,
 				0EDB05B32A0DADB9009E46A8 /* FileViewController.swift in Sources */,
 				0E77DE1E2A0FA53800F06E47 /* AlarmApplicationDelegate.swift in Sources */,
+				0EC03D5F2A0FBB48007CD53C /* Extensions+NSNotificationName.swift in Sources */,
 				0E09A62729FF7DCA00EC6AE1 /* DevelopersTableViewCell.swift in Sources */,
 				0E09A62C2A01EDF800EC6AE1 /* ImageCollectionViewController.swift in Sources */,
 				0EFE31D429DF9EFE00725EEE /* SceneDelegate.swift in Sources */,
