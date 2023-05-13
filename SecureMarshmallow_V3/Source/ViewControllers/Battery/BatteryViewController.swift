@@ -88,16 +88,12 @@ class BatteryViewController: BaseEP {
             
             switch batteryState {
             case .unknown:
-                print("배터리 상태: unknown")
                 nowBatteryState = "unknown"
             case .unplugged:
-                print("배터리 상태: unplugged")
                 nowBatteryState = "unplugged"
             case .charging:
-                print("배터리 상태: charging")
                 nowBatteryState = "charging"
             case .full:
-                print("배터리 상태: full")
                 nowBatteryState = "full"
 
             @unknown default:

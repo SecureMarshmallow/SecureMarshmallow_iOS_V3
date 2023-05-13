@@ -31,6 +31,8 @@
 		0E5686FF29FA347300EEEBD3 /* SecureMarshmallow.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0E5686FD29FA347300EEEBD3 /* SecureMarshmallow.xcdatamodeld */; };
 		0E56871029FA37E800EEEBD3 /* Extensions+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E56870F29FA37E800EEEBD3 /* Extensions+UIView.swift */; };
 		0E56871229FA39C000EEEBD3 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E56871129FA39C000EEEBD3 /* TaskModel.swift */; };
+		0E77DE1E2A0FA53800F06E47 /* AlarmApplicationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E77DE1D2A0FA53800F06E47 /* AlarmApplicationDelegate.swift */; };
+		0E77DE212A0FA74D00F06E47 /* ObjectPropertyReflectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E77DE202A0FA74D00F06E47 /* ObjectPropertyReflectable.swift */; };
 		0E84099429E2D759005EB879 /* PasswordWriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E84099329E2D759005EB879 /* PasswordWriteViewController.swift */; };
 		0E84099629E2D7B5005EB879 /* PasswordWritePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E84099529E2D7B5005EB879 /* PasswordWritePresenter.swift */; };
 		0E8409B429E38420005EB879 /* Passwords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8409B329E38420005EB879 /* Passwords.swift */; };
@@ -54,6 +56,7 @@
 		0EDB05A52A0D0191009E46A8 /* BaseEP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDB05A42A0D0191009E46A8 /* BaseEP.swift */; };
 		0EDB05A82A0D05C8009E46A8 /* OSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDB05A72A0D05C8009E46A8 /* OSViewController.swift */; };
 		0EDB05B32A0DADB9009E46A8 /* FileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDB05B22A0DADB9009E46A8 /* FileViewController.swift */; };
+		0EDB05F52A0E3FBA009E46A8 /* WiFiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDB05F42A0E3FBA009E46A8 /* WiFiViewController.swift */; };
 		0EFE31D229DF9EFE00725EEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFE31D129DF9EFE00725EEE /* AppDelegate.swift */; };
 		0EFE31D429DF9EFE00725EEE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFE31D329DF9EFE00725EEE /* SceneDelegate.swift */; };
 		0EFE31E129DF9EFF00725EEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EFE31DF29DF9EFF00725EEE /* LaunchScreen.storyboard */; };
@@ -132,6 +135,8 @@
 		0E5686FE29FA347300EEEBD3 /* SecureMarshmallow.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SecureMarshmallow.xcdatamodel; sourceTree = "<group>"; };
 		0E56870F29FA37E800EEEBD3 /* Extensions+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIView.swift"; sourceTree = "<group>"; };
 		0E56871129FA39C000EEEBD3 /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
+		0E77DE1D2A0FA53800F06E47 /* AlarmApplicationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmApplicationDelegate.swift; sourceTree = "<group>"; };
+		0E77DE202A0FA74D00F06E47 /* ObjectPropertyReflectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectPropertyReflectable.swift; sourceTree = "<group>"; };
 		0E84099329E2D759005EB879 /* PasswordWriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordWriteViewController.swift; sourceTree = "<group>"; };
 		0E84099529E2D7B5005EB879 /* PasswordWritePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordWritePresenter.swift; sourceTree = "<group>"; };
 		0E8409B329E38420005EB879 /* Passwords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Passwords.swift; sourceTree = "<group>"; };
@@ -156,6 +161,7 @@
 		0EDB05A42A0D0191009E46A8 /* BaseEP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseEP.swift; sourceTree = "<group>"; };
 		0EDB05A72A0D05C8009E46A8 /* OSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSViewController.swift; sourceTree = "<group>"; };
 		0EDB05B22A0DADB9009E46A8 /* FileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileViewController.swift; sourceTree = "<group>"; };
+		0EDB05F42A0E3FBA009E46A8 /* WiFiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFiViewController.swift; sourceTree = "<group>"; };
 		0EFE31CE29DF9EFE00725EEE /* SecureMarshmallow_V3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecureMarshmallow_V3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EFE31D129DF9EFE00725EEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0EFE31D329DF9EFE00725EEE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -268,6 +274,23 @@
 				0E09A62E2A01F70300EC6AE1 /* ImageCollectionViewCell.swift */,
 			);
 			path = Photo;
+			sourceTree = "<group>";
+		};
+		0E77DE1C2A0FA44000F06E47 /* Alarm */ = {
+			isa = PBXGroup;
+			children = (
+				0E77DE1F2A0FA60700F06E47 /* Protocol */,
+				0E77DE202A0FA74D00F06E47 /* ObjectPropertyReflectable.swift */,
+			);
+			path = Alarm;
+			sourceTree = "<group>";
+		};
+		0E77DE1F2A0FA60700F06E47 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				0E77DE1D2A0FA53800F06E47 /* AlarmApplicationDelegate.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 		0E84099229E2D638005EB879 /* PasswordWrite */ = {
@@ -431,6 +454,14 @@
 			path = File;
 			sourceTree = "<group>";
 		};
+		0EDB05F32A0E3FAE009E46A8 /* WiFi */ = {
+			isa = PBXGroup;
+			children = (
+				0EDB05F42A0E3FBA009E46A8 /* WiFiViewController.swift */,
+			);
+			path = WiFi;
+			sourceTree = "<group>";
+		};
 		0EFE31C529DF9EFE00725EEE = {
 			isa = PBXGroup;
 			children = (
@@ -541,6 +572,8 @@
 		0EFE320A29DFA1A500725EEE /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				0E77DE1C2A0FA44000F06E47 /* Alarm */,
+				0EDB05F32A0E3FAE009E46A8 /* WiFi */,
 				0EDB05B12A0DADAC009E46A8 /* File */,
 				0EDB05A62A0D05B9009E46A8 /* OS */,
 				0EDB059D2A0CC228009E46A8 /* Battery */,
@@ -929,6 +962,7 @@
 				0EFE321029DFA1E700725EEE /* BaseNC.swift in Sources */,
 				0EFE323F29DFCE8200725EEE /* UserDefaultsManager.swift in Sources */,
 				0EDB05B32A0DADB9009E46A8 /* FileViewController.swift in Sources */,
+				0E77DE1E2A0FA53800F06E47 /* AlarmApplicationDelegate.swift in Sources */,
 				0E09A62729FF7DCA00EC6AE1 /* DevelopersTableViewCell.swift in Sources */,
 				0E09A62C2A01EDF800EC6AE1 /* ImageCollectionViewController.swift in Sources */,
 				0EFE31D429DF9EFE00725EEE /* SceneDelegate.swift in Sources */,
@@ -938,6 +972,7 @@
 				0E09A61A29FD28DC00EC6AE1 /* TimeOfAppViewController.swift in Sources */,
 				0E5686FF29FA347300EEEBD3 /* SecureMarshmallow.xcdatamodeld in Sources */,
 				0E09A62F2A01F70300EC6AE1 /* ImageCollectionViewCell.swift in Sources */,
+				0EDB05F52A0E3FBA009E46A8 /* WiFiViewController.swift in Sources */,
 				0E09A62529FF7DB600EC6AE1 /* DevelopersViewController.swift in Sources */,
 				0ECEF8BB29FBA771008E848E /* BaseSC.swift in Sources */,
 				0E09A61229FD0FC400EC6AE1 /* SupportCell.swift in Sources */,
@@ -951,6 +986,7 @@
 				0E5686FC29FA341100EEEBD3 /* CoreDataManager.swift in Sources */,
 				0EDB059F2A0CC247009E46A8 /* BatteryViewController.swift in Sources */,
 				0ECEF8AE29FB933F008E848E /* GmailInformationViewController.swift in Sources */,
+				0E77DE212A0FA74D00F06E47 /* ObjectPropertyReflectable.swift in Sources */,
 				0ECEF8C329FCCA06008E848E /* MarshmallowWidgetViewController.swift in Sources */,
 				0E09A61029FD0FB600EC6AE1 /* SupportItmeType.swift in Sources */,
 				0ECEF8AA29FB930A008E848E /* GmailCell.swift in Sources */,

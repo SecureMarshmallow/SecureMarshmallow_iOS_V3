@@ -49,6 +49,7 @@ class FileViewController: BaseEP {
             
             cell?.titleLabel.text = "앱 내부 데이터 크기"
         }
+        
         if indexPath.row == 1 {
             
             if let totalCapacity = deviceTotalCapacity() {
@@ -62,6 +63,7 @@ class FileViewController: BaseEP {
             cell?.titleLabel.text = "기기의 전체 디스크 용량"
             
         }
+        
         if indexPath.row == 2 {
             
             if let availableCapacity = deviceAvailableCapacity() {
