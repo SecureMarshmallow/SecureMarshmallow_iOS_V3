@@ -33,6 +33,9 @@
 		0E56871229FA39C000EEEBD3 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E56871129FA39C000EEEBD3 /* TaskModel.swift */; };
 		0E77DE1E2A0FA53800F06E47 /* AlarmApplicationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E77DE1D2A0FA53800F06E47 /* AlarmApplicationDelegate.swift */; };
 		0E77DE212A0FA74D00F06E47 /* ObjectPropertyReflectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E77DE202A0FA74D00F06E47 /* ObjectPropertyReflectable.swift */; };
+		0E77DE232A0FAB7C00F06E47 /* Persistable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E77DE222A0FAB7C00F06E47 /* Persistable.swift */; };
+		0E77DE252A0FABBB00F06E47 /* AlarmSchedulerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E77DE242A0FABBB00F06E47 /* AlarmSchedulerDelegate.swift */; };
+		0E77DE282A0FAF4200F06E47 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E77DE272A0FAF4200F06E47 /* Alarm.swift */; };
 		0E84099429E2D759005EB879 /* PasswordWriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E84099329E2D759005EB879 /* PasswordWriteViewController.swift */; };
 		0E84099629E2D7B5005EB879 /* PasswordWritePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E84099529E2D7B5005EB879 /* PasswordWritePresenter.swift */; };
 		0E8409B429E38420005EB879 /* Passwords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8409B329E38420005EB879 /* Passwords.swift */; };
@@ -137,6 +140,9 @@
 		0E56871129FA39C000EEEBD3 /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
 		0E77DE1D2A0FA53800F06E47 /* AlarmApplicationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmApplicationDelegate.swift; sourceTree = "<group>"; };
 		0E77DE202A0FA74D00F06E47 /* ObjectPropertyReflectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectPropertyReflectable.swift; sourceTree = "<group>"; };
+		0E77DE222A0FAB7C00F06E47 /* Persistable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistable.swift; sourceTree = "<group>"; };
+		0E77DE242A0FABBB00F06E47 /* AlarmSchedulerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmSchedulerDelegate.swift; sourceTree = "<group>"; };
+		0E77DE272A0FAF4200F06E47 /* Alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
 		0E84099329E2D759005EB879 /* PasswordWriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordWriteViewController.swift; sourceTree = "<group>"; };
 		0E84099529E2D7B5005EB879 /* PasswordWritePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordWritePresenter.swift; sourceTree = "<group>"; };
 		0E8409B329E38420005EB879 /* Passwords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Passwords.swift; sourceTree = "<group>"; };
@@ -279,8 +285,8 @@
 		0E77DE1C2A0FA44000F06E47 /* Alarm */ = {
 			isa = PBXGroup;
 			children = (
+				0E77DE262A0FAF2D00F06E47 /* Model */,
 				0E77DE1F2A0FA60700F06E47 /* Protocol */,
-				0E77DE202A0FA74D00F06E47 /* ObjectPropertyReflectable.swift */,
 			);
 			path = Alarm;
 			sourceTree = "<group>";
@@ -289,8 +295,19 @@
 			isa = PBXGroup;
 			children = (
 				0E77DE1D2A0FA53800F06E47 /* AlarmApplicationDelegate.swift */,
+				0E77DE202A0FA74D00F06E47 /* ObjectPropertyReflectable.swift */,
+				0E77DE222A0FAB7C00F06E47 /* Persistable.swift */,
+				0E77DE242A0FABBB00F06E47 /* AlarmSchedulerDelegate.swift */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		0E77DE262A0FAF2D00F06E47 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0E77DE272A0FAF4200F06E47 /* Alarm.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		0E84099229E2D638005EB879 /* PasswordWrite */ = {
@@ -955,6 +972,7 @@
 				0EFE323529DFC22500725EEE /* TabbarViewController.swift in Sources */,
 				0E8409B929E38D06005EB879 /* SettingsViewController.swift in Sources */,
 				0E84099629E2D7B5005EB879 /* PasswordWritePresenter.swift in Sources */,
+				0E77DE232A0FAB7C00F06E47 /* Persistable.swift in Sources */,
 				0EFE323729DFC23600725EEE /* HomeViewController.swift in Sources */,
 				0E09A60E29FD0FA800EC6AE1 /* SupportViewController.swift in Sources */,
 				0EDB05A12A0CC4E0009E46A8 /* Extensions+UIColor.swift in Sources */,
@@ -980,12 +998,14 @@
 				0EFE320E29DFA1D000725EEE /* BaseVC.swift in Sources */,
 				0E8409B629E3843B005EB879 /* SavePassword.swift in Sources */,
 				0E09A62929FF7E5B00EC6AE1 /* Extensions+NSObject.swift in Sources */,
+				0E77DE252A0FABBB00F06E47 /* AlarmSchedulerDelegate.swift in Sources */,
 				0ECEF8B129FB98A2008E848E /* AppLogoViewController.swift in Sources */,
 				0EDB05A32A0CD06F009E46A8 /* ExplanationCollectionViewCell.swift in Sources */,
 				0EDB05A82A0D05C8009E46A8 /* OSViewController.swift in Sources */,
 				0E5686FC29FA341100EEEBD3 /* CoreDataManager.swift in Sources */,
 				0EDB059F2A0CC247009E46A8 /* BatteryViewController.swift in Sources */,
 				0ECEF8AE29FB933F008E848E /* GmailInformationViewController.swift in Sources */,
+				0E77DE282A0FAF4200F06E47 /* Alarm.swift in Sources */,
 				0E77DE212A0FA74D00F06E47 /* ObjectPropertyReflectable.swift in Sources */,
 				0ECEF8C329FCCA06008E848E /* MarshmallowWidgetViewController.swift in Sources */,
 				0E09A61029FD0FB600EC6AE1 /* SupportItmeType.swift in Sources */,
