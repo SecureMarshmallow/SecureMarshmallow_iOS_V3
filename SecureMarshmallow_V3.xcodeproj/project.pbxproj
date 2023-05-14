@@ -45,6 +45,12 @@
 		0EC03D852A10E8B2007CD53C /* Clocks.json in Resources */ = {isa = PBXBuildFile; fileRef = 0EC03D842A10E8B2007CD53C /* Clocks.json */; };
 		0EC03D882A10E8C9007CD53C /* bell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0EC03D862A10E8C9007CD53C /* bell.mp3 */; };
 		0EC03D892A10E8C9007CD53C /* tickle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0EC03D872A10E8C9007CD53C /* tickle.mp3 */; };
+		0EC03D8D2A10E942007CD53C /* Extensions+Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC03D8C2A10E942007CD53C /* Extensions+Array.swift */; };
+		0EC03D8F2A10E99E007CD53C /* Extensions+UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC03D8E2A10E99E007CD53C /* Extensions+UIStackView.swift */; };
+		0EC03D912A10EA46007CD53C /* writeToFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC03D902A10EA46007CD53C /* writeToFile.swift */; };
+		0EC03D932A10EA9D007CD53C /* DateFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC03D922A10EA9D007CD53C /* DateFunctions.swift */; };
+		0EC03D952A10EACD007CD53C /* generalFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC03D942A10EACD007CD53C /* generalFunctions.swift */; };
+		0EC03D982A10EAFF007CD53C /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC03D972A10EAFF007CD53C /* StartViewController.swift */; };
 		0EC9B47B47968329BD9F41B6 /* Pods_SecureMarshmallow_V3_SecureMarshmallow_V3UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FBA3FD3EE3B33BE850B399D /* Pods_SecureMarshmallow_V3_SecureMarshmallow_V3UITests.framework */; };
 		0ECEF8AA29FB930A008E848E /* GmailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECEF8A929FB930A008E848E /* GmailCell.swift */; };
 		0ECEF8AC29FB932B008E848E /* GmailItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECEF8AB29FB932B008E848E /* GmailItemType.swift */; };
@@ -154,6 +160,12 @@
 		0EC03D842A10E8B2007CD53C /* Clocks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Clocks.json; path = "../../../../../../../Downloads/Swift_alarm_clock-master/myClock/Data/Clocks.json"; sourceTree = "<group>"; };
 		0EC03D862A10E8C9007CD53C /* bell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = bell.mp3; path = "../../../../../../../Downloads/Swift_alarm_clock-master/myClock/Data/bell.mp3"; sourceTree = "<group>"; };
 		0EC03D872A10E8C9007CD53C /* tickle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = tickle.mp3; path = "../../../../../../../Downloads/Swift_alarm_clock-master/myClock/Data/tickle.mp3"; sourceTree = "<group>"; };
+		0EC03D8C2A10E942007CD53C /* Extensions+Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+Array.swift"; sourceTree = "<group>"; };
+		0EC03D8E2A10E99E007CD53C /* Extensions+UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIStackView.swift"; sourceTree = "<group>"; };
+		0EC03D902A10EA46007CD53C /* writeToFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = writeToFile.swift; sourceTree = "<group>"; };
+		0EC03D922A10EA9D007CD53C /* DateFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFunctions.swift; sourceTree = "<group>"; };
+		0EC03D942A10EACD007CD53C /* generalFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = generalFunctions.swift; sourceTree = "<group>"; };
+		0EC03D972A10EAFF007CD53C /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		0ECEF8A929FB930A008E848E /* GmailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GmailCell.swift; sourceTree = "<group>"; };
 		0ECEF8AB29FB932B008E848E /* GmailItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GmailItemType.swift; sourceTree = "<group>"; };
 		0ECEF8AD29FB933F008E848E /* GmailInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GmailInformationViewController.swift; sourceTree = "<group>"; };
@@ -331,6 +343,7 @@
 		0EC03D752A10E167007CD53C /* Alarm */ = {
 			isa = PBXGroup;
 			children = (
+				0EC03D962A10EAF7007CD53C /* Start */,
 				0EC03D792A10E671007CD53C /* Data */,
 				0EC03D762A10E52F007CD53C /* RepeatDate */,
 			);
@@ -356,6 +369,14 @@
 				0EC03D842A10E8B2007CD53C /* Clocks.json */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		0EC03D962A10EAF7007CD53C /* Start */ = {
+			isa = PBXGroup;
+			children = (
+				0EC03D972A10EAFF007CD53C /* StartViewController.swift */,
+			);
+			path = Start;
 			sourceTree = "<group>";
 		};
 		0ECEF8A729FB9249008E848E /* Main */ = {
@@ -616,6 +637,11 @@
 				0E56870F29FA37E800EEEBD3 /* Extensions+UIView.swift */,
 				0E09A62829FF7E5B00EC6AE1 /* Extensions+NSObject.swift */,
 				0EDB05A02A0CC4E0009E46A8 /* Extensions+UIColor.swift */,
+				0EC03D8C2A10E942007CD53C /* Extensions+Array.swift */,
+				0EC03D8E2A10E99E007CD53C /* Extensions+UIStackView.swift */,
+				0EC03D902A10EA46007CD53C /* writeToFile.swift */,
+				0EC03D922A10EA9D007CD53C /* DateFunctions.swift */,
+				0EC03D942A10EACD007CD53C /* generalFunctions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -981,6 +1007,7 @@
 				0EC03D812A10E761007CD53C /* Clock.swift in Sources */,
 				0E8409B429E38420005EB879 /* Passwords.swift in Sources */,
 				0EFE323529DFC22500725EEE /* TabbarViewController.swift in Sources */,
+				0EC03D982A10EAFF007CD53C /* StartViewController.swift in Sources */,
 				0E8409B929E38D06005EB879 /* SettingsViewController.swift in Sources */,
 				0E84099629E2D7B5005EB879 /* PasswordWritePresenter.swift in Sources */,
 				0EFE323729DFC23600725EEE /* HomeViewController.swift in Sources */,
@@ -990,19 +1017,24 @@
 				0EFE321029DFA1E700725EEE /* BaseNC.swift in Sources */,
 				0EFE323F29DFCE8200725EEE /* UserDefaultsManager.swift in Sources */,
 				0EDB05B32A0DADB9009E46A8 /* FileViewController.swift in Sources */,
+				0EC03D932A10EA9D007CD53C /* DateFunctions.swift in Sources */,
 				0E09A62729FF7DCA00EC6AE1 /* DevelopersTableViewCell.swift in Sources */,
 				0E09A62C2A01EDF800EC6AE1 /* ImageCollectionViewController.swift in Sources */,
 				0EC03D782A10E630007CD53C /* RepeatTableViewController.swift in Sources */,
+				0EC03D8F2A10E99E007CD53C /* Extensions+UIStackView.swift in Sources */,
 				0EFE31D429DF9EFE00725EEE /* SceneDelegate.swift in Sources */,
 				0E09A61429FD110700EC6AE1 /* BaseSV.swift in Sources */,
 				0EFE323B29DFCDFB00725EEE /* ListViewController.swift in Sources */,
+				0EC03D912A10EA46007CD53C /* writeToFile.swift in Sources */,
 				0E56871029FA37E800EEEBD3 /* Extensions+UIView.swift in Sources */,
 				0E09A61A29FD28DC00EC6AE1 /* TimeOfAppViewController.swift in Sources */,
 				0E5686FF29FA347300EEEBD3 /* SecureMarshmallow.xcdatamodeld in Sources */,
 				0E09A62F2A01F70300EC6AE1 /* ImageCollectionViewCell.swift in Sources */,
 				0EDB05F52A0E3FBA009E46A8 /* WiFiViewController.swift in Sources */,
 				0E09A62529FF7DB600EC6AE1 /* DevelopersViewController.swift in Sources */,
+				0EC03D8D2A10E942007CD53C /* Extensions+Array.swift in Sources */,
 				0ECEF8BB29FBA771008E848E /* BaseSC.swift in Sources */,
+				0EC03D952A10EACD007CD53C /* generalFunctions.swift in Sources */,
 				0E09A61229FD0FC400EC6AE1 /* SupportCell.swift in Sources */,
 				0E09A60529FD0A3500EC6AE1 /* MarshmallowWidget.intentdefinition in Sources */,
 				0EFE320E29DFA1D000725EEE /* BaseVC.swift in Sources */,

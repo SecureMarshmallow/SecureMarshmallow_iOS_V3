@@ -7,4 +7,8 @@ extension UIView {
             addSubview($0)
         }
     }
+    
+    func addSubviews(_ viewsToAdd: [UIView]) {
+        viewsToAdd.forEach({addSubview($0)})
+    }
 }
