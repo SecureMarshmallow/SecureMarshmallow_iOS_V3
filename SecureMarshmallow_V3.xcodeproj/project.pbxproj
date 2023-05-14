@@ -51,6 +51,7 @@
 		0EC03D932A10EA9D007CD53C /* DateFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC03D922A10EA9D007CD53C /* DateFunctions.swift */; };
 		0EC03D952A10EACD007CD53C /* generalFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC03D942A10EACD007CD53C /* generalFunctions.swift */; };
 		0EC03D982A10EAFF007CD53C /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC03D972A10EAFF007CD53C /* StartViewController.swift */; };
+		0EC03D9A2A10EBEF007CD53C /* ClockCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC03D992A10EBEF007CD53C /* ClockCell.swift */; };
 		0EC9B47B47968329BD9F41B6 /* Pods_SecureMarshmallow_V3_SecureMarshmallow_V3UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FBA3FD3EE3B33BE850B399D /* Pods_SecureMarshmallow_V3_SecureMarshmallow_V3UITests.framework */; };
 		0ECEF8AA29FB930A008E848E /* GmailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECEF8A929FB930A008E848E /* GmailCell.swift */; };
 		0ECEF8AC29FB932B008E848E /* GmailItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECEF8AB29FB932B008E848E /* GmailItemType.swift */; };
@@ -166,6 +167,7 @@
 		0EC03D922A10EA9D007CD53C /* DateFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFunctions.swift; sourceTree = "<group>"; };
 		0EC03D942A10EACD007CD53C /* generalFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = generalFunctions.swift; sourceTree = "<group>"; };
 		0EC03D972A10EAFF007CD53C /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		0EC03D992A10EBEF007CD53C /* ClockCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockCell.swift; sourceTree = "<group>"; };
 		0ECEF8A929FB930A008E848E /* GmailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GmailCell.swift; sourceTree = "<group>"; };
 		0ECEF8AB29FB932B008E848E /* GmailItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GmailItemType.swift; sourceTree = "<group>"; };
 		0ECEF8AD29FB933F008E848E /* GmailInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GmailInformationViewController.swift; sourceTree = "<group>"; };
@@ -375,6 +377,7 @@
 			isa = PBXGroup;
 			children = (
 				0EC03D972A10EAFF007CD53C /* StartViewController.swift */,
+				0EC03D992A10EBEF007CD53C /* ClockCell.swift */,
 			);
 			path = Start;
 			sourceTree = "<group>";
@@ -1017,6 +1020,7 @@
 				0EFE321029DFA1E700725EEE /* BaseNC.swift in Sources */,
 				0EFE323F29DFCE8200725EEE /* UserDefaultsManager.swift in Sources */,
 				0EDB05B32A0DADB9009E46A8 /* FileViewController.swift in Sources */,
+				0EC03D9A2A10EBEF007CD53C /* ClockCell.swift in Sources */,
 				0EC03D932A10EA9D007CD53C /* DateFunctions.swift in Sources */,
 				0E09A62729FF7DCA00EC6AE1 /* DevelopersTableViewCell.swift in Sources */,
 				0E09A62C2A01EDF800EC6AE1 /* ImageCollectionViewController.swift in Sources */,
