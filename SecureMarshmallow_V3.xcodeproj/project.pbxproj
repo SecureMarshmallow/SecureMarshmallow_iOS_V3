@@ -38,12 +38,13 @@
 		0E8409B929E38D06005EB879 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8409B829E38D06005EB879 /* SettingsViewController.swift */; };
 		0E8409BB29E38D26005EB879 /* SettingsItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8409BA29E38D26005EB879 /* SettingsItemType.swift */; };
 		0E8409BD29E38D36005EB879 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8409BC29E38D36005EB879 /* SettingsCell.swift */; };
-		0EC03D5D2A0FBB04007CD53C /* Extensions+UIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC03D5C2A0FBB04007CD53C /* Extensions+UIWindow.swift */; };
-		0EC03D5F2A0FBB48007CD53C /* Extensions+NSNotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC03D5E2A0FBB48007CD53C /* Extensions+NSNotificationName.swift */; };
 		0EC03D782A10E630007CD53C /* RepeatTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC03D772A10E630007CD53C /* RepeatTableViewController.swift */; };
 		0EC03D7B2A10E687007CD53C /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC03D7A2A10E687007CD53C /* Day.swift */; };
 		0EC03D7D2A10E6FB007CD53C /* MonthMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC03D7C2A10E6FB007CD53C /* MonthMetadata.swift */; };
 		0EC03D812A10E761007CD53C /* Clock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC03D802A10E761007CD53C /* Clock.swift */; };
+		0EC03D852A10E8B2007CD53C /* Clocks.json in Resources */ = {isa = PBXBuildFile; fileRef = 0EC03D842A10E8B2007CD53C /* Clocks.json */; };
+		0EC03D882A10E8C9007CD53C /* bell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0EC03D862A10E8C9007CD53C /* bell.mp3 */; };
+		0EC03D892A10E8C9007CD53C /* tickle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0EC03D872A10E8C9007CD53C /* tickle.mp3 */; };
 		0EC9B47B47968329BD9F41B6 /* Pods_SecureMarshmallow_V3_SecureMarshmallow_V3UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FBA3FD3EE3B33BE850B399D /* Pods_SecureMarshmallow_V3_SecureMarshmallow_V3UITests.framework */; };
 		0ECEF8AA29FB930A008E848E /* GmailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECEF8A929FB930A008E848E /* GmailCell.swift */; };
 		0ECEF8AC29FB932B008E848E /* GmailItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECEF8AB29FB932B008E848E /* GmailItemType.swift */; };
@@ -146,12 +147,13 @@
 		0E8409B829E38D06005EB879 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		0E8409BA29E38D26005EB879 /* SettingsItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsItemType.swift; sourceTree = "<group>"; };
 		0E8409BC29E38D36005EB879 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
-		0EC03D5C2A0FBB04007CD53C /* Extensions+UIWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIWindow.swift"; sourceTree = "<group>"; };
-		0EC03D5E2A0FBB48007CD53C /* Extensions+NSNotificationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+NSNotificationName.swift"; sourceTree = "<group>"; };
 		0EC03D772A10E630007CD53C /* RepeatTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatTableViewController.swift; sourceTree = "<group>"; };
 		0EC03D7A2A10E687007CD53C /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		0EC03D7C2A10E6FB007CD53C /* MonthMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthMetadata.swift; sourceTree = "<group>"; };
 		0EC03D802A10E761007CD53C /* Clock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clock.swift; sourceTree = "<group>"; };
+		0EC03D842A10E8B2007CD53C /* Clocks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Clocks.json; path = "../../../../../../../Downloads/Swift_alarm_clock-master/myClock/Data/Clocks.json"; sourceTree = "<group>"; };
+		0EC03D862A10E8C9007CD53C /* bell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = bell.mp3; path = "../../../../../../../Downloads/Swift_alarm_clock-master/myClock/Data/bell.mp3"; sourceTree = "<group>"; };
+		0EC03D872A10E8C9007CD53C /* tickle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = tickle.mp3; path = "../../../../../../../Downloads/Swift_alarm_clock-master/myClock/Data/tickle.mp3"; sourceTree = "<group>"; };
 		0ECEF8A929FB930A008E848E /* GmailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GmailCell.swift; sourceTree = "<group>"; };
 		0ECEF8AB29FB932B008E848E /* GmailItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GmailItemType.swift; sourceTree = "<group>"; };
 		0ECEF8AD29FB933F008E848E /* GmailInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GmailInformationViewController.swift; sourceTree = "<group>"; };
@@ -346,9 +348,12 @@
 		0EC03D792A10E671007CD53C /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				0EC03D862A10E8C9007CD53C /* bell.mp3 */,
+				0EC03D872A10E8C9007CD53C /* tickle.mp3 */,
 				0EC03D7A2A10E687007CD53C /* Day.swift */,
 				0EC03D7C2A10E6FB007CD53C /* MonthMetadata.swift */,
 				0EC03D802A10E761007CD53C /* Clock.swift */,
+				0EC03D842A10E8B2007CD53C /* Clocks.json */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -611,8 +616,6 @@
 				0E56870F29FA37E800EEEBD3 /* Extensions+UIView.swift */,
 				0E09A62829FF7E5B00EC6AE1 /* Extensions+NSObject.swift */,
 				0EDB05A02A0CC4E0009E46A8 /* Extensions+UIColor.swift */,
-				0EC03D5C2A0FBB04007CD53C /* Extensions+UIWindow.swift */,
-				0EC03D5E2A0FBB48007CD53C /* Extensions+NSNotificationName.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -821,8 +824,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EC03D852A10E8B2007CD53C /* Clocks.json in Resources */,
+				0EC03D882A10E8C9007CD53C /* bell.mp3 in Resources */,
 				0E40E15029F3F36000615E86 /* Assets.xcassets in Resources */,
 				0EFE31E129DF9EFF00725EEE /* LaunchScreen.storyboard in Resources */,
+				0EC03D892A10E8C9007CD53C /* tickle.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -965,7 +971,6 @@
 				0EDB05A52A0D0191009E46A8 /* BaseEP.swift in Sources */,
 				0E84099429E2D759005EB879 /* PasswordWriteViewController.swift in Sources */,
 				0ECEF8C129FC22A9008E848E /* CommonItemType.swift in Sources */,
-				0EC03D5D2A0FBB04007CD53C /* Extensions+UIWindow.swift in Sources */,
 				0ECEF8AC29FB932B008E848E /* GmailItemType.swift in Sources */,
 				0E56871229FA39C000EEEBD3 /* TaskModel.swift in Sources */,
 				0EFE323D29DFCE4300725EEE /* ListPresenter.swift in Sources */,
@@ -985,7 +990,6 @@
 				0EFE321029DFA1E700725EEE /* BaseNC.swift in Sources */,
 				0EFE323F29DFCE8200725EEE /* UserDefaultsManager.swift in Sources */,
 				0EDB05B32A0DADB9009E46A8 /* FileViewController.swift in Sources */,
-				0EC03D5F2A0FBB48007CD53C /* Extensions+NSNotificationName.swift in Sources */,
 				0E09A62729FF7DCA00EC6AE1 /* DevelopersTableViewCell.swift in Sources */,
 				0E09A62C2A01EDF800EC6AE1 /* ImageCollectionViewController.swift in Sources */,
 				0EC03D782A10E630007CD53C /* RepeatTableViewController.swift in Sources */,
