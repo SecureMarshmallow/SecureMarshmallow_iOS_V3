@@ -20,9 +20,7 @@ class StartViewModel {
     init() {
         getData()
     }
-    
-    // MARK: Functions
-    
+        
     func itemAt(_ index: Int) -> Clock? {
         guard let item = clocks.safeRef(index) else { return nil }
         return item

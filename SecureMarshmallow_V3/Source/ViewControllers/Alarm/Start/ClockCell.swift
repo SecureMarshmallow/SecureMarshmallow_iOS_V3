@@ -69,7 +69,7 @@ class ClockCell: UICollectionViewCell {
     private let chevronImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.image = UIImage(systemName: "chevron.right")?.withTintColor(.gray, renderingMode: .alwaysOriginal)
+        imageView.image = UIImage(systemName: "chevron.right")?.withTintColor(.black, renderingMode: .alwaysOriginal)
         imageView.isHidden = false
         return imageView
     }()
@@ -100,6 +100,7 @@ class ClockCell: UICollectionViewCell {
             layer.borderColor = UIColor.white.cgColor
             layer.shadowOffset = CGSize(width: 10, height: 10)
             layer.shadowOpacity = 0.1
+            chevronImageView.image = UIImage(systemName: "chevron.right")?.withTintColor(.black, renderingMode: .alwaysOriginal)
         }
         else{
             print("off 🔈")
@@ -109,6 +110,7 @@ class ClockCell: UICollectionViewCell {
             layer.borderColor = UIColor.clear.cgColor
             layer.shadowOffset = CGSize(width: 0, height: 0)
             layer.shadowOpacity = 0
+            chevronImageView.image = UIImage(systemName: "chevron.right")?.withTintColor(.lightGray, renderingMode: .alwaysOriginal)
         }
         switchValueChanged(sender.isOn)
     }

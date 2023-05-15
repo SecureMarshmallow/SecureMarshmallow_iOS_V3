@@ -195,35 +195,29 @@ class CalendarPickerViewController: UIViewController {
 
 // MARK: - Day Generation
 private extension CalendarPickerViewController {
-  // 1
-  func monthMetadata(for baseDate: Date) throws -> MonthMetadata {
-    // 2
-    guard
-      let numberOfDaysInMonth = calendar.range(
+
+   func monthMetadata(for baseDate: Date) throws -> MonthMetadata {
+    guard let numberOfDaysInMonth = calendar.range(
         of: .day,
         in: .month,
         for: baseDate)?.count,
       let firstDayOfMonth = calendar.date(
         from: calendar.dateComponents([.year, .month], from: baseDate))
       else {
-        // 3
         throw CalendarDataError.metadataGeneration
     }
 
-    // 4
     let firstDayWeekday = calendar.component(.weekday, from: firstDayOfMonth)
 
-    // 5
     return MonthMetadata(
       numberOfDays: numberOfDaysInMonth,
       firstDay: firstDayOfMonth,
       firstDayWeekday: firstDayWeekday)
   }
 
-  // 1
   func generateDaysInMonth(for baseDate: Date) -> [Day] {
-    // 2
-    guard let metadata = try? monthMetadata(for: baseDate) else {
+    
+      guard let metadata = try? monthMetadata(for: baseDate) else {
       preconditionFailure("An error occurred when generating the metadata for \(baseDate)")
     }
 
@@ -231,18 +225,16 @@ private extension CalendarPickerViewController {
     let offsetInInitialRow = metadata.firstDayWeekday
     let firstDayOfMonth = metadata.firstDay
 
-    // 3
     var days: [Day] = (1..<(numberOfDaysInMonth + offsetInInitialRow))
       .map { day in
-        // 4
+          
         let isWithinDisplayedMonth = day >= offsetInInitialRow
-        // 5
+
         let dayOffset =
           isWithinDisplayedMonth ?
           day - offsetInInitialRow :
           -(offsetInInitialRow - day)
 
-        // 6
         return generateDay(
           offsetBy: dayOffset,
           for: firstDayOfMonth,
@@ -253,7 +245,6 @@ private extension CalendarPickerViewController {
     return days
   }
     
-  // 7
   func generateDay(
     offsetBy dayOffset: Int,
     for baseDate: Date,
@@ -283,26 +274,22 @@ private extension CalendarPickerViewController {
     )
   }
 
-  // 1
   func generateStartOfNextMonth(
     using firstDayOfDisplayedMonth: Date
     ) -> [Day] {
-    // 2
-    guard
-      let lastDayInMonth = calendar.date(
+
+    guard let lastDayInMonth = calendar.date(
         byAdding: DateComponents(month: 1, day: -1),
         to: firstDayOfDisplayedMonth)
       else {
         return []
     }
 
-    // 3
     let additionalDays = 7 - calendar.component(.weekday, from: lastDayInMonth)
     guard additionalDays > 0 else {
       return []
     }
 
-    // 4
     let days: [Day] = (1...additionalDays)
       .map {
         generateDay(
@@ -319,7 +306,6 @@ private extension CalendarPickerViewController {
   }
 }
 
-// MARK: - UICollectionViewDataSource
 extension CalendarPickerViewController: UICollectionViewDataSource {
   func collectionView(
     _ collectionView: UICollectionView,
@@ -348,8 +334,8 @@ extension CalendarPickerViewController: UICollectionViewDelegateFlowLayout {
     _ collectionView: UICollectionView,
     didSelectItemAt indexPath: IndexPath
   ) {
-//    let day = days[indexPath.row]
-    if (days[indexPath.row].isSelected) {
+
+      if (days[indexPath.row].isSelected) {
         days[indexPath.row].isSelected = false
     } else {
         days[indexPath.row].isSelected = true

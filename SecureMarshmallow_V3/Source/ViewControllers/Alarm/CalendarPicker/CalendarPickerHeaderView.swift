@@ -85,10 +85,6 @@ class CalendarPickerHeaderView: UIView {
       dayLabel.textAlignment = .center
       dayLabel.text = dayOfWeekLetter(for: dayNumber)
 
-      // VoiceOver users don't need to hear these days of the week read to them, nor do SwitchControl or Voice Control users need to select them
-      // If fact, they get in the way!
-      // When a VoiceOver user highlights a day of the month, the day of the week is read to them.
-      // That method provides the same amount of context as this stack view does to visual users
       dayLabel.isAccessibilityElement = false
       dayOfWeekStackView.addArrangedSubview(dayLabel)
     }

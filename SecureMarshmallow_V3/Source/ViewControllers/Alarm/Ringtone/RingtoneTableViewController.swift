@@ -26,22 +26,19 @@ class RingtoneTableViewController: UITableViewController {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "ringtoneCell")
     }
 
-    // MARK: - Table view
-
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
+
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
+
         return viewModel.ringtones.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ringtoneCell", for: indexPath)
 
-        // Configure the cell...
         cell.textLabel?.text = viewModel.ringtones[indexPath.row]
         
         if (clocks[currentClockIndex].selectedRingtone[indexPath.row] == true) {
@@ -54,12 +51,11 @@ class RingtoneTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // Unselect the row.
+
         tableView.deselectRow(at: indexPath, animated: false)
         
         print(clocks[currentClockIndex].selectedRingtone.count)
 
-        // unselect the previous selected ringtone and remove checkmark
         for i in 0...clocks[currentClockIndex].selectedRingtone.count - 1 {
             print("i: \(i)")
             clocks[currentClockIndex].selectedRingtone[i] = false
@@ -68,7 +64,6 @@ class RingtoneTableViewController: UITableViewController {
             cell!.accessoryType = .none
         }
         
-        // set the selected ringtone as active and add checkmark
         clocks[currentClockIndex].selectedRingtone[indexPath.row] = true
         let cell = tableView.cellForRow(at: indexPath)
         cell!.accessoryType = .checkmark

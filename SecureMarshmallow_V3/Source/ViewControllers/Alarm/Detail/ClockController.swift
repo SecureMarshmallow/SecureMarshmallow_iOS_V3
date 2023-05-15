@@ -20,8 +20,6 @@ class ClockController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
-    // MARK: Views
-    
     private let containerView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -108,9 +106,6 @@ class ClockController: UIViewController {
             internDeleteButton.heightAnchor.constraint(equalToConstant: buttonSize.height)
         ])
     }
-
-    // MARK: Buttons
-    
     
     private let timePicker: UIDatePicker = {
        let time = UIDatePicker()
@@ -158,8 +153,6 @@ class ClockController: UIViewController {
         return btn
     }()
 
-    // MARK: Actions of buttons
-    
     @objc func timePickerChanged(picker: UIDatePicker) {
         let clockIndex = clocks.firstIndex(where: { $0.id == viewModel.clock.id })
         clocks[clockIndex!].ringTime = Calendar.current.dateComponents([.hour, .minute], from: picker.date)
@@ -215,8 +208,6 @@ class ClockController: UIViewController {
         }, clockId: viewModel.clock.id)
         present(controller, animated: true, completion: nil)
     }
-    
-    // MARK: Functions
     
     func editNameSave() {
         let clockIndex = clocks.firstIndex(where: {$0.id == viewModel.clock.id})
