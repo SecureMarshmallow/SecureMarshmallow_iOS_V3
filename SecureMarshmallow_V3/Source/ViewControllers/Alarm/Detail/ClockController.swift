@@ -146,7 +146,7 @@ class ClockController: UIViewController {
     private let calendarButton: EditButton = {
         let btn = EditButton(title: "달력")
         btn.translatesAutoresizingMaskIntoConstraints = false
-        btn.setTitle("Calendar View", for: .normal)
+        btn.setTitle("달력", for: .normal)
         btn.addTarget(self, action: #selector(calendarButtonPressed), for: .touchUpInside)
         return btn
     }()
@@ -173,12 +173,13 @@ class ClockController: UIViewController {
     }
     
     @objc func deleteAlertMessage(_ sender: UIButton!) {
-        let alertController:UIAlertController = UIAlertController(title: "Delete", message: "Are you sure?", preferredStyle: UIAlertController.Style.alert)
+        let alertController:UIAlertController = UIAlertController(title: "알람 삭제", message: "알람을 삭제하시겠습니까?", preferredStyle: UIAlertController.Style.alert)
 
-        alertController.addAction(UIAlertAction(title: "Yes", style: UIAlertAction.Style.destructive, handler: { (action: UIAlertAction!) in
+        alertController.addAction(UIAlertAction(title: "삭제", style: UIAlertAction.Style.destructive, handler: { (action: UIAlertAction!) in
             self.choseToDelete()
+            self.dismissTap()
             }))
-        alertController.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler:nil))
+        alertController.addAction(UIAlertAction(title: "취소", style: UIAlertAction.Style.cancel, handler:nil))
         present(alertController, animated: true, completion: nil)
     }
 
@@ -191,18 +192,18 @@ class ClockController: UIViewController {
     }
     
     @objc func alertTextField(_ sender: UIButton!) {
-        let alertController:UIAlertController = UIAlertController(title: "Edit Title", message: nil, preferredStyle: UIAlertController.Style.alert)
+        let alertController:UIAlertController = UIAlertController(title: "알람 수정", message: nil, preferredStyle: UIAlertController.Style.alert)
 
         alertController.addTextField { (textField) in
             textField.text = clocks[self.currentIndex!].name
         }
         let clockIndex = clocks.firstIndex(where: {$0.id == viewModel.clock.id})
-        alertController.addAction(UIAlertAction(title: "Save", style: UIAlertAction.Style.default, handler: { (action: UIAlertAction!) in
+        alertController.addAction(UIAlertAction(title: "저장", style: UIAlertAction.Style.default, handler: { (action: UIAlertAction!) in
             clocks[clockIndex!].name = alertController.textFields![0].text!
             self.editNameSave()
             }))
 
-        alertController.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler:nil))
+        alertController.addAction(UIAlertAction(title: "취소", style: UIAlertAction.Style.cancel, handler:nil))
         present(alertController, animated: true, completion: nil)
     }
     

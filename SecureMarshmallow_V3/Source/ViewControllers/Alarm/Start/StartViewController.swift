@@ -68,7 +68,7 @@ class StartController: UIViewController {
     
     private func addClock() {
         let newID = UUID.init()
-        clocks.append(Clock(id: newID, name: "New Alarm", daysOfWeek: [0], ringDays: [], isActivated: true, ringTime: Calendar.current.dateComponents([.hour, .minute], from: Date.init()), notificationId: UUID().uuidString, selectedDays: [true, true, true, true, true, true, true], selectedRingtone: [true, false]))
+        clocks.append(Clock(id: newID, name: "이름 없음", daysOfWeek: [0], ringDays: [], isActivated: true, ringTime: Calendar.current.dateComponents([.hour, .minute], from: Date.init()), notificationId: UUID().uuidString, selectedDays: [true, true, true, true, true, true, true], selectedRingtone: [true, false]))
         let element = clocks.first(where: {$0.id == newID})
         let index = clocks.firstIndex(of: element!)
         let currentClockIndex = index!
