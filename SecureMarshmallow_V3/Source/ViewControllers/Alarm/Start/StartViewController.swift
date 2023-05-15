@@ -45,7 +45,7 @@ class StartController: UIViewController {
         collectionView.dataSource = self
         collectionView.backgroundColor = .BackGray
         collectionView.alwaysBounceVertical = true
-        collectionView.contentInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
+        collectionView.contentInset = UIEdgeInsets(top: 20, left: 16, bottom: 0, right: 16)
 
         view.addSubview(collectionView)
 
