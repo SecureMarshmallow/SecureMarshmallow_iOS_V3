@@ -1,20 +1,22 @@
 //
 //  StartViewModel.swift
-//  SecureMarshmallow_V3
+//  myClock
 //
-//  Created by 박준하 on 2023/05/14.
+//  Created by Alexander Kurz on 3/28/22.
 //
 
 import Foundation
-import UIKit
+
+// MARK: Global variables
 
 var clocks: [Clock] = []
 var subUrl: URL?
 var cells: [ClockCell] = []
 
 class StartViewModel {
-    let fileManger = FileManager.default
+    let fm = FileManager.default
     let mainUrl: URL? = Bundle.main.url(forResource: "Clocks", withExtension: "json")
+
     init() {
         getData()
     }
@@ -27,7 +29,7 @@ class StartViewModel {
     }
 
     private func loadFile(mainPath: URL, subPath: URL){
-        if fileManger.fileExists(atPath: subPath.path){
+        if fm.fileExists(atPath: subPath.path){
             decodeData(pathName: subPath)
         }else{
             decodeData(pathName: mainPath)
@@ -45,7 +47,7 @@ class StartViewModel {
     private func getData() {
         do {
             print("json file gets read")
-            let documentDirectory = try fileManger.url(for: .documentDirectory, in: .userDomainMask, appropriateFor:nil, create:false)
+            let documentDirectory = try fm.url(for: .documentDirectory, in: .userDomainMask, appropriateFor:nil, create:false)
             subUrl = documentDirectory.appendingPathComponent("Clocks.json")
             loadFile(mainPath: mainUrl!, subPath: subUrl!)
         } catch {
@@ -53,5 +55,3 @@ class StartViewModel {
         }
     }
 }
-
-

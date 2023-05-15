@@ -53,6 +53,15 @@
 		0EC03D982A10EAFF007CD53C /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC03D972A10EAFF007CD53C /* StartViewController.swift */; };
 		0EC03D9A2A10EBEF007CD53C /* ClockCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC03D992A10EBEF007CD53C /* ClockCell.swift */; };
 		0EC03D9C2A10EF3E007CD53C /* StartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC03D9B2A10EF3E007CD53C /* StartViewModel.swift */; };
+		0EC03D9F2A10F1EF007CD53C /* CalendarDateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC03D9E2A10F1EF007CD53C /* CalendarDateCollectionViewCell.swift */; };
+		0EC03DA12A10F1FC007CD53C /* CalendarPickerFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC03DA02A10F1FC007CD53C /* CalendarPickerFooterView.swift */; };
+		0EC03DA32A10F210007CD53C /* CalendarPickerHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC03DA22A10F210007CD53C /* CalendarPickerHeaderView.swift */; };
+		0EC03DA52A10F221007CD53C /* CalendarPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC03DA42A10F221007CD53C /* CalendarPickerViewController.swift */; };
+		0EC03DA82A10F249007CD53C /* ClockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC03DA72A10F249007CD53C /* ClockViewModel.swift */; };
+		0EC03DAA2A10F25D007CD53C /* ClockController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC03DA92A10F25D007CD53C /* ClockController.swift */; };
+		0EC03DAC2A10F29A007CD53C /* RepeatTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC03DAB2A10F29A007CD53C /* RepeatTableViewModel.swift */; };
+		0EC03DAE2A10F308007CD53C /* RingtoneTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC03DAD2A10F308007CD53C /* RingtoneTableViewController.swift */; };
+		0EC03DB12A10F337007CD53C /* RingtoneTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC03DB02A10F337007CD53C /* RingtoneTableViewModel.swift */; };
 		0EC9B47B47968329BD9F41B6 /* Pods_SecureMarshmallow_V3_SecureMarshmallow_V3UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FBA3FD3EE3B33BE850B399D /* Pods_SecureMarshmallow_V3_SecureMarshmallow_V3UITests.framework */; };
 		0ECEF8AA29FB930A008E848E /* GmailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECEF8A929FB930A008E848E /* GmailCell.swift */; };
 		0ECEF8AC29FB932B008E848E /* GmailItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECEF8AB29FB932B008E848E /* GmailItemType.swift */; };
@@ -170,6 +179,15 @@
 		0EC03D972A10EAFF007CD53C /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		0EC03D992A10EBEF007CD53C /* ClockCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockCell.swift; sourceTree = "<group>"; };
 		0EC03D9B2A10EF3E007CD53C /* StartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewModel.swift; sourceTree = "<group>"; };
+		0EC03D9E2A10F1EF007CD53C /* CalendarDateCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDateCollectionViewCell.swift; sourceTree = "<group>"; };
+		0EC03DA02A10F1FC007CD53C /* CalendarPickerFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarPickerFooterView.swift; sourceTree = "<group>"; };
+		0EC03DA22A10F210007CD53C /* CalendarPickerHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarPickerHeaderView.swift; sourceTree = "<group>"; };
+		0EC03DA42A10F221007CD53C /* CalendarPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarPickerViewController.swift; sourceTree = "<group>"; };
+		0EC03DA72A10F249007CD53C /* ClockViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockViewModel.swift; sourceTree = "<group>"; };
+		0EC03DA92A10F25D007CD53C /* ClockController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockController.swift; sourceTree = "<group>"; };
+		0EC03DAB2A10F29A007CD53C /* RepeatTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatTableViewModel.swift; sourceTree = "<group>"; };
+		0EC03DAD2A10F308007CD53C /* RingtoneTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingtoneTableViewController.swift; sourceTree = "<group>"; };
+		0EC03DB02A10F337007CD53C /* RingtoneTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingtoneTableViewModel.swift; sourceTree = "<group>"; };
 		0ECEF8A929FB930A008E848E /* GmailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GmailCell.swift; sourceTree = "<group>"; };
 		0ECEF8AB29FB932B008E848E /* GmailItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GmailItemType.swift; sourceTree = "<group>"; };
 		0ECEF8AD29FB933F008E848E /* GmailInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GmailInformationViewController.swift; sourceTree = "<group>"; };
@@ -347,9 +365,12 @@
 		0EC03D752A10E167007CD53C /* Alarm */ = {
 			isa = PBXGroup;
 			children = (
+				0EC03D762A10E52F007CD53C /* RepeatDate */,
+				0EC03DAF2A10F32B007CD53C /* Ringtone */,
+				0EC03DA62A10F240007CD53C /* Detail */,
+				0EC03D9D2A10F0C5007CD53C /* CalendarPicker */,
 				0EC03D962A10EAF7007CD53C /* Start */,
 				0EC03D792A10E671007CD53C /* Data */,
-				0EC03D762A10E52F007CD53C /* RepeatDate */,
 			);
 			path = Alarm;
 			sourceTree = "<group>";
@@ -358,6 +379,7 @@
 			isa = PBXGroup;
 			children = (
 				0EC03D772A10E630007CD53C /* RepeatTableViewController.swift */,
+				0EC03DAB2A10F29A007CD53C /* RepeatTableViewModel.swift */,
 			);
 			path = RepeatDate;
 			sourceTree = "<group>";
@@ -383,6 +405,35 @@
 				0EC03D992A10EBEF007CD53C /* ClockCell.swift */,
 			);
 			path = Start;
+			sourceTree = "<group>";
+		};
+		0EC03D9D2A10F0C5007CD53C /* CalendarPicker */ = {
+			isa = PBXGroup;
+			children = (
+				0EC03D9E2A10F1EF007CD53C /* CalendarDateCollectionViewCell.swift */,
+				0EC03DA02A10F1FC007CD53C /* CalendarPickerFooterView.swift */,
+				0EC03DA22A10F210007CD53C /* CalendarPickerHeaderView.swift */,
+				0EC03DA42A10F221007CD53C /* CalendarPickerViewController.swift */,
+			);
+			path = CalendarPicker;
+			sourceTree = "<group>";
+		};
+		0EC03DA62A10F240007CD53C /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				0EC03DA72A10F249007CD53C /* ClockViewModel.swift */,
+				0EC03DA92A10F25D007CD53C /* ClockController.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		0EC03DAF2A10F32B007CD53C /* Ringtone */ = {
+			isa = PBXGroup;
+			children = (
+				0EC03DAD2A10F308007CD53C /* RingtoneTableViewController.swift */,
+				0EC03DB02A10F337007CD53C /* RingtoneTableViewModel.swift */,
+			);
+			path = Ringtone;
 			sourceTree = "<group>";
 		};
 		0ECEF8A729FB9249008E848E /* Main */ = {
@@ -1004,6 +1055,7 @@
 				0E84099429E2D759005EB879 /* PasswordWriteViewController.swift in Sources */,
 				0ECEF8C129FC22A9008E848E /* CommonItemType.swift in Sources */,
 				0ECEF8AC29FB932B008E848E /* GmailItemType.swift in Sources */,
+				0EC03DB12A10F337007CD53C /* RingtoneTableViewModel.swift in Sources */,
 				0E56871229FA39C000EEEBD3 /* TaskModel.swift in Sources */,
 				0EFE323D29DFCE4300725EEE /* ListPresenter.swift in Sources */,
 				0E8409BD29E38D36005EB879 /* SettingsCell.swift in Sources */,
@@ -1024,9 +1076,11 @@
 				0EFE323F29DFCE8200725EEE /* UserDefaultsManager.swift in Sources */,
 				0EDB05B32A0DADB9009E46A8 /* FileViewController.swift in Sources */,
 				0EC03D9A2A10EBEF007CD53C /* ClockCell.swift in Sources */,
+				0EC03DA12A10F1FC007CD53C /* CalendarPickerFooterView.swift in Sources */,
 				0EC03D932A10EA9D007CD53C /* DateFunctions.swift in Sources */,
 				0E09A62729FF7DCA00EC6AE1 /* DevelopersTableViewCell.swift in Sources */,
 				0E09A62C2A01EDF800EC6AE1 /* ImageCollectionViewController.swift in Sources */,
+				0EC03DA32A10F210007CD53C /* CalendarPickerHeaderView.swift in Sources */,
 				0EC03D782A10E630007CD53C /* RepeatTableViewController.swift in Sources */,
 				0EC03D8F2A10E99E007CD53C /* Extensions+UIStackView.swift in Sources */,
 				0EFE31D429DF9EFE00725EEE /* SceneDelegate.swift in Sources */,
@@ -1034,18 +1088,24 @@
 				0EC03D9C2A10EF3E007CD53C /* StartViewModel.swift in Sources */,
 				0EFE323B29DFCDFB00725EEE /* ListViewController.swift in Sources */,
 				0EC03D912A10EA46007CD53C /* writeToFile.swift in Sources */,
+				0EC03DA52A10F221007CD53C /* CalendarPickerViewController.swift in Sources */,
 				0E56871029FA37E800EEEBD3 /* Extensions+UIView.swift in Sources */,
+				0EC03DA82A10F249007CD53C /* ClockViewModel.swift in Sources */,
 				0E09A61A29FD28DC00EC6AE1 /* TimeOfAppViewController.swift in Sources */,
 				0E5686FF29FA347300EEEBD3 /* SecureMarshmallow.xcdatamodeld in Sources */,
 				0E09A62F2A01F70300EC6AE1 /* ImageCollectionViewCell.swift in Sources */,
 				0EDB05F52A0E3FBA009E46A8 /* WiFiViewController.swift in Sources */,
 				0E09A62529FF7DB600EC6AE1 /* DevelopersViewController.swift in Sources */,
+				0EC03DAE2A10F308007CD53C /* RingtoneTableViewController.swift in Sources */,
 				0EC03D8D2A10E942007CD53C /* Extensions+Array.swift in Sources */,
 				0ECEF8BB29FBA771008E848E /* BaseSC.swift in Sources */,
 				0EC03D952A10EACD007CD53C /* generalFunctions.swift in Sources */,
+				0EC03DAC2A10F29A007CD53C /* RepeatTableViewModel.swift in Sources */,
 				0E09A61229FD0FC400EC6AE1 /* SupportCell.swift in Sources */,
 				0E09A60529FD0A3500EC6AE1 /* MarshmallowWidget.intentdefinition in Sources */,
+				0EC03D9F2A10F1EF007CD53C /* CalendarDateCollectionViewCell.swift in Sources */,
 				0EFE320E29DFA1D000725EEE /* BaseVC.swift in Sources */,
+				0EC03DAA2A10F25D007CD53C /* ClockController.swift in Sources */,
 				0E8409B629E3843B005EB879 /* SavePassword.swift in Sources */,
 				0EC03D7D2A10E6FB007CD53C /* MonthMetadata.swift in Sources */,
 				0E09A62929FF7E5B00EC6AE1 /* Extensions+NSObject.swift in Sources */,

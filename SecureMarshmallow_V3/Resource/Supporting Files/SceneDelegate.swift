@@ -4,15 +4,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
-
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
- 
+        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
+        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
+        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+        registerLocal()
         guard let windowScene = (scene as? UIWindowScene) else { return }
-            window = UIWindow(frame: UIScreen.main.bounds)
-            window?.windowScene = windowScene
-                
-        self.window?.rootViewController = BaseNC(rootViewController: TapBarViewController())
-        self.window?.makeKeyAndVisible()
+        window = UIWindow(windowScene: windowScene)
+        window?.rootViewController = UINavigationController(rootViewController: StartController())
+        window?.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -36,16 +36,87 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Called as the scene transitions from the background to the foreground.
         // Use this method to undo the changes made on entering the background.
     }
+    
+    // MARK: Functions
 
+    private func setNextClocks() {
+        for clock in clocks {
+            if (clock.isActivated) {
+                scheduleClock(clockId: clock.id)
+            }
+        }
+    }
+    
+    private func registerLocal() {
+        let center = UNUserNotificationCenter.current()
+        
+        center.requestAuthorization(options: [.alert, .badge, .sound]){(granted, error) in
+            if granted {
+                print("User notifications were granted")
+            } else {
+                print("User notifications not granted")
+            }
+        }
+    }
+    
+    private func unscheduleAllClocks() {
+        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+        UNUserNotificationCenter.current().removeAllDeliveredNotifications()
+    }
+    
+    private func findNextRingDate(ringDates: [DateComponents]) -> DateComponents {
+        var nextDate = ringDates[0]
+        for date in ringDates {
+            if (date < nextDate) {
+                nextDate = date
+            }
+        }
+        print("next date \(nextDate)")
+
+        return nextDate
+    }
+    
+    private func scheduleClock(clockId: UUID) {
+        let clockIndex = clocks.firstIndex(where: {$0.id == clockId})
+        let clock = clocks[clockIndex!]
+        let center = UNUserNotificationCenter.current()
+        
+
+        if (clock.ringDays.isEmpty) { return }
+        let nextDate = findNextRingDate(ringDates: clock.ringDays)
+        let ringDate = DateComponents(calendar: Calendar.current, year: nextDate.year, month: nextDate.month, day: nextDate.day, hour: clock.ringTime.hour, minute: clock.ringTime.minute)
+        print(ringDate)
+
+        let trigger = UNCalendarNotificationTrigger(dateMatching: ringDate, repeats: false)
+
+        let content = UNMutableNotificationContent()
+        content.title = clock.name
+        content.body = "get ready for a great new day"
+        content.categoryIdentifier = "myIdentifier"
+        content.userInfo = ["Id": 7]
+        
+        if (clock.selectedRingtone[0] == true) {
+            content.sound = UNNotificationSound.criticalSoundNamed(UNNotificationSoundName(rawValue: "bell.mp3"))
+        }
+        else if (clock.selectedRingtone[1] == true) {
+            content.sound = UNNotificationSound.criticalSoundNamed(UNNotificationSoundName(rawValue: "tickle.mp3"))
+        }
+        
+        clocks[clockIndex!].notificationId = UUID().uuidString
+        
+        let request = UNNotificationRequest(identifier: clock.notificationId, content: content, trigger: trigger)
+        center.add(request)
+    }
+    
     func sceneDidEnterBackground(_ scene: UIScene) {
+        removeClocksInPast()
+        unscheduleAllClocks()
+        setNextClocks()
+        writeToFile(location: subUrl!)
         // Called as the scene transitions from the foreground to the background.
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
-
-        // Save changes in the application's managed object context when the application transitions to the background.
-        (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
     }
-
-
 }
+
 

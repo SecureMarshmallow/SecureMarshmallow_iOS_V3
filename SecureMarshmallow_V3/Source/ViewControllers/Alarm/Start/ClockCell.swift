@@ -1,60 +1,29 @@
-//
-//  ClockCell.swift
-//  SecureMarshmallow_V3
-//
-//  Created by 박준하 on 2023/05/14.
-//
-
 import UIKit
-import Then
-import SnapKit
 
 class ClockCell: UICollectionViewCell {
     
-    private let nameLabel = UILabel().then {
-        $0.font = UIFont.systemFont(ofSize: 20, weight: .bold)
-        $0.textColor = .lightGray
-        $0.numberOfLines = 0
-    }
-    
-    private let chevronImageView = UIImageView().then {
-        $0.image = UIImage(systemName: "chevron.right")?.withTintColor(.gray, renderingMode: .alwaysOriginal)
-        $0.isHidden = false
-    }
-    
-    private let switchView = UISwitch().then {
-        $0.setOn(false, animated: true)
-    }
-    
-    var switchValueChanged: ((Bool) -> ()) = { _ in }
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
-        
+        layout()
     }
-    
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    private func setupView() {
+        
+    private func layout() {
         switchView.addTarget(self, action: #selector(switchStateDidChange(_:)), for: .valueChanged)
-        
-        layer.cornerRadius = 10
-        backgroundColor = .black
+
+        layer.cornerRadius = 20
+        backgroundColor = .cellColor
         layer.borderWidth = 1
-        
+    
         addSubviews([
             nameLabel,
             chevronImageView,
-            switchView
+            switchView,
         ])
-        
-        layout()
-    }
-    
-    private func layout() {
+
         NSLayoutConstraint.activate([
             nameLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 16),
             nameLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
@@ -76,6 +45,8 @@ class ClockCell: UICollectionViewCell {
         chevronImageView.isHidden = chevronHidden
         if (switchView.isOn) {
             layer.borderColor = UIColor.white.cgColor
+            layer.shadowOffset = CGSize(width: 10, height: 10)
+            layer.shadowOpacity = 0.1
             nameLabel.textColor = .white
         }
         else {
@@ -84,19 +55,48 @@ class ClockCell: UICollectionViewCell {
         }
     }
     
-    @objc func switchStateDidChange(_ sender:UISwitch!)
+    let nameLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont.systemFont(ofSize: 20, weight: .bold)
+        label.textColor = .lightGray
+        label.numberOfLines = 0
+
+        return label
+    }()
+
+    private let chevronImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.image = UIImage(systemName: "chevron.right")?.withTintColor(.gray, renderingMode: .alwaysOriginal)
+        imageView.isHidden = false
+        return imageView
+    }()
+
+    let switchView: UISwitch = {
+        let switchDemo = UISwitch()
+        switchDemo.translatesAutoresizingMaskIntoConstraints = false
+        switchDemo.setOn(false, animated: true)
+        return switchDemo
+    }()
+    
+    var switchValueChanged: ((Bool) -> ()) = { _ in }
+
+    @objc func switchStateDidChange(_ sender: UISwitch!)
     {
         let defaults = UserDefaults.standard
+        
         let key = nameLabel.text
+        
         if (sender.isOn == true){
-            print("UISwitch state is now ON")
+            print("on 🔊")
             defaults.set(true, forKey: key!)
             print(key!)
             nameLabel.textColor = .white
             layer.borderColor = UIColor.white.cgColor
         }
         else{
-            print("UISwitch state is now Off")
+            print("off 🔈")
             defaults.set(false, forKey: key!)
             print(key!)
             nameLabel.textColor = .lightGray
