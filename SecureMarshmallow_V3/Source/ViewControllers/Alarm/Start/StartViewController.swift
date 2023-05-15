@@ -109,7 +109,11 @@ extension StartController: UICollectionViewDelegate, UICollectionViewDataSource,
         
         let controller = ClockController(viewModel: ClockViewModel(clock: clock, collectionView: collectionView))
  
-        navigationController?.pushViewController(controller, animated: true)
+//        navigationController?.pushViewController(controller, animated: true)
+        let viewController = UINavigationController(rootViewController: controller)
+        viewController.modalPresentationStyle = .automatic
+            self.present(viewController, animated: true)
+        
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

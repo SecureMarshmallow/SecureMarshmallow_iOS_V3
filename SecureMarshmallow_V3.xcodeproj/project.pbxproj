@@ -62,6 +62,7 @@
 		0EC03DAC2A10F29A007CD53C /* RepeatTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC03DAB2A10F29A007CD53C /* RepeatTableViewModel.swift */; };
 		0EC03DAE2A10F308007CD53C /* RingtoneTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC03DAD2A10F308007CD53C /* RingtoneTableViewController.swift */; };
 		0EC03DB12A10F337007CD53C /* RingtoneTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC03DB02A10F337007CD53C /* RingtoneTableViewModel.swift */; };
+		0EC03E192A11FC9C007CD53C /* EditButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC03E182A11FC9C007CD53C /* EditButton.swift */; };
 		0EC9B47B47968329BD9F41B6 /* Pods_SecureMarshmallow_V3_SecureMarshmallow_V3UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FBA3FD3EE3B33BE850B399D /* Pods_SecureMarshmallow_V3_SecureMarshmallow_V3UITests.framework */; };
 		0ECEF8AA29FB930A008E848E /* GmailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECEF8A929FB930A008E848E /* GmailCell.swift */; };
 		0ECEF8AC29FB932B008E848E /* GmailItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECEF8AB29FB932B008E848E /* GmailItemType.swift */; };
@@ -188,6 +189,7 @@
 		0EC03DAB2A10F29A007CD53C /* RepeatTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatTableViewModel.swift; sourceTree = "<group>"; };
 		0EC03DAD2A10F308007CD53C /* RingtoneTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingtoneTableViewController.swift; sourceTree = "<group>"; };
 		0EC03DB02A10F337007CD53C /* RingtoneTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingtoneTableViewModel.swift; sourceTree = "<group>"; };
+		0EC03E182A11FC9C007CD53C /* EditButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditButton.swift; sourceTree = "<group>"; };
 		0ECEF8A929FB930A008E848E /* GmailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GmailCell.swift; sourceTree = "<group>"; };
 		0ECEF8AB29FB932B008E848E /* GmailItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GmailItemType.swift; sourceTree = "<group>"; };
 		0ECEF8AD29FB933F008E848E /* GmailInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GmailInformationViewController.swift; sourceTree = "<group>"; };
@@ -711,6 +713,7 @@
 				0EDB05AB2A0D53E2009E46A8 /* BaseNavigationViewController */,
 				0EDB05AD2A0D5424009E46A8 /* BaseSetting */,
 				0EDB05AF2A0D5476009E46A8 /* ExplanationViewController */,
+				0EC03E182A11FC9C007CD53C /* EditButton.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -1099,6 +1102,7 @@
 				0EC03DAE2A10F308007CD53C /* RingtoneTableViewController.swift in Sources */,
 				0EC03D8D2A10E942007CD53C /* Extensions+Array.swift in Sources */,
 				0ECEF8BB29FBA771008E848E /* BaseSC.swift in Sources */,
+				0EC03E192A11FC9C007CD53C /* EditButton.swift in Sources */,
 				0EC03D952A10EACD007CD53C /* generalFunctions.swift in Sources */,
 				0EC03DAC2A10F29A007CD53C /* RepeatTableViewModel.swift in Sources */,
 				0E09A61229FD0FC400EC6AE1 /* SupportCell.swift in Sources */,

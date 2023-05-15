@@ -73,10 +73,13 @@ class ClockCell: UICollectionViewCell {
         imageView.isHidden = false
         return imageView
     }()
-
+    
     let switchView: UISwitch = {
         let switchDemo = UISwitch()
         switchDemo.translatesAutoresizingMaskIntoConstraints = false
+        switchDemo.tintColor = .gray
+        switchDemo.onTintColor = .black
+        switchDemo.thumbTintColor = .white
         switchDemo.setOn(false, animated: true)
         return switchDemo
     }()
