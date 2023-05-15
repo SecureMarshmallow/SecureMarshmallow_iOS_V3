@@ -43,14 +43,15 @@ class ClockCell: UICollectionViewCell {
         nameLabel.text = clock.name
         switchView.isOn = clock.isActivated
         chevronImageView.isHidden = chevronHidden
+        
         if (switchView.isOn) {
             layer.borderColor = UIColor.white.cgColor
+            nameLabel.textColor = .cellTitleColor
             layer.shadowOffset = CGSize(width: 10, height: 10)
             layer.shadowOpacity = 0.1
-            nameLabel.textColor = .white
         }
         else {
-            layer.borderColor = UIColor.darkGray.cgColor
+            layer.borderColor = UIColor.black.cgColor
             nameLabel.textColor = .lightGray
         }
     }
@@ -59,7 +60,7 @@ class ClockCell: UICollectionViewCell {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 20, weight: .bold)
-        label.textColor = .lightGray
+        label.textColor = .cellTitleColor
         label.numberOfLines = 0
 
         return label
@@ -92,15 +93,19 @@ class ClockCell: UICollectionViewCell {
             print("on 🔊")
             defaults.set(true, forKey: key!)
             print(key!)
-            nameLabel.textColor = .white
+            nameLabel.textColor = .cellTitleColor
             layer.borderColor = UIColor.white.cgColor
+            layer.shadowOffset = CGSize(width: 10, height: 10)
+            layer.shadowOpacity = 0.1
         }
         else{
             print("off 🔈")
             defaults.set(false, forKey: key!)
             print(key!)
             nameLabel.textColor = .lightGray
-            layer.borderColor = UIColor.darkGray.cgColor
+            layer.borderColor = UIColor.clear.cgColor
+            layer.shadowOffset = CGSize(width: 0, height: 0)
+            layer.shadowOpacity = 0
         }
         switchValueChanged(sender.isOn)
     }
