@@ -17,6 +17,7 @@ class EditButton: UIButton {
         setTitleColor(.cellTitleColor, for: .normal)
         
         layer.cornerRadius = 20
+        layer.borderColor = UIColor.white.cgColor
         
         layer.shadowOffset = CGSize(width: 10, height: 10)
         layer.shadowOpacity = 0.1
