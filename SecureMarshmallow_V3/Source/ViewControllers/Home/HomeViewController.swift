@@ -8,6 +8,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         label.textColor = UIColor.black
         label.text = "SecureMarshmallow"
         label.font = .systemFont(ofSize: 24.0, weight: .bold)
+        label.numberOfLines = 0
         return label
     }()
     
@@ -53,7 +54,31 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     func configureUI() {
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: navLabel)
         self.navigationItem.leftItemsSupplementBackButton = true
+        
+        let image = UIImage(named: "AppIcon")
+        
+        let resizedImage = image?.resized(toWidth: 50, height: 50)
+        
+        let roundedImage = resizedImage?.roundedImage(withRadius: 25)
+        
+        let button = UIButton(type: .custom)
+        button.setImage(roundedImage, for: .normal)
+        button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+        button.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
+        
+        let barButtonItem = UIBarButtonItem(customView: button)
+        
+        let spacer = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
+        spacer.width = 20
+        
+        navigationItem.rightBarButtonItems = [spacer, barButtonItem]
     }
+
+
+    @objc func buttonTapped() {
+        print("안녕")
+    }
+
     
     @objc func handleLongGesture(_ gesture: UILongPressGestureRecognizer) {
         switch gesture.state {
@@ -243,5 +268,24 @@ extension HomeViewController {
         let adjustedIndexPath = IndexPath(item: (collectionView.numberOfItems(inSection: proposedIndexPath.section) / 2), section: proposedIndexPath.section)
         
         return adjustedIndexPath
+    }
+}
+
+extension UIImage {
+    func resized(toWidth width: CGFloat, height: CGFloat) -> UIImage? {
+        let newSize = CGSize(width: width, height: height)
+        UIGraphicsBeginImageContextWithOptions(newSize, false, scale)
+        defer { UIGraphicsEndImageContext() }
+        draw(in: CGRect(origin: .zero, size: newSize))
+        return UIGraphicsGetImageFromCurrentImageContext()
+    }
+    
+    func roundedImage(withRadius radius: CGFloat) -> UIImage? {
+        UIGraphicsBeginImageContextWithOptions(size, false, scale)
+        defer { UIGraphicsEndImageContext() }
+        let bounds = CGRect(origin: .zero, size: size)
+        UIBezierPath(roundedRect: bounds, cornerRadius: radius).addClip()
+        draw(in: bounds)
+        return UIGraphicsGetImageFromCurrentImageContext()
     }
 }
