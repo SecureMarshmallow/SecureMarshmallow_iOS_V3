@@ -11,7 +11,7 @@ import Then
 
 class SamilInformationCollectionViewCell: UICollectionViewCell {
     
-    static let identifier = "InformationCollectionViewCell"
+    static let identifier = "SamilInformationCollectionViewCell"
     
     var imageView: UIImageView = {
         let images = UIImageView()
