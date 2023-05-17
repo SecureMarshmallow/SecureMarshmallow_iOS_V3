@@ -34,7 +34,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         collectionView.register(SamilInformationCollectionViewCell.self, forCellWithReuseIdentifier: SamilInformationCollectionViewCell.identifier)
         collectionView.register(LargeInformationCollectionViewCell.self, forCellWithReuseIdentifier: LargeInformationCollectionViewCell.identifier)
         collectionView.register(AlarmCollectionViewCell.self, forCellWithReuseIdentifier: AlarmCollectionViewCell.identifier)
-        collectionView.backgroundColor = .white
+        collectionView.backgroundColor = .HomeBackgroundColor
         view.addSubview(collectionView)
         collectionView.snp.makeConstraints {
             $0.edges.equalToSuperview()
@@ -101,7 +101,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath)
-        cell.backgroundColor = .gray
+        cell.backgroundColor = .cellColor
         
         for subview in cell.contentView.subviews {
             subview.removeFromSuperview()
@@ -111,7 +111,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         
         if item == 1 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SamilInformationCollectionViewCell.identifier, for: indexPath) as! SamilInformationCollectionViewCell
-            cell.backgroundColor = .gray
+            cell.backgroundColor = .white
             cell.layout()
             cell.layer.cornerRadius = 25.0
             
@@ -127,19 +127,19 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
             
             //time
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AlarmCollectionViewCell.identifier, for: indexPath) as! AlarmCollectionViewCell
-            cell.backgroundColor = .gray
+            cell.backgroundColor = .white
             cell.layout()
             cell.layer.cornerRadius = 20.0
             
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath)
-            cell.backgroundColor = .gray
+            cell.backgroundColor = .white
             
             let label = UILabel()
             label.font = .systemFont(ofSize: 20)
             label.textAlignment = .center
-            label.textColor = .white
+            label.textColor = .black
             label.text = "Item \(item)"
             cell.contentView.addSubview(label)
             label.snp.makeConstraints { make in

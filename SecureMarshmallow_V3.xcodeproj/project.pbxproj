@@ -710,9 +710,9 @@
 		0EFE320B29DFA1BB00725EEE /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				0EDB05A02A0CC4E0009E46A8 /* Extensions+UIColor.swift */,
 				0E56870F29FA37E800EEEBD3 /* Extensions+UIView.swift */,
 				0E09A62829FF7E5B00EC6AE1 /* Extensions+NSObject.swift */,
-				0EDB05A02A0CC4E0009E46A8 /* Extensions+UIColor.swift */,
 				0EC03D8C2A10E942007CD53C /* Extensions+Array.swift */,
 				0EC03D8E2A10E99E007CD53C /* Extensions+UIStackView.swift */,
 				0EC03D902A10EA46007CD53C /* writeToFile.swift */,
