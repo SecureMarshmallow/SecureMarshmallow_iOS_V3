@@ -31,7 +31,9 @@
 		0E5686FF29FA347300EEEBD3 /* SecureMarshmallow.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0E5686FD29FA347300EEEBD3 /* SecureMarshmallow.xcdatamodeld */; };
 		0E56871029FA37E800EEEBD3 /* Extensions+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E56870F29FA37E800EEEBD3 /* Extensions+UIView.swift */; };
 		0E56871229FA39C000EEEBD3 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E56871129FA39C000EEEBD3 /* TaskModel.swift */; };
-		0E6275412A146EB100E8F8E9 /* InformationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6275402A146EB100E8F8E9 /* InformationCollectionViewCell.swift */; };
+		0E6275412A146EB100E8F8E9 /* SamilInformationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6275402A146EB100E8F8E9 /* SamilInformationCollectionViewCell.swift */; };
+		0E6275432A14D17500E8F8E9 /* LargeInformationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6275422A14D17500E8F8E9 /* LargeInformationCollectionViewCell.swift */; };
+		0E6275462A14D53F00E8F8E9 /* AlarmCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6275452A14D53F00E8F8E9 /* AlarmCollectionViewCell.swift */; };
 		0E84099429E2D759005EB879 /* PasswordWriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E84099329E2D759005EB879 /* PasswordWriteViewController.swift */; };
 		0E84099629E2D7B5005EB879 /* PasswordWritePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E84099529E2D7B5005EB879 /* PasswordWritePresenter.swift */; };
 		0E8409B429E38420005EB879 /* Passwords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8409B329E38420005EB879 /* Passwords.swift */; };
@@ -159,7 +161,9 @@
 		0E5686FE29FA347300EEEBD3 /* SecureMarshmallow.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SecureMarshmallow.xcdatamodel; sourceTree = "<group>"; };
 		0E56870F29FA37E800EEEBD3 /* Extensions+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIView.swift"; sourceTree = "<group>"; };
 		0E56871129FA39C000EEEBD3 /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
-		0E6275402A146EB100E8F8E9 /* InformationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationCollectionViewCell.swift; sourceTree = "<group>"; };
+		0E6275402A146EB100E8F8E9 /* SamilInformationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamilInformationCollectionViewCell.swift; sourceTree = "<group>"; };
+		0E6275422A14D17500E8F8E9 /* LargeInformationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeInformationCollectionViewCell.swift; sourceTree = "<group>"; };
+		0E6275452A14D53F00E8F8E9 /* AlarmCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmCollectionViewCell.swift; sourceTree = "<group>"; };
 		0E84099329E2D759005EB879 /* PasswordWriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordWriteViewController.swift; sourceTree = "<group>"; };
 		0E84099529E2D7B5005EB879 /* PasswordWritePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordWritePresenter.swift; sourceTree = "<group>"; };
 		0E8409B329E38420005EB879 /* Passwords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Passwords.swift; sourceTree = "<group>"; };
@@ -328,7 +332,9 @@
 			isa = PBXGroup;
 			children = (
 				0EFE323629DFC23600725EEE /* HomeViewController.swift */,
-				0E6275402A146EB100E8F8E9 /* InformationCollectionViewCell.swift */,
+				0E6275402A146EB100E8F8E9 /* SamilInformationCollectionViewCell.swift */,
+				0E6275422A14D17500E8F8E9 /* LargeInformationCollectionViewCell.swift */,
+				0E6275452A14D53F00E8F8E9 /* AlarmCollectionViewCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -1107,6 +1113,7 @@
 				0EC03DA82A10F249007CD53C /* ClockViewModel.swift in Sources */,
 				0E09A61A29FD28DC00EC6AE1 /* TimeOfAppViewController.swift in Sources */,
 				0E5686FF29FA347300EEEBD3 /* SecureMarshmallow.xcdatamodeld in Sources */,
+				0E6275432A14D17500E8F8E9 /* LargeInformationCollectionViewCell.swift in Sources */,
 				0E09A62F2A01F70300EC6AE1 /* ImageCollectionViewCell.swift in Sources */,
 				0EDB05F52A0E3FBA009E46A8 /* WiFiViewController.swift in Sources */,
 				0E09A62529FF7DB600EC6AE1 /* DevelopersViewController.swift in Sources */,
@@ -1115,7 +1122,7 @@
 				0ECEF8BB29FBA771008E848E /* BaseSC.swift in Sources */,
 				0EC03E192A11FC9C007CD53C /* EditButton.swift in Sources */,
 				0EC03D952A10EACD007CD53C /* generalFunctions.swift in Sources */,
-				0E6275412A146EB100E8F8E9 /* InformationCollectionViewCell.swift in Sources */,
+				0E6275412A146EB100E8F8E9 /* SamilInformationCollectionViewCell.swift in Sources */,
 				0EC03DAC2A10F29A007CD53C /* RepeatTableViewModel.swift in Sources */,
 				0E09A61229FD0FC400EC6AE1 /* SupportCell.swift in Sources */,
 				0E09A60529FD0A3500EC6AE1 /* MarshmallowWidget.intentdefinition in Sources */,
@@ -1123,6 +1130,7 @@
 				0EFE320E29DFA1D000725EEE /* BaseVC.swift in Sources */,
 				0EC03DAA2A10F25D007CD53C /* ClockController.swift in Sources */,
 				0E8409B629E3843B005EB879 /* SavePassword.swift in Sources */,
+				0E6275462A14D53F00E8F8E9 /* AlarmCollectionViewCell.swift in Sources */,
 				0EC03D7D2A10E6FB007CD53C /* MonthMetadata.swift in Sources */,
 				0E09A62929FF7E5B00EC6AE1 /* Extensions+NSObject.swift in Sources */,
 				0ECEF8B129FB98A2008E848E /* AppLogoViewController.swift in Sources */,

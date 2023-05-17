@@ -33,6 +33,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellIdentifier)
         collectionView.register(SamilInformationCollectionViewCell.self, forCellWithReuseIdentifier: SamilInformationCollectionViewCell.identifier)
         collectionView.register(LargeInformationCollectionViewCell.self, forCellWithReuseIdentifier: LargeInformationCollectionViewCell.identifier)
+        collectionView.register(AlarmCollectionViewCell.self, forCellWithReuseIdentifier: AlarmCollectionViewCell.identifier)
         collectionView.backgroundColor = .white
         view.addSubview(collectionView)
         collectionView.snp.makeConstraints {
@@ -116,8 +117,16 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
             
             return cell
         } else if item == 4 {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LargeInformationCollectionViewCell.identifier, for: indexPath) as! LargeInformationCollectionViewCell
             
+            //image
+//            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LargeInformationCollectionViewCell.identifier, for: indexPath) as! LargeInformationCollectionViewCell
+//
+//            cell.backgroundColor = .gray
+//            cell.layout()
+//            cell.layer.cornerRadius = 20.0
+            
+            //time
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AlarmCollectionViewCell.identifier, for: indexPath) as! AlarmCollectionViewCell
             cell.backgroundColor = .gray
             cell.layout()
             cell.layer.cornerRadius = 20.0
