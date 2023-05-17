@@ -139,8 +139,12 @@ extension ImageCollectionViewController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let collectionViewWidth = collectionView.bounds.width
+        let spacing: CGFloat = 20
+        let numberOfItemsPerRow: CGFloat = 2
+        let itemWidth = (collectionViewWidth - spacing * (numberOfItemsPerRow + 1)) / numberOfItemsPerRow
         
-        return CGSize(width: 165, height: 165)
+        return CGSize(width: itemWidth, height: itemWidth)
     }
 }
 

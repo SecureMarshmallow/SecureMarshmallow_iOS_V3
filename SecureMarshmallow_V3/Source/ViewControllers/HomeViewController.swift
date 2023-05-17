@@ -155,33 +155,6 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         
         return cellSize
     }
-    
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        guard indexPath.section < items.count, indexPath.item < items[indexPath.section].count else {
-//            return .zero
-//        }
-//
-//        let item = items[indexPath.section][indexPath.item]
-//        var cellSize = CGSize.zero
-//
-//        switch item {
-//        case 1:
-//            cellSize = CGSize(width: 80 - 20, height: 80 - 20)
-//        case 2:
-//            cellSize = CGSize(width: 370 - 20, height: 230 - 20)
-//        case 3:
-//            cellSize = CGSize(width: 370 - 20, height: 260 - 20)
-//        case 4:
-//            cellSize = CGSize(width: 150 - 20, height: 150 - 20)
-//        case 5:
-//            cellSize = CGSize(width: 370 - 20, height: 370 - 20)
-//        default:
-//            break
-//        }
-//
-//        return cellSize
-//    }
-
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 24, left: 20, bottom: 24, right: 20)
     }
@@ -196,7 +169,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         let screenWidth = UIScreen.main.bounds.width
-        return CGSize(width: screenWidth, height: 60)
+        return CGSize(width: screenWidth, height: 10)
     }
     
 }
@@ -234,6 +207,7 @@ extension HomeViewController {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, targetIndexPathForMoveFromItemAt originalIndexPath: IndexPath, toProposedIndexPath proposedIndexPath: IndexPath) -> IndexPath {
 
         let adjustedIndexPath = IndexPath(item: (collectionView.numberOfItems(inSection: proposedIndexPath.section) / 2), section: proposedIndexPath.section)
+        
         return adjustedIndexPath
     }
 }
