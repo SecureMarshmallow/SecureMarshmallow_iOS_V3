@@ -31,6 +31,8 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellIdentifier)
+        collectionView.register(SamilInformationCollectionViewCell.self, forCellWithReuseIdentifier: SamilInformationCollectionViewCell.identifier)
+        collectionView.register(LargeInformationCollectionViewCell.self, forCellWithReuseIdentifier: LargeInformationCollectionViewCell.identifier)
         collectionView.backgroundColor = .white
         view.addSubview(collectionView)
         collectionView.snp.makeConstraints {
@@ -105,18 +107,41 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         }
         
         let item = items[indexPath.section][indexPath.item]
-        let label = UILabel()
-        label.font = .systemFont(ofSize: 20)
-        label.textAlignment = .center
-        label.textColor = .white
-        label.text = "Item \(item)"
-        cell.contentView.addSubview(label)
-        label.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
-        }
         
-        return cell
+        if item == 1 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SamilInformationCollectionViewCell.identifier, for: indexPath) as! SamilInformationCollectionViewCell
+            cell.backgroundColor = .gray
+            cell.layout()
+            cell.layer.cornerRadius = 25.0
+            
+            return cell
+        } else if item == 4 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LargeInformationCollectionViewCell.identifier, for: indexPath) as! LargeInformationCollectionViewCell
+            
+            cell.backgroundColor = .gray
+            cell.layout()
+            cell.layer.cornerRadius = 20.0
+            
+            return cell
+        } else {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath)
+            cell.backgroundColor = .gray
+            
+            let label = UILabel()
+            label.font = .systemFont(ofSize: 20)
+            label.textAlignment = .center
+            label.textColor = .white
+            label.text = "Item \(item)"
+            cell.contentView.addSubview(label)
+            label.snp.makeConstraints { make in
+                make.edges.equalToSuperview()
+            }
+            
+            
+            return cell
+        }
     }
+
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         guard indexPath.section < items.count, indexPath.item < items[indexPath.section].count else {
@@ -137,9 +162,9 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
             }
         case 3:
             if traitCollection.horizontalSizeClass == .regular && traitCollection.verticalSizeClass == .regular {
-                cellSize = CGSize(width: 370, height: 260)
+                cellSize = CGSize(width: 370, height: 160)
             } else {
-                cellSize = CGSize(width: 390, height: 290)
+                cellSize = CGSize(width: 390, height: 190)
             }
         case 4:
             cellSize = CGSize(width: 150, height: 150)

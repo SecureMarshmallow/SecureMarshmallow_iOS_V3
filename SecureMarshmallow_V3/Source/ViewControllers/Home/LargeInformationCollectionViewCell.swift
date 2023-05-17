@@ -1,17 +1,18 @@
 //
-//  InformationCollectionViewCell.swift
+//  LargeInformationCollectionViewCell.swift
 //  SecureMarshmallow_V3
 //
 //  Created by 박준하 on 2023/05/17.
 //
 
+import Foundation
 import UIKit
 import SnapKit
 import Then
 
-class InformationCollectionViewCell: UICollectionViewCell {
+class LargeInformationCollectionViewCell: UICollectionViewCell {
     
-    static let identifier = "InformationCollectionViewCell"
+    static let identifier = "LargeInformationCollectionViewCell"
     
     var imageView: UIImageView = {
         let images = UIImageView()
@@ -25,7 +26,7 @@ class InformationCollectionViewCell: UICollectionViewCell {
         
         imageView.snp.makeConstraints {
             $0.centerX.centerY.equalToSuperview()
-            $0.height.width.equalTo(50.0)
+            $0.height.width.equalTo(100.0)
         }
     }
 }
