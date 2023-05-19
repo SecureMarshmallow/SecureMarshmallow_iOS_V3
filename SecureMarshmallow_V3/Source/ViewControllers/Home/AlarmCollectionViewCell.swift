@@ -44,19 +44,20 @@ class AlarmCollectionViewCell: UICollectionViewCell {
         
         timeLabel.snp.makeConstraints {
             $0.centerX.equalToSuperview()
-            $0.top.equalToSuperview().offset(50.0)
+            $0.top.equalToSuperview().offset(30.0)
         }
         
         dateLabel.snp.makeConstraints {
-            $0.top.equalTo(timeLabel.snp.bottom).offset(30.0)
-            $0.leading.equalToSuperview().offset(15.0)
+            $0.top.equalTo(timeLabel.snp.bottom).offset(12.0)
+//            $0.leading.equalToSuperview().offset(15.0)
+            $0.centerX.equalTo(timeLabel.snp.centerX)
         }
         
         switchView.snp.makeConstraints {
-            $0.top.equalTo(timeLabel.snp.bottom).offset(22.0)
-            $0.leading.equalTo(dateLabel.snp.trailing).offset(10)
-            $0.trailing.equalToSuperview().inset(5.0)
-            
+            $0.top.equalTo(timeLabel.snp.bottom).offset(40.0)
+//            $0.leading.equalTo(dateLabel.snp.trailing).offset(10)
+//            $0.trailing.equalToSuperview().inset(5.0)
+            $0.centerX.equalTo(dateLabel.snp.centerX)
         }
     }
 }
