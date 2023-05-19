@@ -142,21 +142,21 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
             
             return cell
         } else if item == 4 {
-            if indexPath.item == 6 {
-                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AlarmCollectionViewCell.identifier, for: indexPath) as! AlarmCollectionViewCell
-                cell.backgroundColor = .white
-                cell.layout()
-                cell.layer.cornerRadius = 20.0
-                
-                return cell
-            } else if indexPath.item == 7 {
-                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LargeInformationCollectionViewCell.identifier, for: indexPath) as! LargeInformationCollectionViewCell
-                cell.backgroundColor = .gray
-                cell.layout()
-                cell.layer.cornerRadius = 20.0
-                
-                return cell
-            }
+            
+            //image
+//            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LargeInformationCollectionViewCell.identifier, for: indexPath) as! LargeInformationCollectionViewCell
+//
+//            cell.backgroundColor = .gray
+//            cell.layout()
+//            cell.layer.cornerRadius = 20.0
+            
+            //time
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AlarmCollectionViewCell.identifier, for: indexPath) as! AlarmCollectionViewCell
+            cell.backgroundColor = .white
+            cell.layout()
+            cell.layer.cornerRadius = 20.0
+            
+            return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath)
             cell.backgroundColor = .white
@@ -171,11 +171,11 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
                 make.edges.equalToSuperview()
             }
             
+            
             return cell
         }
-        
-        return cell
     }
+
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         guard indexPath.section < items.count, indexPath.item < items[indexPath.section].count else {

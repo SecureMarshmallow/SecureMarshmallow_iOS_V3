@@ -1,6 +1,6 @@
+import UIKit
 import SnapKit
 import Then
-import UIKit
 
 final class ListViewController: UIViewController {
     private lazy var presenter = ListPresenter(viewController: self)
@@ -11,13 +11,20 @@ final class ListViewController: UIViewController {
         $0.font = .systemFont(ofSize: 24.0, weight: .bold)
     }
 
-    private lazy var tableView = UITableView().then {
-        $0.dataSource = presenter
-    }
+    private lazy var collectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.backgroundColor = .white
+        collectionView.dataSource = presenter
+        collectionView.delegate = presenter
+        return collectionView
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        collectionView.register(TaskCollectionViewCell.self, forCellWithReuseIdentifier: TaskCollectionViewCell.reuseIdentifier)
         presenter.viewDidLoad()
     }
 
@@ -30,9 +37,6 @@ final class ListViewController: UIViewController {
 
 extension ListViewController: ListProtocol {
     func setupNavigationBar() {
-//        navigationItem.title = "SecureMarshmallow"
-//        navigationController?.navigationBar.prefersLargeTitles = true
-
         self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(customView: navLabel)
         self.navigationItem.leftItemsSupplementBackButton = true
 
@@ -41,8 +45,8 @@ extension ListViewController: ListProtocol {
     }
 
     func setupViews() {
-        view.addSubview(tableView)
-        tableView.snp.makeConstraints {
+        view.addSubview(collectionView)
+        collectionView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
     }
@@ -53,8 +57,8 @@ extension ListViewController: ListProtocol {
         present(vc, animated: true)
     }
 
-    func reloadTableView() {
-        tableView.reloadData()
+    func reloadCollectionView() {
+        collectionView.reloadData()
     }
 }
 

@@ -1,13 +1,16 @@
-import UIKit
 
-protocol ListProtocol{
+import UIKit
+import SnapKit
+import Then
+
+protocol ListProtocol {
     func setupNavigationBar()
     func setupViews()
     func presentToWriteViewController()
-    func reloadTableView()
+    func reloadCollectionView()
 }
 
-final class ListPresenter: NSObject {
+final class ListPresenter: NSObject, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     private let viewController: ListProtocol
     private let userDefaultManger = UserDefaultsManager()
     
@@ -17,14 +20,13 @@ final class ListPresenter: NSObject {
 
     private var review: [SavePassword] = []
     
-    init(viewController:
-         ListProtocol) {
+    init(viewController: ListProtocol) {
         self.viewController = viewController
     }
     
     func viewDidLoad() {
         tasks = coreDataManager.fetchTasks()
-        viewController.reloadTableView()
+        viewController.reloadCollectionView()
         viewController.setupNavigationBar()
         viewController.setupViews()
     }
@@ -32,54 +34,42 @@ final class ListPresenter: NSObject {
     func viewWillAppear() {
         tasks = coreDataManager.fetchTasks()
         review = userDefaultManger.getReviews()
-        viewController.reloadTableView()
+        viewController.reloadCollectionView()
     }
     
     func didTapRightBarButtonItem() {
         viewController.presentToWriteViewController()
     }
-}
-
-extension ListPresenter: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    
+    // MARK: - UICollectionViewDataSource
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return tasks.count
     }
 
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: nil)
-        
-        let task = tasks[indexPath.row]
-        cell.textLabel?.text = task.title
-        cell.detailTextLabel?.text = task.details
-        
-        cell.selectionStyle = .none
-        
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TaskCollectionViewCell.reuseIdentifier, for: indexPath) as! TaskCollectionViewCell
+        let task = tasks[indexPath.item]
+        cell.configure(title: task.title!)
         return cell
     }
-
-    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        return true
+    
+    // MARK: - UICollectionViewDelegate
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("안녕")
     }
-
-    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
-        return .delete
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
     }
-
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            let task = tasks[indexPath.row]
-            
-            let context = CoreDataManager.shared.persistentContainer.viewContext
-            context.delete(task)
-            
-            do {
-                try context.save()
-            } catch {
-                print("❌ Error saving context: \(error)")
-            }
-            
-            tasks.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let collectionViewWidth = collectionView.bounds.width
+        let spacing: CGFloat = 20
+        let numberOfItemsPerRow: CGFloat = 2
+        let itemWidth = (collectionViewWidth - spacing * (numberOfItemsPerRow + 1)) / numberOfItemsPerRow
+        
+        return CGSize(width: itemWidth, height: itemWidth)
     }
 }

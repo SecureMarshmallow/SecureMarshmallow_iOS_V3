@@ -27,6 +27,7 @@
 		0E09A62C2A01EDF800EC6AE1 /* ImageCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E09A62B2A01EDF800EC6AE1 /* ImageCollectionViewController.swift */; };
 		0E09A62F2A01F70300EC6AE1 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E09A62E2A01F70300EC6AE1 /* ImageCollectionViewCell.swift */; };
 		0E40E15029F3F36000615E86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E40E14F29F3F36000615E86 /* Assets.xcassets */; };
+		0E54CC972A1742FF00AFAA7D /* TaskCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E54CC962A1742FF00AFAA7D /* TaskCollectionViewCell.swift */; };
 		0E5686FC29FA341100EEEBD3 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5686FB29FA341100EEEBD3 /* CoreDataManager.swift */; };
 		0E5686FF29FA347300EEEBD3 /* SecureMarshmallow.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0E5686FD29FA347300EEEBD3 /* SecureMarshmallow.xcdatamodeld */; };
 		0E56871029FA37E800EEEBD3 /* Extensions+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E56870F29FA37E800EEEBD3 /* Extensions+UIView.swift */; };
@@ -36,7 +37,6 @@
 		0E6275462A14D53F00E8F8E9 /* AlarmCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6275452A14D53F00E8F8E9 /* AlarmCollectionViewCell.swift */; };
 		0E84099429E2D759005EB879 /* PasswordWriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E84099329E2D759005EB879 /* PasswordWriteViewController.swift */; };
 		0E84099629E2D7B5005EB879 /* PasswordWritePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E84099529E2D7B5005EB879 /* PasswordWritePresenter.swift */; };
-		0E8409B429E38420005EB879 /* Passwords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8409B329E38420005EB879 /* Passwords.swift */; };
 		0E8409B629E3843B005EB879 /* SavePassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8409B529E3843B005EB879 /* SavePassword.swift */; };
 		0E8409B929E38D06005EB879 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8409B829E38D06005EB879 /* SettingsViewController.swift */; };
 		0E8409BB29E38D26005EB879 /* SettingsItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8409BA29E38D26005EB879 /* SettingsItemType.swift */; };
@@ -157,6 +157,7 @@
 		0E09A62B2A01EDF800EC6AE1 /* ImageCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewController.swift; sourceTree = "<group>"; };
 		0E09A62E2A01F70300EC6AE1 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		0E40E14F29F3F36000615E86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Assets.xcassets/Assets.xcassets; sourceTree = "<group>"; };
+		0E54CC962A1742FF00AFAA7D /* TaskCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCollectionViewCell.swift; sourceTree = "<group>"; };
 		0E5686FB29FA341100EEEBD3 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		0E5686FE29FA347300EEEBD3 /* SecureMarshmallow.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SecureMarshmallow.xcdatamodel; sourceTree = "<group>"; };
 		0E56870F29FA37E800EEEBD3 /* Extensions+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIView.swift"; sourceTree = "<group>"; };
@@ -166,7 +167,6 @@
 		0E6275452A14D53F00E8F8E9 /* AlarmCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmCollectionViewCell.swift; sourceTree = "<group>"; };
 		0E84099329E2D759005EB879 /* PasswordWriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordWriteViewController.swift; sourceTree = "<group>"; };
 		0E84099529E2D7B5005EB879 /* PasswordWritePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordWritePresenter.swift; sourceTree = "<group>"; };
-		0E8409B329E38420005EB879 /* Passwords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Passwords.swift; sourceTree = "<group>"; };
 		0E8409B529E3843B005EB879 /* SavePassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavePassword.swift; sourceTree = "<group>"; };
 		0E8409B829E38D06005EB879 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		0E8409BA29E38D26005EB879 /* SettingsItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsItemType.swift; sourceTree = "<group>"; };
@@ -354,6 +354,7 @@
 				0E8409AE29E383C7005EB879 /* PasswordModel */,
 				0EFE323929DFCDA200725EEE /* PasswordList */,
 				0E84099229E2D638005EB879 /* PasswordWrite */,
+				0E54CC962A1742FF00AFAA7D /* TaskCollectionViewCell.swift */,
 			);
 			path = Memo;
 			sourceTree = "<group>";
@@ -361,7 +362,6 @@
 		0E8409AE29E383C7005EB879 /* PasswordModel */ = {
 			isa = PBXGroup;
 			children = (
-				0E8409B329E38420005EB879 /* Passwords.swift */,
 				0E8409B529E3843B005EB879 /* SavePassword.swift */,
 				0E56871129FA39C000EEEBD3 /* TaskModel.swift */,
 			);
@@ -1083,7 +1083,6 @@
 				0ECEF8B529FB98C6008E848E /* AppLogoCell.swift in Sources */,
 				0EC03D7B2A10E687007CD53C /* Day.swift in Sources */,
 				0EC03D812A10E761007CD53C /* Clock.swift in Sources */,
-				0E8409B429E38420005EB879 /* Passwords.swift in Sources */,
 				0EFE323529DFC22500725EEE /* TabbarViewController.swift in Sources */,
 				0EC03D982A10EAFF007CD53C /* StartViewController.swift in Sources */,
 				0E8409B929E38D06005EB879 /* SettingsViewController.swift in Sources */,
@@ -1104,6 +1103,7 @@
 				0EC03D782A10E630007CD53C /* RepeatTableViewController.swift in Sources */,
 				0EC03D8F2A10E99E007CD53C /* Extensions+UIStackView.swift in Sources */,
 				0EFE31D429DF9EFE00725EEE /* SceneDelegate.swift in Sources */,
+				0E54CC972A1742FF00AFAA7D /* TaskCollectionViewCell.swift in Sources */,
 				0E09A61429FD110700EC6AE1 /* BaseSV.swift in Sources */,
 				0EC03D9C2A10EF3E007CD53C /* StartViewModel.swift in Sources */,
 				0EFE323B29DFCDFB00725EEE /* ListViewController.swift in Sources */,
