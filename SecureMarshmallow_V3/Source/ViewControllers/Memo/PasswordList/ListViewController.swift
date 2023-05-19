@@ -25,6 +25,7 @@ final class ListViewController: UIViewController {
         super.viewDidLoad()
 
         collectionView.register(TaskCollectionViewCell.self, forCellWithReuseIdentifier: TaskCollectionViewCell.reuseIdentifier)
+        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "AddCell")
         presenter.viewDidLoad()
     }
 
@@ -37,11 +38,11 @@ final class ListViewController: UIViewController {
 
 extension ListViewController: ListProtocol {
     func setupNavigationBar() {
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(customView: navLabel)
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: navLabel)
         self.navigationItem.leftItemsSupplementBackButton = true
 
-        let rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(didTapRightBarButtonItem))
-        navigationItem.rightBarButtonItem = rightBarButtonItem
+//        let rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addImage))
+//        navigationItem.rightBarButtonItem = rightBarButtonItem
     }
 
     func setupViews() {
@@ -60,10 +61,12 @@ extension ListViewController: ListProtocol {
     func reloadCollectionView() {
         collectionView.reloadData()
     }
-}
 
-private extension ListViewController {
-    @objc func didTapRightBarButtonItem() {
-        presenter.didTapRightBarButtonItem()
+    @objc func addImage() {
+        presenter.addNotes()
+    }
+
+    @objc private func didTapRightBarButtonItem() {
+        presenter.addNotes()
     }
 }
