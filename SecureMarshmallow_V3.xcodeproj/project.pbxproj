@@ -688,6 +688,7 @@
 			);
 			path = Source;
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		0EFE320A29DFA1A500725EEE /* ViewControllers */ = {
 			isa = PBXGroup;
