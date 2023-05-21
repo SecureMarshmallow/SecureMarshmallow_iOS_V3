@@ -12,14 +12,14 @@ enum Operator {
 class CalculatorViewController: UIViewController {
     
     private let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout()).then {
-        $0.backgroundColor = .white
+        $0.backgroundColor = .cellColor
         $0.showsVerticalScrollIndicator = false
         $0.showsHorizontalScrollIndicator = false
         $0.register(CalculatorCell.self, forCellWithReuseIdentifier: CalculatorCell.identifier)
     }
     
     private let buttons: [[String]] = [
-        ["C", "±", "%", "÷"],
+        ["AC", "±", "%", "÷"],
         ["7", "8", "9", "×"],
         ["4", "5", "6", "-"],
         ["1", "2", "3", "+"],
@@ -38,7 +38,7 @@ class CalculatorViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .white
+        view.backgroundColor = .cellColor
         layout()
         navgetionTitle()
     }
@@ -51,15 +51,19 @@ class CalculatorViewController: UIViewController {
         view.addSubview(resultLabel)
         view.addSubview(collectionView)
         
+        let layout = UICollectionViewFlowLayout()
+        layout.minimumInteritemSpacing = 0
+        collectionView.collectionViewLayout = layout
+
         collectionView.delegate = self
         collectionView.dataSource = self
-        
+
         resultLabel.snp.makeConstraints {
             $0.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(20)
             $0.trailing.equalToSuperview().offset(-20)
             $0.leading.equalToSuperview().offset(20)
         }
-        
+
         collectionView.snp.makeConstraints {
             $0.top.equalTo(resultLabel.snp.bottom).offset(20)
             $0.leading.trailing.bottom.equalToSuperview()
@@ -71,17 +75,21 @@ class CalculatorViewController: UIViewController {
 
 extension CalculatorViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = (collectionView.bounds.width - 10) / 4
-       
+        let width = (collectionView.bounds.width - 30) / 4
+        
         return CGSize(width: width, height: width)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
+        return 10
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
+        return 10
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0)
     }
 }
 
@@ -95,7 +103,7 @@ extension CalculatorViewController: UICollectionViewDataSource {
         cell.button.addTarget(self, action: #selector(didTapButton(_:)), for: .touchUpInside)
         
         switch buttonText {
-        case "C":
+        case "AC":
             cell.button.setTitleColor(.red, for: .normal)
         case "=", "+", "-", "×", "÷":
             cell.button.setTitleColor(.orange, for: .normal)
