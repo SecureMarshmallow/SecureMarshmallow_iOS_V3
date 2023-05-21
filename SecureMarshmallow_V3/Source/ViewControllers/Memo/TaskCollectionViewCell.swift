@@ -20,9 +20,8 @@ class TaskCollectionViewCell: UICollectionViewCell {
     }
     
     private func setupViews() {
-        
-        contentView.backgroundColor = .red
-        
+        contentView.layer.cornerRadius = 20.0
+        contentView.backgroundColor = .white
         contentView.addSubview(titleLabel)
         
         titleLabel.snp.makeConstraints {

@@ -41,6 +41,8 @@
 		0E8409B929E38D06005EB879 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8409B829E38D06005EB879 /* SettingsViewController.swift */; };
 		0E8409BB29E38D26005EB879 /* SettingsItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8409BA29E38D26005EB879 /* SettingsItemType.swift */; };
 		0E8409BD29E38D36005EB879 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8409BC29E38D36005EB879 /* SettingsCell.swift */; };
+		0E85A9ED2A1A3BD0000676C2 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E85A9EC2A1A3BD0000676C2 /* CalculatorViewController.swift */; };
+		0E85A9EF2A1A3D6B000676C2 /* CalculatorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E85A9EE2A1A3D6B000676C2 /* CalculatorCell.swift */; };
 		0EC03D782A10E630007CD53C /* RepeatTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC03D772A10E630007CD53C /* RepeatTableViewController.swift */; };
 		0EC03D7B2A10E687007CD53C /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC03D7A2A10E687007CD53C /* Day.swift */; };
 		0EC03D7D2A10E6FB007CD53C /* MonthMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC03D7C2A10E6FB007CD53C /* MonthMetadata.swift */; };
@@ -171,6 +173,8 @@
 		0E8409B829E38D06005EB879 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		0E8409BA29E38D26005EB879 /* SettingsItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsItemType.swift; sourceTree = "<group>"; };
 		0E8409BC29E38D36005EB879 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
+		0E85A9EC2A1A3BD0000676C2 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
+		0E85A9EE2A1A3D6B000676C2 /* CalculatorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorCell.swift; sourceTree = "<group>"; };
 		0EC03D772A10E630007CD53C /* RepeatTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatTableViewController.swift; sourceTree = "<group>"; };
 		0EC03D7A2A10E687007CD53C /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		0EC03D7C2A10E6FB007CD53C /* MonthMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthMetadata.swift; sourceTree = "<group>"; };
@@ -379,6 +383,15 @@
 				0ECEF8A829FB92F8008E848E /* Gmail */,
 			);
 			path = Setting;
+			sourceTree = "<group>";
+		};
+		0E85A9E92A1A33A7000676C2 /* calculator */ = {
+			isa = PBXGroup;
+			children = (
+				0E85A9EC2A1A3BD0000676C2 /* CalculatorViewController.swift */,
+				0E85A9EE2A1A3D6B000676C2 /* CalculatorCell.swift */,
+			);
+			path = calculator;
 			sourceTree = "<group>";
 		};
 		0EC03D752A10E167007CD53C /* Alarm */ = {
@@ -693,6 +706,7 @@
 		0EFE320A29DFA1A500725EEE /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				0E85A9E92A1A33A7000676C2 /* calculator */,
 				0EC03D752A10E167007CD53C /* Alarm */,
 				0EDB05F32A0E3FAE009E46A8 /* WiFi */,
 				0EDB05B12A0DADAC009E46A8 /* File */,
@@ -1122,6 +1136,7 @@
 				0EC03D8D2A10E942007CD53C /* Extensions+Array.swift in Sources */,
 				0ECEF8BB29FBA771008E848E /* BaseSC.swift in Sources */,
 				0EC03E192A11FC9C007CD53C /* EditButton.swift in Sources */,
+				0E85A9ED2A1A3BD0000676C2 /* CalculatorViewController.swift in Sources */,
 				0EC03D952A10EACD007CD53C /* generalFunctions.swift in Sources */,
 				0E6275412A146EB100E8F8E9 /* SamilInformationCollectionViewCell.swift in Sources */,
 				0EC03DAC2A10F29A007CD53C /* RepeatTableViewModel.swift in Sources */,
@@ -1141,6 +1156,7 @@
 				0EDB059F2A0CC247009E46A8 /* BatteryViewController.swift in Sources */,
 				0ECEF8AE29FB933F008E848E /* GmailInformationViewController.swift in Sources */,
 				0ECEF8C329FCCA06008E848E /* MarshmallowWidgetViewController.swift in Sources */,
+				0E85A9EF2A1A3D6B000676C2 /* CalculatorCell.swift in Sources */,
 				0E09A61029FD0FB600EC6AE1 /* SupportItmeType.swift in Sources */,
 				0ECEF8AA29FB930A008E848E /* GmailCell.swift in Sources */,
 			);

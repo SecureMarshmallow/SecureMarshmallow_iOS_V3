@@ -15,7 +15,7 @@ final class ListViewController: UIViewController {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.backgroundColor = .white
+        collectionView.backgroundColor = .cellColor
         collectionView.dataSource = presenter
         collectionView.delegate = presenter
         return collectionView
