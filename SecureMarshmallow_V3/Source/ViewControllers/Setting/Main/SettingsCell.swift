@@ -7,7 +7,7 @@ class SettingsCell: BaseSC<SettingsItem> {
     override func layoutSubviews() {
         super.layoutSubviews()
 
-        let cornerRadius: CGFloat = 10
+        let cornerRadius: CGFloat = 20
         let path = UIBezierPath(roundedRect: bounds, cornerRadius: cornerRadius)
         let maskLayer = CAShapeLayer()
         maskLayer.path = path.cgPath

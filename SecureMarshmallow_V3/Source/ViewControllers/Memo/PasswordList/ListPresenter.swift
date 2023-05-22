@@ -14,6 +14,7 @@ protocol ListProtocol {
 final class ListPresenter: NSObject, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     private let viewController: ListProtocol
     private let userDefaultManger = UserDefaultsManager()
+    private let navigationController: UINavigationController
 
     private let coreDataManager = CoreDataManager.shared
 
@@ -21,8 +22,9 @@ final class ListPresenter: NSObject, UICollectionViewDataSource, UICollectionVie
 
     private var review: [SavePassword] = []
 
-    init(viewController: ListProtocol) {
+    init(viewController: ListProtocol, navigationController: UINavigationController) {
         self.viewController = viewController
+        self.navigationController = navigationController
     }
 
     func viewDidLoad() {
@@ -76,7 +78,12 @@ final class ListPresenter: NSObject, UICollectionViewDataSource, UICollectionVie
     // MARK: - UICollectionViewDelegate
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(indexPath.row)
+        if indexPath.row < tasks.count {
+            let task = tasks[indexPath.row]
+            let detailMemoViewController = DetailMemoViewController()
+            detailMemoViewController.setMemo(title: task.title!, contents: task.details!)
+            navigationController.pushViewController(detailMemoViewController, animated: true)
+        }
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {

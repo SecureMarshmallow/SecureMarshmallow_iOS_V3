@@ -88,7 +88,6 @@ extension SettingsViewController {
         
         return cell
     }
-
 }
 
 // MARK: - UITableViewDelegate

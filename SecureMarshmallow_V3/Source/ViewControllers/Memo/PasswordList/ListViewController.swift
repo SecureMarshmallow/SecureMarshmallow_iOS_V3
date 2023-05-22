@@ -3,7 +3,7 @@ import SnapKit
 import Then
 
 final class ListViewController: UIViewController {
-    private lazy var presenter = ListPresenter(viewController: self)
+    private lazy var presenter = ListPresenter(viewController: self, navigationController: navigationController!)
 
     private lazy var navLabel = UILabel().then {
         $0.textColor = UIColor.black
@@ -40,9 +40,6 @@ extension ListViewController: ListProtocol {
     func setupNavigationBar() {
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: navLabel)
         self.navigationItem.leftItemsSupplementBackButton = true
-
-//        let rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addImage))
-//        navigationItem.rightBarButtonItem = rightBarButtonItem
     }
 
     func setupViews() {

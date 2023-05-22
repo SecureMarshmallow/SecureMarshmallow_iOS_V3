@@ -43,6 +43,8 @@
 		0E8409BD29E38D36005EB879 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8409BC29E38D36005EB879 /* SettingsCell.swift */; };
 		0E85A9ED2A1A3BD0000676C2 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E85A9EC2A1A3BD0000676C2 /* CalculatorViewController.swift */; };
 		0E85A9EF2A1A3D6B000676C2 /* CalculatorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E85A9EE2A1A3D6B000676C2 /* CalculatorCell.swift */; };
+		0E85A9F52A1B295D000676C2 /* BluetoothViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E85A9F42A1B295D000676C2 /* BluetoothViewController.swift */; };
+		0E85AA082A1B5FB0000676C2 /* DetailMemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E85AA072A1B5FB0000676C2 /* DetailMemoViewController.swift */; };
 		0EC03D782A10E630007CD53C /* RepeatTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC03D772A10E630007CD53C /* RepeatTableViewController.swift */; };
 		0EC03D7B2A10E687007CD53C /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC03D7A2A10E687007CD53C /* Day.swift */; };
 		0EC03D7D2A10E6FB007CD53C /* MonthMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC03D7C2A10E6FB007CD53C /* MonthMetadata.swift */; };
@@ -175,6 +177,8 @@
 		0E8409BC29E38D36005EB879 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
 		0E85A9EC2A1A3BD0000676C2 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		0E85A9EE2A1A3D6B000676C2 /* CalculatorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorCell.swift; sourceTree = "<group>"; };
+		0E85A9F42A1B295D000676C2 /* BluetoothViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothViewController.swift; sourceTree = "<group>"; };
+		0E85AA072A1B5FB0000676C2 /* DetailMemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMemoViewController.swift; sourceTree = "<group>"; };
 		0EC03D772A10E630007CD53C /* RepeatTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatTableViewController.swift; sourceTree = "<group>"; };
 		0EC03D7A2A10E687007CD53C /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		0EC03D7C2A10E6FB007CD53C /* MonthMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthMetadata.swift; sourceTree = "<group>"; };
@@ -355,6 +359,7 @@
 		0E8409AD29E383BC005EB879 /* Memo */ = {
 			isa = PBXGroup;
 			children = (
+				0E85AA062A1B5F70000676C2 /* Detail */,
 				0E8409AE29E383C7005EB879 /* PasswordModel */,
 				0EFE323929DFCDA200725EEE /* PasswordList */,
 				0E84099229E2D638005EB879 /* PasswordWrite */,
@@ -375,11 +380,11 @@
 		0E8409B729E38CF8005EB879 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
+				0ECEF8A729FB9249008E848E /* Main */,
 				0E09A62A29FF947200EC6AE1 /* DeveloperIntroduction */,
 				0E09A61B29FD2C2600EC6AE1 /* TimeOfApp */,
 				0E09A60C29FD0F3F00EC6AE1 /* Support */,
 				0ECEF8AF29FB9890008E848E /* AppLogo */,
-				0ECEF8A729FB9249008E848E /* Main */,
 				0ECEF8A829FB92F8008E848E /* Gmail */,
 			);
 			path = Setting;
@@ -392,6 +397,22 @@
 				0E85A9EE2A1A3D6B000676C2 /* CalculatorCell.swift */,
 			);
 			path = calculator;
+			sourceTree = "<group>";
+		};
+		0E85A9F32A1B2957000676C2 /* Bluetooth */ = {
+			isa = PBXGroup;
+			children = (
+				0E85A9F42A1B295D000676C2 /* BluetoothViewController.swift */,
+			);
+			path = Bluetooth;
+			sourceTree = "<group>";
+		};
+		0E85AA062A1B5F70000676C2 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				0E85AA072A1B5FB0000676C2 /* DetailMemoViewController.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		0EC03D752A10E167007CD53C /* Alarm */ = {
@@ -706,6 +727,7 @@
 		0EFE320A29DFA1A500725EEE /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				0E85A9F32A1B2957000676C2 /* Bluetooth */,
 				0E85A9E92A1A33A7000676C2 /* calculator */,
 				0EC03D752A10E167007CD53C /* Alarm */,
 				0EDB05F32A0E3FAE009E46A8 /* WiFi */,
@@ -1146,6 +1168,7 @@
 				0EFE320E29DFA1D000725EEE /* BaseVC.swift in Sources */,
 				0EC03DAA2A10F25D007CD53C /* ClockController.swift in Sources */,
 				0E8409B629E3843B005EB879 /* SavePassword.swift in Sources */,
+				0E85AA082A1B5FB0000676C2 /* DetailMemoViewController.swift in Sources */,
 				0E6275462A14D53F00E8F8E9 /* AlarmCollectionViewCell.swift in Sources */,
 				0EC03D7D2A10E6FB007CD53C /* MonthMetadata.swift in Sources */,
 				0E09A62929FF7E5B00EC6AE1 /* Extensions+NSObject.swift in Sources */,
@@ -1157,6 +1180,7 @@
 				0ECEF8AE29FB933F008E848E /* GmailInformationViewController.swift in Sources */,
 				0ECEF8C329FCCA06008E848E /* MarshmallowWidgetViewController.swift in Sources */,
 				0E85A9EF2A1A3D6B000676C2 /* CalculatorCell.swift in Sources */,
+				0E85A9F52A1B295D000676C2 /* BluetoothViewController.swift in Sources */,
 				0E09A61029FD0FB600EC6AE1 /* SupportItmeType.swift in Sources */,
 				0ECEF8AA29FB930A008E848E /* GmailCell.swift in Sources */,
 			);
