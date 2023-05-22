@@ -43,7 +43,7 @@ class CalculatorViewController: UIViewController {
 
         view.backgroundColor = .cellColor
         layout()
-        navigationTitle()
+        navigation()
 
         let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(handleLongGesture(_:)))
         collectionView.addGestureRecognizer(longPressGesture)
@@ -51,8 +51,11 @@ class CalculatorViewController: UIViewController {
         collectionView.register(CalculatorCell.self, forCellWithReuseIdentifier: CalculatorCell.identifier)
     }
 
-    private func navigationTitle() {
+    private func navigation() {
         title = "계산기"
+        
+        let sortCalculatorButton = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(sortCalculatorButtonDidTap))
+        navigationItem.rightBarButtonItem = sortCalculatorButton
     }
 
     private func layout() {
@@ -177,53 +180,19 @@ extension CalculatorViewController: UICollectionViewDelegate {
             collectionView.cancelInteractiveMovement()
         }
     }
-
-//    @objc private func handleLongGesture(_ gesture: UILongPressGestureRecognizer) {
-//        switch gesture.state {
-//        case .began:
-//            guard let selectedIndexPath = collectionView.indexPathForItem(at: gesture.location(in: collectionView)),
-//                  let cell = collectionView.cellForItem(at: selectedIndexPath) else {
-//                break
-//            }
-//            sourceIndexPath = selectedIndexPath
-//            movingCellSnapshot = cell.snapshotView(afterScreenUpdates: false)
-//            if let snapshot = movingCellSnapshot {
-//                snapshot.frame = cell.frame
-//                collectionView.addSubview(snapshot)
-//                UIView.animate(withDuration: 0.2) {
-//                    snapshot.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
-//                    snapshot.alpha = 0.9
-//                }
-//                cell.isHidden = true
-//            }
-//        case .changed:
-//            guard let movingCellSnapshot = movingCellSnapshot else {
-//                break
-//            }
-//            movingCellSnapshot.center = gesture.location(in: collectionView)
-//            collectionView.updateInteractiveMovementTargetPosition(gesture.location(in: collectionView))
-//        case .ended:
-//            guard let movingCellSnapshot = movingCellSnapshot,
-//                  let sourceIndexPath = sourceIndexPath,
-//                  let indexPath = collectionView.indexPathForItem(at: gesture.location(in: collectionView)) else {
-//                break
-//            }
-//            collectionView.endInteractiveMovement()
-//            buttons.swapAt(sourceIndexPath.section, indexPath.section)
-//            collectionView.moveItem(at: sourceIndexPath, to: indexPath)
-//            UIView.animate(withDuration: 0.2, animations: {
-//                movingCellSnapshot.transform = CGAffineTransform.identity
-//                movingCellSnapshot.alpha = 1.0
-//            }) { _ in
-//                movingCellSnapshot.removeFromSuperview()
-//                self.collectionView.cellForItem(at: indexPath)?.isHidden = false
-//            }
-//            self.sourceIndexPath = nil
-//        default:
-//            collectionView.cancelInteractiveMovement()
-//            sourceIndexPath = nil
-//        }
-//    }
+    
+    @objc private func sortCalculatorButtonDidTap() {
+    
+    buttons = [
+        ["AC", "±", "%", "÷"],
+        ["7", "8", "9", "×"],
+        ["4", "5", "6", "-"],
+        ["1", "2", "3", "+"],
+        ["0", ".", "="]
+    ]
+        
+        collectionView.reloadData()
+    }
 }
 
 extension CalculatorViewController {
