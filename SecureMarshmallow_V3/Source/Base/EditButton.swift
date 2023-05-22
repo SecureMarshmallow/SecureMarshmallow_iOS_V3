@@ -1,10 +1,3 @@
-//
-//  EditButton.swift
-//  SecureMarshmallow_V3
-//
-//  Created by 박준하 on 2023/05/15.
-//
-
 import UIKit
 
 class EditButton: UIButton {

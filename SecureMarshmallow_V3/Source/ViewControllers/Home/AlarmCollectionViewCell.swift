@@ -1,10 +1,3 @@
-//
-//  AlarmCollectionViewCell.swift
-//  Pods
-//
-//  Created by 박준하 on 2023/05/17.
-//
-
 import UIKit
 import Then
 import SnapKit
@@ -49,14 +42,11 @@ class AlarmCollectionViewCell: UICollectionViewCell {
         
         dateLabel.snp.makeConstraints {
             $0.top.equalTo(timeLabel.snp.bottom).offset(12.0)
-//            $0.leading.equalToSuperview().offset(15.0)
             $0.centerX.equalTo(timeLabel.snp.centerX)
         }
         
         switchView.snp.makeConstraints {
             $0.top.equalTo(timeLabel.snp.bottom).offset(40.0)
-//            $0.leading.equalTo(dateLabel.snp.trailing).offset(10)
-//            $0.trailing.equalToSuperview().inset(5.0)
             $0.centerX.equalTo(dateLabel.snp.centerX)
         }
     }

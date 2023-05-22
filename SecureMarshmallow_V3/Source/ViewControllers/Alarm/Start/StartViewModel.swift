@@ -1,10 +1,3 @@
-//
-//  StartViewModel.swift
-//  myClock
-//
-//  Created by Alexander Kurz on 3/28/22.
-//
-
 import Foundation
 
 // MARK: Global variables
