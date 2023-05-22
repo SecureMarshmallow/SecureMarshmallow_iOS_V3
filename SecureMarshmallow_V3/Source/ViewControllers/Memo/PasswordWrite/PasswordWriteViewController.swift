@@ -4,34 +4,25 @@ import UIKit
 final class ReviewWriteViewController: UIViewController {
     private lazy var presenter = PasswordWritePresenter(viewController: self)
     
-    private lazy var titleTextField: UITextField = {
-        let textField = UITextField()
-        textField.placeholder = "비밀번호를 입력해주세요."
-        textField.textColor = .tertiaryLabel
-        textField.font = .systemFont(ofSize: 23.0, weight: .bold)
-        
-        return textField
-    }()
+    private lazy var titleTextField = UITextField().then {
+        $0.placeholder = "비밀번호를 입력해주세요."
+        $0.textColor = .tertiaryLabel
+        $0.font = .systemFont(ofSize: 23.0, weight: .bold)
+    }
     
-    private lazy var contentsTextView: UITextView = {
-       let textView = UITextView()
-        textView.textColor = .tertiaryLabel
-        textView.text = presenter.contentsTextViewPlaceHolderText
-        textView.font = .systemFont(ofSize: 16.0, weight: .medium)
+    private lazy var contentsTextView = UITextView().then {
+        $0.textColor = .tertiaryLabel
+        $0.text = presenter.contentsTextViewPlaceHolderText
+        $0.font = .systemFont(ofSize: 16.0, weight: .medium)
         
-        textView.delegate = self
-        
-        return textView
-    }()
+        $0.delegate = self
+    }
     
-    private lazy var imageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFill
-        imageView.clipsToBounds = true
-        imageView.backgroundColor = .secondarySystemBackground
-        
-       return imageView
-    }()
+    private lazy var imageView = UIImageView().then {
+        $0.contentMode = .scaleAspectFill
+        $0.clipsToBounds = true
+        $0.backgroundColor = .secondarySystemBackground
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -87,8 +78,7 @@ extension ReviewWriteViewController: PasswordWriteProtocol {
         dismiss(animated: true)
     }
     
-    func setupViews() {
-        view.backgroundColor = .systemBackground
+    func layout() {
 
         [titleTextField, contentsTextView, imageView]
             .forEach { view.addSubview($0) }
@@ -113,6 +103,10 @@ extension ReviewWriteViewController: PasswordWriteProtocol {
             $0.height.equalTo(200.0)
             $0.bottom.equalTo(view.safeAreaLayoutGuide)
         }
+    }
+    
+    func attribute() {
+        view.backgroundColor = .systemBackground
     }
     
 }

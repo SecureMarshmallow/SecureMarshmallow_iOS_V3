@@ -4,7 +4,8 @@ protocol PasswordWriteProtocol {
     func setupNavigationBar()
     func showCloseAlertController()
     func close()
-    func setupViews()
+    func layout()
+    func attribute()
 }
 
 final class PasswordWritePresenter {
@@ -20,7 +21,8 @@ final class PasswordWritePresenter {
     
     func viewDidLoad() {
         viewController.setupNavigationBar()
-        viewController.setupViews()
+        viewController.layout()
+        viewController.attribute()
     }
     
     func didTapLeftBarButton() {
@@ -28,18 +30,6 @@ final class PasswordWritePresenter {
     }
     
     func didTapRightBarButton(title: String, contentsText: String) {
-        
-//        guard let passworrdd = passwords,
-//              contentsText != contentsTextViewPlaceHolderText
-//        else { return }
-//
-//        let bookReview = SavePassword(
-//            title: passworrdd.title,
-//            contents: contentsText
-//        )
-//
-//        userDefaultsManager.setReview(bookReview)
-//
         
         let savePassword = SavePassword(
             title: title,
@@ -50,8 +40,4 @@ final class PasswordWritePresenter {
         
         viewController.close()
     }
-    
-//    func didTapTitleButton() {
-//        viewController.presentToSearchBookViewController()
-//    }
 }
