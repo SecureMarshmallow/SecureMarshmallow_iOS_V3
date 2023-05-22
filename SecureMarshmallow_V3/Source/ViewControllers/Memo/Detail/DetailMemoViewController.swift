@@ -3,6 +3,7 @@ import SnapKit
 import Then
 
 class DetailMemoViewController: UIViewController {
+    private lazy var presenter = DetailMemoPresenter(viewController: self, navigationController: navigationController!)
     private var titleText: String?
     private var contentsText: String?
     
@@ -17,23 +18,13 @@ class DetailMemoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
-        displayMemo()
-        
-        title = "\(navigationTitle)"
-        
-        view.backgroundColor = .white
+        presenter.viewDidLoad()
     }
+}
+
+extension DetailMemoViewController: DetailProtocol {
     
-    private func setupUI() {
-        view.addSubview(contentsLabel)
-        contentsLabel.snp.makeConstraints {
-            $0.top.equalTo(view.safeAreaLayoutGuide).inset(20.0)
-            $0.leading.trailing.equalToSuperview().inset(20.0)
-        }
-    }
-    
-    private func displayMemo() {
+    func displayMemo() {
         contentsLabel.text = contentsText
     }
     
@@ -41,4 +32,19 @@ class DetailMemoViewController: UIViewController {
         navigationTitle = title
         contentsText = contents
     }
+    
+    func attribute() {
+        title = "\(navigationTitle)"
+
+        view.backgroundColor = .white
+    }
+    
+    func layout() {
+        view.addSubview(contentsLabel)
+        contentsLabel.snp.makeConstraints {
+            $0.top.equalTo(view.safeAreaLayoutGuide).inset(20.0)
+            $0.leading.trailing.equalToSuperview().inset(20.0)
+        }
+    }
+    
 }
