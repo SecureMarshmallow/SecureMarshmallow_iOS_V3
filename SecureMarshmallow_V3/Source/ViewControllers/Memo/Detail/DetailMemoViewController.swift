@@ -4,17 +4,16 @@ import Then
 
 class DetailMemoViewController: UIViewController {
     private lazy var presenter = DetailMemoPresenter(viewController: self, navigationController: navigationController!)
+    
     private var titleText: String?
     private var contentsText: String?
     
     var navigationTitle: String = ""
     
-    private lazy var contentsLabel: UILabel = {
-        let label = UILabel()
-        label.font = .systemFont(ofSize: 16.0, weight: .medium)
-        label.numberOfLines = 0
-        return label
-    }()
+    private lazy var contentsLabel = UILabel().then {
+        $0.font = .systemFont(ofSize: 16.0, weight: .medium)
+        $0.numberOfLines = 0
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
