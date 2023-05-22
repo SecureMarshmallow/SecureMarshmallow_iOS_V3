@@ -2,7 +2,7 @@ import UIKit
 import SnapKit
 import Then
 
-class TaskCollectionViewCell: UICollectionViewCell {
+class MemoCollectionViewCell: UICollectionViewCell {
     static let reuseIdentifier = "TaskCellIdentifier"
     
     private lazy var titleLabel = UILabel().then {

@@ -3,7 +3,7 @@ import UIKit
 import SnapKit
 import Then
 
-protocol ListProtocol {
+protocol MemoListProtocol {
     func setupNavigationBar()
     func setupViews()
     func presentToWriteViewController()
@@ -11,8 +11,8 @@ protocol ListProtocol {
     func addImage()
 }
 
-final class ListPresenter: NSObject, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-    private let viewController: ListProtocol
+final class MemoListPresenter: NSObject, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    private let viewController: MemoListProtocol
     private let userDefaultManger = UserDefaultsManager()
     private let navigationController: UINavigationController
 
@@ -20,9 +20,9 @@ final class ListPresenter: NSObject, UICollectionViewDataSource, UICollectionVie
 
     private var tasks: [Task] = []
 
-    private var review: [SavePassword] = []
+    private var review: [MemoData] = []
 
-    init(viewController: ListProtocol, navigationController: UINavigationController) {
+    init(viewController: MemoListProtocol, navigationController: UINavigationController) {
         self.viewController = viewController
         self.navigationController = navigationController
     }
@@ -68,7 +68,7 @@ final class ListPresenter: NSObject, UICollectionViewDataSource, UICollectionVie
             cell.clipsToBounds = true
             return cell
         } else {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TaskCollectionViewCell.reuseIdentifier, for: indexPath) as! TaskCollectionViewCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MemoCollectionViewCell.reuseIdentifier, for: indexPath) as! MemoCollectionViewCell
             let task = tasks[indexPath.item]
             cell.configure(title: task.title!)
             return cell

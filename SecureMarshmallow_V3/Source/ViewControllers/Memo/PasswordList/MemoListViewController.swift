@@ -2,8 +2,8 @@ import UIKit
 import SnapKit
 import Then
 
-final class ListViewController: UIViewController {
-    private lazy var presenter = ListPresenter(viewController: self, navigationController: navigationController!)
+final class MemoListViewController: UIViewController {
+    private lazy var presenter = MemoListPresenter(viewController: self, navigationController: navigationController!)
 
     private lazy var navLabel = UILabel().then {
         $0.textColor = UIColor.black
@@ -24,7 +24,7 @@ final class ListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        collectionView.register(TaskCollectionViewCell.self, forCellWithReuseIdentifier: TaskCollectionViewCell.reuseIdentifier)
+        collectionView.register(MemoCollectionViewCell.self, forCellWithReuseIdentifier: MemoCollectionViewCell.reuseIdentifier)
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "AddCell")
         presenter.viewDidLoad()
     }
@@ -36,7 +36,7 @@ final class ListViewController: UIViewController {
     }
 }
 
-extension ListViewController: ListProtocol {
+extension MemoListViewController: MemoListProtocol {
     func setupNavigationBar() {
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: navLabel)
         self.navigationItem.leftItemsSupplementBackButton = true
@@ -50,7 +50,7 @@ extension ListViewController: ListProtocol {
     }
 
     func presentToWriteViewController() {
-        let vc = UINavigationController(rootViewController: ReviewWriteViewController())
+        let vc = UINavigationController(rootViewController: MemoWriteViewController())
         vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true)
     }

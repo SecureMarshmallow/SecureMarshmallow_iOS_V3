@@ -1,6 +1,6 @@
 import UIKit
 
-protocol PasswordWriteProtocol {
+protocol MemoWriteProtocol {
     func setupNavigationBar()
     func showCloseAlertController()
     func close()
@@ -8,14 +8,14 @@ protocol PasswordWriteProtocol {
     func attribute()
 }
 
-final class PasswordWritePresenter {
-    private let viewController: PasswordWriteProtocol
+final class MemoWritePresenter {
+    private let viewController: MemoWriteProtocol
     
     private let userDefaultsManager = UserDefaultsManager()
         
     let contentsTextViewPlaceHolderText = "내용을 입력해주세요. "
     
-    init(viewController: PasswordWriteProtocol) {
+    init(viewController: MemoWriteProtocol) {
         self.viewController = viewController
     }
     
@@ -31,7 +31,7 @@ final class PasswordWritePresenter {
     
     func didTapRightBarButton(title: String, contentsText: String) {
         
-        let savePassword = SavePassword(
+        let savePassword = MemoData(
             title: title,
             contents: contentsText
         )

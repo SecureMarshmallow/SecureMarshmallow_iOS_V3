@@ -1,8 +1,8 @@
 import SnapKit
 import UIKit
 
-final class ReviewWriteViewController: UIViewController {
-    private lazy var presenter = PasswordWritePresenter(viewController: self)
+final class MemoWriteViewController: UIViewController {
+    private lazy var presenter = MemoWritePresenter(viewController: self)
     
     private lazy var titleTextField = UITextField().then {
         $0.placeholder = "비밀번호를 입력해주세요."
@@ -30,7 +30,7 @@ final class ReviewWriteViewController: UIViewController {
     }
 }
 
-extension ReviewWriteViewController: UITextViewDelegate {
+extension MemoWriteViewController: UITextViewDelegate {
     func textViewDidBeginEditing(_ textView: UITextView) {
         guard textView.textColor == .tertiaryLabel else {
             return
@@ -41,7 +41,7 @@ extension ReviewWriteViewController: UITextViewDelegate {
     }
 }
 
-extension ReviewWriteViewController: PasswordWriteProtocol {
+extension MemoWriteViewController: MemoWriteProtocol {
 
     func setupNavigationBar() {
         navigationItem.leftBarButtonItem =
@@ -80,8 +80,9 @@ extension ReviewWriteViewController: PasswordWriteProtocol {
     
     func layout() {
 
-        [titleTextField, contentsTextView, imageView]
-            .forEach { view.addSubview($0) }
+        view.addSubviews([titleTextField,
+                          contentsTextView, imageView
+                         ])
 
         titleTextField.snp.makeConstraints {
             $0.leading.equalToSuperview().inset(20.0)
@@ -108,10 +109,9 @@ extension ReviewWriteViewController: PasswordWriteProtocol {
     func attribute() {
         view.backgroundColor = .systemBackground
     }
-    
 }
 
-private extension ReviewWriteViewController {
+private extension MemoWriteViewController {
     @objc func didTapLeftBarButton() {
         presenter.didTapLeftBarButton()
     }
