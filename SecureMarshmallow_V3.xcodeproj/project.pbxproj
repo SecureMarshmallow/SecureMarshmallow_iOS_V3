@@ -52,6 +52,8 @@
 		0E85AA142A1C947A000676C2 /* GmailInformationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E85AA132A1C9479000676C2 /* GmailInformationPresenter.swift */; };
 		0E85AA162A1CA1A8000676C2 /* TimeOfAppPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E85AA152A1CA1A8000676C2 /* TimeOfAppPresenter.swift */; };
 		0E85AA182A1CA98C000676C2 /* BatteryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E85AA172A1CA98C000676C2 /* BatteryPresenter.swift */; };
+		0E85AA1A2A1CB5EE000676C2 /* OSPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E85AA192A1CB5EE000676C2 /* OSPresenter.swift */; };
+		0E85AA1C2A1CB787000676C2 /* FilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E85AA1B2A1CB787000676C2 /* FilePresenter.swift */; };
 		0EC03D782A10E630007CD53C /* RepeatTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC03D772A10E630007CD53C /* RepeatTableViewController.swift */; };
 		0EC03D7B2A10E687007CD53C /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC03D7A2A10E687007CD53C /* Day.swift */; };
 		0EC03D7D2A10E6FB007CD53C /* MonthMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC03D7C2A10E6FB007CD53C /* MonthMetadata.swift */; };
@@ -193,6 +195,8 @@
 		0E85AA132A1C9479000676C2 /* GmailInformationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GmailInformationPresenter.swift; sourceTree = "<group>"; };
 		0E85AA152A1CA1A8000676C2 /* TimeOfAppPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeOfAppPresenter.swift; sourceTree = "<group>"; };
 		0E85AA172A1CA98C000676C2 /* BatteryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryPresenter.swift; sourceTree = "<group>"; };
+		0E85AA192A1CB5EE000676C2 /* OSPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OSPresenter.swift; path = /Users/junha/Desktop/SecureMarshmallow_iOS_V3/SecureMarshmallow_V3/Source/ViewControllers/OS/OSPresenter.swift; sourceTree = "<absolute>"; };
+		0E85AA1B2A1CB787000676C2 /* FilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilePresenter.swift; sourceTree = "<group>"; };
 		0EC03D772A10E630007CD53C /* RepeatTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatTableViewController.swift; sourceTree = "<group>"; };
 		0EC03D7A2A10E687007CD53C /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		0EC03D7C2A10E6FB007CD53C /* MonthMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthMetadata.swift; sourceTree = "<group>"; };
@@ -550,6 +554,7 @@
 			isa = PBXGroup;
 			children = (
 				0EDB05A72A0D05C8009E46A8 /* OSViewController.swift */,
+				0E85AA192A1CB5EE000676C2 /* OSPresenter.swift */,
 			);
 			path = OS;
 			sourceTree = "<group>";
@@ -624,6 +629,7 @@
 			isa = PBXGroup;
 			children = (
 				0EDB05B22A0DADB9009E46A8 /* FileViewController.swift */,
+				0E85AA1B2A1CB787000676C2 /* FilePresenter.swift */,
 			);
 			path = File;
 			sourceTree = "<group>";
@@ -1134,6 +1140,7 @@
 				0EDB05A52A0D0191009E46A8 /* BaseEP.swift in Sources */,
 				0E84099429E2D759005EB879 /* MemoWriteViewController.swift in Sources */,
 				0ECEF8C129FC22A9008E848E /* CommonItemType.swift in Sources */,
+				0E85AA1A2A1CB5EE000676C2 /* OSPresenter.swift in Sources */,
 				0ECEF8AC29FB932B008E848E /* GmailItemType.swift in Sources */,
 				0EC03DB12A10F337007CD53C /* RingtoneTableViewModel.swift in Sources */,
 				0E56871229FA39C000EEEBD3 /* TaskModel.swift in Sources */,
@@ -1163,6 +1170,7 @@
 				0E09A62729FF7DCA00EC6AE1 /* DevelopersTableViewCell.swift in Sources */,
 				0E09A62C2A01EDF800EC6AE1 /* ImageCollectionViewController.swift in Sources */,
 				0EC03DA32A10F210007CD53C /* CalendarPickerHeaderView.swift in Sources */,
+				0E85AA1C2A1CB787000676C2 /* FilePresenter.swift in Sources */,
 				0EC03D782A10E630007CD53C /* RepeatTableViewController.swift in Sources */,
 				0EC03D8F2A10E99E007CD53C /* Extensions+UIStackView.swift in Sources */,
 				0EFE31D429DF9EFE00725EEE /* SceneDelegate.swift in Sources */,
