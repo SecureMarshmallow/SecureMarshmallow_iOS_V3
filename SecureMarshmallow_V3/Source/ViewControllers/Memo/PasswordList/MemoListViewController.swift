@@ -44,6 +44,7 @@ extension MemoListViewController: MemoListProtocol {
 
     func setupViews() {
         view.addSubview(collectionView)
+        
         collectionView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
