@@ -50,6 +50,7 @@
 		0E85AA102A1C6592000676C2 /* SupportPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E85AA0F2A1C6592000676C2 /* SupportPresenter.swift */; };
 		0E85AA122A1C84D9000676C2 /* AppLogoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E85AA112A1C84D9000676C2 /* AppLogoPresenter.swift */; };
 		0E85AA142A1C947A000676C2 /* GmailInformationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E85AA132A1C9479000676C2 /* GmailInformationPresenter.swift */; };
+		0E85AA162A1CA1A8000676C2 /* TimeOfAppPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E85AA152A1CA1A8000676C2 /* TimeOfAppPresenter.swift */; };
 		0EC03D782A10E630007CD53C /* RepeatTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC03D772A10E630007CD53C /* RepeatTableViewController.swift */; };
 		0EC03D7B2A10E687007CD53C /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC03D7A2A10E687007CD53C /* Day.swift */; };
 		0EC03D7D2A10E6FB007CD53C /* MonthMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC03D7C2A10E6FB007CD53C /* MonthMetadata.swift */; };
@@ -189,6 +190,7 @@
 		0E85AA0F2A1C6592000676C2 /* SupportPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportPresenter.swift; sourceTree = "<group>"; };
 		0E85AA112A1C84D9000676C2 /* AppLogoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLogoPresenter.swift; sourceTree = "<group>"; };
 		0E85AA132A1C9479000676C2 /* GmailInformationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GmailInformationPresenter.swift; sourceTree = "<group>"; };
+		0E85AA152A1CA1A8000676C2 /* TimeOfAppPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeOfAppPresenter.swift; sourceTree = "<group>"; };
 		0EC03D772A10E630007CD53C /* RepeatTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatTableViewController.swift; sourceTree = "<group>"; };
 		0EC03D7A2A10E687007CD53C /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		0EC03D7C2A10E6FB007CD53C /* MonthMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthMetadata.swift; sourceTree = "<group>"; };
@@ -325,6 +327,7 @@
 			isa = PBXGroup;
 			children = (
 				0E09A61929FD28DC00EC6AE1 /* TimeOfAppViewController.swift */,
+				0E85AA152A1CA1A8000676C2 /* TimeOfAppPresenter.swift */,
 			);
 			path = TimeOfApp;
 			sourceTree = "<group>";
@@ -1150,6 +1153,7 @@
 				0EFE323F29DFCE8200725EEE /* UserDefaultsManager.swift in Sources */,
 				0EDB05B32A0DADB9009E46A8 /* FileViewController.swift in Sources */,
 				0EC03D9A2A10EBEF007CD53C /* ClockCell.swift in Sources */,
+				0E85AA162A1CA1A8000676C2 /* TimeOfAppPresenter.swift in Sources */,
 				0EC03DA12A10F1FC007CD53C /* CalendarPickerFooterView.swift in Sources */,
 				0EC03D932A10EA9D007CD53C /* DateFunctions.swift in Sources */,
 				0E09A62729FF7DCA00EC6AE1 /* DevelopersTableViewCell.swift in Sources */,
