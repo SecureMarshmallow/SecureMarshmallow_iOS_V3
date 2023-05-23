@@ -436,6 +436,14 @@
 			path = Detail;
 			sourceTree = "<group>";
 		};
+		0E85AA1F2A1CCD74000676C2 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				0EC03E182A11FC9C007CD53C /* EditButton.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
 		0EC03D752A10E167007CD53C /* Alarm */ = {
 			isa = PBXGroup;
 			children = (
@@ -788,12 +796,12 @@
 		0EFE320C29DFA1C900725EEE /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				0E85AA1F2A1CCD74000676C2 /* Custom */,
 				0EDB05A92A0D53AF009E46A8 /* BaseViewController */,
 				0EDB05AA2A0D53D0009E46A8 /* ExplanationCollectionViewCell */,
 				0EDB05AB2A0D53E2009E46A8 /* BaseNavigationViewController */,
 				0EDB05AD2A0D5424009E46A8 /* BaseSetting */,
 				0EDB05AF2A0D5476009E46A8 /* ExplanationViewController */,
-				0EC03E182A11FC9C007CD53C /* EditButton.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
