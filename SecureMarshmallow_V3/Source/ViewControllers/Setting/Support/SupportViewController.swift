@@ -13,7 +13,6 @@ class SupportViewController: BaseSV {
         presenter.viewDidLoad()
     }
     
-    
     override func configureItems() {
         tableView.register(SupportCell.self, forCellReuseIdentifier: SupportCell.reuseIdentifier)
     }

@@ -51,6 +51,7 @@
 		0E85AA122A1C84D9000676C2 /* AppLogoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E85AA112A1C84D9000676C2 /* AppLogoPresenter.swift */; };
 		0E85AA142A1C947A000676C2 /* GmailInformationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E85AA132A1C9479000676C2 /* GmailInformationPresenter.swift */; };
 		0E85AA162A1CA1A8000676C2 /* TimeOfAppPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E85AA152A1CA1A8000676C2 /* TimeOfAppPresenter.swift */; };
+		0E85AA182A1CA98C000676C2 /* BatteryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E85AA172A1CA98C000676C2 /* BatteryPresenter.swift */; };
 		0EC03D782A10E630007CD53C /* RepeatTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC03D772A10E630007CD53C /* RepeatTableViewController.swift */; };
 		0EC03D7B2A10E687007CD53C /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC03D7A2A10E687007CD53C /* Day.swift */; };
 		0EC03D7D2A10E6FB007CD53C /* MonthMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC03D7C2A10E6FB007CD53C /* MonthMetadata.swift */; };
@@ -191,6 +192,7 @@
 		0E85AA112A1C84D9000676C2 /* AppLogoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLogoPresenter.swift; sourceTree = "<group>"; };
 		0E85AA132A1C9479000676C2 /* GmailInformationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GmailInformationPresenter.swift; sourceTree = "<group>"; };
 		0E85AA152A1CA1A8000676C2 /* TimeOfAppPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeOfAppPresenter.swift; sourceTree = "<group>"; };
+		0E85AA172A1CA98C000676C2 /* BatteryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryPresenter.swift; sourceTree = "<group>"; };
 		0EC03D772A10E630007CD53C /* RepeatTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatTableViewController.swift; sourceTree = "<group>"; };
 		0EC03D7A2A10E687007CD53C /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		0EC03D7C2A10E6FB007CD53C /* MonthMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthMetadata.swift; sourceTree = "<group>"; };
@@ -539,6 +541,7 @@
 			isa = PBXGroup;
 			children = (
 				0EDB059E2A0CC247009E46A8 /* BatteryViewController.swift */,
+				0E85AA172A1CA98C000676C2 /* BatteryPresenter.swift */,
 			);
 			path = Battery;
 			sourceTree = "<group>";
@@ -1127,6 +1130,7 @@
 			files = (
 				0ECEF90129FCD331008E848E /* ImageCache.swift in Sources */,
 				0E85AA0E2A1C62E6000676C2 /* DevelopersPresenter.swift in Sources */,
+				0E85AA182A1CA98C000676C2 /* BatteryPresenter.swift in Sources */,
 				0EDB05A52A0D0191009E46A8 /* BaseEP.swift in Sources */,
 				0E84099429E2D759005EB879 /* MemoWriteViewController.swift in Sources */,
 				0ECEF8C129FC22A9008E848E /* CommonItemType.swift in Sources */,
