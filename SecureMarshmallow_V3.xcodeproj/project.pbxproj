@@ -35,9 +35,9 @@
 		0E6275412A146EB100E8F8E9 /* SamilInformationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6275402A146EB100E8F8E9 /* SamilInformationCollectionViewCell.swift */; };
 		0E6275432A14D17500E8F8E9 /* LargeInformationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6275422A14D17500E8F8E9 /* LargeInformationCollectionViewCell.swift */; };
 		0E6275462A14D53F00E8F8E9 /* AlarmCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6275452A14D53F00E8F8E9 /* AlarmCollectionViewCell.swift */; };
-		0E84099429E2D759005EB879 /* PasswordWriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E84099329E2D759005EB879 /* PasswordWriteViewController.swift */; };
-		0E84099629E2D7B5005EB879 /* PasswordWritePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E84099529E2D7B5005EB879 /* PasswordWritePresenter.swift */; };
-		0E8409B629E3843B005EB879 /* SavePassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8409B529E3843B005EB879 /* SavePassword.swift */; };
+		0E84099429E2D759005EB879 /* MemoWriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E84099329E2D759005EB879 /* MemoWriteViewController.swift */; };
+		0E84099629E2D7B5005EB879 /* MemoWritePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E84099529E2D7B5005EB879 /* MemoWritePresenter.swift */; };
+		0E8409B629E3843B005EB879 /* MemoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8409B529E3843B005EB879 /* MemoData.swift */; };
 		0E8409B929E38D06005EB879 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8409B829E38D06005EB879 /* SettingsViewController.swift */; };
 		0E8409BB29E38D26005EB879 /* SettingsItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8409BA29E38D26005EB879 /* SettingsItemType.swift */; };
 		0E8409BD29E38D36005EB879 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8409BC29E38D36005EB879 /* SettingsCell.swift */; };
@@ -45,6 +45,15 @@
 		0E85A9EF2A1A3D6B000676C2 /* CalculatorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E85A9EE2A1A3D6B000676C2 /* CalculatorCell.swift */; };
 		0E85A9F52A1B295D000676C2 /* BluetoothViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E85A9F42A1B295D000676C2 /* BluetoothViewController.swift */; };
 		0E85AA082A1B5FB0000676C2 /* DetailMemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E85AA072A1B5FB0000676C2 /* DetailMemoViewController.swift */; };
+		0E85AA0A2A1B68E6000676C2 /* DetailMemoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E85AA092A1B68E6000676C2 /* DetailMemoPresenter.swift */; };
+		0E85AA0E2A1C62E6000676C2 /* DevelopersPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E85AA0D2A1C62E6000676C2 /* DevelopersPresenter.swift */; };
+		0E85AA102A1C6592000676C2 /* SupportPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E85AA0F2A1C6592000676C2 /* SupportPresenter.swift */; };
+		0E85AA122A1C84D9000676C2 /* AppLogoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E85AA112A1C84D9000676C2 /* AppLogoPresenter.swift */; };
+		0E85AA142A1C947A000676C2 /* GmailInformationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E85AA132A1C9479000676C2 /* GmailInformationPresenter.swift */; };
+		0E85AA162A1CA1A8000676C2 /* TimeOfAppPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E85AA152A1CA1A8000676C2 /* TimeOfAppPresenter.swift */; };
+		0E85AA182A1CA98C000676C2 /* BatteryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E85AA172A1CA98C000676C2 /* BatteryPresenter.swift */; };
+		0E85AA1A2A1CB5EE000676C2 /* OSPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E85AA192A1CB5EE000676C2 /* OSPresenter.swift */; };
+		0E85AA1C2A1CB787000676C2 /* FilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E85AA1B2A1CB787000676C2 /* FilePresenter.swift */; };
 		0EC03D782A10E630007CD53C /* RepeatTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC03D772A10E630007CD53C /* RepeatTableViewController.swift */; };
 		0EC03D7B2A10E687007CD53C /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC03D7A2A10E687007CD53C /* Day.swift */; };
 		0EC03D7D2A10E6FB007CD53C /* MonthMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC03D7C2A10E6FB007CD53C /* MonthMetadata.swift */; };
@@ -97,8 +106,8 @@
 		0EFE321029DFA1E700725EEE /* BaseNC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFE320F29DFA1E700725EEE /* BaseNC.swift */; };
 		0EFE323529DFC22500725EEE /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFE323429DFC22500725EEE /* TabbarViewController.swift */; };
 		0EFE323729DFC23600725EEE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFE323629DFC23600725EEE /* HomeViewController.swift */; };
-		0EFE323B29DFCDFB00725EEE /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFE323A29DFCDFB00725EEE /* ListViewController.swift */; };
-		0EFE323D29DFCE4300725EEE /* ListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFE323C29DFCE4300725EEE /* ListPresenter.swift */; };
+		0EFE323B29DFCDFB00725EEE /* MemoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFE323A29DFCDFB00725EEE /* MemoListViewController.swift */; };
+		0EFE323D29DFCE4300725EEE /* MemoListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFE323C29DFCE4300725EEE /* MemoListPresenter.swift */; };
 		0EFE323F29DFCE8200725EEE /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFE323E29DFCE8200725EEE /* UserDefaultsManager.swift */; };
 		48D7226EF4FD3B8A079B5970 /* Pods_SecureMarshmallow_V3Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53B53B99C8AF3C119336DB4A /* Pods_SecureMarshmallow_V3Tests.framework */; };
 		BAC150F152B3DE456D494115 /* Pods_SecureMarshmallow_V3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40845CBE8C39C18514247C52 /* Pods_SecureMarshmallow_V3.framework */; };
@@ -169,9 +178,9 @@
 		0E6275402A146EB100E8F8E9 /* SamilInformationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamilInformationCollectionViewCell.swift; sourceTree = "<group>"; };
 		0E6275422A14D17500E8F8E9 /* LargeInformationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeInformationCollectionViewCell.swift; sourceTree = "<group>"; };
 		0E6275452A14D53F00E8F8E9 /* AlarmCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmCollectionViewCell.swift; sourceTree = "<group>"; };
-		0E84099329E2D759005EB879 /* PasswordWriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordWriteViewController.swift; sourceTree = "<group>"; };
-		0E84099529E2D7B5005EB879 /* PasswordWritePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordWritePresenter.swift; sourceTree = "<group>"; };
-		0E8409B529E3843B005EB879 /* SavePassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavePassword.swift; sourceTree = "<group>"; };
+		0E84099329E2D759005EB879 /* MemoWriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoWriteViewController.swift; sourceTree = "<group>"; };
+		0E84099529E2D7B5005EB879 /* MemoWritePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoWritePresenter.swift; sourceTree = "<group>"; };
+		0E8409B529E3843B005EB879 /* MemoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoData.swift; sourceTree = "<group>"; };
 		0E8409B829E38D06005EB879 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		0E8409BA29E38D26005EB879 /* SettingsItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsItemType.swift; sourceTree = "<group>"; };
 		0E8409BC29E38D36005EB879 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
@@ -179,6 +188,15 @@
 		0E85A9EE2A1A3D6B000676C2 /* CalculatorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorCell.swift; sourceTree = "<group>"; };
 		0E85A9F42A1B295D000676C2 /* BluetoothViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothViewController.swift; sourceTree = "<group>"; };
 		0E85AA072A1B5FB0000676C2 /* DetailMemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMemoViewController.swift; sourceTree = "<group>"; };
+		0E85AA092A1B68E6000676C2 /* DetailMemoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMemoPresenter.swift; sourceTree = "<group>"; };
+		0E85AA0D2A1C62E6000676C2 /* DevelopersPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevelopersPresenter.swift; sourceTree = "<group>"; };
+		0E85AA0F2A1C6592000676C2 /* SupportPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportPresenter.swift; sourceTree = "<group>"; };
+		0E85AA112A1C84D9000676C2 /* AppLogoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLogoPresenter.swift; sourceTree = "<group>"; };
+		0E85AA132A1C9479000676C2 /* GmailInformationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GmailInformationPresenter.swift; sourceTree = "<group>"; };
+		0E85AA152A1CA1A8000676C2 /* TimeOfAppPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeOfAppPresenter.swift; sourceTree = "<group>"; };
+		0E85AA172A1CA98C000676C2 /* BatteryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryPresenter.swift; sourceTree = "<group>"; };
+		0E85AA192A1CB5EE000676C2 /* OSPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OSPresenter.swift; path = /Users/junha/Desktop/SecureMarshmallow_iOS_V3/SecureMarshmallow_V3/Source/ViewControllers/OS/OSPresenter.swift; sourceTree = "<absolute>"; };
+		0E85AA1B2A1CB787000676C2 /* FilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilePresenter.swift; sourceTree = "<group>"; };
 		0EC03D772A10E630007CD53C /* RepeatTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatTableViewController.swift; sourceTree = "<group>"; };
 		0EC03D7A2A10E687007CD53C /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		0EC03D7C2A10E6FB007CD53C /* MonthMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthMetadata.swift; sourceTree = "<group>"; };
@@ -236,8 +254,8 @@
 		0EFE320F29DFA1E700725EEE /* BaseNC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNC.swift; sourceTree = "<group>"; };
 		0EFE323429DFC22500725EEE /* TabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
 		0EFE323629DFC23600725EEE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		0EFE323A29DFCDFB00725EEE /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
-		0EFE323C29DFCE4300725EEE /* ListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenter.swift; sourceTree = "<group>"; };
+		0EFE323A29DFCDFB00725EEE /* MemoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListViewController.swift; sourceTree = "<group>"; };
+		0EFE323C29DFCE4300725EEE /* MemoListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListPresenter.swift; sourceTree = "<group>"; };
 		0EFE323E29DFCE8200725EEE /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		0FBA3FD3EE3B33BE850B399D /* Pods_SecureMarshmallow_V3_SecureMarshmallow_V3UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SecureMarshmallow_V3_SecureMarshmallow_V3UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		24C059779EAEFEC7EC8A1A39 /* Pods-SecureMarshmallow_V3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SecureMarshmallow_V3.release.xcconfig"; path = "Target Support Files/Pods-SecureMarshmallow_V3/Pods-SecureMarshmallow_V3.release.xcconfig"; sourceTree = "<group>"; };
@@ -304,6 +322,7 @@
 			isa = PBXGroup;
 			children = (
 				0E09A60D29FD0FA800EC6AE1 /* SupportViewController.swift */,
+				0E85AA0F2A1C6592000676C2 /* SupportPresenter.swift */,
 				0E09A60F29FD0FB600EC6AE1 /* SupportItmeType.swift */,
 				0E09A61129FD0FC400EC6AE1 /* SupportCell.swift */,
 			);
@@ -314,6 +333,7 @@
 			isa = PBXGroup;
 			children = (
 				0E09A61929FD28DC00EC6AE1 /* TimeOfAppViewController.swift */,
+				0E85AA152A1CA1A8000676C2 /* TimeOfAppPresenter.swift */,
 			);
 			path = TimeOfApp;
 			sourceTree = "<group>";
@@ -322,6 +342,7 @@
 			isa = PBXGroup;
 			children = (
 				0E09A62429FF7DB600EC6AE1 /* DevelopersViewController.swift */,
+				0E85AA0D2A1C62E6000676C2 /* DevelopersPresenter.swift */,
 				0E09A62629FF7DCA00EC6AE1 /* DevelopersTableViewCell.swift */,
 			);
 			path = DeveloperIntroduction;
@@ -350,8 +371,8 @@
 		0E84099229E2D638005EB879 /* PasswordWrite */ = {
 			isa = PBXGroup;
 			children = (
-				0E84099329E2D759005EB879 /* PasswordWriteViewController.swift */,
-				0E84099529E2D7B5005EB879 /* PasswordWritePresenter.swift */,
+				0E84099329E2D759005EB879 /* MemoWriteViewController.swift */,
+				0E84099529E2D7B5005EB879 /* MemoWritePresenter.swift */,
 			);
 			path = PasswordWrite;
 			sourceTree = "<group>";
@@ -360,21 +381,20 @@
 			isa = PBXGroup;
 			children = (
 				0E85AA062A1B5F70000676C2 /* Detail */,
-				0E8409AE29E383C7005EB879 /* PasswordModel */,
+				0E8409AE29E383C7005EB879 /* MemoModel */,
 				0EFE323929DFCDA200725EEE /* PasswordList */,
 				0E84099229E2D638005EB879 /* PasswordWrite */,
-				0E54CC962A1742FF00AFAA7D /* TaskCollectionViewCell.swift */,
 			);
 			path = Memo;
 			sourceTree = "<group>";
 		};
-		0E8409AE29E383C7005EB879 /* PasswordModel */ = {
+		0E8409AE29E383C7005EB879 /* MemoModel */ = {
 			isa = PBXGroup;
 			children = (
-				0E8409B529E3843B005EB879 /* SavePassword.swift */,
+				0E8409B529E3843B005EB879 /* MemoData.swift */,
 				0E56871129FA39C000EEEBD3 /* TaskModel.swift */,
 			);
-			path = PasswordModel;
+			path = MemoModel;
 			sourceTree = "<group>";
 		};
 		0E8409B729E38CF8005EB879 /* Setting */ = {
@@ -411,8 +431,17 @@
 			isa = PBXGroup;
 			children = (
 				0E85AA072A1B5FB0000676C2 /* DetailMemoViewController.swift */,
+				0E85AA092A1B68E6000676C2 /* DetailMemoPresenter.swift */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		0E85AA1F2A1CCD74000676C2 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				0EC03E182A11FC9C007CD53C /* EditButton.swift */,
+			);
+			path = Custom;
 			sourceTree = "<group>";
 		};
 		0EC03D752A10E167007CD53C /* Alarm */ = {
@@ -502,9 +531,10 @@
 		0ECEF8A829FB92F8008E848E /* Gmail */ = {
 			isa = PBXGroup;
 			children = (
-				0ECEF8A929FB930A008E848E /* GmailCell.swift */,
-				0ECEF8AB29FB932B008E848E /* GmailItemType.swift */,
 				0ECEF8AD29FB933F008E848E /* GmailInformationViewController.swift */,
+				0E85AA132A1C9479000676C2 /* GmailInformationPresenter.swift */,
+				0ECEF8AB29FB932B008E848E /* GmailItemType.swift */,
+				0ECEF8A929FB930A008E848E /* GmailCell.swift */,
 			);
 			path = Gmail;
 			sourceTree = "<group>";
@@ -513,6 +543,7 @@
 			isa = PBXGroup;
 			children = (
 				0ECEF8B029FB98A2008E848E /* AppLogoViewController.swift */,
+				0E85AA112A1C84D9000676C2 /* AppLogoPresenter.swift */,
 				0ECEF8B429FB98C6008E848E /* AppLogoCell.swift */,
 			);
 			path = AppLogo;
@@ -522,6 +553,7 @@
 			isa = PBXGroup;
 			children = (
 				0EDB059E2A0CC247009E46A8 /* BatteryViewController.swift */,
+				0E85AA172A1CA98C000676C2 /* BatteryPresenter.swift */,
 			);
 			path = Battery;
 			sourceTree = "<group>";
@@ -530,6 +562,7 @@
 			isa = PBXGroup;
 			children = (
 				0EDB05A72A0D05C8009E46A8 /* OSViewController.swift */,
+				0E85AA192A1CB5EE000676C2 /* OSPresenter.swift */,
 			);
 			path = OS;
 			sourceTree = "<group>";
@@ -604,6 +637,7 @@
 			isa = PBXGroup;
 			children = (
 				0EDB05B22A0DADB9009E46A8 /* FileViewController.swift */,
+				0E85AA1B2A1CB787000676C2 /* FilePresenter.swift */,
 			);
 			path = File;
 			sourceTree = "<group>";
@@ -762,12 +796,12 @@
 		0EFE320C29DFA1C900725EEE /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				0E85AA1F2A1CCD74000676C2 /* Custom */,
 				0EDB05A92A0D53AF009E46A8 /* BaseViewController */,
 				0EDB05AA2A0D53D0009E46A8 /* ExplanationCollectionViewCell */,
 				0EDB05AB2A0D53E2009E46A8 /* BaseNavigationViewController */,
 				0EDB05AD2A0D5424009E46A8 /* BaseSetting */,
 				0EDB05AF2A0D5476009E46A8 /* ExplanationViewController */,
-				0EC03E182A11FC9C007CD53C /* EditButton.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -783,8 +817,9 @@
 		0EFE323929DFCDA200725EEE /* PasswordList */ = {
 			isa = PBXGroup;
 			children = (
-				0EFE323A29DFCDFB00725EEE /* ListViewController.swift */,
-				0EFE323C29DFCE4300725EEE /* ListPresenter.swift */,
+				0EFE323A29DFCDFB00725EEE /* MemoListViewController.swift */,
+				0EFE323C29DFCE4300725EEE /* MemoListPresenter.swift */,
+				0E54CC962A1742FF00AFAA7D /* TaskCollectionViewCell.swift */,
 			);
 			path = PasswordList;
 			sourceTree = "<group>";
@@ -1108,22 +1143,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				0ECEF90129FCD331008E848E /* ImageCache.swift in Sources */,
+				0E85AA0E2A1C62E6000676C2 /* DevelopersPresenter.swift in Sources */,
+				0E85AA182A1CA98C000676C2 /* BatteryPresenter.swift in Sources */,
 				0EDB05A52A0D0191009E46A8 /* BaseEP.swift in Sources */,
-				0E84099429E2D759005EB879 /* PasswordWriteViewController.swift in Sources */,
+				0E84099429E2D759005EB879 /* MemoWriteViewController.swift in Sources */,
 				0ECEF8C129FC22A9008E848E /* CommonItemType.swift in Sources */,
+				0E85AA1A2A1CB5EE000676C2 /* OSPresenter.swift in Sources */,
 				0ECEF8AC29FB932B008E848E /* GmailItemType.swift in Sources */,
 				0EC03DB12A10F337007CD53C /* RingtoneTableViewModel.swift in Sources */,
 				0E56871229FA39C000EEEBD3 /* TaskModel.swift in Sources */,
-				0EFE323D29DFCE4300725EEE /* ListPresenter.swift in Sources */,
+				0EFE323D29DFCE4300725EEE /* MemoListPresenter.swift in Sources */,
 				0E8409BD29E38D36005EB879 /* SettingsCell.swift in Sources */,
+				0E85AA0A2A1B68E6000676C2 /* DetailMemoPresenter.swift in Sources */,
 				0E8409BB29E38D26005EB879 /* SettingsItemType.swift in Sources */,
 				0ECEF8B529FB98C6008E848E /* AppLogoCell.swift in Sources */,
 				0EC03D7B2A10E687007CD53C /* Day.swift in Sources */,
 				0EC03D812A10E761007CD53C /* Clock.swift in Sources */,
 				0EFE323529DFC22500725EEE /* TabbarViewController.swift in Sources */,
 				0EC03D982A10EAFF007CD53C /* StartViewController.swift in Sources */,
+				0E85AA102A1C6592000676C2 /* SupportPresenter.swift in Sources */,
 				0E8409B929E38D06005EB879 /* SettingsViewController.swift in Sources */,
-				0E84099629E2D7B5005EB879 /* PasswordWritePresenter.swift in Sources */,
+				0E84099629E2D7B5005EB879 /* MemoWritePresenter.swift in Sources */,
 				0EFE323729DFC23600725EEE /* HomeViewController.swift in Sources */,
 				0E09A60E29FD0FA800EC6AE1 /* SupportViewController.swift in Sources */,
 				0EDB05A12A0CC4E0009E46A8 /* Extensions+UIColor.swift in Sources */,
@@ -1132,18 +1172,20 @@
 				0EFE323F29DFCE8200725EEE /* UserDefaultsManager.swift in Sources */,
 				0EDB05B32A0DADB9009E46A8 /* FileViewController.swift in Sources */,
 				0EC03D9A2A10EBEF007CD53C /* ClockCell.swift in Sources */,
+				0E85AA162A1CA1A8000676C2 /* TimeOfAppPresenter.swift in Sources */,
 				0EC03DA12A10F1FC007CD53C /* CalendarPickerFooterView.swift in Sources */,
 				0EC03D932A10EA9D007CD53C /* DateFunctions.swift in Sources */,
 				0E09A62729FF7DCA00EC6AE1 /* DevelopersTableViewCell.swift in Sources */,
 				0E09A62C2A01EDF800EC6AE1 /* ImageCollectionViewController.swift in Sources */,
 				0EC03DA32A10F210007CD53C /* CalendarPickerHeaderView.swift in Sources */,
+				0E85AA1C2A1CB787000676C2 /* FilePresenter.swift in Sources */,
 				0EC03D782A10E630007CD53C /* RepeatTableViewController.swift in Sources */,
 				0EC03D8F2A10E99E007CD53C /* Extensions+UIStackView.swift in Sources */,
 				0EFE31D429DF9EFE00725EEE /* SceneDelegate.swift in Sources */,
 				0E54CC972A1742FF00AFAA7D /* TaskCollectionViewCell.swift in Sources */,
 				0E09A61429FD110700EC6AE1 /* BaseSV.swift in Sources */,
 				0EC03D9C2A10EF3E007CD53C /* StartViewModel.swift in Sources */,
-				0EFE323B29DFCDFB00725EEE /* ListViewController.swift in Sources */,
+				0EFE323B29DFCDFB00725EEE /* MemoListViewController.swift in Sources */,
 				0EC03D912A10EA46007CD53C /* writeToFile.swift in Sources */,
 				0EC03DA52A10F221007CD53C /* CalendarPickerViewController.swift in Sources */,
 				0E56871029FA37E800EEEBD3 /* Extensions+UIView.swift in Sources */,
@@ -1161,13 +1203,14 @@
 				0E85A9ED2A1A3BD0000676C2 /* CalculatorViewController.swift in Sources */,
 				0EC03D952A10EACD007CD53C /* generalFunctions.swift in Sources */,
 				0E6275412A146EB100E8F8E9 /* SamilInformationCollectionViewCell.swift in Sources */,
+				0E85AA142A1C947A000676C2 /* GmailInformationPresenter.swift in Sources */,
 				0EC03DAC2A10F29A007CD53C /* RepeatTableViewModel.swift in Sources */,
 				0E09A61229FD0FC400EC6AE1 /* SupportCell.swift in Sources */,
 				0E09A60529FD0A3500EC6AE1 /* MarshmallowWidget.intentdefinition in Sources */,
 				0EC03D9F2A10F1EF007CD53C /* CalendarDateCollectionViewCell.swift in Sources */,
 				0EFE320E29DFA1D000725EEE /* BaseVC.swift in Sources */,
 				0EC03DAA2A10F25D007CD53C /* ClockController.swift in Sources */,
-				0E8409B629E3843B005EB879 /* SavePassword.swift in Sources */,
+				0E8409B629E3843B005EB879 /* MemoData.swift in Sources */,
 				0E85AA082A1B5FB0000676C2 /* DetailMemoViewController.swift in Sources */,
 				0E6275462A14D53F00E8F8E9 /* AlarmCollectionViewCell.swift in Sources */,
 				0EC03D7D2A10E6FB007CD53C /* MonthMetadata.swift in Sources */,
@@ -1179,6 +1222,7 @@
 				0EDB059F2A0CC247009E46A8 /* BatteryViewController.swift in Sources */,
 				0ECEF8AE29FB933F008E848E /* GmailInformationViewController.swift in Sources */,
 				0ECEF8C329FCCA06008E848E /* MarshmallowWidgetViewController.swift in Sources */,
+				0E85AA122A1C84D9000676C2 /* AppLogoPresenter.swift in Sources */,
 				0E85A9EF2A1A3D6B000676C2 /* CalculatorCell.swift in Sources */,
 				0E85A9F52A1B295D000676C2 /* BluetoothViewController.swift in Sources */,
 				0E09A61029FD0FB600EC6AE1 /* SupportItmeType.swift in Sources */,

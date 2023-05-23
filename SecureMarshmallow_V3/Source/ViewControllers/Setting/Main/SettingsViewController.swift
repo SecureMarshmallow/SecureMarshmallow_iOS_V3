@@ -18,14 +18,12 @@ class SettingsViewController: BaseSV {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureUI()
         configureSettingsItems()
     }
 
     // MARK: - Helpers
-
+    
     override func configureUI() {
-        super.configureUI()
         self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(customView: navLabel)
         self.navigationItem.leftItemsSupplementBackButton = true
     }

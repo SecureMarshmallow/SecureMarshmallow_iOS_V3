@@ -10,7 +10,7 @@ class TapBarViewController: UITabBarController {
     }()
     
     private lazy var LockViewController: UIViewController = {
-        let viewController = ListViewController()
+        let viewController = MemoListViewController()
         let tabBarItem = UITabBarItem(title: "", image: UIImage(named: "Password_TapBar_Gray"), tag: 1)
         viewController.tabBarItem = tabBarItem
         let navigationView = UINavigationController(rootViewController: viewController)

@@ -1,6 +1,7 @@
 import UIKit
 
 class TimeOfAppViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    private lazy var presenter = TimeOfAppPresenter(viewController: self, navigationController: navigationController!)
     
     let tableView = UITableView()
     var times: [String] = []
@@ -8,26 +9,7 @@ class TimeOfAppViewController: UIViewController, UITableViewDelegate, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationController?.navigationBar.prefersLargeTitles = false
-        title = "앱 열기 추적"
-        
-        // Set up table view
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        view.addSubview(tableView)
-        tableView.frame = view.bounds
-        
-        if let savedTimes = UserDefaults.standard.stringArray(forKey: "times") {
-            times = savedTimes
-        }
-        
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        let currentTime = formatter.string(from: Date())
-        times.insert(currentTime, at: 0)
-        UserDefaults.standard.set(times, forKey: "times")
-        tableView.reloadData()
+        presenter.viewDidLoad()
     }
     
     // MARK: - Table view methods
@@ -42,5 +24,47 @@ class TimeOfAppViewController: UIViewController, UITableViewDelegate, UITableVie
         return cell
     }
     
+}
+
+extension TimeOfAppViewController: TimeOfAppProtocol {
+    func dataFormatter() {
+        if let savedTimes = UserDefaults.standard.stringArray(forKey: "times") {
+            times = savedTimes
+        }
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let currentTime = formatter.string(from: Date())
+        times.insert(currentTime, at: 0)
+        UserDefaults.standard.set(times, forKey: "times")
+        tableView.reloadData()
+    }
+    
+    
+    func tableViewSetup() {
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        
+        view.addSubview(tableView)
+        tableView.frame = view.bounds
+    }
+    
+    func navigationSetup() {
+        navigationController?.navigationBar.prefersLargeTitles = false
+        title = "앱 열기 추적"
+        
+        let resetButton = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(resetButtonTap))
+        
+        navigationItem.rightBarButtonItem = resetButton
+    }
+    
+    @objc func resetButtonTap() {
+        for key in UserDefaults.standard.dictionaryRepresentation().keys {
+            UserDefaults.standard.removeObject(forKey: key.description)
+        }
+        
+        tableView.reloadData()
+    }
 }
 

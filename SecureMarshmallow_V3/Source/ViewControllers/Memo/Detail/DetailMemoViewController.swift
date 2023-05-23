@@ -1,46 +1,29 @@
-//
-//  DetailMemoViewController.swift
-//  SecureMarshmallow_V3
-//
-//  Created by 박준하 on 2023/05/22.
-//
-
 import UIKit
 import SnapKit
 import Then
 
 class DetailMemoViewController: UIViewController {
+    private lazy var presenter = DetailMemoPresenter(viewController: self, navigationController: navigationController!)
+    
     private var titleText: String?
     private var contentsText: String?
     
     var navigationTitle: String = ""
     
-    private lazy var contentsLabel: UILabel = {
-        let label = UILabel()
-        label.font = .systemFont(ofSize: 16.0, weight: .medium)
-        label.numberOfLines = 0
-        return label
-    }()
+    private lazy var contentsLabel = UILabel().then {
+        $0.font = .systemFont(ofSize: 16.0, weight: .medium)
+        $0.numberOfLines = 0
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
-        displayMemo()
-        
-        title = "\(navigationTitle)"
-        
-        view.backgroundColor = .white
+        presenter.viewDidLoad()
     }
+}
+
+extension DetailMemoViewController: DetailProtocol {
     
-    private func setupUI() {
-        view.addSubview(contentsLabel)
-        contentsLabel.snp.makeConstraints {
-            $0.top.equalTo(view.safeAreaLayoutGuide).inset(20.0)
-            $0.leading.trailing.equalToSuperview().inset(20.0)
-        }
-    }
-    
-    private func displayMemo() {
+    func displayMemo() {
         contentsLabel.text = contentsText
     }
     
@@ -48,4 +31,19 @@ class DetailMemoViewController: UIViewController {
         navigationTitle = title
         contentsText = contents
     }
+    
+    func attribute() {
+        title = "\(navigationTitle)"
+
+        view.backgroundColor = .white
+    }
+    
+    func layout() {
+        view.addSubview(contentsLabel)
+        contentsLabel.snp.makeConstraints {
+            $0.top.equalTo(view.safeAreaLayoutGuide).inset(20.0)
+            $0.leading.trailing.equalToSuperview().inset(20.0)
+        }
+    }
+    
 }

@@ -1,13 +1,7 @@
-//
-//  WiFiViewController.swift
-//  SecureMarshmallow_V3
-//
-//  Created by 박준하 on 2023/05/12.
-//
-
 import UIKit
 import SnapKit
 
+//아직 미완성
 class WiFiViewController: BaseEP {
     
     override func viewDidLoad() {

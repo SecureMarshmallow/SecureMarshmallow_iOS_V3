@@ -1,40 +1,21 @@
-//
-//  SupportViewController.swift
-//  SecureMarshmallow_V3
-//
-//  Created by 박준하 on 2023/04/29.
-//
-
 import UIKit
 import SnapKit
 import Then
 
 class SupportViewController: BaseSV {
     
+    private lazy var presenter = SupportPresenter(viewController: self, navigationController: navigationController!)
+    
     private var supportItems: [[SupportItem]] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        configureSettingsItems()
-    }
-    
-    override func attribute() {
-        view.backgroundColor = .systemBackground
-        navigationController?.navigationBar.prefersLargeTitles = false
-        navigationItem.title = "지원"
+        presenter.viewDidLoad()
     }
     
     override func configureItems() {
         tableView.register(SupportCell.self, forCellReuseIdentifier: SupportCell.reuseIdentifier)
     }
-    
-    private func configureSettingsItems() {
-        let section1 = [SupportItem(type: .support)]
-        
-        supportItems = [section1]
-    }
-    
 }
 
 extension SupportViewController {
@@ -68,5 +49,23 @@ extension SupportViewController {
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return supportItems.count
+    }
+}
+
+extension SupportViewController: SupportViewProtocol {
+    
+    func reloadTableView() {
+        tableView.reloadData()
+    }
+    
+    func configureSettingsItems() {
+        let section1 = [SupportItem(type: .support)]
+
+        supportItems = [section1]
+        
+    }
+    
+    func navigationSetup() {
+        title = "지원"
     }
 }
