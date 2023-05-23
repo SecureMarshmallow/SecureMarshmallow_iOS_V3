@@ -1,6 +1,7 @@
 import UIKit
 import SnapKit
 
+//아직 미완성
 class WiFiViewController: BaseEP {
     
     override func viewDidLoad() {

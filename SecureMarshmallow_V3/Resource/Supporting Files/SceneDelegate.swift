@@ -8,7 +8,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         registerLocal()
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = BaseNC(rootViewController: TapBarViewController())
+        window?.rootViewController = BaseNC(rootViewController: CalculatorViewController())
         window?.makeKeyAndVisible()
         
     }
