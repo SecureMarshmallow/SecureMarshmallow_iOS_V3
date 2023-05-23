@@ -46,6 +46,7 @@
 		0E85A9F52A1B295D000676C2 /* BluetoothViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E85A9F42A1B295D000676C2 /* BluetoothViewController.swift */; };
 		0E85AA082A1B5FB0000676C2 /* DetailMemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E85AA072A1B5FB0000676C2 /* DetailMemoViewController.swift */; };
 		0E85AA0A2A1B68E6000676C2 /* DetailMemoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E85AA092A1B68E6000676C2 /* DetailMemoPresenter.swift */; };
+		0E85AA0E2A1C62E6000676C2 /* DevelopersPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E85AA0D2A1C62E6000676C2 /* DevelopersPresenter.swift */; };
 		0EC03D782A10E630007CD53C /* RepeatTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC03D772A10E630007CD53C /* RepeatTableViewController.swift */; };
 		0EC03D7B2A10E687007CD53C /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC03D7A2A10E687007CD53C /* Day.swift */; };
 		0EC03D7D2A10E6FB007CD53C /* MonthMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC03D7C2A10E6FB007CD53C /* MonthMetadata.swift */; };
@@ -181,6 +182,7 @@
 		0E85A9F42A1B295D000676C2 /* BluetoothViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothViewController.swift; sourceTree = "<group>"; };
 		0E85AA072A1B5FB0000676C2 /* DetailMemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMemoViewController.swift; sourceTree = "<group>"; };
 		0E85AA092A1B68E6000676C2 /* DetailMemoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMemoPresenter.swift; sourceTree = "<group>"; };
+		0E85AA0D2A1C62E6000676C2 /* DevelopersPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevelopersPresenter.swift; sourceTree = "<group>"; };
 		0EC03D772A10E630007CD53C /* RepeatTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatTableViewController.swift; sourceTree = "<group>"; };
 		0EC03D7A2A10E687007CD53C /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		0EC03D7C2A10E6FB007CD53C /* MonthMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthMetadata.swift; sourceTree = "<group>"; };
@@ -324,6 +326,7 @@
 			isa = PBXGroup;
 			children = (
 				0E09A62429FF7DB600EC6AE1 /* DevelopersViewController.swift */,
+				0E85AA0D2A1C62E6000676C2 /* DevelopersPresenter.swift */,
 				0E09A62629FF7DCA00EC6AE1 /* DevelopersTableViewCell.swift */,
 			);
 			path = DeveloperIntroduction;
@@ -1111,6 +1114,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0ECEF90129FCD331008E848E /* ImageCache.swift in Sources */,
+				0E85AA0E2A1C62E6000676C2 /* DevelopersPresenter.swift in Sources */,
 				0EDB05A52A0D0191009E46A8 /* BaseEP.swift in Sources */,
 				0E84099429E2D759005EB879 /* MemoWriteViewController.swift in Sources */,
 				0ECEF8C129FC22A9008E848E /* CommonItemType.swift in Sources */,
