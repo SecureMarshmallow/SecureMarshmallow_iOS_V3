@@ -19,8 +19,6 @@ class SupportPresenter: NSObject {
     private let viewController: SupportViewProtocol?
     private let navigationController: UINavigationController
     
-    private var supportItems: [[SupportItem]] = []
-    
     init(viewController: SupportViewProtocol, navigationController: UINavigationController) {
         self.viewController = viewController
         self.navigationController = navigationController

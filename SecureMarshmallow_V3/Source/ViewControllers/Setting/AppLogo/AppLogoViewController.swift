@@ -8,14 +8,12 @@ class AppLogoViewController: UIViewController {
     
     private let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout()).then {
         $0.register(AppLogoCell.self, forCellWithReuseIdentifier: AppLogoCell.identifier)
-
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.viewDidLoad()
     }
-    
 }
 
 extension AppLogoViewController: AppLogoProtocol {

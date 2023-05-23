@@ -2,31 +2,20 @@ import UIKit
 import SnapKit
 
 class GmailInformationViewController: BaseSV {
+    private lazy var presenter = GmailInformationPresenter(viewController: self, navigationController: navigationController!)
     
     private var gmailItems: [[GmailItem]] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureSettingsItems()
-        attribute()
+        presenter.viewDidLoad()
     }
-    
-    override func attribute() {
-        navigationController?.delegate = self
-        view.backgroundColor = .systemBackground
-        navigationController?.navigationBar.prefersLargeTitles = false
-        navigationItem.title = "gmail 정보"
-    }
-    
+
     override func configureItems() {
         tableView.register(GmailCell.self, forCellReuseIdentifier: GmailCell.reuseIdentifier)
     }
     
-    private func configureSettingsItems() {
-        let section1 = [GmailItem(type: .restoreEmail)]
-        let section2 = [GmailItem(type: .deleteAccount)]
-        gmailItems = [section1, section2]
-    }
 }
 
 // MARK: - UITableViewDataSource
@@ -79,5 +68,21 @@ extension GmailInformationViewController: UINavigationControllerDelegate {
         } else {
             navigationController.navigationBar.prefersLargeTitles = true
         }
+    }
+}
+
+extension GmailInformationViewController: GmailInformationProtocol {
+    
+    func configureSettingsItems() {
+        let section1 = [GmailItem(type: .restoreEmail)]
+        let section2 = [GmailItem(type: .deleteAccount)]
+        gmailItems = [section1, section2]
+    }
+    
+    func navigationSetup() {
+        navigationController?.delegate = self
+
+        navigationController?.navigationBar.prefersLargeTitles = false
+        navigationItem.title = "gmail 정보"
     }
 }
