@@ -12,20 +12,24 @@ import Then
 protocol SupportViewProtocol: AnyObject {
     func reloadTableView()
     func configureSettingsItems()
+    func navigationSetup()
 }
 
 class SupportPresenter: NSObject {
-    weak var viewController: SupportViewProtocol?
+    private let viewController: SupportViewProtocol?
+    private let navigationController: UINavigationController
     
     private var supportItems: [[SupportItem]] = []
     
-    init(viewController: SupportViewProtocol) {
+    init(viewController: SupportViewProtocol, navigationController: UINavigationController) {
         self.viewController = viewController
+        self.navigationController = navigationController
     }
     
     func viewDidLoad() {
         viewController?.reloadTableView()
         viewController?.configureSettingsItems()
+        viewController?.navigationSetup()
     }
 
 }

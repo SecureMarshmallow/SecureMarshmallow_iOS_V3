@@ -4,7 +4,7 @@ import Then
 
 class SupportViewController: BaseSV {
     
-    private lazy var presenter = SupportPresenter(viewController: self)
+    private lazy var presenter = SupportPresenter(viewController: self, navigationController: navigationController!)
     private var supportItems: [[SupportItem]] = []
     
     override func viewDidLoad() {
@@ -63,5 +63,9 @@ extension SupportViewController: SupportViewProtocol {
 
         supportItems = [section1]
         
+    }
+    
+    func navigationSetup() {
+        title = "지원"
     }
 }
