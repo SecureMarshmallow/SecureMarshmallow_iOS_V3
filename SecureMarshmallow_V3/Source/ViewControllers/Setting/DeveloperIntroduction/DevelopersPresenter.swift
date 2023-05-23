@@ -12,6 +12,7 @@ import Then
 protocol DevelopersProtocol {
     func layout()
     func attribute()
+    func navigation()
 }
 
 final class DevelopersPresenter: NSObject  {
@@ -26,6 +27,7 @@ final class DevelopersPresenter: NSObject  {
     func viewDidLoad() {
         viewController.layout()
         viewController.attribute()
+        viewController.navigation()
     }
 }
 

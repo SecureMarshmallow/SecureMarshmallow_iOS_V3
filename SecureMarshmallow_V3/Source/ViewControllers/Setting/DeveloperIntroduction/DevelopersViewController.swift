@@ -27,10 +27,13 @@ extension DevelopersViewController: DevelopersProtocol {
     }
     
     func attribute() {
+        DevelopersTableView.separatorStyle = .none
+    }
+    
+    func navigation() {
         self.navigationItem.leftItemsSupplementBackButton = true
         navigationController?.navigationBar.prefersLargeTitles = false
         title = "개발자 소개"
-        DevelopersTableView.separatorStyle = .none
     }
 
 }
