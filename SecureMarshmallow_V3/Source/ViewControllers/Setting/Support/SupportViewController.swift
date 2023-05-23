@@ -4,30 +4,18 @@ import Then
 
 class SupportViewController: BaseSV {
     
+    private lazy var presenter = SupportPresenter(viewController: self)
     private var supportItems: [[SupportItem]] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        configureSettingsItems()
+        presenter.viewDidLoad()
     }
     
-    override func attribute() {
-        view.backgroundColor = .systemBackground
-        navigationController?.navigationBar.prefersLargeTitles = false
-        navigationItem.title = "지원"
-    }
     
     override func configureItems() {
         tableView.register(SupportCell.self, forCellReuseIdentifier: SupportCell.reuseIdentifier)
     }
-    
-    private func configureSettingsItems() {
-        let section1 = [SupportItem(type: .support)]
-        
-        supportItems = [section1]
-    }
-    
 }
 
 extension SupportViewController {
@@ -61,5 +49,19 @@ extension SupportViewController {
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return supportItems.count
+    }
+}
+
+extension SupportViewController: SupportViewProtocol {
+    
+    func reloadTableView() {
+        tableView.reloadData()
+    }
+    
+    func configureSettingsItems() {
+        let section1 = [SupportItem(type: .support)]
+
+        supportItems = [section1]
+        
     }
 }

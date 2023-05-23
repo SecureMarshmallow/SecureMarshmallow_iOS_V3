@@ -8,6 +8,7 @@ class GmailInformationViewController: BaseSV {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureSettingsItems()
+        attribute()
     }
     
     override func attribute() {

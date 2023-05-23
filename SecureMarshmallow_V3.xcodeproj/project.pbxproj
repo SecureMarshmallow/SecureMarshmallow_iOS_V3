@@ -47,6 +47,7 @@
 		0E85AA082A1B5FB0000676C2 /* DetailMemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E85AA072A1B5FB0000676C2 /* DetailMemoViewController.swift */; };
 		0E85AA0A2A1B68E6000676C2 /* DetailMemoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E85AA092A1B68E6000676C2 /* DetailMemoPresenter.swift */; };
 		0E85AA0E2A1C62E6000676C2 /* DevelopersPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E85AA0D2A1C62E6000676C2 /* DevelopersPresenter.swift */; };
+		0E85AA102A1C6592000676C2 /* SupportPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E85AA0F2A1C6592000676C2 /* SupportPresenter.swift */; };
 		0EC03D782A10E630007CD53C /* RepeatTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC03D772A10E630007CD53C /* RepeatTableViewController.swift */; };
 		0EC03D7B2A10E687007CD53C /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC03D7A2A10E687007CD53C /* Day.swift */; };
 		0EC03D7D2A10E6FB007CD53C /* MonthMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC03D7C2A10E6FB007CD53C /* MonthMetadata.swift */; };
@@ -183,6 +184,7 @@
 		0E85AA072A1B5FB0000676C2 /* DetailMemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMemoViewController.swift; sourceTree = "<group>"; };
 		0E85AA092A1B68E6000676C2 /* DetailMemoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMemoPresenter.swift; sourceTree = "<group>"; };
 		0E85AA0D2A1C62E6000676C2 /* DevelopersPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevelopersPresenter.swift; sourceTree = "<group>"; };
+		0E85AA0F2A1C6592000676C2 /* SupportPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportPresenter.swift; sourceTree = "<group>"; };
 		0EC03D772A10E630007CD53C /* RepeatTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatTableViewController.swift; sourceTree = "<group>"; };
 		0EC03D7A2A10E687007CD53C /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		0EC03D7C2A10E6FB007CD53C /* MonthMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthMetadata.swift; sourceTree = "<group>"; };
@@ -308,6 +310,7 @@
 			isa = PBXGroup;
 			children = (
 				0E09A60D29FD0FA800EC6AE1 /* SupportViewController.swift */,
+				0E85AA0F2A1C6592000676C2 /* SupportPresenter.swift */,
 				0E09A60F29FD0FB600EC6AE1 /* SupportItmeType.swift */,
 				0E09A61129FD0FC400EC6AE1 /* SupportCell.swift */,
 			);
@@ -1130,6 +1133,7 @@
 				0EC03D812A10E761007CD53C /* Clock.swift in Sources */,
 				0EFE323529DFC22500725EEE /* TabbarViewController.swift in Sources */,
 				0EC03D982A10EAFF007CD53C /* StartViewController.swift in Sources */,
+				0E85AA102A1C6592000676C2 /* SupportPresenter.swift in Sources */,
 				0E8409B929E38D06005EB879 /* SettingsViewController.swift in Sources */,
 				0E84099629E2D7B5005EB879 /* MemoWritePresenter.swift in Sources */,
 				0EFE323729DFC23600725EEE /* HomeViewController.swift in Sources */,
