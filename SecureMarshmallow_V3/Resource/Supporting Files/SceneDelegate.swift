@@ -8,7 +8,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         registerLocal()
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = BaseNC(rootViewController: CalculatorViewController())
+        window?.rootViewController = BaseNC(rootViewController: TapBarViewController())
         window?.makeKeyAndVisible()
         
     }
@@ -21,19 +21,56 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
     func sceneDidBecomeActive(_ scene: UIScene) {
-        // Called when the scene has moved from an inactive state to an active state.
-        // Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
+        callBackgroundImage(false)
     }
 
     func sceneWillResignActive(_ scene: UIScene) {
-        // Called when the scene will move from an active state to an inactive state.
-        // This may occur due to temporary interruptions (ex. an incoming phone call).
+        callBackgroundImage(true)
     }
 
     func sceneWillEnterForeground(_ scene: UIScene) {
-        // Called as the scene transitions from the background to the foreground.
-        // Use this method to undo the changes made on entering the background.
+        callBackgroundImage(false)
     }
+
+    func sceneDidEnterBackground(_ scene: UIScene) {
+        callBackgroundImage(true)
+        removeClocksInPast()
+        unscheduleAllClocks()
+        setNextClocks()
+//        writeToFile(location: subUrl!) 보류
+        // Called as the scene transitions from the foreground to the background.
+        // Use this method to save data, release shared resources, and store enough scene-specific state information
+        // to restore the scene back to its current state.
+    }
+    
+    func callBackgroundImage(_ isBackground: Bool) {
+
+            let TAG_BG_IMG = -101
+            let backgroundView = window?.viewWithTag(TAG_BG_IMG)
+
+            if isBackground {
+
+                if backgroundView == nil {
+
+                    let bgView = UIView()
+                    bgView.frame = UIScreen.main.bounds
+                    bgView.tag = TAG_BG_IMG
+                    bgView.backgroundColor = .secondarySystemBackground
+
+                    let appIcon = UIImageView()
+                    appIcon.frame = CGRect(x: bgView.layer.bounds.midX - 90, y: bgView.layer.bounds.midY - 90, width: 180, height: 180)
+                    appIcon.image = UIImage(named: "logo1")
+                    bgView.addSubview(appIcon)
+
+                    window?.addSubview(bgView)
+                }
+            } else {
+
+                if let backgroundView = backgroundView {
+                    backgroundView.removeFromSuperview()
+                }
+            }
+        }
     
     // MARK: Functions
 
@@ -104,16 +141,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let request = UNNotificationRequest(identifier: clock.notificationId, content: content, trigger: trigger)
         center.add(request)
-    }
-    
-    func sceneDidEnterBackground(_ scene: UIScene) {
-        removeClocksInPast()
-        unscheduleAllClocks()
-        setNextClocks()
-//        writeToFile(location: subUrl!) 보류
-        // Called as the scene transitions from the foreground to the background.
-        // Use this method to save data, release shared resources, and store enough scene-specific state information
-        // to restore the scene back to its current state.
     }
 }
 
