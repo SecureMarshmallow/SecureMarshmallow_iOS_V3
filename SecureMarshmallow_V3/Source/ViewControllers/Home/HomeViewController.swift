@@ -15,7 +15,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     var collectionView: UICollectionView!
     var items: [[Int]] = [
-        [3, 1, 1, 1, 1, 2, 4, 4, 6]
+        [3, 1, 1, 1, 1, 2, 4, 4, 6, 7]
     ]
     
     let cellIdentifier = "cell"
@@ -23,21 +23,6 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        let jailbreakStatus = IOSSecuritySuite.amIJailbrokenWithFailMessage()
-//        if jailbreakStatus.jailbroken {
-//            print("디바이스가 탈옥되어있습니다.")
-//            let alert = UIAlertController(title: "탈옥", message: "이 기기는 탈옥되었습니다.", preferredStyle: .alert)
-//            alert.addAction(UIAlertAction(title: "닫기", style: UIAlertAction.Style.default) { UIAlertAction in
-//                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-//                    exit(0)
-//                }
-//            })
-//            self.present(alert, animated: true, completion: nil)
-//            print("사유: \(jailbreakStatus.failMessage)")
-//        } else {
-//            print("이 디바이스는 탈옥되어있지 않습니다.")
-//        }
                     
         let layout = UICollectionViewFlowLayout()
         layout.minimumLineSpacing = 10
@@ -182,6 +167,12 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
             cell.layer.cornerRadius = 20.0
             
             return cell
+        } else if item == 7 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MiddleAlamCollectionViewCell.identifier, for: indexPath) as! MiddleAlamCollectionViewCell
+            cell.backgroundColor = .white
+            cell.layout()
+            
+            return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath)
             cell.backgroundColor = .white
@@ -235,6 +226,8 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
             }
         case 6:
             cellSize = CGSize(width: 180, height: 180)
+        case 7:
+            cellSize = CGSize(width: 100, height: 100)
         default:
             break
         }

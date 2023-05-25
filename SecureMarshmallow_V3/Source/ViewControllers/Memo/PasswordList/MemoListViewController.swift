@@ -27,6 +27,7 @@ final class MemoListViewController: UIViewController {
         collectionView.register(MemoCollectionViewCell.self, forCellWithReuseIdentifier: MemoCollectionViewCell.reuseIdentifier)
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "AddCell")
         presenter.viewDidLoad()
+    
     }
 
     override func viewWillAppear(_ animated: Bool) {

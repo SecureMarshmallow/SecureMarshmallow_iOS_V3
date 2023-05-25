@@ -63,6 +63,7 @@
 		0E85AA582A1EF0C7000676C2 /* BagPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E85AA572A1EF0C7000676C2 /* BagPresenter.swift */; };
 		0E85AA5D2A1F05FA000676C2 /* Extensions+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E85AA5C2A1F05FA000676C2 /* Extensions+UIImage.swift */; };
 		0E85AA5F2A1F0A30000676C2 /* MiddleCalculatorColloectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E85AA5E2A1F0A30000676C2 /* MiddleCalculatorColloectionViewCell.swift */; };
+		0E85AA6B2A1F946F000676C2 /* MiddleAlamCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E85AA6A2A1F946F000676C2 /* MiddleAlamCollectionViewCell.swift */; };
 		0EC03D782A10E630007CD53C /* RepeatTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC03D772A10E630007CD53C /* RepeatTableViewController.swift */; };
 		0EC03D7B2A10E687007CD53C /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC03D7A2A10E687007CD53C /* Day.swift */; };
 		0EC03D7D2A10E6FB007CD53C /* MonthMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC03D7C2A10E6FB007CD53C /* MonthMetadata.swift */; };
@@ -215,6 +216,7 @@
 		0E85AA572A1EF0C7000676C2 /* BagPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagPresenter.swift; sourceTree = "<group>"; };
 		0E85AA5C2A1F05FA000676C2 /* Extensions+UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIImage.swift"; sourceTree = "<group>"; };
 		0E85AA5E2A1F0A30000676C2 /* MiddleCalculatorColloectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleCalculatorColloectionViewCell.swift; sourceTree = "<group>"; };
+		0E85AA6A2A1F946F000676C2 /* MiddleAlamCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleAlamCollectionViewCell.swift; sourceTree = "<group>"; };
 		0EC03D772A10E630007CD53C /* RepeatTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatTableViewController.swift; sourceTree = "<group>"; };
 		0EC03D7A2A10E687007CD53C /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		0EC03D7C2A10E6FB007CD53C /* MonthMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthMetadata.swift; sourceTree = "<group>"; };
@@ -381,6 +383,7 @@
 				0EFE323629DFC23600725EEE /* HomeViewController.swift */,
 				0E6275402A146EB100E8F8E9 /* SamilInformationCollectionViewCell.swift */,
 				0E85AA5E2A1F0A30000676C2 /* MiddleCalculatorColloectionViewCell.swift */,
+				0E85AA6A2A1F946F000676C2 /* MiddleAlamCollectionViewCell.swift */,
 				0E6275422A14D17500E8F8E9 /* LargeInformationCollectionViewCell.swift */,
 				0E6275452A14D53F00E8F8E9 /* AlarmCollectionViewCell.swift */,
 			);
@@ -1220,6 +1223,7 @@
 				0E09A60E29FD0FA800EC6AE1 /* SupportViewController.swift in Sources */,
 				0EDB05A12A0CC4E0009E46A8 /* Extensions+UIColor.swift in Sources */,
 				0EFE31D229DF9EFE00725EEE /* AppDelegate.swift in Sources */,
+				0E85AA6B2A1F946F000676C2 /* MiddleAlamCollectionViewCell.swift in Sources */,
 				0EFE321029DFA1E700725EEE /* BaseNC.swift in Sources */,
 				0EFE323F29DFCE8200725EEE /* UserDefaultsManager.swift in Sources */,
 				0E85AA4D2A1EEABE000676C2 /* BaseWebView.swift in Sources */,
