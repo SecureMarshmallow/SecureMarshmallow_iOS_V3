@@ -54,6 +54,13 @@
 		0E85AA182A1CA98C000676C2 /* BatteryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E85AA172A1CA98C000676C2 /* BatteryPresenter.swift */; };
 		0E85AA1A2A1CB5EE000676C2 /* OSPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E85AA192A1CB5EE000676C2 /* OSPresenter.swift */; };
 		0E85AA1C2A1CB787000676C2 /* FilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E85AA1B2A1CB787000676C2 /* FilePresenter.swift */; };
+		0E85AA4A2A1EE974000676C2 /* BagiOSWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E85AA492A1EE974000676C2 /* BagiOSWebViewController.swift */; };
+		0E85AA4D2A1EEABE000676C2 /* BaseWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E85AA4C2A1EEABE000676C2 /* BaseWebView.swift */; };
+		0E85AA4F2A1EEDBD000676C2 /* BagBackendWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E85AA4E2A1EEDBD000676C2 /* BagBackendWebViewController.swift */; };
+		0E85AA522A1EEE24000676C2 /* BagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E85AA512A1EEE24000676C2 /* BagViewController.swift */; };
+		0E85AA542A1EEF4F000676C2 /* BagItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E85AA532A1EEF4F000676C2 /* BagItemType.swift */; };
+		0E85AA562A1EF054000676C2 /* BagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E85AA552A1EF054000676C2 /* BagCell.swift */; };
+		0E85AA582A1EF0C7000676C2 /* BagPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E85AA572A1EF0C7000676C2 /* BagPresenter.swift */; };
 		0EC03D782A10E630007CD53C /* RepeatTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC03D772A10E630007CD53C /* RepeatTableViewController.swift */; };
 		0EC03D7B2A10E687007CD53C /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC03D7A2A10E687007CD53C /* Day.swift */; };
 		0EC03D7D2A10E6FB007CD53C /* MonthMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC03D7C2A10E6FB007CD53C /* MonthMetadata.swift */; };
@@ -197,6 +204,13 @@
 		0E85AA172A1CA98C000676C2 /* BatteryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryPresenter.swift; sourceTree = "<group>"; };
 		0E85AA192A1CB5EE000676C2 /* OSPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OSPresenter.swift; path = /Users/junha/Desktop/SecureMarshmallow_iOS_V3/SecureMarshmallow_V3/Source/ViewControllers/OS/OSPresenter.swift; sourceTree = "<absolute>"; };
 		0E85AA1B2A1CB787000676C2 /* FilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilePresenter.swift; sourceTree = "<group>"; };
+		0E85AA492A1EE974000676C2 /* BagiOSWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagiOSWebViewController.swift; sourceTree = "<group>"; };
+		0E85AA4C2A1EEABE000676C2 /* BaseWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWebView.swift; sourceTree = "<group>"; };
+		0E85AA4E2A1EEDBD000676C2 /* BagBackendWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagBackendWebViewController.swift; sourceTree = "<group>"; };
+		0E85AA512A1EEE24000676C2 /* BagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagViewController.swift; sourceTree = "<group>"; };
+		0E85AA532A1EEF4F000676C2 /* BagItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagItemType.swift; sourceTree = "<group>"; };
+		0E85AA552A1EF054000676C2 /* BagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagCell.swift; sourceTree = "<group>"; };
+		0E85AA572A1EF0C7000676C2 /* BagPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagPresenter.swift; sourceTree = "<group>"; };
 		0EC03D772A10E630007CD53C /* RepeatTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatTableViewController.swift; sourceTree = "<group>"; };
 		0EC03D7A2A10E687007CD53C /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		0EC03D7C2A10E6FB007CD53C /* MonthMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthMetadata.swift; sourceTree = "<group>"; };
@@ -400,6 +414,7 @@
 		0E8409B729E38CF8005EB879 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
+				0E85AA502A1EEE14000676C2 /* Bag */,
 				0ECEF8A729FB9249008E848E /* Main */,
 				0E09A62A29FF947200EC6AE1 /* DeveloperIntroduction */,
 				0E09A61B29FD2C2600EC6AE1 /* TimeOfApp */,
@@ -442,6 +457,34 @@
 				0EC03E182A11FC9C007CD53C /* EditButton.swift */,
 			);
 			path = Custom;
+			sourceTree = "<group>";
+		};
+		0E85AA482A1EE958000676C2 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				0E85AA4E2A1EEDBD000676C2 /* BagBackendWebViewController.swift */,
+				0E85AA492A1EE974000676C2 /* BagiOSWebViewController.swift */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
+		0E85AA4B2A1EEA9C000676C2 /* BaseWebView */ = {
+			isa = PBXGroup;
+			children = (
+				0E85AA4C2A1EEABE000676C2 /* BaseWebView.swift */,
+			);
+			path = BaseWebView;
+			sourceTree = "<group>";
+		};
+		0E85AA502A1EEE14000676C2 /* Bag */ = {
+			isa = PBXGroup;
+			children = (
+				0E85AA512A1EEE24000676C2 /* BagViewController.swift */,
+				0E85AA572A1EF0C7000676C2 /* BagPresenter.swift */,
+				0E85AA532A1EEF4F000676C2 /* BagItemType.swift */,
+				0E85AA552A1EF054000676C2 /* BagCell.swift */,
+			);
+			path = Bag;
 			sourceTree = "<group>";
 		};
 		0EC03D752A10E167007CD53C /* Alarm */ = {
@@ -521,6 +564,7 @@
 		0ECEF8A729FB9249008E848E /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				0E85AA482A1EE958000676C2 /* WebView */,
 				0E8409B829E38D06005EB879 /* SettingsViewController.swift */,
 				0E8409BA29E38D26005EB879 /* SettingsItemType.swift */,
 				0E8409BC29E38D36005EB879 /* SettingsCell.swift */,
@@ -796,6 +840,7 @@
 		0EFE320C29DFA1C900725EEE /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				0E85AA4B2A1EEA9C000676C2 /* BaseWebView */,
 				0E85AA1F2A1CCD74000676C2 /* Custom */,
 				0EDB05A92A0D53AF009E46A8 /* BaseViewController */,
 				0EDB05AA2A0D53D0009E46A8 /* ExplanationCollectionViewCell */,
@@ -1170,6 +1215,7 @@
 				0EFE31D229DF9EFE00725EEE /* AppDelegate.swift in Sources */,
 				0EFE321029DFA1E700725EEE /* BaseNC.swift in Sources */,
 				0EFE323F29DFCE8200725EEE /* UserDefaultsManager.swift in Sources */,
+				0E85AA4D2A1EEABE000676C2 /* BaseWebView.swift in Sources */,
 				0EDB05B32A0DADB9009E46A8 /* FileViewController.swift in Sources */,
 				0EC03D9A2A10EBEF007CD53C /* ClockCell.swift in Sources */,
 				0E85AA162A1CA1A8000676C2 /* TimeOfAppPresenter.swift in Sources */,
@@ -1196,6 +1242,7 @@
 				0E09A62F2A01F70300EC6AE1 /* ImageCollectionViewCell.swift in Sources */,
 				0EDB05F52A0E3FBA009E46A8 /* WiFiViewController.swift in Sources */,
 				0E09A62529FF7DB600EC6AE1 /* DevelopersViewController.swift in Sources */,
+				0E85AA582A1EF0C7000676C2 /* BagPresenter.swift in Sources */,
 				0EC03DAE2A10F308007CD53C /* RingtoneTableViewController.swift in Sources */,
 				0EC03D8D2A10E942007CD53C /* Extensions+Array.swift in Sources */,
 				0ECEF8BB29FBA771008E848E /* BaseSC.swift in Sources */,
@@ -1203,6 +1250,7 @@
 				0E85A9ED2A1A3BD0000676C2 /* CalculatorViewController.swift in Sources */,
 				0EC03D952A10EACD007CD53C /* generalFunctions.swift in Sources */,
 				0E6275412A146EB100E8F8E9 /* SamilInformationCollectionViewCell.swift in Sources */,
+				0E85AA562A1EF054000676C2 /* BagCell.swift in Sources */,
 				0E85AA142A1C947A000676C2 /* GmailInformationPresenter.swift in Sources */,
 				0EC03DAC2A10F29A007CD53C /* RepeatTableViewModel.swift in Sources */,
 				0E09A61229FD0FC400EC6AE1 /* SupportCell.swift in Sources */,
@@ -1214,6 +1262,7 @@
 				0E85AA082A1B5FB0000676C2 /* DetailMemoViewController.swift in Sources */,
 				0E6275462A14D53F00E8F8E9 /* AlarmCollectionViewCell.swift in Sources */,
 				0EC03D7D2A10E6FB007CD53C /* MonthMetadata.swift in Sources */,
+				0E85AA4F2A1EEDBD000676C2 /* BagBackendWebViewController.swift in Sources */,
 				0E09A62929FF7E5B00EC6AE1 /* Extensions+NSObject.swift in Sources */,
 				0ECEF8B129FB98A2008E848E /* AppLogoViewController.swift in Sources */,
 				0EDB05A32A0CD06F009E46A8 /* ExplanationCollectionViewCell.swift in Sources */,
@@ -1221,10 +1270,13 @@
 				0E5686FC29FA341100EEEBD3 /* CoreDataManager.swift in Sources */,
 				0EDB059F2A0CC247009E46A8 /* BatteryViewController.swift in Sources */,
 				0ECEF8AE29FB933F008E848E /* GmailInformationViewController.swift in Sources */,
+				0E85AA542A1EEF4F000676C2 /* BagItemType.swift in Sources */,
 				0ECEF8C329FCCA06008E848E /* MarshmallowWidgetViewController.swift in Sources */,
+				0E85AA4A2A1EE974000676C2 /* BagiOSWebViewController.swift in Sources */,
 				0E85AA122A1C84D9000676C2 /* AppLogoPresenter.swift in Sources */,
 				0E85A9EF2A1A3D6B000676C2 /* CalculatorCell.swift in Sources */,
 				0E85A9F52A1B295D000676C2 /* BluetoothViewController.swift in Sources */,
+				0E85AA522A1EEE24000676C2 /* BagViewController.swift in Sources */,
 				0E09A61029FD0FB600EC6AE1 /* SupportItmeType.swift in Sources */,
 				0ECEF8AA29FB930A008E848E /* GmailCell.swift in Sources */,
 			);
