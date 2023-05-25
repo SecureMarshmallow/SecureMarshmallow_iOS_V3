@@ -134,6 +134,25 @@ extension SettingsViewController {
             print("피드백")
         case .appShare:
             print("앱 공유")
+            let text = "SecureMarshmallow를 사용해주셔서 감사합니다!!"
+//
+            let image = UIImage(named: "BlackLogo")
+            
+            guard let image = image else { return }
+            let activityViewController = UIActivityViewController(activityItems: [image, text], applicationActivities: nil)
+
+            let excludedActivityTypes: [UIActivity.ActivityType] = [.airDrop]
+
+            activityViewController.excludedActivityTypes = excludedActivityTypes
+
+            activityViewController.popoverPresentationController?.sourceView = self.view
+            activityViewController.completionWithItemsHandler = { activityType, completed, returnedItems, error in
+                if completed {
+                    print("공유가 완료되었습니다.")
+                }
+            }
+            present(activityViewController, animated: true, completion: nil)
+
         case .privacyPolicy:
             print("개인정보 처리 방침")
         case .termsofUse:
