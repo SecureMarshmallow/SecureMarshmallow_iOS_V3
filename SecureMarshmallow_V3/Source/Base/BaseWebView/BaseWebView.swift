@@ -13,7 +13,7 @@ class BaseWebView: UIViewController, UIScrollViewDelegate {
     
     func setupWebView(with url: URL) {
         webView = WKWebView(frame: view.bounds)
-        webView?.scrollView.delegate = self // UIScrollViewDelegate 설정
+        webView?.scrollView.delegate = self
         
         let urlRequest = URLRequest(url: url)
         webView?.load(urlRequest)
@@ -29,11 +29,9 @@ class BaseWebView: UIViewController, UIScrollViewDelegate {
         let navigationBar = navigationController?.navigationBar
         
         if offsetY > 0 && !navigationBarHidden {
-            // 스크롤이 아래로 발생하고 네비게이션 바가 표시 중인 경우
             navigationBar?.isHidden = true
             navigationBarHidden = true
         } else if offsetY < 0 && navigationBarHidden {
-            // 스크롤이 위로 발생하고 네비게이션 바가 숨겨진 경우
             navigationBar?.isHidden = false
             navigationBarHidden = false
         }

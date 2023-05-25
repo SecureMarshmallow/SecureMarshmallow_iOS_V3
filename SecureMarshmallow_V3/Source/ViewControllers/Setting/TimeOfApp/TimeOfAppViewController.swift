@@ -53,6 +53,7 @@ extension TimeOfAppViewController: TimeOfAppProtocol {
     func navigationSetup() {
         navigationController?.navigationBar.prefersLargeTitles = false
         title = "앱 열기 추적"
+        self.navigationItem.largeTitleDisplayMode = .never
         
         let resetButton = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(resetButtonTap))
         

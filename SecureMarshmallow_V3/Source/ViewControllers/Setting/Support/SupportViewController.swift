@@ -67,5 +67,6 @@ extension SupportViewController: SupportViewProtocol {
     
     func navigationSetup() {
         title = "지원"
+        self.navigationItem.largeTitleDisplayMode = .never
     }
 }
