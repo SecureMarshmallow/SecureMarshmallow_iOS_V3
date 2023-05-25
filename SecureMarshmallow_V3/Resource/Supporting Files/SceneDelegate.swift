@@ -6,12 +6,43 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        registerLocal()
-        guard let windowScene = (scene as? UIWindowScene) else { return }
-        window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = BaseNC(rootViewController: TapBarViewController())
-        window?.makeKeyAndVisible()
         
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+        let window = UIWindow(windowScene: windowScene)
+        self.window = window
+        
+        let viewController = TapBarViewController()
+        window.rootViewController = BaseNC(rootViewController: viewController)
+        window.makeKeyAndVisible()
+        
+        let jailbreakStatus = IOSSecuritySuite.amIJailbrokenWithFailMessage()
+        if jailbreakStatus.jailbroken {
+            print("디바이스가 탈옥되어있습니다.")
+            
+            let alert = UIAlertController(title: "탈옥", message: "이 기기는 탈옥되었습니다.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "닫기", style: .default) { _ in
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                    exit(0)
+                }
+            })
+            
+            //탈옥 장치 판별
+            let jailbreakStatus = IOSSecuritySuite.amIJailbrokenWithFailedChecks()
+            if jailbreakStatus.jailbroken {
+                if (jailbreakStatus.failedChecks.contains { $0.check ==
+                    .existenceOfSuspiciousFiles }) && (jailbreakStatus.failedChecks.contains
+                                                       { $0.check == .suspiciousFilesCanBeOpened }) {
+                    print("이것은 실제 탈옥 장치입니다")
+                }
+            }
+            
+            viewController.present(alert, animated: true, completion: nil)
+            print("사유: \(jailbreakStatus.failedChecks)")
+        } else if IOSSecuritySuite.amIRunInEmulator() {
+            print("시뮬레이터 입니다.")
+        } else {
+            print("이 디바이스는 안전합니다.")
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

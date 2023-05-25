@@ -24,19 +24,20 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        if IOSSecuritySuite.amIJailbroken() {
-//            print("This device is jailbroken")
+//        let jailbreakStatus = IOSSecuritySuite.amIJailbrokenWithFailMessage()
+//        if jailbreakStatus.jailbroken {
+//            print("디바이스가 탈옥되어있습니다.")
+//            let alert = UIAlertController(title: "탈옥", message: "이 기기는 탈옥되었습니다.", preferredStyle: .alert)
+//            alert.addAction(UIAlertAction(title: "닫기", style: UIAlertAction.Style.default) { UIAlertAction in
+//                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+//                    exit(0)
+//                }
+//            })
+//            self.present(alert, animated: true, completion: nil)
+//            print("사유: \(jailbreakStatus.failMessage)")
 //        } else {
-//            print("This device is not jailbroken")
+//            print("이 디바이스는 탈옥되어있지 않습니다.")
 //        }
-//
-        let jailbreakStatus = IOSSecuritySuite.amIJailbrokenWithFailMessage()
-        if jailbreakStatus.jailbroken {
-            print("디바이스가 탈옥되어있습니다.")
-            print("사유: \(jailbreakStatus.failMessage)")
-        } else {
-            print("이 디바이스는 탈옥되어있지 않습니다.")
-        }
                     
         let layout = UICollectionViewFlowLayout()
         layout.minimumLineSpacing = 10
