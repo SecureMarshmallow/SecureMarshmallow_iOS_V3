@@ -54,6 +54,7 @@ class CalculatorViewController: UIViewController {
     private func navigation() {
         title = "계산기"
         
+        self.navigationItem.largeTitleDisplayMode = .never
         let sortCalculatorButton = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(sortCalculatorButtonDidTap))
         navigationItem.rightBarButtonItem = sortCalculatorButton
     }
