@@ -140,7 +140,6 @@ extension SettingsViewController {
         case .appShare:
             print("앱 공유")
             let text = "SecureMarshmallow를 사용해주셔서 감사합니다!!"
-//
             let image = UIImage(named: "BlackLogo")
             
             guard let image = image else { return }

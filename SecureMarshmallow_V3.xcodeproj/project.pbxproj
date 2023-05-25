@@ -61,6 +61,8 @@
 		0E85AA542A1EEF4F000676C2 /* BagItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E85AA532A1EEF4F000676C2 /* BagItemType.swift */; };
 		0E85AA562A1EF054000676C2 /* BagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E85AA552A1EF054000676C2 /* BagCell.swift */; };
 		0E85AA582A1EF0C7000676C2 /* BagPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E85AA572A1EF0C7000676C2 /* BagPresenter.swift */; };
+		0E85AA5D2A1F05FA000676C2 /* Extensions+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E85AA5C2A1F05FA000676C2 /* Extensions+UIImage.swift */; };
+		0E85AA5F2A1F0A30000676C2 /* MiddleCalculatorColloectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E85AA5E2A1F0A30000676C2 /* MiddleCalculatorColloectionViewCell.swift */; };
 		0EC03D782A10E630007CD53C /* RepeatTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC03D772A10E630007CD53C /* RepeatTableViewController.swift */; };
 		0EC03D7B2A10E687007CD53C /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC03D7A2A10E687007CD53C /* Day.swift */; };
 		0EC03D7D2A10E6FB007CD53C /* MonthMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC03D7C2A10E6FB007CD53C /* MonthMetadata.swift */; };
@@ -211,6 +213,8 @@
 		0E85AA532A1EEF4F000676C2 /* BagItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagItemType.swift; sourceTree = "<group>"; };
 		0E85AA552A1EF054000676C2 /* BagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagCell.swift; sourceTree = "<group>"; };
 		0E85AA572A1EF0C7000676C2 /* BagPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagPresenter.swift; sourceTree = "<group>"; };
+		0E85AA5C2A1F05FA000676C2 /* Extensions+UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIImage.swift"; sourceTree = "<group>"; };
+		0E85AA5E2A1F0A30000676C2 /* MiddleCalculatorColloectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleCalculatorColloectionViewCell.swift; sourceTree = "<group>"; };
 		0EC03D772A10E630007CD53C /* RepeatTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatTableViewController.swift; sourceTree = "<group>"; };
 		0EC03D7A2A10E687007CD53C /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		0EC03D7C2A10E6FB007CD53C /* MonthMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthMetadata.swift; sourceTree = "<group>"; };
@@ -376,6 +380,7 @@
 			children = (
 				0EFE323629DFC23600725EEE /* HomeViewController.swift */,
 				0E6275402A146EB100E8F8E9 /* SamilInformationCollectionViewCell.swift */,
+				0E85AA5E2A1F0A30000676C2 /* MiddleCalculatorColloectionViewCell.swift */,
 				0E6275422A14D17500E8F8E9 /* LargeInformationCollectionViewCell.swift */,
 				0E6275452A14D53F00E8F8E9 /* AlarmCollectionViewCell.swift */,
 			);
@@ -833,6 +838,7 @@
 				0EC03D902A10EA46007CD53C /* writeToFile.swift */,
 				0EC03D922A10EA9D007CD53C /* DateFunctions.swift */,
 				0EC03D942A10EACD007CD53C /* generalFunctions.swift */,
+				0E85AA5C2A1F05FA000676C2 /* Extensions+UIImage.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1196,6 +1202,7 @@
 				0E85AA1A2A1CB5EE000676C2 /* OSPresenter.swift in Sources */,
 				0ECEF8AC29FB932B008E848E /* GmailItemType.swift in Sources */,
 				0EC03DB12A10F337007CD53C /* RingtoneTableViewModel.swift in Sources */,
+				0E85AA5D2A1F05FA000676C2 /* Extensions+UIImage.swift in Sources */,
 				0E56871229FA39C000EEEBD3 /* TaskModel.swift in Sources */,
 				0EFE323D29DFCE4300725EEE /* MemoListPresenter.swift in Sources */,
 				0E8409BD29E38D36005EB879 /* SettingsCell.swift in Sources */,
@@ -1273,6 +1280,7 @@
 				0E85AA542A1EEF4F000676C2 /* BagItemType.swift in Sources */,
 				0ECEF8C329FCCA06008E848E /* MarshmallowWidgetViewController.swift in Sources */,
 				0E85AA4A2A1EE974000676C2 /* BagiOSWebViewController.swift in Sources */,
+				0E85AA5F2A1F0A30000676C2 /* MiddleCalculatorColloectionViewCell.swift in Sources */,
 				0E85AA122A1C84D9000676C2 /* AppLogoPresenter.swift in Sources */,
 				0E85A9EF2A1A3D6B000676C2 /* CalculatorCell.swift in Sources */,
 				0E85A9F52A1B295D000676C2 /* BluetoothViewController.swift in Sources */,

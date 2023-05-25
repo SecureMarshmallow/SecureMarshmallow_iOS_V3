@@ -14,7 +14,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     var collectionView: UICollectionView!
     var items: [[Int]] = [
-        [3, 1, 1, 1, 1, 2, 4, 4]
+        [3, 1, 1, 1, 1, 2, 4, 4, 6]
     ]
     
     let cellIdentifier = "cell"
@@ -35,6 +35,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         collectionView.register(SamilInformationCollectionViewCell.self, forCellWithReuseIdentifier: SamilInformationCollectionViewCell.identifier)
         collectionView.register(LargeInformationCollectionViewCell.self, forCellWithReuseIdentifier: LargeInformationCollectionViewCell.identifier)
         collectionView.register(AlarmCollectionViewCell.self, forCellWithReuseIdentifier: AlarmCollectionViewCell.identifier)
+        collectionView.register(MiddleCalculatorColloectionViewCell.self, forCellWithReuseIdentifier: MiddleCalculatorColloectionViewCell.identifier)
         collectionView.backgroundColor = .HomeBackgroundColor
         view.addSubview(collectionView)
         collectionView.snp.makeConstraints {
@@ -76,7 +77,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
 
 
     @objc func buttonTapped() {
-        print("안녕")
+        print("마쉬멜로~~야아아ㅏ")
     }
 
     
@@ -136,6 +137,13 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         
         if item == 1 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SamilInformationCollectionViewCell.identifier, for: indexPath) as! SamilInformationCollectionViewCell
+            cell.backgroundColor = .white
+            cell.layout()
+            cell.layer.cornerRadius = 25.0
+            
+            return cell
+        } else if item == 6 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MiddleCalculatorColloectionViewCell.identifier, for: indexPath) as! MiddleCalculatorColloectionViewCell
             cell.backgroundColor = .white
             cell.layout()
             cell.layer.cornerRadius = 25.0
@@ -208,6 +216,8 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
             } else {
                 cellSize = CGSize(width: 390, height: 390)
             }
+        case 6:
+            cellSize = CGSize(width: 180, height: 180)
         default:
             break
         }
@@ -237,6 +247,16 @@ extension HomeViewController {
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let item = items[indexPath.section][indexPath.item]
+        
+        switch item {
+        case 6:
+            let calculatorVC = CalculatorViewController()
+            calculatorVC.modalPresentationStyle = .fullScreen
+            self.navigationController?.pushViewController(calculatorVC, animated: true)
+        default:
+            print("클릭되지 않음")
+        }
+        
         print("Selected item: \(item)")
         print(items)
     }
@@ -268,24 +288,5 @@ extension HomeViewController {
         let adjustedIndexPath = IndexPath(item: (collectionView.numberOfItems(inSection: proposedIndexPath.section) / 2), section: proposedIndexPath.section)
         
         return adjustedIndexPath
-    }
-}
-
-extension UIImage {
-    func resized(toWidth width: CGFloat, height: CGFloat) -> UIImage? {
-        let newSize = CGSize(width: width, height: height)
-        UIGraphicsBeginImageContextWithOptions(newSize, false, scale)
-        defer { UIGraphicsEndImageContext() }
-        draw(in: CGRect(origin: .zero, size: newSize))
-        return UIGraphicsGetImageFromCurrentImageContext()
-    }
-    
-    func roundedImage(withRadius radius: CGFloat) -> UIImage? {
-        UIGraphicsBeginImageContextWithOptions(size, false, scale)
-        defer { UIGraphicsEndImageContext() }
-        let bounds = CGRect(origin: .zero, size: size)
-        UIBezierPath(roundedRect: bounds, cornerRadius: radius).addClip()
-        draw(in: bounds)
-        return UIGraphicsGetImageFromCurrentImageContext()
     }
 }
