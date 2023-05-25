@@ -479,6 +479,7 @@
 		0E85AA502A1EEE14000676C2 /* Bag */ = {
 			isa = PBXGroup;
 			children = (
+				0E85AA482A1EE958000676C2 /* WebView */,
 				0E85AA512A1EEE24000676C2 /* BagViewController.swift */,
 				0E85AA572A1EF0C7000676C2 /* BagPresenter.swift */,
 				0E85AA532A1EEF4F000676C2 /* BagItemType.swift */,
@@ -564,7 +565,6 @@
 		0ECEF8A729FB9249008E848E /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				0E85AA482A1EE958000676C2 /* WebView */,
 				0E8409B829E38D06005EB879 /* SettingsViewController.swift */,
 				0E8409BA29E38D26005EB879 /* SettingsItemType.swift */,
 				0E8409BC29E38D36005EB879 /* SettingsCell.swift */,
