@@ -1,4 +1,5 @@
 import UIKit
+import WebKit
 import Then
 
 class SettingsViewController: BaseSV {
@@ -130,8 +131,12 @@ extension SettingsViewController {
             print("지원")
         case .bugReport:
             print("버그 제보")
+            let bagVC = BagViewController()
+            bagVC.modalPresentationStyle = .fullScreen
+            self.navigationController?.pushViewController(bagVC, animated: true)
         case .feedback:
             print("피드백")
+            
         case .appShare:
             print("앱 공유")
             let text = "SecureMarshmallow를 사용해주셔서 감사합니다!!"
