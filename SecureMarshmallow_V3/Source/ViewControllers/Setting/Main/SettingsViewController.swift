@@ -19,7 +19,7 @@ class SettingsViewController: BaseSV {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureSettingsItems()
+        configureSettingsItems()        
     }
 
     // MARK: - Helpers

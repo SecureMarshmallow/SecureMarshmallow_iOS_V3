@@ -11,7 +11,7 @@ class ImageCollectionViewController: UIViewController {
     }
     
     let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout()).then {
-        $0.backgroundColor = .white
+        $0.backgroundColor = .cellColor
         $0.register(ImageCollectionViewCell.self, forCellWithReuseIdentifier: ImageCollectionViewCell.identifier)
         $0.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "AddCell")
     }
