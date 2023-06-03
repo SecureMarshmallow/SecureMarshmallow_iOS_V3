@@ -15,7 +15,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     var collectionView: UICollectionView!
     var items: [[Int]] = [
-        [3, 1, 1, 1, 1, 2, 4, 4, 6, 7]
+        [3, 1, 1, 1, 1, 2, 4, 4, 6]
     ]
     
     let cellIdentifier = "cell"
@@ -79,6 +79,8 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
 
     @objc func buttonTapped() {
         print("마쉬멜로~~야아아ㅏ")
+        let modalViewController = AddMainCollectionViewController()
+        self.present(modalViewController, animated: true)
     }
 
     

@@ -19,6 +19,7 @@ class SettingsViewController: BaseSV {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .SettingCollectionViewBackgorund
         configureSettingsItems()        
     }
 

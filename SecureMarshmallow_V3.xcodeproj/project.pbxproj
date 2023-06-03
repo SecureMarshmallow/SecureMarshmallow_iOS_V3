@@ -35,6 +35,7 @@
 		0E6275412A146EB100E8F8E9 /* SamilInformationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6275402A146EB100E8F8E9 /* SamilInformationCollectionViewCell.swift */; };
 		0E6275432A14D17500E8F8E9 /* LargeInformationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6275422A14D17500E8F8E9 /* LargeInformationCollectionViewCell.swift */; };
 		0E6275462A14D53F00E8F8E9 /* AlarmCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6275452A14D53F00E8F8E9 /* AlarmCollectionViewCell.swift */; };
+		0E732BE72A224AF4006A28B4 /* AddMainCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E732BE62A224AF3006A28B4 /* AddMainCollectionViewController.swift */; };
 		0E84099429E2D759005EB879 /* MemoWriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E84099329E2D759005EB879 /* MemoWriteViewController.swift */; };
 		0E84099629E2D7B5005EB879 /* MemoWritePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E84099529E2D7B5005EB879 /* MemoWritePresenter.swift */; };
 		0E8409B629E3843B005EB879 /* MemoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8409B529E3843B005EB879 /* MemoData.swift */; };
@@ -188,6 +189,7 @@
 		0E6275402A146EB100E8F8E9 /* SamilInformationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamilInformationCollectionViewCell.swift; sourceTree = "<group>"; };
 		0E6275422A14D17500E8F8E9 /* LargeInformationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeInformationCollectionViewCell.swift; sourceTree = "<group>"; };
 		0E6275452A14D53F00E8F8E9 /* AlarmCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmCollectionViewCell.swift; sourceTree = "<group>"; };
+		0E732BE62A224AF3006A28B4 /* AddMainCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMainCollectionViewController.swift; sourceTree = "<group>"; };
 		0E84099329E2D759005EB879 /* MemoWriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoWriteViewController.swift; sourceTree = "<group>"; };
 		0E84099529E2D7B5005EB879 /* MemoWritePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoWritePresenter.swift; sourceTree = "<group>"; };
 		0E8409B529E3843B005EB879 /* MemoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoData.swift; sourceTree = "<group>"; };
@@ -386,6 +388,7 @@
 				0E85AA6A2A1F946F000676C2 /* MiddleAlamCollectionViewCell.swift */,
 				0E6275422A14D17500E8F8E9 /* LargeInformationCollectionViewCell.swift */,
 				0E6275452A14D53F00E8F8E9 /* AlarmCollectionViewCell.swift */,
+				0E732BE62A224AF3006A28B4 /* AddMainCollectionViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -405,7 +408,6 @@
 				0E85AA062A1B5F70000676C2 /* Detail */,
 				0E8409AE29E383C7005EB879 /* MemoModel */,
 				0EFE323929DFCDA200725EEE /* PasswordList */,
-				0E84099229E2D638005EB879 /* PasswordWrite */,
 			);
 			path = Memo;
 			sourceTree = "<group>";
@@ -874,6 +876,7 @@
 				0EFE323A29DFCDFB00725EEE /* MemoListViewController.swift */,
 				0EFE323C29DFCE4300725EEE /* MemoListPresenter.swift */,
 				0E54CC962A1742FF00AFAA7D /* TaskCollectionViewCell.swift */,
+				0E84099229E2D638005EB879 /* PasswordWrite */,
 			);
 			path = PasswordList;
 			sourceTree = "<group>";
@@ -1285,6 +1288,7 @@
 				0ECEF8C329FCCA06008E848E /* MarshmallowWidgetViewController.swift in Sources */,
 				0E85AA4A2A1EE974000676C2 /* BagiOSWebViewController.swift in Sources */,
 				0E85AA5F2A1F0A30000676C2 /* MiddleCalculatorColloectionViewCell.swift in Sources */,
+				0E732BE72A224AF4006A28B4 /* AddMainCollectionViewController.swift in Sources */,
 				0E85AA122A1C84D9000676C2 /* AppLogoPresenter.swift in Sources */,
 				0E85A9EF2A1A3D6B000676C2 /* CalculatorCell.swift in Sources */,
 				0E85A9F52A1B295D000676C2 /* BluetoothViewController.swift in Sources */,

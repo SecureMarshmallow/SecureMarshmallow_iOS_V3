@@ -5,4 +5,5 @@ extension UIColor {
     static let cellColor: UIColor = UIColor(named: "CollectioinViewCellColor")!
     static let cellTitleColor: UIColor = UIColor(named: "CellTitleColor")!
     static let HomeBackgroundColor: UIColor = UIColor(named: "HomeBackgroundColor")!
+    static let SettingCollectionViewBackgorund: UIColor = UIColor(named: "SettingCollectionViewBackgorund")!
 }
