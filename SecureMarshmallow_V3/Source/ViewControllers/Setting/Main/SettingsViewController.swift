@@ -40,7 +40,9 @@ class SettingsViewController: BaseSV {
                         SettingsItem(type: .idInformation)]
         let section2 = [SettingsItem(type: .appPassword),
                         SettingsItem(type: .intrusionInformation),
-                        SettingsItem(type: .appTracking)]
+                        SettingsItem(type: .appTracking),
+                        SettingsItem(type: .captureTracking)
+        ]
 
         let section3 = [SettingsItem(type: .changeAppIcon),
                         SettingsItem(type: .changeAppTheme)]
@@ -96,9 +98,9 @@ extension SettingsViewController {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         super.tableView(tableView, didSelectRowAt: indexPath)
-
+        
         tableView.deselectRow(at: indexPath, animated: true)
-
+        
         let item = settingsItems[indexPath.section][indexPath.row]
         switch item.type {
         case .gmailInformation:
@@ -118,6 +120,11 @@ extension SettingsViewController {
             timeOfAppVC.modalPresentationStyle = .fullScreen
             self.navigationController?.pushViewController(timeOfAppVC, animated: true)
             break
+        case .captureTracking:
+            let captureTrackingVC = CaptureTrackingViewController()
+            captureTrackingVC.modalPresentationStyle = .fullScreen
+            self.navigationController?.pushViewController(captureTrackingVC, animated: true)
+            print("캡처 감지")
         case .changeAppIcon:
             let applogoVC = AppLogoViewController()
             applogoVC.modalPresentationStyle = .fullScreen
@@ -145,11 +152,11 @@ extension SettingsViewController {
             
             guard let image = image else { return }
             let activityViewController = UIActivityViewController(activityItems: [image, text], applicationActivities: nil)
-
+            
             let excludedActivityTypes: [UIActivity.ActivityType] = [.airDrop]
-
+            
             activityViewController.excludedActivityTypes = excludedActivityTypes
-
+            
             activityViewController.popoverPresentationController?.sourceView = self.view
             activityViewController.completionWithItemsHandler = { activityType, completed, returnedItems, error in
                 if completed {
@@ -157,7 +164,7 @@ extension SettingsViewController {
                 }
             }
             present(activityViewController, animated: true, completion: nil)
-
+            
         case .privacyPolicy:
             print("개인정보 처리 방침")
         case .termsofUse:

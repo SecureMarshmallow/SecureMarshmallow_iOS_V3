@@ -7,6 +7,7 @@ enum SettingsItemType {
     case appPassword // 앱 비밀번호
     case intrusionInformation //침임 시도
     case appTracking //앱 열기 추적
+    case captureTracking
     case changeAppIcon //앱 아이콘 변경
     case changeAppTheme // 앱 테마 변경
     case help // 지원
@@ -50,6 +51,8 @@ enum SettingsItemType {
             return "사용 방법"
         case .developerIformation:
             return "개발자 정보"
+        case .captureTracking:
+            return "스크린샷 추적"
         }
     }
     
@@ -84,6 +87,8 @@ enum SettingsItemType {
         case .howToUse:
             return UIImage(systemName: "info.circle")
         case .developerIformation:
+            return UIImage(systemName: "info.circle")
+        case .captureTracking:
             return UIImage(systemName: "info.circle")
         }
     }

@@ -35,6 +35,8 @@
 		0E6275412A146EB100E8F8E9 /* SamilInformationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6275402A146EB100E8F8E9 /* SamilInformationCollectionViewCell.swift */; };
 		0E6275432A14D17500E8F8E9 /* LargeInformationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6275422A14D17500E8F8E9 /* LargeInformationCollectionViewCell.swift */; };
 		0E6275462A14D53F00E8F8E9 /* AlarmCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6275452A14D53F00E8F8E9 /* AlarmCollectionViewCell.swift */; };
+		0E71B8F12A2B583C00C6CEF0 /* CaptureTrackingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E71B8F02A2B583C00C6CEF0 /* CaptureTrackingViewController.swift */; };
+		0E71B8F32A2B5F0800C6CEF0 /* CaptureTrackingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E71B8F22A2B5F0800C6CEF0 /* CaptureTrackingPresenter.swift */; };
 		0E732BE72A224AF4006A28B4 /* AddMainCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E732BE62A224AF3006A28B4 /* AddMainCollectionViewController.swift */; };
 		0E84099429E2D759005EB879 /* MemoWriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E84099329E2D759005EB879 /* MemoWriteViewController.swift */; };
 		0E84099629E2D7B5005EB879 /* MemoWritePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E84099529E2D7B5005EB879 /* MemoWritePresenter.swift */; };
@@ -189,6 +191,8 @@
 		0E6275402A146EB100E8F8E9 /* SamilInformationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamilInformationCollectionViewCell.swift; sourceTree = "<group>"; };
 		0E6275422A14D17500E8F8E9 /* LargeInformationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeInformationCollectionViewCell.swift; sourceTree = "<group>"; };
 		0E6275452A14D53F00E8F8E9 /* AlarmCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmCollectionViewCell.swift; sourceTree = "<group>"; };
+		0E71B8F02A2B583C00C6CEF0 /* CaptureTrackingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureTrackingViewController.swift; sourceTree = "<group>"; };
+		0E71B8F22A2B5F0800C6CEF0 /* CaptureTrackingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureTrackingPresenter.swift; sourceTree = "<group>"; };
 		0E732BE62A224AF3006A28B4 /* AddMainCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMainCollectionViewController.swift; sourceTree = "<group>"; };
 		0E84099329E2D759005EB879 /* MemoWriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoWriteViewController.swift; sourceTree = "<group>"; };
 		0E84099529E2D7B5005EB879 /* MemoWritePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoWritePresenter.swift; sourceTree = "<group>"; };
@@ -393,6 +397,15 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		0E71B8EF2A2B581900C6CEF0 /* Capture */ = {
+			isa = PBXGroup;
+			children = (
+				0E71B8F02A2B583C00C6CEF0 /* CaptureTrackingViewController.swift */,
+				0E71B8F22A2B5F0800C6CEF0 /* CaptureTrackingPresenter.swift */,
+			);
+			path = Capture;
+			sourceTree = "<group>";
+		};
 		0E84099229E2D638005EB879 /* PasswordWrite */ = {
 			isa = PBXGroup;
 			children = (
@@ -424,6 +437,7 @@
 		0E8409B729E38CF8005EB879 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
+				0E71B8EF2A2B581900C6CEF0 /* Capture */,
 				0E85AA502A1EEE14000676C2 /* Bag */,
 				0ECEF8A729FB9249008E848E /* Main */,
 				0E09A62A29FF947200EC6AE1 /* DeveloperIntroduction */,
@@ -1253,6 +1267,7 @@
 				0E09A61A29FD28DC00EC6AE1 /* TimeOfAppViewController.swift in Sources */,
 				0E5686FF29FA347300EEEBD3 /* SecureMarshmallow.xcdatamodeld in Sources */,
 				0E6275432A14D17500E8F8E9 /* LargeInformationCollectionViewCell.swift in Sources */,
+				0E71B8F32A2B5F0800C6CEF0 /* CaptureTrackingPresenter.swift in Sources */,
 				0E09A62F2A01F70300EC6AE1 /* ImageCollectionViewCell.swift in Sources */,
 				0EDB05F52A0E3FBA009E46A8 /* WiFiViewController.swift in Sources */,
 				0E09A62529FF7DB600EC6AE1 /* DevelopersViewController.swift in Sources */,
@@ -1273,6 +1288,7 @@
 				0EFE320E29DFA1D000725EEE /* BaseVC.swift in Sources */,
 				0EC03DAA2A10F25D007CD53C /* ClockController.swift in Sources */,
 				0E8409B629E3843B005EB879 /* MemoData.swift in Sources */,
+				0E71B8F12A2B583C00C6CEF0 /* CaptureTrackingViewController.swift in Sources */,
 				0E85AA082A1B5FB0000676C2 /* DetailMemoViewController.swift in Sources */,
 				0E6275462A14D53F00E8F8E9 /* AlarmCollectionViewCell.swift in Sources */,
 				0EC03D7D2A10E6FB007CD53C /* MonthMetadata.swift in Sources */,
