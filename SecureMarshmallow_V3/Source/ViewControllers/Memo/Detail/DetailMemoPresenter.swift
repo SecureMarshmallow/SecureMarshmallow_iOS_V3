@@ -7,6 +7,7 @@ protocol DetailProtocol {
     func displayMemo()
     func setMemo(title: String, contents: String)
     func attribute()
+    func screenshotDetection()
 }
 
 class DetailMemoPresenter: NSObject {
@@ -22,5 +23,6 @@ class DetailMemoPresenter: NSObject {
         viewController.layout()
         viewController.displayMemo()
         viewController.attribute()
+        viewController.screenshotDetection()
     }
 }

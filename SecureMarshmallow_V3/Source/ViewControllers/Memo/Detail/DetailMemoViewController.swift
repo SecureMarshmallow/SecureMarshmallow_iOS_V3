@@ -22,6 +22,21 @@ class DetailMemoViewController: UIViewController {
 }
 
 extension DetailMemoViewController: DetailProtocol {
+    func screenshotDetection() {
+        let mainQueue = OperationQueue.main
+        
+        NotificationCenter.default.addObserver(
+            forName: UIApplication.userDidTakeScreenshotNotification,
+            object: nil,
+            queue: mainQueue)
+        {
+            notification in
+            let alert = UIAlertController(title: "경고", message: "스크린샷이 감지 되었습니다.\n 스크린샷이 찍힌 시간을 (설정 -> 스크린샷 추적) 에 가시면 보실 수 있습니다.", preferredStyle: .alert)
+            let action = UIAlertAction(title: "확인", style: .default, handler: nil)
+            alert.addAction(action)
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
     
     func displayMemo() {
         contentsLabel.text = contentsText
