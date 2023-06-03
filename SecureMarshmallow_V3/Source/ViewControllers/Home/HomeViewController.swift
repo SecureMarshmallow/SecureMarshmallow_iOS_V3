@@ -39,9 +39,12 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         collectionView.register(MiddleCalculatorColloectionViewCell.self, forCellWithReuseIdentifier: MiddleCalculatorColloectionViewCell.identifier)
         collectionView.backgroundColor = .HomeBackgroundColor
         view.addSubview(collectionView)
+        
         collectionView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
+        
+        collectionView.makeSecure()
         
         let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(handleLongGesture(_:)))
         collectionView.addGestureRecognizer(longPressGesture)

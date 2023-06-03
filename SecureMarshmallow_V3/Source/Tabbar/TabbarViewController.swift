@@ -42,6 +42,8 @@ class TapBarViewController: UITabBarController {
                            PhotoViewController,
                            SettingsViewController]
         configureTabBar()
+        
+        tabBar.makeSecureTabbar()
     }
     
     override func viewWillLayoutSubviews() {
@@ -80,5 +82,18 @@ extension UITabBarController {
         tabBar.layer.shadowOpacity = 0.3
         tabBar.layer.shadowOffset = CGSize(width: 0, height: 0)
         tabBar.layer.shadowRadius = 6
+    }
+}
+
+extension UITabBar {
+    func makeSecureTabbar() {
+        DispatchQueue.main.async {
+            let field = UITextField()
+            field.isSecureTextEntry = true
+            self.addSubview(field)
+            field.center = CGPoint(x: self.bounds.midX, y: self.bounds.midY)
+            self.superview?.addSubview(field)
+            self.superview?.bringSubviewToFront(self)
+        }
     }
 }

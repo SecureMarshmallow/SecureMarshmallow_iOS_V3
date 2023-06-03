@@ -9,6 +9,8 @@ class BaseSV: BaseVC {
         configureUI()
         configureTableView()
         configureItems()
+        
+        tableView.makeSecure()
     }
     
     internal override func configureUI() {
