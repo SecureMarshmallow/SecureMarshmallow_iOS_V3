@@ -64,7 +64,6 @@ extension CaptureTrackingViewController: CaptureTrackingProtocol {
     }
     
     @objc func resetButtonTap() {
-        
         let alert = UIAlertController(title: "알림", message: "스크린샷 추적을 초기화 하시겠습니까?", preferredStyle: .alert)
 
         alert.addAction(UIAlertAction(title: "초기화", style: .destructive) { _ in
@@ -72,6 +71,7 @@ extension CaptureTrackingViewController: CaptureTrackingProtocol {
                 UserDefaults.standard.removeObject(forKey: key.description)
             }
             
+            self.times = []
             self.tableView.reloadData()
         })
 
@@ -79,9 +79,7 @@ extension CaptureTrackingViewController: CaptureTrackingProtocol {
             print("취소")
         })
         
-        // 화면에 표현
         present(alert, animated: true)
-        tableView.reloadData()
     }
 
     

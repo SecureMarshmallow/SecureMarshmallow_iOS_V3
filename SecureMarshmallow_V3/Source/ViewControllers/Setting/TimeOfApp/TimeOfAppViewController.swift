@@ -68,6 +68,7 @@ extension TimeOfAppViewController: TimeOfAppProtocol {
                 UserDefaults.standard.removeObject(forKey: key.description)
             }
             
+            self.times = []
             self.tableView.reloadData()
         })
 
@@ -75,9 +76,7 @@ extension TimeOfAppViewController: TimeOfAppProtocol {
             print("취소")
         })
         
-        // 화면에 표현
         present(alert, animated: true)
-        tableView.reloadData()
     }
 }
 
