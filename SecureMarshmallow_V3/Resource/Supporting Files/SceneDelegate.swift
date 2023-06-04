@@ -12,7 +12,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = window
         
         let viewController = TapBarViewController()
-        window.rootViewController = BaseNC(rootViewController: LoginViewController())
+        window.rootViewController = BaseNC(rootViewController: ErrorViewController())
         window.makeKeyAndVisible()
         
         let jailbreakStatus = IOSSecuritySuite.amIJailbrokenWithFailMessage()

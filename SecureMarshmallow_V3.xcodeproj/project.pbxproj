@@ -39,6 +39,9 @@
 		0E71B8F32A2B5F0800C6CEF0 /* CaptureTrackingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E71B8F22A2B5F0800C6CEF0 /* CaptureTrackingPresenter.swift */; };
 		0E71B8F82A2CB28500C6CEF0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E71B8F72A2CB28500C6CEF0 /* LoginViewController.swift */; };
 		0E71B8FA2A2CB74E00C6CEF0 /* Extensions+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E71B8F92A2CB74E00C6CEF0 /* Extensions+TextField.swift */; };
+		0E71B8FD2A2CBB7900C6CEF0 /* ErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E71B8FC2A2CBB7900C6CEF0 /* ErrorViewController.swift */; };
+		0E71B8FF2A2CBB8A00C6CEF0 /* ErrorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E71B8FE2A2CBB8A00C6CEF0 /* ErrorPresenter.swift */; };
+		0E71B9022A2CC63F00C6CEF0 /* fire.json in Resources */ = {isa = PBXBuildFile; fileRef = 0E71B9012A2CC63F00C6CEF0 /* fire.json */; };
 		0E732BE72A224AF4006A28B4 /* AddMainCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E732BE62A224AF3006A28B4 /* AddMainCollectionViewController.swift */; };
 		0E84099429E2D759005EB879 /* MemoWriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E84099329E2D759005EB879 /* MemoWriteViewController.swift */; };
 		0E84099629E2D7B5005EB879 /* MemoWritePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E84099529E2D7B5005EB879 /* MemoWritePresenter.swift */; };
@@ -197,6 +200,9 @@
 		0E71B8F22A2B5F0800C6CEF0 /* CaptureTrackingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureTrackingPresenter.swift; sourceTree = "<group>"; };
 		0E71B8F72A2CB28500C6CEF0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0E71B8F92A2CB74E00C6CEF0 /* Extensions+TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+TextField.swift"; sourceTree = "<group>"; };
+		0E71B8FC2A2CBB7900C6CEF0 /* ErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewController.swift; sourceTree = "<group>"; };
+		0E71B8FE2A2CBB8A00C6CEF0 /* ErrorPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorPresenter.swift; sourceTree = "<group>"; };
+		0E71B9012A2CC63F00C6CEF0 /* fire.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = fire.json; path = ../../../../../../Downloads/fire.json; sourceTree = "<group>"; };
 		0E732BE62A224AF3006A28B4 /* AddMainCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMainCollectionViewController.swift; sourceTree = "<group>"; };
 		0E84099329E2D759005EB879 /* MemoWriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoWriteViewController.swift; sourceTree = "<group>"; };
 		0E84099529E2D7B5005EB879 /* MemoWritePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoWritePresenter.swift; sourceTree = "<group>"; };
@@ -416,6 +422,23 @@
 				0E71B8F72A2CB28500C6CEF0 /* LoginViewController.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		0E71B8FB2A2CBAEA00C6CEF0 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				0E71B8FC2A2CBB7900C6CEF0 /* ErrorViewController.swift */,
+				0E71B8FE2A2CBB8A00C6CEF0 /* ErrorPresenter.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		0E71B9002A2CC53D00C6CEF0 /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				0E71B9012A2CC63F00C6CEF0 /* fire.json */,
+			);
+			path = Lottie;
 			sourceTree = "<group>";
 		};
 		0E84099229E2D638005EB879 /* PasswordWrite */ = {
@@ -801,6 +824,7 @@
 		0EFE320629DFA12400725EEE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0E71B9002A2CC53D00C6CEF0 /* Lottie */,
 				0EFE320729DFA13500725EEE /* Assets */,
 				0EFE31D129DF9EFE00725EEE /* AppDelegate.swift */,
 				0EFE31D329DF9EFE00725EEE /* SceneDelegate.swift */,
@@ -841,6 +865,7 @@
 		0EFE320A29DFA1A500725EEE /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				0E71B8FB2A2CBAEA00C6CEF0 /* Error */,
 				0E71B8F62A2CB27900C6CEF0 /* Login */,
 				0E85A9F32A1B2957000676C2 /* Bluetooth */,
 				0E85A9E92A1A33A7000676C2 /* calculator */,
@@ -1087,6 +1112,7 @@
 				0EC03D852A10E8B2007CD53C /* Clocks.json in Resources */,
 				0EC03D882A10E8C9007CD53C /* bell.mp3 in Resources */,
 				0E40E15029F3F36000615E86 /* Assets.xcassets in Resources */,
+				0E71B9022A2CC63F00C6CEF0 /* fire.json in Resources */,
 				0EFE31E129DF9EFF00725EEE /* LaunchScreen.storyboard in Resources */,
 				0EC03D892A10E8C9007CD53C /* tickle.mp3 in Resources */,
 			);
@@ -1304,6 +1330,7 @@
 				0EFE320E29DFA1D000725EEE /* BaseVC.swift in Sources */,
 				0EC03DAA2A10F25D007CD53C /* ClockController.swift in Sources */,
 				0E8409B629E3843B005EB879 /* MemoData.swift in Sources */,
+				0E71B8FF2A2CBB8A00C6CEF0 /* ErrorPresenter.swift in Sources */,
 				0E71B8F12A2B583C00C6CEF0 /* CaptureTrackingViewController.swift in Sources */,
 				0E85AA082A1B5FB0000676C2 /* DetailMemoViewController.swift in Sources */,
 				0E6275462A14D53F00E8F8E9 /* AlarmCollectionViewCell.swift in Sources */,
@@ -1327,6 +1354,7 @@
 				0E85AA522A1EEE24000676C2 /* BagViewController.swift in Sources */,
 				0E09A61029FD0FB600EC6AE1 /* SupportItmeType.swift in Sources */,
 				0ECEF8AA29FB930A008E848E /* GmailCell.swift in Sources */,
+				0E71B8FD2A2CBB7900C6CEF0 /* ErrorViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
