@@ -16,6 +16,7 @@ target 'SecureMarshmallow_V3' do
 	pod 'RxFlow'
 	pod 'Moya', '~> 15.0'
 	pod 'IOSSecuritySuite'
+	pod ‘RealmSwift’
 
   # Pods for SecureMarshmallow_V3
 

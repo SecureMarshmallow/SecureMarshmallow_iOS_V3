@@ -9,6 +9,11 @@ PODS:
     - Moya/Core (= 15.0.0)
   - Moya/Core (15.0.0):
     - Alamofire (~> 5.0)
+  - Realm (10.38.0):
+    - Realm/Headers (= 10.38.0)
+  - Realm/Headers (10.38.0)
+  - RealmSwift (10.38.0):
+    - Realm (= 10.38.0)
   - RxCocoa (6.5.0):
     - RxRelay (= 6.5.0)
     - RxSwift (= 6.5.0)
@@ -27,6 +32,7 @@ DEPENDENCIES:
   - Kingfisher (~> 5.0)
   - lottie-ios
   - Moya (~> 15.0)
+  - RealmSwift
   - RxCocoa (= 6.5.0)
   - RxFlow
   - RxSwift (= 6.5.0)
@@ -40,6 +46,8 @@ SPEC REPOS:
     - Kingfisher
     - lottie-ios
     - Moya
+    - Realm
+    - RealmSwift
     - RxCocoa
     - RxFlow
     - RxRelay
@@ -53,6 +61,8 @@ SPEC CHECKSUMS:
   Kingfisher: a3c03d702433fa6cfedabb2bddbe076fb8f2e902
   lottie-ios: d0954d3150061f662ed0adf96ef98d7421864c47
   Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
+  Realm: 5902885dd1d5e71b0b020830caab937ecdf5bf07
+  RealmSwift: 0fc037d6c32c7c4fc9362892380f380114ecdcf0
   RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
   RxFlow: 52f6f6379918392c1ea8cb62d8dcf2df9a5463dd
   RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
@@ -60,6 +70,6 @@ SPEC CHECKSUMS:
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
   Then: 844265ae87834bbe1147d91d5d41a404da2ec27d
 
-PODFILE CHECKSUM: ada8b9fb8ec232d45a63c6d3c32261bb971bc292
+PODFILE CHECKSUM: 747dfca2b5a6f6f8e722b5acd040a1eb7fe60f3a
 
 COCOAPODS: 1.12.0

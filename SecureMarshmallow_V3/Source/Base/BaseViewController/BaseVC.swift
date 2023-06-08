@@ -25,6 +25,7 @@ class BaseVC: UIViewController {
         self.configureUI()
         self.configureItem()
         self.view.setNeedsUpdateConstraints()
+        self.setNavigationBar()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -40,4 +41,13 @@ class BaseVC: UIViewController {
     func attribute() { }
     func configureUI() { }
     func configureTableView() { }
+    func setNavigationBar() {
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = .systemGray6
+        self.navigationItem.standardAppearance = appearance
+        self.navigationItem.scrollEdgeAppearance = appearance
+        
+        self.navigationController?.navigationBar.tintColor = .black
+    }
 }

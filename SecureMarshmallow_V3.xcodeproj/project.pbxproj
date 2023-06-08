@@ -35,6 +35,19 @@
 		0E6275412A146EB100E8F8E9 /* SamilInformationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6275402A146EB100E8F8E9 /* SamilInformationCollectionViewCell.swift */; };
 		0E6275432A14D17500E8F8E9 /* LargeInformationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6275422A14D17500E8F8E9 /* LargeInformationCollectionViewCell.swift */; };
 		0E6275462A14D53F00E8F8E9 /* AlarmCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6275452A14D53F00E8F8E9 /* AlarmCollectionViewCell.swift */; };
+		0E6C19BE2A31AAC300487114 /* Extensions+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6C19BD2A31AAC200487114 /* Extensions+UIViewController.swift */; };
+		0E6C19C02A31AAF900487114 /* Extensions+UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6C19BF2A31AAF900487114 /* Extensions+UILabel.swift */; };
+		0E6C19C22A31AB2400487114 /* Extensions+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6C19C12A31AB2400487114 /* Extensions+Date.swift */; };
+		0E6C19C42A31AB3B00487114 /* Results+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6C19C32A31AB3B00487114 /* Results+Extension.swift */; };
+		0E6C19C92A31AB7500487114 /* WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6C19C82A31AB7500487114 /* WriteViewController.swift */; };
+		0E6C19CB2A31AB8200487114 /* WriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6C19CA2A31AB8200487114 /* WriteView.swift */; };
+		0E6C19CD2A31AB9500487114 /* MemoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6C19CC2A31AB9500487114 /* MemoListViewController.swift */; };
+		0E6C19D02A31ABAA00487114 /* MemoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6C19CF2A31ABAA00487114 /* MemoListView.swift */; };
+		0E6C19D22A31ABBF00487114 /* FixListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6C19D12A31ABBF00487114 /* FixListViewController.swift */; };
+		0E6C19D42A31ABCE00487114 /* FixListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6C19D32A31ABCE00487114 /* FixListView.swift */; };
+		0E6C19D92A31AC0C00487114 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6C19D82A31AC0C00487114 /* BaseView.swift */; };
+		0E6C19DC2A31AC4200487114 /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6C19DB2A31AC4200487114 /* Memo.swift */; };
+		0E6C19DE2A31AC5300487114 /* MemoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6C19DD2A31AC5300487114 /* MemoRepository.swift */; };
 		0E71B8F12A2B583C00C6CEF0 /* CaptureTrackingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E71B8F02A2B583C00C6CEF0 /* CaptureTrackingViewController.swift */; };
 		0E71B8F32A2B5F0800C6CEF0 /* CaptureTrackingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E71B8F22A2B5F0800C6CEF0 /* CaptureTrackingPresenter.swift */; };
 		0E71B8F82A2CB28500C6CEF0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E71B8F72A2CB28500C6CEF0 /* LoginViewController.swift */; };
@@ -121,8 +134,8 @@
 		0EFE321029DFA1E700725EEE /* BaseNC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFE320F29DFA1E700725EEE /* BaseNC.swift */; };
 		0EFE323529DFC22500725EEE /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFE323429DFC22500725EEE /* TabbarViewController.swift */; };
 		0EFE323729DFC23600725EEE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFE323629DFC23600725EEE /* HomeViewController.swift */; };
-		0EFE323B29DFCDFB00725EEE /* MemoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFE323A29DFCDFB00725EEE /* MemoListViewController.swift */; };
-		0EFE323D29DFCE4300725EEE /* MemoListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFE323C29DFCE4300725EEE /* MemoListPresenter.swift */; };
+		0EFE323B29DFCDFB00725EEE /* MemoListViewControllerOld.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFE323A29DFCDFB00725EEE /* MemoListViewControllerOld.swift */; };
+		0EFE323D29DFCE4300725EEE /* MemoListPresenterOld.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFE323C29DFCE4300725EEE /* MemoListPresenterOld.swift */; };
 		0EFE323F29DFCE8200725EEE /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFE323E29DFCE8200725EEE /* UserDefaultsManager.swift */; };
 		48D7226EF4FD3B8A079B5970 /* Pods_SecureMarshmallow_V3Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53B53B99C8AF3C119336DB4A /* Pods_SecureMarshmallow_V3Tests.framework */; };
 		BAC150F152B3DE456D494115 /* Pods_SecureMarshmallow_V3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40845CBE8C39C18514247C52 /* Pods_SecureMarshmallow_V3.framework */; };
@@ -193,6 +206,19 @@
 		0E6275402A146EB100E8F8E9 /* SamilInformationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamilInformationCollectionViewCell.swift; sourceTree = "<group>"; };
 		0E6275422A14D17500E8F8E9 /* LargeInformationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeInformationCollectionViewCell.swift; sourceTree = "<group>"; };
 		0E6275452A14D53F00E8F8E9 /* AlarmCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmCollectionViewCell.swift; sourceTree = "<group>"; };
+		0E6C19BD2A31AAC200487114 /* Extensions+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIViewController.swift"; sourceTree = "<group>"; };
+		0E6C19BF2A31AAF900487114 /* Extensions+UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UILabel.swift"; sourceTree = "<group>"; };
+		0E6C19C12A31AB2400487114 /* Extensions+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+Date.swift"; sourceTree = "<group>"; };
+		0E6C19C32A31AB3B00487114 /* Results+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Results+Extension.swift"; sourceTree = "<group>"; };
+		0E6C19C82A31AB7500487114 /* WriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteViewController.swift; sourceTree = "<group>"; };
+		0E6C19CA2A31AB8200487114 /* WriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteView.swift; sourceTree = "<group>"; };
+		0E6C19CC2A31AB9500487114 /* MemoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListViewController.swift; sourceTree = "<group>"; };
+		0E6C19CF2A31ABAA00487114 /* MemoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListView.swift; sourceTree = "<group>"; };
+		0E6C19D12A31ABBF00487114 /* FixListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixListViewController.swift; sourceTree = "<group>"; };
+		0E6C19D32A31ABCE00487114 /* FixListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixListView.swift; sourceTree = "<group>"; };
+		0E6C19D82A31AC0C00487114 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		0E6C19DB2A31AC4200487114 /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
+		0E6C19DD2A31AC5300487114 /* MemoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoRepository.swift; sourceTree = "<group>"; };
 		0E71B8F02A2B583C00C6CEF0 /* CaptureTrackingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureTrackingViewController.swift; sourceTree = "<group>"; };
 		0E71B8F22A2B5F0800C6CEF0 /* CaptureTrackingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureTrackingPresenter.swift; sourceTree = "<group>"; };
 		0E71B8F72A2CB28500C6CEF0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -284,8 +310,8 @@
 		0EFE320F29DFA1E700725EEE /* BaseNC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNC.swift; sourceTree = "<group>"; };
 		0EFE323429DFC22500725EEE /* TabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
 		0EFE323629DFC23600725EEE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		0EFE323A29DFCDFB00725EEE /* MemoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListViewController.swift; sourceTree = "<group>"; };
-		0EFE323C29DFCE4300725EEE /* MemoListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListPresenter.swift; sourceTree = "<group>"; };
+		0EFE323A29DFCDFB00725EEE /* MemoListViewControllerOld.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListViewControllerOld.swift; sourceTree = "<group>"; };
+		0EFE323C29DFCE4300725EEE /* MemoListPresenterOld.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListPresenterOld.swift; sourceTree = "<group>"; };
 		0EFE323E29DFCE8200725EEE /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		0FBA3FD3EE3B33BE850B399D /* Pods_SecureMarshmallow_V3_SecureMarshmallow_V3UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SecureMarshmallow_V3_SecureMarshmallow_V3UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		24C059779EAEFEC7EC8A1A39 /* Pods-SecureMarshmallow_V3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SecureMarshmallow_V3.release.xcconfig"; path = "Target Support Files/Pods-SecureMarshmallow_V3/Pods-SecureMarshmallow_V3.release.xcconfig"; sourceTree = "<group>"; };
@@ -387,6 +413,75 @@
 			path = Photo;
 			sourceTree = "<group>";
 		};
+		0E181EA52A31BA32003B9A67 /* Write */ = {
+			isa = PBXGroup;
+			children = (
+				0E6C19C82A31AB7500487114 /* WriteViewController.swift */,
+				0E6C19CA2A31AB8200487114 /* WriteView.swift */,
+			);
+			path = Write;
+			sourceTree = "<group>";
+		};
+		0E181EA62A31BA70003B9A67 /* MemoList */ = {
+			isa = PBXGroup;
+			children = (
+				0E181EA82A31BA92003B9A67 /* view */,
+				0E181EA72A31BA85003B9A67 /* controller */,
+				0E181EAA2A31BAB0003B9A67 /* Repository */,
+				0E181EA92A31BA9B003B9A67 /* model */,
+			);
+			path = MemoList;
+			sourceTree = "<group>";
+		};
+		0E181EA72A31BA85003B9A67 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				0E6C19CC2A31AB9500487114 /* MemoListViewController.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		0E181EA82A31BA92003B9A67 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				0E6C19CF2A31ABAA00487114 /* MemoListView.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		0E181EA92A31BA9B003B9A67 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				0E6C19DB2A31AC4200487114 /* Memo.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		0E181EAA2A31BAB0003B9A67 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				0E6C19DD2A31AC5300487114 /* MemoRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		0E181EAB2A31BB2B003B9A67 /* Fix */ = {
+			isa = PBXGroup;
+			children = (
+				0E6C19D12A31ABBF00487114 /* FixListViewController.swift */,
+				0E6C19D32A31ABCE00487114 /* FixListView.swift */,
+			);
+			path = Fix;
+			sourceTree = "<group>";
+		};
+		0E181EAC2A31BB40003B9A67 /* BaseView */ = {
+			isa = PBXGroup;
+			children = (
+				0E6C19D82A31AC0C00487114 /* BaseView.swift */,
+			);
+			path = BaseView;
+			sourceTree = "<group>";
+		};
 		0E62753F2A146E7200E8F8E9 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -399,6 +494,16 @@
 				0E732BE62A224AF3006A28B4 /* AddMainCollectionViewController.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		0E6C19C52A31AB5300487114 /* RealmMemo(now) */ = {
+			isa = PBXGroup;
+			children = (
+				0E181EA52A31BA32003B9A67 /* Write */,
+				0E181EA62A31BA70003B9A67 /* MemoList */,
+				0E181EAB2A31BB2B003B9A67 /* Fix */,
+			);
+			path = "RealmMemo(now)";
 			sourceTree = "<group>";
 		};
 		0E71B8EF2A2B581900C6CEF0 /* Capture */ = {
@@ -444,14 +549,14 @@
 			path = PasswordWrite;
 			sourceTree = "<group>";
 		};
-		0E8409AD29E383BC005EB879 /* Memo */ = {
+		0E8409AD29E383BC005EB879 /* CoreMemo(Old) */ = {
 			isa = PBXGroup;
 			children = (
 				0E85AA062A1B5F70000676C2 /* Detail */,
 				0E8409AE29E383C7005EB879 /* MemoModel */,
 				0EFE323929DFCDA200725EEE /* PasswordList */,
 			);
-			path = Memo;
+			path = "CoreMemo(Old)";
 			sourceTree = "<group>";
 		};
 		0E8409AE29E383C7005EB879 /* MemoModel */ = {
@@ -856,6 +961,7 @@
 		0EFE320A29DFA1A500725EEE /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				0E6C19C52A31AB5300487114 /* RealmMemo(now) */,
 				0E71B8FB2A2CBAEA00C6CEF0 /* Error */,
 				0E71B8F62A2CB27900C6CEF0 /* Login */,
 				0E85A9F32A1B2957000676C2 /* Bluetooth */,
@@ -867,7 +973,7 @@
 				0EDB059D2A0CC228009E46A8 /* Battery */,
 				0E09A62D2A01F6F200EC6AE1 /* Photo */,
 				0E8409B729E38CF8005EB879 /* Setting */,
-				0E8409AD29E383BC005EB879 /* Memo */,
+				0E8409AD29E383BC005EB879 /* CoreMemo(Old) */,
 				0E62753F2A146E7200E8F8E9 /* Home */,
 				0ECEF8C229FCCA06008E848E /* MarshmallowWidgetViewController.swift */,
 				0ECEF90029FCD331008E848E /* ImageCache.swift */,
@@ -880,8 +986,12 @@
 			children = (
 				0EDB05A02A0CC4E0009E46A8 /* Extensions+UIColor.swift */,
 				0E56870F29FA37E800EEEBD3 /* Extensions+UIView.swift */,
+				0E6C19BD2A31AAC200487114 /* Extensions+UIViewController.swift */,
 				0E09A62829FF7E5B00EC6AE1 /* Extensions+NSObject.swift */,
 				0EC03D8C2A10E942007CD53C /* Extensions+Array.swift */,
+				0E6C19BF2A31AAF900487114 /* Extensions+UILabel.swift */,
+				0E6C19C12A31AB2400487114 /* Extensions+Date.swift */,
+				0E6C19C32A31AB3B00487114 /* Results+Extension.swift */,
 				0EC03D8E2A10E99E007CD53C /* Extensions+UIStackView.swift */,
 				0EC03D902A10EA46007CD53C /* writeToFile.swift */,
 				0EC03D922A10EA9D007CD53C /* DateFunctions.swift */,
@@ -895,6 +1005,7 @@
 		0EFE320C29DFA1C900725EEE /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				0E181EAC2A31BB40003B9A67 /* BaseView */,
 				0E85AA4B2A1EEA9C000676C2 /* BaseWebView */,
 				0E85AA1F2A1CCD74000676C2 /* Custom */,
 				0EDB05A92A0D53AF009E46A8 /* BaseViewController */,
@@ -917,8 +1028,8 @@
 		0EFE323929DFCDA200725EEE /* PasswordList */ = {
 			isa = PBXGroup;
 			children = (
-				0EFE323A29DFCDFB00725EEE /* MemoListViewController.swift */,
-				0EFE323C29DFCE4300725EEE /* MemoListPresenter.swift */,
+				0EFE323A29DFCDFB00725EEE /* MemoListViewControllerOld.swift */,
+				0EFE323C29DFCE4300725EEE /* MemoListPresenterOld.swift */,
 				0E54CC962A1742FF00AFAA7D /* TaskCollectionViewCell.swift */,
 				0E84099229E2D638005EB879 /* PasswordWrite */,
 			);
@@ -1243,20 +1354,24 @@
 			files = (
 				0ECEF90129FCD331008E848E /* ImageCache.swift in Sources */,
 				0E85AA0E2A1C62E6000676C2 /* DevelopersPresenter.swift in Sources */,
+				0E6C19C42A31AB3B00487114 /* Results+Extension.swift in Sources */,
 				0E85AA182A1CA98C000676C2 /* BatteryPresenter.swift in Sources */,
 				0EDB05A52A0D0191009E46A8 /* BaseEP.swift in Sources */,
 				0E84099429E2D759005EB879 /* MemoWriteViewController.swift in Sources */,
+				0E6C19BE2A31AAC300487114 /* Extensions+UIViewController.swift in Sources */,
 				0ECEF8C129FC22A9008E848E /* CommonItemType.swift in Sources */,
 				0E85AA1A2A1CB5EE000676C2 /* OSPresenter.swift in Sources */,
 				0ECEF8AC29FB932B008E848E /* GmailItemType.swift in Sources */,
 				0EC03DB12A10F337007CD53C /* RingtoneTableViewModel.swift in Sources */,
+				0E6C19D02A31ABAA00487114 /* MemoListView.swift in Sources */,
 				0E85AA5D2A1F05FA000676C2 /* Extensions+UIImage.swift in Sources */,
 				0E56871229FA39C000EEEBD3 /* TaskModel.swift in Sources */,
-				0EFE323D29DFCE4300725EEE /* MemoListPresenter.swift in Sources */,
+				0EFE323D29DFCE4300725EEE /* MemoListPresenterOld.swift in Sources */,
 				0E8409BD29E38D36005EB879 /* SettingsCell.swift in Sources */,
 				0E85AA0A2A1B68E6000676C2 /* DetailMemoPresenter.swift in Sources */,
 				0E8409BB29E38D26005EB879 /* SettingsItemType.swift in Sources */,
 				0ECEF8B529FB98C6008E848E /* AppLogoCell.swift in Sources */,
+				0E6C19DE2A31AC5300487114 /* MemoRepository.swift in Sources */,
 				0EC03D7B2A10E687007CD53C /* Day.swift in Sources */,
 				0EC03D812A10E761007CD53C /* Clock.swift in Sources */,
 				0EFE323529DFC22500725EEE /* TabbarViewController.swift in Sources */,
@@ -1264,6 +1379,7 @@
 				0E85AA102A1C6592000676C2 /* SupportPresenter.swift in Sources */,
 				0E8409B929E38D06005EB879 /* SettingsViewController.swift in Sources */,
 				0E84099629E2D7B5005EB879 /* MemoWritePresenter.swift in Sources */,
+				0E6C19D42A31ABCE00487114 /* FixListView.swift in Sources */,
 				0EFE323729DFC23600725EEE /* HomeViewController.swift in Sources */,
 				0E09A60E29FD0FA800EC6AE1 /* SupportViewController.swift in Sources */,
 				0EDB05A12A0CC4E0009E46A8 /* Extensions+UIColor.swift in Sources */,
@@ -1273,9 +1389,13 @@
 				0EFE323F29DFCE8200725EEE /* UserDefaultsManager.swift in Sources */,
 				0E85AA4D2A1EEABE000676C2 /* BaseWebView.swift in Sources */,
 				0EDB05B32A0DADB9009E46A8 /* FileViewController.swift in Sources */,
+				0E6C19C22A31AB2400487114 /* Extensions+Date.swift in Sources */,
 				0EC03D9A2A10EBEF007CD53C /* ClockCell.swift in Sources */,
+				0E6C19DC2A31AC4200487114 /* Memo.swift in Sources */,
 				0E85AA162A1CA1A8000676C2 /* TimeOfAppPresenter.swift in Sources */,
 				0EC03DA12A10F1FC007CD53C /* CalendarPickerFooterView.swift in Sources */,
+				0E6C19CD2A31AB9500487114 /* MemoListViewController.swift in Sources */,
+				0E6C19D92A31AC0C00487114 /* BaseView.swift in Sources */,
 				0EC03D932A10EA9D007CD53C /* DateFunctions.swift in Sources */,
 				0E09A62729FF7DCA00EC6AE1 /* DevelopersTableViewCell.swift in Sources */,
 				0E09A62C2A01EDF800EC6AE1 /* ImageCollectionViewController.swift in Sources */,
@@ -1285,13 +1405,16 @@
 				0EC03D8F2A10E99E007CD53C /* Extensions+UIStackView.swift in Sources */,
 				0EFE31D429DF9EFE00725EEE /* SceneDelegate.swift in Sources */,
 				0E54CC972A1742FF00AFAA7D /* TaskCollectionViewCell.swift in Sources */,
+				0E6C19D22A31ABBF00487114 /* FixListViewController.swift in Sources */,
 				0E09A61429FD110700EC6AE1 /* BaseSV.swift in Sources */,
 				0EC03D9C2A10EF3E007CD53C /* StartViewModel.swift in Sources */,
-				0EFE323B29DFCDFB00725EEE /* MemoListViewController.swift in Sources */,
+				0EFE323B29DFCDFB00725EEE /* MemoListViewControllerOld.swift in Sources */,
 				0EC03D912A10EA46007CD53C /* writeToFile.swift in Sources */,
+				0E6C19CB2A31AB8200487114 /* WriteView.swift in Sources */,
 				0EC03DA52A10F221007CD53C /* CalendarPickerViewController.swift in Sources */,
 				0E56871029FA37E800EEEBD3 /* Extensions+UIView.swift in Sources */,
 				0EC03DA82A10F249007CD53C /* ClockViewModel.swift in Sources */,
+				0E6C19C92A31AB7500487114 /* WriteViewController.swift in Sources */,
 				0E09A61A29FD28DC00EC6AE1 /* TimeOfAppViewController.swift in Sources */,
 				0E5686FF29FA347300EEEBD3 /* SecureMarshmallow.xcdatamodeld in Sources */,
 				0E6275432A14D17500E8F8E9 /* LargeInformationCollectionViewCell.swift in Sources */,
@@ -1324,6 +1447,7 @@
 				0E6275462A14D53F00E8F8E9 /* AlarmCollectionViewCell.swift in Sources */,
 				0EC03D7D2A10E6FB007CD53C /* MonthMetadata.swift in Sources */,
 				0E85AA4F2A1EEDBD000676C2 /* BagBackendWebViewController.swift in Sources */,
+				0E6C19C02A31AAF900487114 /* Extensions+UILabel.swift in Sources */,
 				0E09A62929FF7E5B00EC6AE1 /* Extensions+NSObject.swift in Sources */,
 				0ECEF8B129FB98A2008E848E /* AppLogoViewController.swift in Sources */,
 				0EDB05A32A0CD06F009E46A8 /* ExplanationCollectionViewCell.swift in Sources */,
