@@ -5,7 +5,7 @@ import Then
 class MemoCollectionViewCell: UICollectionViewCell {
     static let reuseIdentifier = "TaskCellIdentifier"
     
-    private lazy var titleLabel = UILabel().then {
+    public lazy var titleLabel = UILabel().then {
         $0.textAlignment = .center
         $0.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
     }

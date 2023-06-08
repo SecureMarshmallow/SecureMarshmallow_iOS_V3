@@ -42,7 +42,7 @@ final class MemoListPresenter: NSObject, UICollectionViewDataSource, UICollectio
     func addNotes() {
         viewController.presentToWriteViewController()
     }
-
+    
     // MARK: - UICollectionViewDataSource
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

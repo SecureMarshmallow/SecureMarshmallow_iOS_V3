@@ -38,4 +38,14 @@ final class CoreDataManager {
             return []
         }
     }
+    
+    func deleteTask(_ task: Task) {
+        managedObjectContext.delete(task)
+        
+        do {
+            try managedObjectContext.save()
+        } catch {
+            print(error)
+        }
+    }
 }
