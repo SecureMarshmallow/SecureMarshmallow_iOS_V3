@@ -2,7 +2,7 @@ import UIKit
 
 class BaseSV: BaseVC {
     
-    let tableView = UITableView(frame: .zero, style: .grouped)
+    let tableView = UITableView(frame: .zero, style: .insetGrouped)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,8 +28,8 @@ class BaseSV: BaseVC {
         tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 20, right: 0)
         tableView.snp.makeConstraints {
             $0.top.equalTo(view.safeAreaLayoutGuide.snp.top)
-            $0.leading.equalTo(view.snp.leading).offset(20)
-            $0.trailing.equalTo(view.snp.trailing).offset(-20)
+            $0.leading.equalTo(view.snp.leading)
+            $0.trailing.equalTo(view.snp.trailing)
             $0.bottom.equalTo(view.snp.bottom)
         }
     }
