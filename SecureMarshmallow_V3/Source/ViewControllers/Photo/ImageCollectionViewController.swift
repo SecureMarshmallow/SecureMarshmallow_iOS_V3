@@ -6,7 +6,7 @@ class ImageCollectionViewController: UIViewController {
     
     private lazy var navLabel = UILabel().then {
         $0.textColor = UIColor.black
-        $0.text = "사진"
+        $0.text = "앨범"
         $0.font = .systemFont(ofSize: 24.0, weight: .bold)
     }
     
@@ -27,6 +27,7 @@ class ImageCollectionViewController: UIViewController {
         
         self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(customView: navLabel)
         self.navigationItem.leftItemsSupplementBackButton = true
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "folder.fill.badge.plus"), style: .plain, target: nil, action: nil)
 
 //        let deleteButton = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(deleteImage))
 //        navigationItem.leftBarButtonItems = [deleteButton]

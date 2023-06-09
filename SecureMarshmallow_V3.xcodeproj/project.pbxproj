@@ -26,6 +26,8 @@
 		0E09A62929FF7E5B00EC6AE1 /* Extensions+NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E09A62829FF7E5B00EC6AE1 /* Extensions+NSObject.swift */; };
 		0E09A62C2A01EDF800EC6AE1 /* ImageCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E09A62B2A01EDF800EC6AE1 /* ImageCollectionViewController.swift */; };
 		0E09A62F2A01F70300EC6AE1 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E09A62E2A01F70300EC6AE1 /* ImageCollectionViewCell.swift */; };
+		0E181EAE2A32FA2E003B9A67 /* ImageFileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E181EAD2A32FA2E003B9A67 /* ImageFileViewController.swift */; };
+		0E181EB02A32FAA8003B9A67 /* ImageFileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E181EAF2A32FAA8003B9A67 /* ImageFileCollectionViewCell.swift */; };
 		0E40E15029F3F36000615E86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E40E14F29F3F36000615E86 /* Assets.xcassets */; };
 		0E54CC972A1742FF00AFAA7D /* TaskCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E54CC962A1742FF00AFAA7D /* TaskCollectionViewCell.swift */; };
 		0E5686FC29FA341100EEEBD3 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5686FB29FA341100EEEBD3 /* CoreDataManager.swift */; };
@@ -197,6 +199,8 @@
 		0E09A62829FF7E5B00EC6AE1 /* Extensions+NSObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+NSObject.swift"; sourceTree = "<group>"; };
 		0E09A62B2A01EDF800EC6AE1 /* ImageCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewController.swift; sourceTree = "<group>"; };
 		0E09A62E2A01F70300EC6AE1 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		0E181EAD2A32FA2E003B9A67 /* ImageFileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFileViewController.swift; sourceTree = "<group>"; };
+		0E181EAF2A32FAA8003B9A67 /* ImageFileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFileCollectionViewCell.swift; sourceTree = "<group>"; };
 		0E40E14F29F3F36000615E86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Assets.xcassets/Assets.xcassets; sourceTree = "<group>"; };
 		0E54CC962A1742FF00AFAA7D /* TaskCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCollectionViewCell.swift; sourceTree = "<group>"; };
 		0E5686FB29FA341100EEEBD3 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
@@ -409,6 +413,8 @@
 			children = (
 				0E09A62B2A01EDF800EC6AE1 /* ImageCollectionViewController.swift */,
 				0E09A62E2A01F70300EC6AE1 /* ImageCollectionViewCell.swift */,
+				0E181EAD2A32FA2E003B9A67 /* ImageFileViewController.swift */,
+				0E181EAF2A32FAA8003B9A67 /* ImageFileCollectionViewCell.swift */,
 			);
 			path = Photo;
 			sourceTree = "<group>";
@@ -1358,6 +1364,7 @@
 				0E85AA182A1CA98C000676C2 /* BatteryPresenter.swift in Sources */,
 				0EDB05A52A0D0191009E46A8 /* BaseEP.swift in Sources */,
 				0E84099429E2D759005EB879 /* MemoWriteViewController.swift in Sources */,
+				0E181EAE2A32FA2E003B9A67 /* ImageFileViewController.swift in Sources */,
 				0E6C19BE2A31AAC300487114 /* Extensions+UIViewController.swift in Sources */,
 				0ECEF8C129FC22A9008E848E /* CommonItemType.swift in Sources */,
 				0E85AA1A2A1CB5EE000676C2 /* OSPresenter.swift in Sources */,
@@ -1426,6 +1433,7 @@
 				0E85AA582A1EF0C7000676C2 /* BagPresenter.swift in Sources */,
 				0EC03DAE2A10F308007CD53C /* RingtoneTableViewController.swift in Sources */,
 				0EC03D8D2A10E942007CD53C /* Extensions+Array.swift in Sources */,
+				0E181EB02A32FAA8003B9A67 /* ImageFileCollectionViewCell.swift in Sources */,
 				0ECEF8BB29FBA771008E848E /* BaseSC.swift in Sources */,
 				0EC03E192A11FC9C007CD53C /* EditButton.swift in Sources */,
 				0E85A9ED2A1A3BD0000676C2 /* CalculatorViewController.swift in Sources */,

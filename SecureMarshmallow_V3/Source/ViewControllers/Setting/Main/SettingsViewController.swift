@@ -31,7 +31,6 @@ class SettingsViewController: BaseSV {
     }
 
     override func configureItems() {
-//        super.configureItems()
         tableView.register(SettingsCell.self, forCellReuseIdentifier: SettingsCell.reuseIdentifier)
     }
 
