@@ -27,7 +27,7 @@ class ImageCollectionViewController: UIViewController {
         
         self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(customView: navLabel)
         self.navigationItem.leftItemsSupplementBackButton = true
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "folder.fill.badge.plus"), style: .plain, target: nil, action: nil)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "folder.fill.badge.plus"), style: .plain, target: self, action: #selector(addImage))
 
 //        let deleteButton = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(deleteImage))
 //        navigationItem.leftBarButtonItems = [deleteButton]
@@ -48,6 +48,12 @@ class ImageCollectionViewController: UIViewController {
         collectionView.register(UICollectionViewCell.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: "AddButtonFooter")
     }
 
+    @objc func addImage() {
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.delegate = self
+        present(imagePickerController, animated: true, completion: nil)
+    }
+    
     @objc func handleLongGesture(gesture: UILongPressGestureRecognizer) {
         switch gesture.state {
         case .began:
@@ -73,44 +79,21 @@ class ImageCollectionViewController: UIViewController {
 //            collectionView.deleteItems(at: selectedIndexPaths)
 //        }
 //    }
-
-    @objc func addImage() {
-        let imagePickerController = UIImagePickerController()
-        imagePickerController.delegate = self
-        present(imagePickerController, animated: true, completion: nil)
-    }
 }
 
 extension ImageCollectionViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return images.count + 1
+        return images.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if indexPath.row == images.count {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AddCell", for: indexPath)
-            let addButton = UIButton().then {
-                $0.backgroundColor = .lightGray
-                $0.setTitleColor(.white, for: .normal)
-                $0.setTitle("+", for: .normal)
-                $0.addTarget(self, action: #selector(addImage), for: .touchUpInside)
-            }
-            cell.contentView.addSubview(addButton)
-            addButton.snp.makeConstraints {
-                $0.edges.equalToSuperview()
-            }
-            cell.layer.cornerRadius = 5
-            cell.clipsToBounds = true
-            return cell
-        } else {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImageCollectionViewCell.identifier, for: indexPath) as! ImageCollectionViewCell
-            cell.imageView.image = images[indexPath.row]
-            return cell
-        }
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImageCollectionViewCell.identifier, for: indexPath) as! ImageCollectionViewCell
+        cell.imageView.image = images[indexPath.row]
+        return cell
     }
 
     func collectionView(_ collectionView: UICollectionView, canMoveItemAt indexPath: IndexPath) -> Bool {
-        return indexPath.row != images.count
+        return true
     }
 
     func collectionView(_ collectionView: UICollectionView, moveItemAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
@@ -160,3 +143,4 @@ extension ImageCollectionViewController: UIImagePickerControllerDelegate, UINavi
         dismiss(animated: true, completion: nil)
     }
 }
+

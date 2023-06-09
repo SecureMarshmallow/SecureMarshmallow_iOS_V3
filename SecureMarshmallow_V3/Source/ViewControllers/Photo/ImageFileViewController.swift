@@ -1,10 +1,3 @@
-//
-//  ImageFileViewController.swift
-//  SecureMarshmallow_V3
-//
-//  Created by 박준하 on 2023/06/09.
-//
-
 import UIKit
 import SnapKit
 import Then
@@ -90,15 +83,10 @@ extension ImageFileViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImageFileCollectionViewCell.identifier, for: indexPath) as! ImageFileCollectionViewCell
         
-        if indexPath.row == 0 {
-            cell.imageView.image = UIImage(named: "BlackLogo")
-            cell.titleLabel.text = "메인 엘범"
-            
-        } else {
-            cell.imageView.backgroundColor = .blue
-            let cellData = imageCellData[indexPath.item]
-            cell.titleLabel.text = cellData.title
-        }
+        let cellData = imageCellData[indexPath.item]
+        cell.titleLabel.text = cellData.title
+        cell.imageView.backgroundColor = .red
+        // cell.imageView.image = cellData.image
         
         return cell
     }
@@ -117,5 +105,12 @@ extension ImageFileViewController: UICollectionViewDelegateFlowLayout {
         let itemWidth = (collectionViewWidth - spacing * (numberOfItemsPerRow + 1)) / numberOfItemsPerRow
         let itemHeight = itemWidth + 30
         return CGSize(width: itemWidth, height: itemHeight)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let imageCollectionViewController = ImageCollectionViewController()
+        // Configure the ImageCollectionViewController with the selected cell's data
+        
+        navigationController?.pushViewController(imageCollectionViewController, animated: true)
     }
 }
