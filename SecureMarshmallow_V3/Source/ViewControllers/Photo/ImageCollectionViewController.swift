@@ -15,11 +15,17 @@ class ImageCollectionViewController: UIViewController {
         $0.register(ImageCollectionViewCell.self, forCellWithReuseIdentifier: ImageCollectionViewCell.identifier)
         $0.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "AddCell")
     }
-
-    var images = [UIImage]() {
-        didSet {
-            collectionView.reloadData()
-        }
+    
+    var cellData: ImageCellData
+    var images = [UIImage]()
+    
+    init(cellData: ImageCellData) {
+        self.cellData = cellData
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 
     override func viewDidLoad() {
@@ -28,24 +34,32 @@ class ImageCollectionViewController: UIViewController {
         self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(customView: navLabel)
         self.navigationItem.leftItemsSupplementBackButton = true
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "folder.fill.badge.plus"), style: .plain, target: self, action: #selector(addImage))
-
-//        let deleteButton = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(deleteImage))
-//        navigationItem.leftBarButtonItems = [deleteButton]
-
+        
         view.addSubview(collectionView)
-
+        
         collectionView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
-
+        
         collectionView.dataSource = self
         collectionView.delegate = self
-
-        let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(handleLongGesture(gesture:)))
-        collectionView.addGestureRecognizer(longPressGesture)
         
-        // add footer view
-        collectionView.register(UICollectionViewCell.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: "AddButtonFooter")
+        loadImages()
+    }
+    
+    private func loadImages() {
+        if let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+            let fileURLs = try? FileManager.default.contentsOfDirectory(at: documentDirectory, includingPropertiesForKeys: nil)
+            if let fileURLs = fileURLs {
+                for fileURL in fileURLs {
+                    if fileURL.lastPathComponent.hasPrefix(cellData.imageName) {
+                        if let image = UIImage(contentsOfFile: fileURL.path) {
+                            images.append(image)
+                        }
+                    }
+                }
+            }
+        }
     }
 
     @objc func addImage() {
@@ -69,16 +83,15 @@ class ImageCollectionViewController: UIViewController {
             collectionView.cancelInteractiveMovement()
         }
     }
-
-//    @objc func deleteImage() {
-//        if let selectedIndexPaths = collectionView.indexPathsForSelectedItems {
-//            let sortedIndexPaths = selectedIndexPaths.sorted().reversed()
-//            for indexPath in sortedIndexPaths {
-//                images.remove(at: indexPath.row)
-//            }
-//            collectionView.deleteItems(at: selectedIndexPaths)
-//        }
-//    }
+    
+    private func saveImage(_ image: UIImage) {
+        if let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+            let fileURL = documentDirectory.appendingPathComponent("\(cellData.imageName)_\(UUID().uuidString).png")
+            if let imageData = image.pngData() {
+                try? imageData.write(to: fileURL)
+            }
+        }
+    }
 }
 
 extension ImageCollectionViewController: UICollectionViewDataSource {
@@ -135,8 +148,10 @@ extension ImageCollectionViewController: UICollectionViewDelegateFlowLayout {
 extension ImageCollectionViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[.editedImage] as? UIImage {
+            saveImage(image)
             images.append(image)
         } else if let image = info[.originalImage] as? UIImage {
+            saveImage(image)
             images.append(image)
         }
         collectionView.reloadData()

@@ -19,7 +19,7 @@ class TapBarViewController: UITabBarController {
     }()
     
     private lazy var PhotoViewController: UIViewController = {
-        let viewController = ImageCollectionViewController()
+        let viewController = ImageFileViewController()
         let tabBarItem = UITabBarItem(title: "", image: UIImage(named: "Photo_TapBar_Gray"), tag: 2)
         viewController.tabBarItem = tabBarItem
         let navigationView = UINavigationController(rootViewController: viewController)

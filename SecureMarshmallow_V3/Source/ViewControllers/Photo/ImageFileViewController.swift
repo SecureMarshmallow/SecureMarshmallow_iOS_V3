@@ -4,7 +4,7 @@ import Then
 
 struct ImageCellData {
     let title: String
-    let image: UIImage?
+    let imageName: String
 }
 
 class ImageFileViewController: UIViewController {
@@ -43,6 +43,31 @@ class ImageFileViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
         
+        loadImagesFromUserDefaults()
+    }
+    
+    private func loadImagesFromUserDefaults() {
+        if let imageDataArray = UserDefaults.standard.array(forKey: "ImageDataArray") as? [[String: Any]] {
+            for imageData in imageDataArray {
+                if let title = imageData["title"] as? String,
+                   let imageName = imageData["imageName"] as? String {
+                    let cellData = ImageCellData(title: title, imageName: imageName)
+                    imageCellData.append(cellData)
+                }
+            }
+        }
+    }
+    
+    private func saveImagesToUserDefaults() {
+        var imageDataArray = [[String: Any]]()
+        for cellData in imageCellData {
+            let imageData: [String: Any] = [
+                "title": cellData.title,
+                "imageName": cellData.imageName
+            ]
+            imageDataArray.append(imageData)
+        }
+        UserDefaults.standard.set(imageDataArray, forKey: "ImageDataArray")
     }
     
     @objc private func showAddCellAlert() {
@@ -57,7 +82,8 @@ class ImageFileViewController: UIViewController {
                 return
             }
             
-            let newCellData = ImageCellData(title: title, image: nil)
+            let imageName = "image_\(self?.imageCellData.count ?? 0 + 1)"
+            let newCellData = ImageCellData(title: title, imageName: imageName)
             self?.imageCellData.append(newCellData)
             
             let addedCellIndex = IndexPath(item: (self?.imageCellData.count ?? 0) - 1, section: 0)
@@ -65,6 +91,8 @@ class ImageFileViewController: UIViewController {
             self?.collectionView.performBatchUpdates({
                 self?.collectionView.insertItems(at: [addedCellIndex])
             }, completion: nil)
+            
+            self?.saveImagesToUserDefaults()
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         
@@ -86,9 +114,17 @@ extension ImageFileViewController: UICollectionViewDataSource {
         let cellData = imageCellData[indexPath.item]
         cell.titleLabel.text = cellData.title
         cell.imageView.backgroundColor = .red
-        // cell.imageView.image = cellData.image
+        cell.imageView.image = loadImage(named: cellData.imageName)
         
         return cell
+    }
+    
+    private func loadImage(named imageName: String) -> UIImage? {
+        if let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+            let fileURL = documentDirectory.appendingPathComponent("\(imageName).png")
+            return UIImage(contentsOfFile: fileURL.path)
+        }
+        return nil
     }
 }
 
@@ -108,9 +144,8 @@ extension ImageFileViewController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let imageCollectionViewController = ImageCollectionViewController()
-        // Configure the ImageCollectionViewController with the selected cell's data
-        
+        let cellData = imageCellData[indexPath.item]
+        let imageCollectionViewController = ImageCollectionViewController(cellData: cellData)
         navigationController?.pushViewController(imageCollectionViewController, animated: true)
     }
 }
