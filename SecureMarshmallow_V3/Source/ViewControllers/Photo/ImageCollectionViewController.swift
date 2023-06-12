@@ -18,9 +18,11 @@ class ImageCollectionViewController: UIViewController {
     
     var cellData: ImageCellData
     var images = [UIImage]()
+    var titleNavName: String = ""
     
-    init(cellData: ImageCellData) {
+    init(cellData: ImageCellData, navName: String) {
         self.cellData = cellData
+        self.titleNavName = navName
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -31,10 +33,14 @@ class ImageCollectionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationController?.navigationBar.tintColor = .black
+        
+        navLabel.text = "앨범 / \(titleNavName)"
+        
         self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(customView: navLabel)
         self.navigationItem.leftItemsSupplementBackButton = true
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "folder.fill.badge.plus"), style: .plain, target: self, action: #selector(addImage))
-        
+                
         view.addSubview(collectionView)
         
         collectionView.snp.makeConstraints {

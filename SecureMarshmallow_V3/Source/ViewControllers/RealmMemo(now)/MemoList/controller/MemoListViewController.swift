@@ -59,8 +59,6 @@ class MemoListViewController: BaseVC {
         }
     }
     
-
-    
     override func loadView() {
         self.view = listView
     }
@@ -99,7 +97,6 @@ class MemoListViewController: BaseVC {
         listView.tableView.delegate = self
         listView.tableView.dataSource = self
     }
-    
     
     override func setNavigationBar() {
         super.setNavigationBar()

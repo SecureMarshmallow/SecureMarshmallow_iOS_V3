@@ -9,7 +9,7 @@ class BaseNC: UINavigationController {
 
     private var backButtonAppearance: UIBarButtonItemAppearance {
         let backButtonAppearance = UIBarButtonItemAppearance()
-        backButtonAppearance.normal.titleTextAttributes = [.foregroundColor: UIColor.clear]
+        backButtonAppearance.normal.titleTextAttributes = [.foregroundColor: UIColor.black]
         return backButtonAppearance
     }
 
