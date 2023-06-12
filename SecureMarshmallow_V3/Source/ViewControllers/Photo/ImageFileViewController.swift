@@ -71,12 +71,12 @@ class ImageFileViewController: UIViewController {
     }
     
     @objc private func showAddCellAlert() {
-        let alertController = UIAlertController(title: "Add Cell", message: "Enter a title for the new cell", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "파일 추가", message: "파일을 추가하시 겠습니까?", preferredStyle: .alert)
         alertController.addTextField { textField in
-            textField.placeholder = "Title"
+            textField.placeholder = "파일 이름을 적어주세요"
         }
         
-        let addAction = UIAlertAction(title: "Add", style: .default) { [weak self] _ in
+        let addAction = UIAlertAction(title: "추가", style: .default) { [weak self] _ in
             guard let textField = alertController.textFields?.first,
                   let title = textField.text else {
                 return
@@ -94,7 +94,7 @@ class ImageFileViewController: UIViewController {
             
             self?.saveImagesToUserDefaults()
         }
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let cancelAction = UIAlertAction(title: "취소", style: .cancel, handler: nil)
         
         alertController.addAction(addAction)
         alertController.addAction(cancelAction)
@@ -113,8 +113,8 @@ extension ImageFileViewController: UICollectionViewDataSource {
         
         let cellData = imageCellData[indexPath.item]
         cell.titleLabel.text = cellData.title
-        cell.imageView.backgroundColor = .red
-        cell.imageView.image = loadImage(named: cellData.imageName)
+        cell.imageView.image = UIImage(named: "TestFile")
+//        cell.imageView.image = loadImage(named: cellData.imageName)
         
         return cell
     }
@@ -145,7 +145,7 @@ extension ImageFileViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cellData = imageCellData[indexPath.item]
-        let imageCollectionViewController = ImageCollectionViewController(cellData: cellData)
+        let imageCollectionViewController = ImageCollectionViewController(cellData: cellData, navName: "\(cellData.title)")
         navigationController?.pushViewController(imageCollectionViewController, animated: true)
     }
 }
