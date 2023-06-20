@@ -28,6 +28,7 @@
 		0E09A62F2A01F70300EC6AE1 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E09A62E2A01F70300EC6AE1 /* ImageCollectionViewCell.swift */; };
 		0E181EAE2A32FA2E003B9A67 /* ImageFileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E181EAD2A32FA2E003B9A67 /* ImageFileViewController.swift */; };
 		0E181EB02A32FAA8003B9A67 /* ImageFileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E181EAF2A32FAA8003B9A67 /* ImageFileCollectionViewCell.swift */; };
+		0E38B8952A41BAFC00520784 /* Clocks.json in Resources */ = {isa = PBXBuildFile; fileRef = 0E38B8942A41BAFC00520784 /* Clocks.json */; };
 		0E40E15029F3F36000615E86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E40E14F29F3F36000615E86 /* Assets.xcassets */; };
 		0E54CC972A1742FF00AFAA7D /* TaskCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E54CC962A1742FF00AFAA7D /* TaskCollectionViewCell.swift */; };
 		0E5686FC29FA341100EEEBD3 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5686FB29FA341100EEEBD3 /* CoreDataManager.swift */; };
@@ -201,6 +202,7 @@
 		0E09A62E2A01F70300EC6AE1 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		0E181EAD2A32FA2E003B9A67 /* ImageFileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFileViewController.swift; sourceTree = "<group>"; };
 		0E181EAF2A32FAA8003B9A67 /* ImageFileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFileCollectionViewCell.swift; sourceTree = "<group>"; };
+		0E38B8942A41BAFC00520784 /* Clocks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Clocks.json; path = "../../../../../../../Downloads/Swift_alarm_clock-master/myClock/Data/Clocks.json"; sourceTree = "<group>"; };
 		0E40E14F29F3F36000615E86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Assets.xcassets/Assets.xcassets; sourceTree = "<group>"; };
 		0E54CC962A1742FF00AFAA7D /* TaskCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCollectionViewCell.swift; sourceTree = "<group>"; };
 		0E5686FB29FA341100EEEBD3 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
@@ -680,6 +682,7 @@
 				0EC03D7A2A10E687007CD53C /* Day.swift */,
 				0EC03D7C2A10E6FB007CD53C /* MonthMetadata.swift */,
 				0EC03D802A10E761007CD53C /* Clock.swift */,
+				0E38B8942A41BAFC00520784 /* Clocks.json */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -1219,6 +1222,7 @@
 			files = (
 				0E40E15029F3F36000615E86 /* Assets.xcassets in Resources */,
 				0E71B9022A2CC63F00C6CEF0 /* fire.json in Resources */,
+				0E38B8952A41BAFC00520784 /* Clocks.json in Resources */,
 				0EFE31E129DF9EFF00725EEE /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
