@@ -40,6 +40,8 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         collectionView.backgroundColor = .HomeBackgroundColor
         view.addSubview(collectionView)
         
+        edgesForExtendedLayout = []
+        
         collectionView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }

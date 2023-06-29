@@ -33,7 +33,7 @@ class TapBarViewController: UITabBarController {
         let navigationView = UINavigationController(rootViewController: viewController)
         return navigationView
     }()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -46,13 +46,21 @@ class TapBarViewController: UITabBarController {
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
+        
+        let tabBarHeight: CGFloat
+
+        if UIScreen.main.bounds.height <= 667 {
+            tabBarHeight = 50
+        } else {
+            tabBarHeight = 70
+        }
+        
+        let window = UIApplication.shared.keyWindow
+        let bottomPadding = window?.safeAreaInsets.bottom ?? 0
 
         var tabFrame = tabBar.frame
-        if UIScreen.main.bounds.height <= 667 {
-            tabFrame.size.height = 50
-        } else {
-            tabFrame.size.height = 70
-        }
+        tabFrame.size.height = tabBarHeight + bottomPadding
+        tabFrame.origin.y = view.frame.height - tabBarHeight - bottomPadding
         tabBar.frame = tabFrame
     }
 }
