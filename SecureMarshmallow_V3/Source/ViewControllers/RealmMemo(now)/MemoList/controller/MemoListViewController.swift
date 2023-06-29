@@ -21,7 +21,7 @@ class MemoListViewController: BaseVC {
     let memoRepository = MemoRepository()
     
     lazy var makeMemoButton = UIButton().then {
-        $0.backgroundColor = .cellTitleColor
+        $0.setImage(UIImage(named: "plusButton"), for: .normal)
         $0.layer.cornerRadius = 35.0
         $0.addTarget(self, action: #selector(makeMemoButtonTapped), for: .touchUpInside)
     }
