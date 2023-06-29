@@ -31,6 +31,7 @@ class ImageFileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationController?.navigationBar.tintColor = .black
         self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(customView: navLabel)
         self.navigationItem.leftItemsSupplementBackButton = true
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "folder.fill.badge.plus"), style: .plain, target: self, action: #selector(showAddCellAlert))
