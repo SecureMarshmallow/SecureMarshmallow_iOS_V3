@@ -40,10 +40,12 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         collectionView.backgroundColor = .HomeBackgroundColor
         view.addSubview(collectionView)
         
-        edgesForExtendedLayout = []
+        collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 70, right: 0)
+        
+//        edgesForExtendedLayout = []
         
         collectionView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
+            $0.top.leading.trailing.bottom.equalToSuperview()
         }
         
         collectionView.makeSecure()
