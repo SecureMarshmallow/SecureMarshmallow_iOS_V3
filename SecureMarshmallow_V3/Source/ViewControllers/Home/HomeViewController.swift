@@ -14,8 +14,8 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     }()
     
     var collectionView: UICollectionView!
-    var items: [[Int]] = [
-        [3, 1, 1, 1, 1, 2, 4, 4, 6]
+    var items: [[Double]] = [
+        [3, 1, 1.1, 1.2, 1.3, 2, 4, 4, 6, 8]
     ]
     
     let cellIdentifier = "cell"
@@ -146,59 +146,60 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         
         let item = items[indexPath.section][indexPath.item]
         
-        if item == 1 {
+        switch item {
+        case 1:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SamilInformationCollectionViewCell.identifier, for: indexPath) as! SamilInformationCollectionViewCell
-            cell.backgroundColor = .white
             cell.layout()
-            cell.layer.cornerRadius = 25.0
-            
             return cell
-        } else if item == 6 {
+        case 1.1:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SamilInformationCollectionViewCell.identifier, for: indexPath) as! SamilInformationCollectionViewCell
+            cell.setImage(image: UIImage(named: "battery"))
+            return cell
+        case 1.2:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SamilInformationCollectionViewCell.identifier, for: indexPath) as! SamilInformationCollectionViewCell
+            cell.setImage(image: UIImage(named: "file"))
+            return cell
+        case 1.3:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SamilInformationCollectionViewCell.identifier, for: indexPath) as! SamilInformationCollectionViewCell
+            cell.setImage(image: UIImage(named: "WiFi"))
+            return cell
+        case 6:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MiddleCalculatorColloectionViewCell.identifier, for: indexPath) as! MiddleCalculatorColloectionViewCell
             cell.backgroundColor = .white
             cell.layout()
             cell.layer.cornerRadius = 25.0
-            
             return cell
-        } else if item == 4 {
-            
-            //image
-//            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LargeInformationCollectionViewCell.identifier, for: indexPath) as! LargeInformationCollectionViewCell
-//
-//            cell.backgroundColor = .gray
-//            cell.layout()
-//            cell.layer.cornerRadius = 20.0
-            
-            //time
+        case 4:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AlarmCollectionViewCell.identifier, for: indexPath) as! AlarmCollectionViewCell
             cell.backgroundColor = .white
             cell.layout()
             cell.layer.cornerRadius = 20.0
-            
             return cell
-        } else if item == 7 {
+        case 7:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MiddleAlamCollectionViewCell.identifier, for: indexPath) as! MiddleAlamCollectionViewCell
             cell.backgroundColor = .white
             cell.layout()
-            
             return cell
-        } else {
+        case 8:
+            print("8")
+            
+        default:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath)
             cell.backgroundColor = .white
-            
+
             let label = UILabel()
             label.font = .systemFont(ofSize: 20)
             label.textAlignment = .center
             label.textColor = .black
             label.text = "Item \(item)"
             cell.contentView.addSubview(label)
-            label.snp.makeConstraints { make in
-                make.edges.equalToSuperview()
+            
+            label.snp.makeConstraints {
+                $0.edges.equalToSuperview()
             }
-            
-            
             return cell
         }
+        return cell
     }
 
 
@@ -212,6 +213,12 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         
         switch item {
         case 1:
+            cellSize = CGSize(width: 80, height: 80)
+        case 1.1:
+            cellSize = CGSize(width: 80, height: 80)
+        case 1.2:
+            cellSize = CGSize(width: 80, height: 80)
+        case 1.3:
             cellSize = CGSize(width: 80, height: 80)
         case 2:
             if traitCollection.horizontalSizeClass == .regular && traitCollection.verticalSizeClass == .regular {
@@ -237,6 +244,8 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
             cellSize = CGSize(width: 180, height: 180)
         case 7:
             cellSize = CGSize(width: 100, height: 100)
+        case 8:
+            cellSize = CGSize(width: 180, height: 180)
         default:
             break
         }
@@ -275,7 +284,7 @@ extension HomeViewController {
         default:
             print("클릭되지 않음")
         }
-        
+
         print("Selected item: \(item)")
         print(items)
     }
