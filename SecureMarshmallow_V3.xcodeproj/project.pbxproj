@@ -121,6 +121,7 @@
 		0ECEF8C329FCCA06008E848E /* MarshmallowWidgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECEF8C229FCCA06008E848E /* MarshmallowWidgetViewController.swift */; };
 		0ECEF90129FCD331008E848E /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECEF90029FCD331008E848E /* ImageCache.swift */; };
 		0ED7C4CC2A4E645700131DDE /* LargeBluetoothCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED7C4CB2A4E645700131DDE /* LargeBluetoothCollectionViewCell.swift */; };
+		0ED7C4CE2A4E79DF00131DDE /* TimerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED7C4CD2A4E79DF00131DDE /* TimerCollectionViewCell.swift */; };
 		0EDB059F2A0CC247009E46A8 /* BatteryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDB059E2A0CC247009E46A8 /* BatteryViewController.swift */; };
 		0EDB05A12A0CC4E0009E46A8 /* Extensions+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDB05A02A0CC4E0009E46A8 /* Extensions+UIColor.swift */; };
 		0EDB05A32A0CD06F009E46A8 /* ExplanationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDB05A22A0CD06F009E46A8 /* ExplanationCollectionViewCell.swift */; };
@@ -297,6 +298,7 @@
 		0ECEF8CB29FCCFCF008E848E /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		0ECEF90029FCD331008E848E /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		0ED7C4CB2A4E645700131DDE /* LargeBluetoothCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeBluetoothCollectionViewCell.swift; sourceTree = "<group>"; };
+		0ED7C4CD2A4E79DF00131DDE /* TimerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerCollectionViewCell.swift; sourceTree = "<group>"; };
 		0EDB059E2A0CC247009E46A8 /* BatteryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryViewController.swift; sourceTree = "<group>"; };
 		0EDB05A02A0CC4E0009E46A8 /* Extensions+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIColor.swift"; sourceTree = "<group>"; };
 		0EDB05A22A0CD06F009E46A8 /* ExplanationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplanationCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -499,6 +501,7 @@
 				0E6275402A146EB100E8F8E9 /* SamilInformationCollectionViewCell.swift */,
 				0E85AA5E2A1F0A30000676C2 /* MiddleCalculatorColloectionViewCell.swift */,
 				0ED7C4CB2A4E645700131DDE /* LargeBluetoothCollectionViewCell.swift */,
+				0ED7C4CD2A4E79DF00131DDE /* TimerCollectionViewCell.swift */,
 				0E85AA6A2A1F946F000676C2 /* MiddleAlamCollectionViewCell.swift */,
 				0E6275422A14D17500E8F8E9 /* LargeInformationCollectionViewCell.swift */,
 				0E6275452A14D53F00E8F8E9 /* AlarmCollectionViewCell.swift */,
@@ -1453,6 +1456,7 @@
 				0E09A61229FD0FC400EC6AE1 /* SupportCell.swift in Sources */,
 				0E09A60529FD0A3500EC6AE1 /* MarshmallowWidget.intentdefinition in Sources */,
 				0EC03D9F2A10F1EF007CD53C /* CalendarDateCollectionViewCell.swift in Sources */,
+				0ED7C4CE2A4E79DF00131DDE /* TimerCollectionViewCell.swift in Sources */,
 				0EFE320E29DFA1D000725EEE /* BaseVC.swift in Sources */,
 				0EC03DAA2A10F25D007CD53C /* ClockController.swift in Sources */,
 				0E8409B629E3843B005EB879 /* MemoData.swift in Sources */,

@@ -38,6 +38,10 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         collectionView.register(AlarmCollectionViewCell.self, forCellWithReuseIdentifier: AlarmCollectionViewCell.identifier)
         collectionView.register(MiddleCalculatorColloectionViewCell.self, forCellWithReuseIdentifier: MiddleCalculatorColloectionViewCell.identifier)
         collectionView.register(LargeBluetoothCollectionViewCell.self, forCellWithReuseIdentifier: LargeBluetoothCollectionViewCell.identifier)
+        
+        collectionView.register(TimerCollectionViewCell.self, forCellWithReuseIdentifier: TimerCollectionViewCell.identifier)
+
+
         collectionView.backgroundColor = .HomeBackgroundColor
         view.addSubview(collectionView)
         
@@ -163,6 +167,10 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         case 1.3:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SamilInformationCollectionViewCell.identifier, for: indexPath) as! SamilInformationCollectionViewCell
             cell.setImage(image: UIImage(named: "WiFi"))
+            return cell
+        case 3:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TimerCollectionViewCell.identifier, for: indexPath) as! TimerCollectionViewCell
+            
             return cell
         case 6:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MiddleCalculatorColloectionViewCell.identifier, for: indexPath) as! MiddleCalculatorColloectionViewCell
