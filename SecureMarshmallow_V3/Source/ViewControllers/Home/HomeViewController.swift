@@ -37,6 +37,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         collectionView.register(LargeInformationCollectionViewCell.self, forCellWithReuseIdentifier: LargeInformationCollectionViewCell.identifier)
         collectionView.register(AlarmCollectionViewCell.self, forCellWithReuseIdentifier: AlarmCollectionViewCell.identifier)
         collectionView.register(MiddleCalculatorColloectionViewCell.self, forCellWithReuseIdentifier: MiddleCalculatorColloectionViewCell.identifier)
+        collectionView.register(LargeBluetoothCollectionViewCell.self, forCellWithReuseIdentifier: LargeBluetoothCollectionViewCell.identifier)
         collectionView.backgroundColor = .HomeBackgroundColor
         view.addSubview(collectionView)
         

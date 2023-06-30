@@ -1,10 +1,3 @@
-//
-//  BaseView.swift
-//  Pods
-//
-//  Created by 박준하 on 2023/06/08.
-//
-
 import UIKit
 
 class BaseView: UIView {
