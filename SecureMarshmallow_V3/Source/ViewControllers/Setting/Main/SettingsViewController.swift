@@ -32,6 +32,8 @@ class SettingsViewController: BaseSV {
 
     override func configureItems() {
         tableView.register(SettingsCell.self, forCellReuseIdentifier: SettingsCell.reuseIdentifier)
+        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 80, right: 0)
+
     }
 
     private func configureSettingsItems() {
