@@ -122,6 +122,7 @@
 		0ECEF90129FCD331008E848E /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECEF90029FCD331008E848E /* ImageCache.swift */; };
 		0ED7C4CC2A4E645700131DDE /* LargeBluetoothCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED7C4CB2A4E645700131DDE /* LargeBluetoothCollectionViewCell.swift */; };
 		0ED7C4CE2A4E79DF00131DDE /* TimerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED7C4CD2A4E79DF00131DDE /* TimerCollectionViewCell.swift */; };
+		0ED7C4D22A502C3300131DDE /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED7C4D12A502C3300131DDE /* SignupViewController.swift */; };
 		0EDB059F2A0CC247009E46A8 /* BatteryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDB059E2A0CC247009E46A8 /* BatteryViewController.swift */; };
 		0EDB05A12A0CC4E0009E46A8 /* Extensions+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDB05A02A0CC4E0009E46A8 /* Extensions+UIColor.swift */; };
 		0EDB05A32A0CD06F009E46A8 /* ExplanationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDB05A22A0CD06F009E46A8 /* ExplanationCollectionViewCell.swift */; };
@@ -299,6 +300,7 @@
 		0ECEF90029FCD331008E848E /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		0ED7C4CB2A4E645700131DDE /* LargeBluetoothCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeBluetoothCollectionViewCell.swift; sourceTree = "<group>"; };
 		0ED7C4CD2A4E79DF00131DDE /* TimerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerCollectionViewCell.swift; sourceTree = "<group>"; };
+		0ED7C4D12A502C3300131DDE /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		0EDB059E2A0CC247009E46A8 /* BatteryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryViewController.swift; sourceTree = "<group>"; };
 		0EDB05A02A0CC4E0009E46A8 /* Extensions+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIColor.swift"; sourceTree = "<group>"; };
 		0EDB05A22A0CD06F009E46A8 /* ExplanationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplanationCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -529,12 +531,13 @@
 			path = Capture;
 			sourceTree = "<group>";
 		};
-		0E71B8F62A2CB27900C6CEF0 /* Login */ = {
+		0E71B8F62A2CB27900C6CEF0 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				0E71B8F72A2CB28500C6CEF0 /* LoginViewController.swift */,
+				0ED7C4D02A502C0F00131DDE /* SignUp */,
+				0ED7C4CF2A502BFB00131DDE /* Login */,
 			);
-			path = Login;
+			path = Auth;
 			sourceTree = "<group>";
 		};
 		0E71B8FB2A2CBAEA00C6CEF0 /* Error */ = {
@@ -763,6 +766,22 @@
 			path = AppLogo;
 			sourceTree = "<group>";
 		};
+		0ED7C4CF2A502BFB00131DDE /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				0E71B8F72A2CB28500C6CEF0 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		0ED7C4D02A502C0F00131DDE /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				0ED7C4D12A502C3300131DDE /* SignupViewController.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
 		0EDB059D2A0CC228009E46A8 /* Battery */ = {
 			isa = PBXGroup;
 			children = (
@@ -978,7 +997,7 @@
 			children = (
 				0E6C19C52A31AB5300487114 /* RealmMemo(now) */,
 				0E71B8FB2A2CBAEA00C6CEF0 /* Error */,
-				0E71B8F62A2CB27900C6CEF0 /* Login */,
+				0E71B8F62A2CB27900C6CEF0 /* Auth */,
 				0E85A9F32A1B2957000676C2 /* Bluetooth */,
 				0E85A9E92A1A33A7000676C2 /* calculator */,
 				0EC03D752A10E167007CD53C /* Alarm */,
@@ -1410,6 +1429,7 @@
 				0EC03D9A2A10EBEF007CD53C /* ClockCell.swift in Sources */,
 				0E6C19DC2A31AC4200487114 /* Memo.swift in Sources */,
 				0E85AA162A1CA1A8000676C2 /* TimeOfAppPresenter.swift in Sources */,
+				0ED7C4D22A502C3300131DDE /* SignupViewController.swift in Sources */,
 				0EC03DA12A10F1FC007CD53C /* CalendarPickerFooterView.swift in Sources */,
 				0E6C19CD2A31AB9500487114 /* MemoListViewController.swift in Sources */,
 				0E6C19D92A31AC0C00487114 /* BaseView.swift in Sources */,

@@ -15,7 +15,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     var collectionView: UICollectionView!
     var items: [[Double]] = [
-        [3, 1, 1.1, 1.2, 1.3, 2, 4, 4, 6, 8]
+        [3, 1, 1.1, 1.2, 1.3, 2, 6, 7.1]
     ]
     
     let cellIdentifier = "cell"
@@ -189,8 +189,12 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
             cell.backgroundColor = .white
             cell.layout()
             return cell
-        case 8:
-            print("8")
+        case 7.1:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AlarmCollectionViewCell.identifier, for: indexPath) as! AlarmCollectionViewCell
+            cell.backgroundColor = .white
+            cell.layout()
+            cell.layer.cornerRadius = 20.0
+            return cell
             
         default:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath)
@@ -252,8 +256,8 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         case 6:
             cellSize = CGSize(width: 180, height: 180)
         case 7:
-            cellSize = CGSize(width: 100, height: 100)
-        case 8:
+            cellSize = CGSize(width: 180, height: 180)
+        case 7.1:
             cellSize = CGSize(width: 180, height: 180)
         default:
             break
@@ -286,10 +290,30 @@ extension HomeViewController {
         let item = items[indexPath.section][indexPath.item]
         
         switch item {
+        case 1:
+            let vc = OSViewController()
+            vc.modalPresentationStyle = .fullScreen
+            self.navigationController?.pushViewController(vc, animated: true)
+        case 1.1:
+            let vc = BatteryViewController()
+            vc.modalPresentationStyle = .fullScreen
+            self.navigationController?.pushViewController(vc, animated: true)
+        case 1.2:
+            let vc = FileViewController()
+            vc.modalPresentationStyle = .fullScreen
+            self.navigationController?.pushViewController(vc, animated: true)
+        case 1.3:
+            let vc = WiFiViewController()
+            vc.modalPresentationStyle = .fullScreen
+            self.navigationController?.pushViewController(vc, animated: true)
         case 6:
             let calculatorVC = CalculatorViewController()
             calculatorVC.modalPresentationStyle = .fullScreen
             self.navigationController?.pushViewController(calculatorVC, animated: true)
+        case 7.1:
+            let alarmVC = StartController()
+            alarmVC.modalPresentationStyle = .fullScreen
+            self.navigationController?.pushViewController(alarmVC, animated: true)
         default:
             print("클릭되지 않음")
         }

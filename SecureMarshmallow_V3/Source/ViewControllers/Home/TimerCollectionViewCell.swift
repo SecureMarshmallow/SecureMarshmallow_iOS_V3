@@ -13,8 +13,20 @@ class TimerCollectionViewCell: UICollectionViewCell {
         }
     }
     
+    let titleLabel = UILabel().then {
+        $0.text = "타이머"
+        $0.font = .systemFont(ofSize: 25.0, weight: .bold)
+        $0.textColor = .black
+    }
+    
     let timeLabel = UILabel().then {
         $0.textAlignment = .center
+        $0.font = .systemFont(ofSize: 25.0, weight: .bold)
+        $0.textColor = .black
+    }
+    
+    let timerImage = UIImageView().then {
+        $0.image = UIImage(named: "timerImage")
     }
     
     let startButton = UIButton().then {
@@ -43,10 +55,26 @@ class TimerCollectionViewCell: UICollectionViewCell {
     }
     
     func setupCell() {
+        contentView.backgroundColor = .white
+        contentView.layer.cornerRadius = 20.0
+        addSubview(titleLabel)
+        addSubview(timerImage)
         addSubview(timeLabel)
+        
+        titleLabel.snp.makeConstraints {
+            $0.top.equalToSuperview().offset(24.0)
+            $0.leading.equalToSuperview().offset(24.0)
+        }
+        
+        timerImage.snp.makeConstraints {
+            $0.top.equalTo(titleLabel.snp.bottom).offset(16.0)
+            $0.leading.equalTo(titleLabel.snp.leading)
+            $0.height.width.equalTo(35.0)
+        }
+        
         timeLabel.snp.makeConstraints {
-            $0.centerX.equalToSuperview()
-            $0.top.equalToSuperview().offset(15)
+            $0.leading.equalTo(timerImage.snp.trailing).offset(20.0)
+            $0.centerY.equalTo(timerImage.snp.centerY) 
         }
         
         addSubview(startButton)
@@ -74,7 +102,9 @@ class TimerCollectionViewCell: UICollectionViewCell {
     }
     
     func updateTimerLabel() {
-        timeLabel.text = "\(countdown) 초"
+        let minutes = countdown / 60
+        let seconds = countdown % 60
+        timeLabel.text = String(format: "%02d:%02d", minutes, seconds)
     }
     
     @objc func startTimer() {
