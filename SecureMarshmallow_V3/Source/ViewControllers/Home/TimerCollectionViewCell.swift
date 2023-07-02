@@ -31,17 +31,23 @@ class TimerCollectionViewCell: UICollectionViewCell {
     
     let startButton = UIButton().then {
         $0.setTitle("시작", for: .normal)
-        $0.setTitleColor(.blue, for: .normal)
+        $0.setTitleColor(.black, for: .normal)
+        $0.backgroundColor = UIColor.cellColor
+        $0.layer.cornerRadius = 20.0
     }
     
     let stopButton = UIButton().then {
         $0.setTitle("정지", for: .normal)
-        $0.setTitleColor(.blue, for: .normal)
+        $0.setTitleColor(.black, for: .normal)
+        $0.backgroundColor = UIColor.cellColor
+        $0.layer.cornerRadius = 20.0
     }
     
     let resetButton = UIButton().then {
         $0.setTitle("초기화", for: .normal)
-        $0.setTitleColor(.blue, for: .normal)
+        $0.setTitleColor(.black, for: .normal)
+        $0.backgroundColor = UIColor.cellColor
+        $0.layer.cornerRadius = 20.0
     }
     
     override init(frame: CGRect) {
@@ -79,22 +85,28 @@ class TimerCollectionViewCell: UICollectionViewCell {
         
         addSubview(startButton)
         startButton.snp.makeConstraints {
-            $0.leading.equalToSuperview().offset(20)
-            $0.bottom.equalToSuperview().offset(-10)
+            $0.height.equalTo(40.0)
+            $0.width.equalTo(80.0)
+            $0.leading.equalToSuperview().offset(40)
+            $0.bottom.equalToSuperview().offset(-15)
         }
         startButton.addTarget(self, action: #selector(startTimer), for: .touchUpInside)
         
         addSubview(stopButton)
         stopButton.snp.makeConstraints {
+            $0.height.equalTo(40.0)
+            $0.width.equalTo(80.0)
             $0.centerX.equalToSuperview()
-            $0.bottom.equalToSuperview().offset(-10)
+            $0.bottom.equalToSuperview().offset(-15)
         }
         stopButton.addTarget(self, action: #selector(stopTimer), for: .touchUpInside)
         
         addSubview(resetButton)
         resetButton.snp.makeConstraints {
-            $0.trailing.equalToSuperview().offset(-20)
-            $0.bottom.equalToSuperview().offset(-10)
+            $0.height.equalTo(40.0)
+            $0.width.equalTo(80.0)
+            $0.trailing.equalToSuperview().offset(-40)
+            $0.bottom.equalToSuperview().offset(-15)
         }
         resetButton.addTarget(self, action: #selector(resetTimer), for: .touchUpInside)
         
