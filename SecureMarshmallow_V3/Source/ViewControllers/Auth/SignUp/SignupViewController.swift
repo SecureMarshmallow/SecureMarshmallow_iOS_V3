@@ -15,14 +15,6 @@ class SignupViewController: UIViewController {
         $0.setPlaceholder(color: .cellTitleColor)
     }
     
-    private let passwordTextField = UITextField().then {
-        $0.placeholder = "Password"
-        $0.borderStyle = .roundedRect
-        $0.backgroundColor = .cellColor
-        $0.setPlaceholder(color: .cellTitleColor)
-        $0.isSecureTextEntry = true
-    }
-    
     private let emailTextField = UITextField().then {
         $0.placeholder = "Email"
         $0.borderStyle = .roundedRect
@@ -38,31 +30,86 @@ class SignupViewController: UIViewController {
         $0.isSecureTextEntry = true
     }
     
+    private let passwordTextField = UITextField().then {
+        $0.placeholder = "Password"
+        $0.borderStyle = .roundedRect
+        $0.backgroundColor = .cellColor
+        $0.setPlaceholder(color: .cellTitleColor)
+        $0.isSecureTextEntry = true
+    }
+    
     private let signupButton = UIButton().then {
         $0.setTitle("Signup", for: .normal)
         $0.backgroundColor = .black
-        $0.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
+        $0.addTarget(self, action: #selector(signupButtonTapped), for: .touchUpInside)
         $0.layer.cornerRadius = 10.0
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupUI()
     }
     
-    @objc private func loginButtonTapped() {
+    private func setupUI() {
+        view.backgroundColor = .white
+        
+        view.addSubview(marshmallowImage)
+        marshmallowImage.snp.makeConstraints {
+            $0.top.equalTo(view.safeAreaLayoutGuide).offset(80.0)
+            $0.centerX.equalToSuperview()
+            $0.height.width.equalTo(200.0)
+        }
+        
+        view.addSubview(idTextField)
+        idTextField.snp.makeConstraints {
+            $0.top.equalTo(marshmallowImage.snp.bottom).offset(50)
+            $0.leading.trailing.equalToSuperview().inset(50)
+            $0.height.equalTo(40)
+        }
+        
+        view.addSubview(emailTextField)
+        emailTextField.snp.makeConstraints {
+            $0.top.equalTo(idTextField.snp.bottom).offset(20)
+            $0.leading.trailing.equalToSuperview().inset(50)
+            $0.height.equalTo(40)
+        }
+        
+        view.addSubview(nicknameTextField)
+        nicknameTextField.snp.makeConstraints {
+            $0.top.equalTo(emailTextField.snp.bottom).offset(20)
+            $0.leading.trailing.equalToSuperview().inset(50)
+            $0.height.equalTo(40)
+        }
+        
+        view.addSubview(passwordTextField)
+        passwordTextField.snp.makeConstraints {
+            $0.top.equalTo(nicknameTextField.snp.bottom).offset(20)
+            $0.leading.trailing.equalToSuperview().inset(50)
+            $0.height.equalTo(40)
+        }
+        
+        view.addSubview(signupButton)
+        signupButton.snp.makeConstraints {
+            $0.top.equalTo(passwordTextField.snp.bottom).offset(50)
+            $0.leading.trailing.equalToSuperview().inset(50)
+            $0.height.equalTo(40)
+        }
+    }
+    
+    @objc private func signupButtonTapped() {
         let enteredUsername = idTextField.text ?? ""
         let enteredPassword = passwordTextField.text ?? ""
         
         if enteredPassword == "password" {
-            showLoginSuccessAlert(username: enteredUsername)
+            showSignupSuccessAlert(username: enteredUsername)
         } else {
-            moveLoginButtonToRandomPosition()
+            moveSignupButtonToRandomPosition()
             showLoginFailureAlert()
         }
     }
     
-    private func showLoginSuccessAlert(username: String) {
+    private func showSignupSuccessAlert(username: String) {
         let alert = UIAlertController(title: "Login 성공", message: "Welcome, \(username)!", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
@@ -74,7 +121,7 @@ class SignupViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
-    private func moveLoginButtonToRandomPosition() {
+    private func moveSignupButtonToRandomPosition() {
         let screenWidth = view.bounds.width
         let screenHeight = view.bounds.height
         
