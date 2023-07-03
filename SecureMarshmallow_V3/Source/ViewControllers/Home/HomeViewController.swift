@@ -18,7 +18,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     var collectionView: UICollectionView!
     var items: [[Double]] = [
-        [3, 1, 1.1, 1.2, 1.3, 2, 6, 7.1, 7.2]
+        [3, 1, 1.1, 1.2, 1.3, 2, 6, 7.1, 7.2, 7.3]
     ]
     
     let cellIdentifier = "cell"
@@ -44,6 +44,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         collectionView.register(ShhCollectionViewCell.self, forCellWithReuseIdentifier: ShhCollectionViewCell.identifier)
         collectionView.register(TimerCollectionViewCell.self, forCellWithReuseIdentifier: TimerCollectionViewCell.identifier)
         collectionView.register(HMACViewController.self, forCellWithReuseIdentifier: HMACViewController.identifier)
+        collectionView.register(CacheClearCollectionViewCell.self, forCellWithReuseIdentifier: CacheClearCollectionViewCell.identifier)
 
         collectionView.backgroundColor = .HomeBackgroundColor
         view.addSubview(collectionView)
@@ -91,6 +92,12 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         navigationItem.rightBarButtonItems = [spacer, barButtonItem]
     }
 
+    private func clearCache() {
+        let cache = URLCache.shared
+        cache.removeAllCachedResponses()
+        print(cache)
+        print("Cache is cleared!")
+    }
 
     @objc func buttonTapped() {
         print("마쉬멜로~~야아아ㅏ")
@@ -219,6 +226,9 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
             cell.verifyMessage(isTampered: isTampered, hmac: hmac, secretKey: secretKey)
             return cell
             
+        case 7.3:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CacheClearCollectionViewCell.identifier, for: indexPath) as! CacheClearCollectionViewCell
+            return cell
         default:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath)
             cell.backgroundColor = .white
@@ -284,6 +294,8 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
             cellSize = CGSize(width: 180, height: 180)
         case 7.2:
             cellSize = CGSize(width: 180, height: 180)
+        case 7.3:
+            cellSize = CGSize(width: 180, height: 180)
         default:
             break
         }
@@ -339,6 +351,15 @@ extension HomeViewController {
             let alarmVC = StartController()
             alarmVC.modalPresentationStyle = .fullScreen
             self.navigationController?.pushViewController(alarmVC, animated: true)
+        case 7.3:
+            let sheet = UIAlertController(title: "캐시", message: "캐시를 전부 삭제하시겠습니까?", preferredStyle: .actionSheet)
+
+            sheet.addAction(UIAlertAction(title: "삭제", style: .destructive, handler: { _ in
+                self.clearCache() }))
+
+            sheet.addAction(UIAlertAction(title: "취소", style: .cancel, handler: { _ in print("취소") }))
+
+            present(sheet, animated: true)
         default:
             print("클릭되지 않음")
         }

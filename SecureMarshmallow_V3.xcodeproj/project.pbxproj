@@ -125,6 +125,7 @@
 		0ED7C4D22A502C3300131DDE /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED7C4D12A502C3300131DDE /* SignupViewController.swift */; };
 		0ED7C4D62A5258D600131DDE /* ShhCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED7C4D52A5258D600131DDE /* ShhCollectionViewCell.swift */; };
 		0ED7C4D82A526C7D00131DDE /* HMACViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED7C4D72A526C7D00131DDE /* HMACViewController.swift */; };
+		0ED7C4DA2A52A5D300131DDE /* CacheClearCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED7C4D92A52A5D300131DDE /* CacheClearCollectionViewCell.swift */; };
 		0EDB059F2A0CC247009E46A8 /* BatteryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDB059E2A0CC247009E46A8 /* BatteryViewController.swift */; };
 		0EDB05A12A0CC4E0009E46A8 /* Extensions+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDB05A02A0CC4E0009E46A8 /* Extensions+UIColor.swift */; };
 		0EDB05A32A0CD06F009E46A8 /* ExplanationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDB05A22A0CD06F009E46A8 /* ExplanationCollectionViewCell.swift */; };
@@ -305,6 +306,7 @@
 		0ED7C4D12A502C3300131DDE /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		0ED7C4D52A5258D600131DDE /* ShhCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShhCollectionViewCell.swift; sourceTree = "<group>"; };
 		0ED7C4D72A526C7D00131DDE /* HMACViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMACViewController.swift; sourceTree = "<group>"; };
+		0ED7C4D92A52A5D300131DDE /* CacheClearCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheClearCollectionViewCell.swift; sourceTree = "<group>"; };
 		0EDB059E2A0CC247009E46A8 /* BatteryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryViewController.swift; sourceTree = "<group>"; };
 		0EDB05A02A0CC4E0009E46A8 /* Extensions+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIColor.swift"; sourceTree = "<group>"; };
 		0EDB05A22A0CD06F009E46A8 /* ExplanationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplanationCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -507,6 +509,7 @@
 				0E6275402A146EB100E8F8E9 /* SamilInformationCollectionViewCell.swift */,
 				0E85AA5E2A1F0A30000676C2 /* MiddleCalculatorColloectionViewCell.swift */,
 				0ED7C4CB2A4E645700131DDE /* LargeBluetoothCollectionViewCell.swift */,
+				0ED7C4D92A52A5D300131DDE /* CacheClearCollectionViewCell.swift */,
 				0ED7C4D52A5258D600131DDE /* ShhCollectionViewCell.swift */,
 				0ED7C4D72A526C7D00131DDE /* HMACViewController.swift */,
 				0ED7C4CD2A4E79DF00131DDE /* TimerCollectionViewCell.swift */,
@@ -1397,6 +1400,7 @@
 				0E85AA0E2A1C62E6000676C2 /* DevelopersPresenter.swift in Sources */,
 				0E6C19C42A31AB3B00487114 /* Results+Extension.swift in Sources */,
 				0E85AA182A1CA98C000676C2 /* BatteryPresenter.swift in Sources */,
+				0ED7C4DA2A52A5D300131DDE /* CacheClearCollectionViewCell.swift in Sources */,
 				0EDB05A52A0D0191009E46A8 /* BaseEP.swift in Sources */,
 				0E84099429E2D759005EB879 /* MemoWriteViewController.swift in Sources */,
 				0E181EAE2A32FA2E003B9A67 /* ImageFileViewController.swift in Sources */,
