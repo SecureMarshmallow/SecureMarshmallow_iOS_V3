@@ -11,9 +11,12 @@ class WiFiViewController: BaseEP {
     }
     
     override func updateWith(_ controller: UIViewController) {
-        super.updateWith(controller)        
+        super.updateWith(controller)
+        
+        customImageView.image = UIImage(named: "WiFi")
+
     }
-    
+
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 6
     }

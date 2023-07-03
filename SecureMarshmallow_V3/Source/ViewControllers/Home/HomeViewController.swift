@@ -154,6 +154,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         switch item {
         case 1:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SamilInformationCollectionViewCell.identifier, for: indexPath) as! SamilInformationCollectionViewCell
+            cell.setImage(image: UIImage(named: "iPhone"))
             cell.layout()
             return cell
         case 1.1:
