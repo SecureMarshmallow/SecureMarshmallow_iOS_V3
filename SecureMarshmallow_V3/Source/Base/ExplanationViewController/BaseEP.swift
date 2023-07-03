@@ -22,7 +22,7 @@ class BaseEP: BaseVC {
         collectionView.showsHorizontalScrollIndicator = true
         collectionView.isScrollEnabled = true
         collectionView.isPagingEnabled = true
-        collectionView.showsHorizontalScrollIndicator = true
+        collectionView.showsHorizontalScrollIndicator = false
         
         collectionView.register(
             ExplanationCollectionViewCell.self,
@@ -83,7 +83,7 @@ class BaseEP: BaseVC {
 
         collectionView.snp.makeConstraints {
             $0.leading.trailing.equalToSuperview()
-            $0.height.equalTo(ExplanationCollectionViewCell.height * 5)
+            $0.height.equalTo(ExplanationCollectionViewCell.height * 4)
             $0.top.equalTo(nameLabel.snp.bottom).offset(5.0)
         }
     }
