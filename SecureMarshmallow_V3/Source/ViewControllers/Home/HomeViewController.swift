@@ -1,8 +1,11 @@
 import UIKit
+import CryptoKit
 import Then
 import IOSSecuritySuite
 
 class HomeViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    private let secretKey = SymmetricKey(size: .bits256)
     
     private lazy var navLabel: UILabel = {
         let label = UILabel()
@@ -15,7 +18,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     var collectionView: UICollectionView!
     var items: [[Double]] = [
-        [3, 1, 1.1, 1.2, 1.3, 2, 6, 7.1]
+        [3, 1, 1.1, 1.2, 1.3, 2, 6, 7.1, 7.2]
     ]
     
     let cellIdentifier = "cell"
@@ -39,9 +42,8 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         collectionView.register(MiddleCalculatorColloectionViewCell.self, forCellWithReuseIdentifier: MiddleCalculatorColloectionViewCell.identifier)
         collectionView.register(LargeBluetoothCollectionViewCell.self, forCellWithReuseIdentifier: LargeBluetoothCollectionViewCell.identifier)
         collectionView.register(ShhCollectionViewCell.self, forCellWithReuseIdentifier: ShhCollectionViewCell.identifier)
-        
         collectionView.register(TimerCollectionViewCell.self, forCellWithReuseIdentifier: TimerCollectionViewCell.identifier)
-
+        collectionView.register(HMACViewController.self, forCellWithReuseIdentifier: HMACViewController.identifier)
 
         collectionView.backgroundColor = .HomeBackgroundColor
         view.addSubview(collectionView)
@@ -202,6 +204,20 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
             cell.layout()
             cell.layer.cornerRadius = 20.0
             return cell
+        case 7.2:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HMACViewController.identifier, for: indexPath) as! HMACViewController
+            let isTampered = indexPath.item % 2 == 1
+            let message = isTampered ? "This is a tampered message." : "This is the original message."
+            if isTampered == true {
+                cell.setupImageView(UIImage(named: "bad")!)
+                cell.resultLabelTextColor(.red)
+            } else {
+                cell.setupImageView(UIImage(named: "good")!)
+                cell.resultLabelTextColor(.green)
+            }
+            let hmac = HMAC<SHA256>.authenticationCode(for: Data(message.utf8), using: secretKey)
+            cell.verifyMessage(isTampered: isTampered, hmac: hmac, secretKey: secretKey)
+            return cell
             
         default:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath)
@@ -265,6 +281,8 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         case 7:
             cellSize = CGSize(width: 180, height: 180)
         case 7.1:
+            cellSize = CGSize(width: 180, height: 180)
+        case 7.2:
             cellSize = CGSize(width: 180, height: 180)
         default:
             break
