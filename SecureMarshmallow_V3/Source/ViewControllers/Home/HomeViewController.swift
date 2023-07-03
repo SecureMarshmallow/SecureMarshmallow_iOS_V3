@@ -38,6 +38,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         collectionView.register(AlarmCollectionViewCell.self, forCellWithReuseIdentifier: AlarmCollectionViewCell.identifier)
         collectionView.register(MiddleCalculatorColloectionViewCell.self, forCellWithReuseIdentifier: MiddleCalculatorColloectionViewCell.identifier)
         collectionView.register(LargeBluetoothCollectionViewCell.self, forCellWithReuseIdentifier: LargeBluetoothCollectionViewCell.identifier)
+        collectionView.register(ShhCollectionViewCell.self, forCellWithReuseIdentifier: ShhCollectionViewCell.identifier)
         
         collectionView.register(TimerCollectionViewCell.self, forCellWithReuseIdentifier: TimerCollectionViewCell.identifier)
 
@@ -169,6 +170,11 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SamilInformationCollectionViewCell.identifier, for: indexPath) as! SamilInformationCollectionViewCell
             cell.setImage(image: UIImage(named: "WiFi"))
             return cell
+            
+        case 2:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ShhCollectionViewCell.identifier, for: indexPath) as! ShhCollectionViewCell
+            return cell
+            
         case 3:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TimerCollectionViewCell.identifier, for: indexPath) as! TimerCollectionViewCell
             
@@ -236,9 +242,9 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
             cellSize = CGSize(width: 80, height: 80)
         case 2:
             if traitCollection.horizontalSizeClass == .regular && traitCollection.verticalSizeClass == .regular {
-                cellSize = CGSize(width: 370, height: 230)
+                cellSize = CGSize(width: 370, height: 160)
             } else {
-                cellSize = CGSize(width: 390, height: 230)
+                cellSize = CGSize(width: 390, height: 160)
             }
         case 3:
             if traitCollection.horizontalSizeClass == .regular && traitCollection.verticalSizeClass == .regular {

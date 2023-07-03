@@ -123,6 +123,7 @@
 		0ED7C4CC2A4E645700131DDE /* LargeBluetoothCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED7C4CB2A4E645700131DDE /* LargeBluetoothCollectionViewCell.swift */; };
 		0ED7C4CE2A4E79DF00131DDE /* TimerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED7C4CD2A4E79DF00131DDE /* TimerCollectionViewCell.swift */; };
 		0ED7C4D22A502C3300131DDE /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED7C4D12A502C3300131DDE /* SignupViewController.swift */; };
+		0ED7C4D62A5258D600131DDE /* ShhCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED7C4D52A5258D600131DDE /* ShhCollectionViewCell.swift */; };
 		0EDB059F2A0CC247009E46A8 /* BatteryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDB059E2A0CC247009E46A8 /* BatteryViewController.swift */; };
 		0EDB05A12A0CC4E0009E46A8 /* Extensions+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDB05A02A0CC4E0009E46A8 /* Extensions+UIColor.swift */; };
 		0EDB05A32A0CD06F009E46A8 /* ExplanationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDB05A22A0CD06F009E46A8 /* ExplanationCollectionViewCell.swift */; };
@@ -301,6 +302,7 @@
 		0ED7C4CB2A4E645700131DDE /* LargeBluetoothCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeBluetoothCollectionViewCell.swift; sourceTree = "<group>"; };
 		0ED7C4CD2A4E79DF00131DDE /* TimerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerCollectionViewCell.swift; sourceTree = "<group>"; };
 		0ED7C4D12A502C3300131DDE /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		0ED7C4D52A5258D600131DDE /* ShhCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShhCollectionViewCell.swift; sourceTree = "<group>"; };
 		0EDB059E2A0CC247009E46A8 /* BatteryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryViewController.swift; sourceTree = "<group>"; };
 		0EDB05A02A0CC4E0009E46A8 /* Extensions+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIColor.swift"; sourceTree = "<group>"; };
 		0EDB05A22A0CD06F009E46A8 /* ExplanationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplanationCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -503,6 +505,7 @@
 				0E6275402A146EB100E8F8E9 /* SamilInformationCollectionViewCell.swift */,
 				0E85AA5E2A1F0A30000676C2 /* MiddleCalculatorColloectionViewCell.swift */,
 				0ED7C4CB2A4E645700131DDE /* LargeBluetoothCollectionViewCell.swift */,
+				0ED7C4D52A5258D600131DDE /* ShhCollectionViewCell.swift */,
 				0ED7C4CD2A4E79DF00131DDE /* TimerCollectionViewCell.swift */,
 				0E85AA6A2A1F946F000676C2 /* MiddleAlamCollectionViewCell.swift */,
 				0E6275422A14D17500E8F8E9 /* LargeInformationCollectionViewCell.swift */,
@@ -1490,6 +1493,7 @@
 				0E09A62929FF7E5B00EC6AE1 /* Extensions+NSObject.swift in Sources */,
 				0ECEF8B129FB98A2008E848E /* AppLogoViewController.swift in Sources */,
 				0EDB05A32A0CD06F009E46A8 /* ExplanationCollectionViewCell.swift in Sources */,
+				0ED7C4D62A5258D600131DDE /* ShhCollectionViewCell.swift in Sources */,
 				0EDB05A82A0D05C8009E46A8 /* OSViewController.swift in Sources */,
 				0E5686FC29FA341100EEEBD3 /* CoreDataManager.swift in Sources */,
 				0EDB059F2A0CC247009E46A8 /* BatteryViewController.swift in Sources */,
