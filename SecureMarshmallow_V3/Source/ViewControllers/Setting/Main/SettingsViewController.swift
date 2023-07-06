@@ -168,6 +168,7 @@ extension SettingsViewController {
             
         case .privacyPolicy:
             print("개인정보 처리 방침")
+            self.navigationController?.pushViewController(PrivacyViewController(), animated: true)
         case .termsofUse:
             print("이용 약관 클릭")
         case .howToUse:

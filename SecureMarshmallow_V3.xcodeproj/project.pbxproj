@@ -30,6 +30,7 @@
 		0E181EB02A32FAA8003B9A67 /* ImageFileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E181EAF2A32FAA8003B9A67 /* ImageFileCollectionViewCell.swift */; };
 		0E38B8952A41BAFC00520784 /* Clocks.json in Resources */ = {isa = PBXBuildFile; fileRef = 0E38B8942A41BAFC00520784 /* Clocks.json */; };
 		0E40E15029F3F36000615E86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E40E14F29F3F36000615E86 /* Assets.xcassets */; };
+		0E4B28932A5685E200769510 /* PrivacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4B28922A5685E200769510 /* PrivacyViewController.swift */; };
 		0E54CC972A1742FF00AFAA7D /* TaskCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E54CC962A1742FF00AFAA7D /* TaskCollectionViewCell.swift */; };
 		0E5686FC29FA341100EEEBD3 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5686FB29FA341100EEEBD3 /* CoreDataManager.swift */; };
 		0E5686FF29FA347300EEEBD3 /* SecureMarshmallow.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0E5686FD29FA347300EEEBD3 /* SecureMarshmallow.xcdatamodeld */; };
@@ -210,6 +211,7 @@
 		0E181EAF2A32FAA8003B9A67 /* ImageFileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFileCollectionViewCell.swift; sourceTree = "<group>"; };
 		0E38B8942A41BAFC00520784 /* Clocks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Clocks.json; path = "../../../../../../../Downloads/Swift_alarm_clock-master/myClock/Data/Clocks.json"; sourceTree = "<group>"; };
 		0E40E14F29F3F36000615E86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Assets.xcassets/Assets.xcassets; sourceTree = "<group>"; };
+		0E4B28922A5685E200769510 /* PrivacyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyViewController.swift; sourceTree = "<group>"; };
 		0E54CC962A1742FF00AFAA7D /* TaskCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCollectionViewCell.swift; sourceTree = "<group>"; };
 		0E5686FB29FA341100EEEBD3 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		0E5686FE29FA347300EEEBD3 /* SecureMarshmallow.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SecureMarshmallow.xcdatamodel; sourceTree = "<group>"; };
@@ -502,6 +504,14 @@
 			path = BaseView;
 			sourceTree = "<group>";
 		};
+		0E4B28942A5685FE00769510 /* Privacy */ = {
+			isa = PBXGroup;
+			children = (
+				0E4B28922A5685E200769510 /* PrivacyViewController.swift */,
+			);
+			path = Privacy;
+			sourceTree = "<group>";
+		};
 		0E62753F2A146E7200E8F8E9 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -597,6 +607,7 @@
 		0E8409B729E38CF8005EB879 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
+				0E4B28942A5685FE00769510 /* Privacy */,
 				0E71B8EF2A2B581900C6CEF0 /* Capture */,
 				0E85AA502A1EEE14000676C2 /* Bag */,
 				0ECEF8A729FB9249008E848E /* Main */,
@@ -1415,6 +1426,7 @@
 				0ED7C4D82A526C7D00131DDE /* HMACViewController.swift in Sources */,
 				0EFE323D29DFCE4300725EEE /* MemoListPresenterOld.swift in Sources */,
 				0E8409BD29E38D36005EB879 /* SettingsCell.swift in Sources */,
+				0E4B28932A5685E200769510 /* PrivacyViewController.swift in Sources */,
 				0E85AA0A2A1B68E6000676C2 /* DetailMemoPresenter.swift in Sources */,
 				0E8409BB29E38D26005EB879 /* SettingsItemType.swift in Sources */,
 				0ECEF8B529FB98C6008E848E /* AppLogoCell.swift in Sources */,

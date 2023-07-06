@@ -20,6 +20,12 @@ class BaseWebView: UIViewController, UIScrollViewDelegate {
         
         if let webView = webView {
             view.addSubview(webView)
+            
+            webView.snp.makeConstraints {
+                $0.top.equalTo(view.safeAreaLayoutGuide)
+                $0.trailing.leading.equalToSuperview()
+                $0.bottom.equalToSuperview()
+            }
         }
     }
     

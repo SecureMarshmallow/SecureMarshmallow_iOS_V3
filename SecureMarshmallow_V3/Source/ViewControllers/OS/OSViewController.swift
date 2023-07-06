@@ -14,7 +14,6 @@ class OSViewController: BaseEP {
     
     override func updateWith(_ controller: UIViewController) {
         super.updateWith(controller)
-        
         customImageView.image = UIImage(named: "iPhone")
     }
 }
