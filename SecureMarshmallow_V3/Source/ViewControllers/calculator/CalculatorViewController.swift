@@ -26,7 +26,8 @@ class CalculatorViewController: UIViewController {
         ["0", ".", "="]
     ]
 
-    private var currentNumber = ""
+    private var accumulator = 0.0
+    private var currentInput = ""
     private var currentOperator: Operator?
 
     private let resultLabel = UILabel().then {
@@ -40,15 +41,15 @@ class CalculatorViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         view.backgroundColor = .cellColor
         layout()
         navigation()
 
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        
         let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(handleLongGesture(_:)))
         collectionView.addGestureRecognizer(longPressGesture)
-        
-        collectionView.register(CalculatorCell.self, forCellWithReuseIdentifier: CalculatorCell.identifier)
     }
 
     private func navigation() {
@@ -203,41 +204,46 @@ extension CalculatorViewController {
         }
         handleButtonInput(buttonText)
     }
-
+    
     private func handleButtonInput(_ buttonText: String) {
         switch buttonText {
         case "AC":
-            currentNumber = ""
+            accumulator = 0.0
+            currentInput = ""
             resultLabel.text = "0"
         case "±":
-            if currentNumber.hasPrefix("-") {
-                currentNumber.removeFirst()
-            } else {
-                currentNumber.insert("-", at: currentNumber.startIndex)
+            if let input = Double(currentInput) {
+                currentInput = String(-input)
+                resultLabel.text = currentInput
             }
-            resultLabel.text = currentNumber
         case "%":
-            if let number = Double(currentNumber) {
-                currentNumber = String(number / 100)
-                resultLabel.text = currentNumber
+            if let input = Double(currentInput) {
+                accumulator = input / 100
+                currentInput = String(accumulator)
+                resultLabel.text = currentInput
+            }
+        case "0", "1", "2", "3", "4", "5", "6", "7", "8", "9":
+            currentInput += buttonText
+            resultLabel.text = currentInput
+        case ".":
+            if !currentInput.contains(".") {
+                currentInput += "."
+                resultLabel.text = currentInput
             }
         case "+", "-", "×", "÷":
             currentOperator = operatorForSymbol(buttonText)
-            resultLabel.text = currentNumber
-            currentNumber = ""
-            
+            if let input = Double(currentInput) {
+                accumulator = input
+                
+            }
+            currentInput = ""
         case "=":
             calculateResult()
-        case ".":
-            if !currentNumber.contains(".") {
-                currentNumber += buttonText
-                resultLabel.text = currentNumber
-            }
         default:
-            currentNumber += buttonText
-            resultLabel.text = currentNumber
+            break
         }
     }
+
     
     private func operatorForSymbol(_ symbol: String) -> Operator? {
         switch symbol {
@@ -255,31 +261,33 @@ extension CalculatorViewController {
     }
 
     private func calculateResult() {
-        guard let number1 = Double(currentNumber),
-              let operator1 = currentOperator,
-              let number2 = Double(resultLabel.text ?? "") else {
+        guard let input = Double(currentInput),
+              let operator1 = currentOperator else {
             return
         }
-        var result: Double = 0
 
-        guard let number2 = Double(currentNumber) else {
-            return
-        }
+        var result: Double = 0.0
 
         switch operator1 {
         case .plus:
-            result = number1 + number2
+            result = accumulator + input
         case .minus:
-            result = number1 - number2
+            result = accumulator - input
         case .multiply:
-            result = number1 * number2
+            result = accumulator * input
         case .divide:
-            result = number1 / number2
+            guard input != 0 else {
+                resultLabel.text = "Error"
+                return
+            }
+            result = accumulator / input
         }
 
-        currentNumber = String(result)
-        resultLabel.text = currentNumber
+        accumulator = result
         currentOperator = nil
+        currentInput = ""
+
+        let isInteger = floor(result) == result
+        resultLabel.text = isInteger ? String(format: "%.0f", result) : String(result)
     }
-    
 }

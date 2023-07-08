@@ -63,4 +63,19 @@ extension DevelopersPresenter: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("adsf")
+        if indexPath.row == 0 {
+            self.navigationController.present(BagiOSWebViewController(), animated: true)
+        }
+        
+        if indexPath.row == 1 {
+            self.navigationController.present(BagBackendWebViewController(), animated: true)
+        }
+        
+        if indexPath.row == 2 {
+            self.navigationController.present(BagFridaViewController(), animated: true)
+        }
+    }
 }

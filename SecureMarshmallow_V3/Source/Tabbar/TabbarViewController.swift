@@ -3,7 +3,7 @@ import UIKit
 class TapBarViewController: UITabBarController {
     
     private lazy var homeViewController: UINavigationController = {
-        let viewController = SecureMarshmallow_V3.HomeViewController()
+        let viewController = HomeViewController()
         let tabBarItem = UITabBarItem(title: "", image: UIImage(named: "Home_TapBar_Gray"), tag: 0)
         viewController.tabBarItem = tabBarItem
         let navigationView = UINavigationController(rootViewController: viewController)

@@ -1,14 +1,13 @@
 import UIKit
 import WebKit
 
-class BagBackendWebViewController: BaseWebView {
+class BagFridaViewController: BaseWebView {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Backend 버그 제보"
         self.navigationItem.largeTitleDisplayMode = .never
-        if let url = URL(string: "https://github.com/one3147") {
+        if let url = URL(string: "https://github.com/wldms615") {
             setupWebView(with: url)
         }
     }
