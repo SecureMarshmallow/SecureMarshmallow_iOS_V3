@@ -5,7 +5,7 @@ class CaptureTrackingViewController: UIViewController, UITableViewDelegate, UITa
     
     let tableView = UITableView()
     var times: [String] = []
-//    let detailMemoViewController = DetailMemoViewController()
+    let detailMemoViewController = MemoListViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
