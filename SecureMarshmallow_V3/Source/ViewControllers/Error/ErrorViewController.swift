@@ -15,13 +15,14 @@ class ErrorViewController: UIViewController {
     //불이 을렁이는 애니메이션을 주는 것이 animationView 입니다.
     internal var animationView: LottieAnimationView?
     
+    var errorTime: Int = 180
+    
     var lapCounter: Int = 0
     var mainLapCounter: Int = 0
     
     var lapTimer : Timer?
     var mainLapTimer : Timer?
     
-    var errorTime: Int = 180
     var userErrorCount = 0
     
     //errorTimer를 선언하는데 errorTimer는 말그대로 Timer Label을 말합니다.
@@ -140,15 +141,22 @@ extension ErrorViewController {
         
         // 둘다 0이면 끝났으니 화면 전환 코드를 수행합니다.
         if minute == 0 && second == 0 {
-            // 나중에 뷰추가 후 수정
-            print("비밀번호 호출 이벤트")
             lapTimer?.invalidate()
             mainLapTimer?.invalidate()
+            
+            DispatchQueue.main.async {
+                self.presentLoginViewController()
+            }
         }
         
         return String(format: "%02i:%02i", minute, second )
     }
     
+    private func presentLoginViewController() {
+        let loginViewController = LoginViewController()
+        loginViewController.modalPresentationStyle = .fullScreen
+        self.present(loginViewController, animated: true)
+    }
     
     @objc func mainLapTimerUpdate(){
         mainLapCounter += 1

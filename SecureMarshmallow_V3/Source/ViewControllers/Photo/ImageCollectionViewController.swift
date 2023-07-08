@@ -151,7 +151,6 @@ class ImageCollectionViewController: UIViewController {
         }
         
         collectionView.deleteItems(at: selectedItems)
-//        navigationItem.rightBarButtonItems?.last?.isEnabled = false
     }
     
     private func removeImage(imagePath: URL) {

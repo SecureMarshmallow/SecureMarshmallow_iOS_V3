@@ -12,7 +12,7 @@ class LoginPageViewController: UIViewController {
         $0.setTitle("로그인", for: .normal)
         $0.setTitleColor(UIColor.white, for: .normal)
         $0.backgroundColor = .black
-        $0.addTarget(self, action: #selector(loginTapped), for: .touchUpInside)
+        $0.addTarget(LoginPageViewController.self, action: #selector(loginTapped), for: .touchUpInside)
         $0.layer.cornerRadius = 10.0
     }
     
@@ -20,7 +20,7 @@ class LoginPageViewController: UIViewController {
         $0.setTitle("회원가입", for: .normal)
         $0.setTitleColor(UIColor.white, for: .normal)
         $0.backgroundColor = .black
-        $0.addTarget(self, action: #selector(signUpTapped), for: .touchUpInside)
+        $0.addTarget(LoginPageViewController.self, action: #selector(signUpTapped), for: .touchUpInside)
         $0.layer.cornerRadius = 10.0
     }
     
@@ -28,7 +28,7 @@ class LoginPageViewController: UIViewController {
         $0.setTitle("비밀번호 초기화", for: .normal)
         $0.setTitleColor(UIColor.white, for: .normal)
         $0.backgroundColor = .black
-        $0.addTarget(self, action: #selector(resetTapped), for: .touchUpInside)
+        $0.addTarget(LoginPageViewController.self, action: #selector(resetTapped), for: .touchUpInside)
         $0.layer.cornerRadius = 10.0
     }
     

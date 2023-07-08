@@ -6,6 +6,8 @@ class LoginViewController: UIViewController {
     
     private let baseURL = "https://2c33-2001-4430-c03f-3e17-b453-85f4-c1a8-643f.ngrok-free.app/"
     
+    private var failedLoginAttempts = 0
+    
     private lazy var keychainManager = KeychainManager(service: "com.secureMarshmallow-V3")
     
     private let marshmallowImage = UIImageView().then {
@@ -73,7 +75,7 @@ class LoginViewController: UIViewController {
     }
     
     @objc private func loginButtonTapped() {
-        
+            
         guard let username = usernameTextField.text,
               let password = passwordTextField.text else { return }
         
@@ -124,8 +126,38 @@ class LoginViewController: UIViewController {
                                 } else {
                                     self.showLoginStatusAlert(title: "Login 실패", message: "Invalid username or password")
                                 }
+                                
+                                self.failedLoginAttempts += 1
+                                
+                                if self.failedLoginAttempts == 5 {
+                                    self.presentErrorViewController(time: 1)
+                                }
+                                
+                                if self.failedLoginAttempts == 10 {
+                                    self.presentErrorViewController(time: 3)
+                                }
+                                
+                                if self.failedLoginAttempts == 15 {
+                                    self.presentErrorViewController(time: 5)
+                                }
+                                self.moveSignupButtonToRandomPosition()
                             }
                         } else {
+                            self.failedLoginAttempts += 1
+                            
+                            if self.failedLoginAttempts == 5 {
+                                self.presentErrorViewController(time: 1)
+                            }
+                            
+                            if self.failedLoginAttempts == 10 {
+                                self.presentErrorViewController(time: 3)
+                            }
+                            
+                            if self.failedLoginAttempts == 15 {
+                                self.presentErrorViewController(time: 5)
+                            }
+                            
+                            self.moveSignupButtonToRandomPosition()
                             self.showErrorAlert(title: "에러 발생", message: "서버 응답을 처리하는 도중 문제가 발생했습니다.")
                         }
                     }
@@ -140,6 +172,14 @@ class LoginViewController: UIViewController {
         }
         
         task.resume()
+    }
+
+    
+    private func presentErrorViewController(time: Int) {
+        let errorViewController = ErrorViewController()
+        errorViewController.errorTime = time * 60
+        errorViewController.modalPresentationStyle = .fullScreen
+        self.present(errorViewController, animated: true)
     }
     
     private func printStoredToken() {
@@ -162,5 +202,28 @@ class LoginViewController: UIViewController {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "확인", style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
+    }
+    
+    private func moveSignupButtonToRandomPosition() {
+        let screenWidth = view.bounds.width
+        let screenHeight = view.bounds.height
+        
+        let topSafeAreaHeight = view.safeAreaInsets.top + (self.navigationController?.navigationBar.bounds.height ?? 0)
+        let bottomSafeAreaHeight = view.safeAreaInsets.bottom
+        let availableHeight = screenHeight - topSafeAreaHeight - bottomSafeAreaHeight
+        
+        let randomX = CGFloat.random(in: 0...screenWidth - loginButton.bounds.width)
+        let randomY = CGFloat.random(in: topSafeAreaHeight...(topSafeAreaHeight + availableHeight - loginButton.bounds.height))
+        
+        loginButton.snp.remakeConstraints {
+            $0.top.equalToSuperview().offset(randomY)
+            $0.leading.equalToSuperview().offset(randomX)
+            $0.width.equalTo(80)
+            $0.height.equalTo(40)
+        }
+        
+        UIView.animate(withDuration: 0.3) {
+            self.view.layoutIfNeeded()
+        }
     }
 }
