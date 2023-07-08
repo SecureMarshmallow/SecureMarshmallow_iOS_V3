@@ -1,7 +1,7 @@
 import UIKit
 
 class CalendarPickerViewController: UIViewController {
-    
+    // MARK: Views
     private lazy var dimmedBackgroundView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false

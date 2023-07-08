@@ -1,5 +1,7 @@
 import Foundation
 
+// MARK: Global variables
+
 var clocks: [Clock] = []
 var subUrl: URL?
 var cells: [ClockCell] = []

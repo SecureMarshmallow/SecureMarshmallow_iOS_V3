@@ -3,7 +3,9 @@ import SnapKit
 import Then
 
 class StartController: UIViewController {
-
+    
+    // MARK: Views
+    
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
@@ -48,11 +50,15 @@ class StartController: UIViewController {
         ])
     }
     
+    // MARK: Button actions
+
     @objc func addTapped(_ sender:UIViewController!) {
         addClock()
         collectionView.reloadData()
     }
-
+    
+    // MARK: Functions
+    
     private func addClock() {
         let newID = UUID.init()
         clocks.append(Clock(id: newID, name: "이름 없음", daysOfWeek: [0], ringDays: [], isActivated: true, ringTime: Calendar.current.dateComponents([.hour, .minute], from: Date.init()), notificationId: UUID().uuidString, selectedDays: [true, true, true, true, true, true, true], selectedRingtone: [true, false]))
@@ -63,6 +69,8 @@ class StartController: UIViewController {
         writeToFile(location: subUrl!)
     }
 }
+
+// MARK: Collection view start controller
 
 extension StartController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

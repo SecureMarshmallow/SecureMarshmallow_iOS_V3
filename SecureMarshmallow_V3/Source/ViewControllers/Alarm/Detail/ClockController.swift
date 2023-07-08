@@ -16,7 +16,11 @@ class ClockController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
-    private let containerView = UIView()
+    private let containerView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
