@@ -2,6 +2,11 @@ import UIKit
 import SnapKit
 import Then
 
+struct ImageData {
+    let imageName: String
+    let imagePath: URL
+}
+
 class ImageCollectionViewController: UIViewController {
     
     private lazy var navLabel = UILabel().then {
@@ -25,7 +30,7 @@ class ImageCollectionViewController: UIViewController {
     }
     
     var cellData: ImageCellData
-    var images = [UIImage]()
+    var images = [ImageData]()
     var titleNavName: String = ""
     
     init(cellData: ImageCellData, navName: String) {
@@ -48,6 +53,8 @@ class ImageCollectionViewController: UIViewController {
         self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(customView: navLabel)
         self.navigationItem.leftItemsSupplementBackButton = true
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "folder.fill.badge.plus"), style: .plain, target: self, action: #selector(addImage))
+        
+        setupTrashButton()
                 
         view.addSubview(collectionView)
         
@@ -110,7 +117,7 @@ class ImageCollectionViewController: UIViewController {
                 for fileURL in fileURLs {
                     if fileURL.lastPathComponent.hasPrefix(cellData.imageName) {
                         if let image = UIImage(contentsOfFile: fileURL.path) {
-                            images.append(image)
+                            images.append(ImageData(imageName: "\(cellData.imageName)_\(UUID().uuidString).png", imagePath: fileURL))
                         }
                     }
                 }
@@ -124,27 +131,70 @@ class ImageCollectionViewController: UIViewController {
         present(imagePickerController, animated: true, completion: nil)
     }
     
-    @objc func handleLongGesture(gesture: UILongPressGestureRecognizer) {
-        switch gesture.state {
-        case .began:
-            guard let selectedIndexPath = collectionView.indexPathForItem(at: gesture.location(in: collectionView)) else {
-                break
-            }
-            collectionView.beginInteractiveMovementForItem(at: selectedIndexPath)
-        case .changed:
-            collectionView.updateInteractiveMovementTargetPosition(gesture.location(in: gesture.view!))
-        case .ended:
-            collectionView.endInteractiveMovement()
-        default:
-            collectionView.cancelInteractiveMovement()
+    private func setupTrashButton() {
+        let trashButton = UIBarButtonItem(image: UIImage(systemName: "trash"), style: .plain, target: self, action: #selector(deleteSelectedImages))
+        navigationItem.rightBarButtonItems = [trashButton]
+        trashButton.isEnabled = false
+    }
+    
+    @objc private func deleteSelectedImages() {
+         guard let selectedItems = collectionView.indexPathsForSelectedItems else {
+             return
+         }
+         
+         let sortedItems = selectedItems.sorted { $0.item > $1.item }
+         
+         for indexPath in sortedItems {
+             let imageData = images[indexPath.item]
+             removeImageFromUserDefaults(imageName: imageData.imageName)
+             removeImage(imagePath: imageData.imagePath)
+             images.remove(at: indexPath.item)
+         }
+         
+         collectionView.deleteItems(at: selectedItems)
+         navigationItem.rightBarButtonItems?.last?.isEnabled = false
+     }
+    
+    private func removeImage(imagePath: URL) {
+        let fileManager = FileManager.default
+        do {
+            try fileManager.removeItem(at: imagePath)
+        } catch {
+            print("Error deleting image: \(error)")
         }
     }
     
-    private func saveImage(_ image: UIImage) {
+    private func removeImageFromUserDefaults(imageName: String) {
+        let userDefaults = UserDefaults.standard
+        var imageKeys = userDefaults.stringArray(forKey: "ImageKeys") ?? []
+        if let index = imageKeys.firstIndex(of: imageName) {
+            imageKeys.remove(at: index)
+            userDefaults.set(imageKeys, forKey: "ImageKeys")
+        }
+    }
+    
+    private func deleteImage(image: UIImage) {
         if let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
-            let fileURL = documentDirectory.appendingPathComponent("\(cellData.imageName)_\(UUID().uuidString).png")
-            if let imageData = image.pngData() {
-                try? imageData.write(to: fileURL)
+            let fileURLs = try? FileManager.default.contentsOfDirectory(at: documentDirectory, includingPropertiesForKeys: nil)
+            if let fileURLs = fileURLs {
+                for fileURL in fileURLs {
+                    if let imageData = UIImage(contentsOfFile: fileURL.path),
+                       imageData.isEqual(image) {
+                        try? FileManager.default.removeItem(at: fileURL)
+                        removeImageFromUserDefaults(imageURL: fileURL)
+                    }
+                }
+            }
+        }
+    }
+    
+    private func removeImageFromUserDefaults(imageURL: URL) {
+        if let imageName = imageURL.lastPathComponent.split(separator: "_").first {
+            let userDefaults = UserDefaults.standard
+            var imageKeys = userDefaults.stringArray(forKey: "ImageKeys") ?? []
+            if let index = imageKeys.firstIndex(of: String(imageName)) {
+                imageKeys.remove(at: index)
+                userDefaults.set(imageKeys, forKey: "ImageKeys")
             }
         }
     }
@@ -157,7 +207,8 @@ extension ImageCollectionViewController: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImageCollectionViewCell.identifier, for: indexPath) as! ImageCollectionViewCell
-        cell.imageView.image = images[indexPath.row]
+        let imageData = images[indexPath.row]
+        cell.imageView.image = UIImage(contentsOfFile: imageData.imagePath.path)
         return cell
     }
 
@@ -204,14 +255,38 @@ extension ImageCollectionViewController: UICollectionViewDelegateFlowLayout {
 extension ImageCollectionViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[.editedImage] as? UIImage {
-            saveImage(image)
-            images.append(image)
+            let imageData = saveImage(image)
+            images.append(imageData)
         } else if let image = info[.originalImage] as? UIImage {
-            saveImage(image)
-            images.append(image)
+            let imageData = saveImage(image)
+            images.append(imageData)
         }
         collectionView.reloadData()
         dismiss(animated: true, completion: nil)
     }
+    
+    private func saveImage(_ image: UIImage) -> ImageData {
+        var savedImageData: ImageData? = nil
+        if let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+            let imageName = "\(cellData.imageName)_\(UUID().uuidString).png"
+            let fileURL = documentDirectory.appendingPathComponent(imageName)
+            if let imageData = image.pngData() {
+                try? imageData.write(to: fileURL)
+                saveImageToUserDefaults(imageURL: fileURL)
+                savedImageData = ImageData(imageName: imageName, imagePath: fileURL)
+            }
+        }
+        return savedImageData ?? ImageData(imageName: "", imagePath: URL(fileURLWithPath: ""))
+    }
+    
+    private func saveImageToUserDefaults(imageURL: URL) {
+        if let imageName = imageURL.lastPathComponent.split(separator: "_").first {
+            let userDefaults = UserDefaults.standard
+            var imageKeys = userDefaults.stringArray(forKey: "ImageKeys") ?? []
+            if !imageKeys.contains(String(imageName)) {
+                imageKeys.append(String(imageName))
+                userDefaults.set(imageKeys, forKey: "ImageKeys")
+            }
+        }
+    }
 }
-
