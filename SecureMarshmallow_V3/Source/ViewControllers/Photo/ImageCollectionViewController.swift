@@ -22,7 +22,7 @@ class ImageCollectionViewController: UIViewController {
         formatter.dateFormat = "yyyy-MM-dd HH:mm"
         return formatter
     }()
-    
+        
     let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout()).then {
         $0.backgroundColor = .cellColor
         $0.register(ImageCollectionViewCell.self, forCellWithReuseIdentifier: ImageCollectionViewCell.identifier)
@@ -50,12 +50,17 @@ class ImageCollectionViewController: UIViewController {
         
         navLabel.text = "앨범 / \(titleNavName)"
         
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(customView: navLabel)
-        self.navigationItem.leftItemsSupplementBackButton = true
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "folder.fill.badge.plus"), style: .plain, target: self, action: #selector(addImage))
+        let trashButton = UIBarButtonItem(image: UIImage(systemName: "trash"), style: .plain, target: self, action: #selector(deleteSelectedImages))
+        trashButton.isEnabled = false
         
-        setupTrashButton()
-                
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(customView: navLabel)
+
+        self.navigationItem.leftItemsSupplementBackButton = true
+        
+        navigationItem.rightBarButtonItems = [trashButton, UIBarButtonItem(image: UIImage(systemName: "folder.fill.badge.plus"), style: .plain, target: self, action: #selector(addImage))]
+
+        
+                        
         view.addSubview(collectionView)
         
         collectionView.snp.makeConstraints {
@@ -131,29 +136,23 @@ class ImageCollectionViewController: UIViewController {
         present(imagePickerController, animated: true, completion: nil)
     }
     
-    private func setupTrashButton() {
-        let trashButton = UIBarButtonItem(image: UIImage(systemName: "trash"), style: .plain, target: self, action: #selector(deleteSelectedImages))
-        navigationItem.rightBarButtonItems = [trashButton]
-        trashButton.isEnabled = false
-    }
-    
     @objc private func deleteSelectedImages() {
-         guard let selectedItems = collectionView.indexPathsForSelectedItems else {
-             return
-         }
-         
-         let sortedItems = selectedItems.sorted { $0.item > $1.item }
-         
-         for indexPath in sortedItems {
-             let imageData = images[indexPath.item]
-             removeImageFromUserDefaults(imageName: imageData.imageName)
-             removeImage(imagePath: imageData.imagePath)
-             images.remove(at: indexPath.item)
-         }
-         
-         collectionView.deleteItems(at: selectedItems)
-         navigationItem.rightBarButtonItems?.last?.isEnabled = false
-     }
+        guard let selectedItems = collectionView.indexPathsForSelectedItems else {
+            return
+        }
+        
+        let sortedItems = selectedItems.sorted { $0.item > $1.item }
+        
+        for indexPath in sortedItems {
+            let imageData = images[indexPath.item]
+            removeImageFromUserDefaults(imageName: imageData.imageName)
+            removeImage(imagePath: imageData.imagePath)
+            images.remove(at: indexPath.item)
+        }
+        
+        collectionView.deleteItems(at: selectedItems)
+//        navigationItem.rightBarButtonItems?.last?.isEnabled = false
+    }
     
     private func removeImage(imagePath: URL) {
         let fileManager = FileManager.default

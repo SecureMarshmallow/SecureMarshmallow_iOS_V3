@@ -9,7 +9,7 @@ struct ImageCellData {
 
 class ImageFileViewController: UIViewController {
     var imageCellData = [ImageCellData]()
-    var isDeleteModeEnabled = false // 추가된 변수
+    var isDeleteModeEnabled = false
 
     private lazy var navLabel = UILabel().then {
         $0.textColor = UIColor.black
@@ -125,7 +125,6 @@ class ImageFileViewController: UIViewController {
 
             let trashIcon = UIBarButtonItem(image: UIImage(systemName: "trash"), style: .plain, target: self, action: #selector(deleteButtonTapped))
             self.navigationItem.rightBarButtonItems = [trashIcon, UIBarButtonItem(image: UIImage(systemName: "folder.fill.badge.plus"), style: .plain, target: self, action: #selector(showAddCellAlert))]
-            
             let alertController = UIAlertController(title: "삭제", message: "삭제가 비활성화됨", preferredStyle: .alert)
             let deleteAction = UIAlertAction(title: "확인", style: .default, handler: { _ in
                 print("확인")
