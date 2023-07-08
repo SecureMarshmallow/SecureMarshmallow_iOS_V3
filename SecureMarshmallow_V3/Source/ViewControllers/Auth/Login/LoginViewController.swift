@@ -6,6 +6,8 @@ class LoginViewController: UIViewController {
     
     private let baseURL = "https://2c33-2001-4430-c03f-3e17-b453-85f4-c1a8-643f.ngrok-free.app/"
     
+    private lazy var keychainManager = KeychainManager(service: "com.secureMarshmallow-V3")
+    
     private let marshmallowImage = UIImageView().then {
         $0.image = UIImage(named: "TransparentLogo")
     }
@@ -74,7 +76,7 @@ class LoginViewController: UIViewController {
         
         guard let username = usernameTextField.text,
               let password = passwordTextField.text else { return }
-              
+        
         let parameters = [
             "id": username,
             "password": password
@@ -99,55 +101,64 @@ class LoginViewController: UIViewController {
                 if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
                     DispatchQueue.main.async {
                         if let success = json["success"] as? Bool, success {
-                            self.showLoginSuccessAlert(username: username)
-                            print("login 성공 \(username)")
+                            if let token = json["access_token"] as? String {
+                                let status = self.keychainManager.storeToken(token, forKey: "access_token")
+                                if status == errSecSuccess {
+                                    print("Token saved in Keychain")
+                                } else {
+                                    print("Failed to save token in Keychain, OSStatus: \(status)")
+                                }
+                                print("Token: \(token)")
+                                self.printStoredToken()
+                                self.showLoginStatusAlert(title: "Login 성공", message: "Welcome, \(username)!")
+                            } else {
+                                if let errorDescription = json["error"] as? String {
+                                    switch errorDescription {
+                                    case "Invalid Request.":
+                                        self.showErrorAlert(title: "에러 발생", message: "요청한 데이터가 누락되거나 적정 길이를 초과했습니다.")
+                                    case "Invalid request method":
+                                        self.showErrorAlert(title: "에러 발생", message: "허용되지 않는 메서드를 사용했습니다.")
+                                    default:
+                                        self.showLoginStatusAlert(title: "Login 실패", message: "Invalid username or password")
+                                    }
+                                } else {
+                                    self.showLoginStatusAlert(title: "Login 실패", message: "Invalid username or password")
+                                }
+                            }
                         } else {
-                            self.moveLoginButtonToRandomPosition()
-                            self.showLoginFailureAlert()
+                            self.showErrorAlert(title: "에러 발생", message: "서버 응답을 처리하는 도중 문제가 발생했습니다.")
                         }
                     }
                 }
             } catch {
                 print("Error decoding JSON: \(error.localizedDescription)")
                 print("Failed JSON data: \(String(data: data, encoding: .utf8) ?? "")")
+                DispatchQueue.main.async {
+                    self.showErrorAlert(title: "에러 발생", message: "서버 응답을 처리하는 도중 문제가 발생했습니다.")
+                }
             }
         }
         
         task.resume()
     }
     
-    private func showLoginSuccessAlert(username: String) {
-        let alert = UIAlertController(title: "Login 성공", message: "Welcome, \(username)!", preferredStyle: .alert)
+    private func printStoredToken() {
+        if let accessToken = keychainManager.getToken(forKey: "access_token") {
+            print("Stored Token: \(accessToken)")
+        } else {
+            print("No token found")
+        }
+    }
+    
+    private func showLoginStatusAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
     }
     
-    private func showLoginFailureAlert() {
-        let alert = UIAlertController(title: "Login 실패", message: "Invalid username or password", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+    private func showErrorAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "확인", style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
-    }
-    
-    private func moveLoginButtonToRandomPosition() {
-        let screenWidth = view.bounds.width
-        let screenHeight = view.bounds.height
-        
-        let topSafeAreaHeight = view.safeAreaInsets.top + (self.navigationController?.navigationBar.bounds.height ?? 0)
-        let bottomSafeAreaHeight = view.safeAreaInsets.bottom
-        let availableHeight = screenHeight - topSafeAreaHeight - bottomSafeAreaHeight
-        
-        let randomX = CGFloat.random(in: 0...screenWidth - loginButton.bounds.width)
-        let randomY = CGFloat.random(in: topSafeAreaHeight...(topSafeAreaHeight + availableHeight - loginButton.bounds.height))
-        
-        loginButton.snp.remakeConstraints {
-            $0.top.equalToSuperview().offset(randomY)
-            $0.leading.equalToSuperview().offset(randomX)
-            $0.width.equalTo(80)
-            $0.height.equalTo(40)
-        }
-        
-        UIView.animate(withDuration: 0.3) {
-            self.view.layoutIfNeeded()
-        }
     }
 }

@@ -134,6 +134,7 @@
 		0EDB05A82A0D05C8009E46A8 /* OSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDB05A72A0D05C8009E46A8 /* OSViewController.swift */; };
 		0EDB05B32A0DADB9009E46A8 /* FileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDB05B22A0DADB9009E46A8 /* FileViewController.swift */; };
 		0EDB05F52A0E3FBA009E46A8 /* WiFiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDB05F42A0E3FBA009E46A8 /* WiFiViewController.swift */; };
+		0EEFAF962A5916CA00D00B1B /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEFAF952A5916CA00D00B1B /* KeychainManager.swift */; };
 		0EFE31D229DF9EFE00725EEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFE31D129DF9EFE00725EEE /* AppDelegate.swift */; };
 		0EFE31D429DF9EFE00725EEE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFE31D329DF9EFE00725EEE /* SceneDelegate.swift */; };
 		0EFE31E129DF9EFF00725EEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EFE31DF29DF9EFF00725EEE /* LaunchScreen.storyboard */; };
@@ -316,6 +317,7 @@
 		0EDB05A72A0D05C8009E46A8 /* OSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSViewController.swift; sourceTree = "<group>"; };
 		0EDB05B22A0DADB9009E46A8 /* FileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileViewController.swift; sourceTree = "<group>"; };
 		0EDB05F42A0E3FBA009E46A8 /* WiFiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFiViewController.swift; sourceTree = "<group>"; };
+		0EEFAF952A5916CA00D00B1B /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		0EFE31CE29DF9EFE00725EEE /* SecureMarshmallow_V3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecureMarshmallow_V3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EFE31D129DF9EFE00725EEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0EFE31D329DF9EFE00725EEE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -1095,6 +1097,7 @@
 			children = (
 				0EFE323E29DFCE8200725EEE /* UserDefaultsManager.swift */,
 				0E5686FB29FA341100EEEBD3 /* CoreDataManager.swift */,
+				0EEFAF952A5916CA00D00B1B /* KeychainManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -1461,6 +1464,7 @@
 				0E09A62C2A01EDF800EC6AE1 /* ImageCollectionViewController.swift in Sources */,
 				0EC03DA32A10F210007CD53C /* CalendarPickerHeaderView.swift in Sources */,
 				0E85AA1C2A1CB787000676C2 /* FilePresenter.swift in Sources */,
+				0EEFAF962A5916CA00D00B1B /* KeychainManager.swift in Sources */,
 				0EC03D782A10E630007CD53C /* RepeatTableViewController.swift in Sources */,
 				0EC03D8F2A10E99E007CD53C /* Extensions+UIStackView.swift in Sources */,
 				0EFE31D429DF9EFE00725EEE /* SceneDelegate.swift in Sources */,
