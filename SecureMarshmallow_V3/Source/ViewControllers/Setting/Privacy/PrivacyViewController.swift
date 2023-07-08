@@ -1,10 +1,3 @@
-//
-//  PrivacyViewController.swift
-//  SecureMarshmallow_V3
-//
-//  Created by 박준하 on 2023/07/06.
-//
-
 import UIKit
 import WebKit
 

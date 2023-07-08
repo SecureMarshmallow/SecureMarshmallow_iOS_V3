@@ -1,10 +1,3 @@
-//
-//  ImageFileCollectionViewCell.swift
-//  SecureMarshmallow_V3
-//
-//  Created by 박준하 on 2023/06/09.
-//
-
 import UIKit
 import SnapKit
 import Then
