@@ -222,11 +222,10 @@ extension CalculatorViewController {
                 resultLabel.text = currentNumber
             }
         case "+", "-", "×", "÷":
-            if let number = Double(currentNumber) {
-                currentNumber = ""
-                currentOperator = operatorForSymbol(buttonText)
-                resultLabel.text = currentNumber
-            }
+            currentOperator = operatorForSymbol(buttonText)
+            resultLabel.text = currentNumber
+            currentNumber = ""
+            
         case "=":
             calculateResult()
         case ".":
@@ -257,10 +256,10 @@ extension CalculatorViewController {
 
     private func calculateResult() {
         guard let number1 = Double(currentNumber),
-              let operator1 = currentOperator else {
+              let operator1 = currentOperator,
+              let number2 = Double(resultLabel.text ?? "") else {
             return
         }
-
         var result: Double = 0
 
         guard let number2 = Double(currentNumber) else {

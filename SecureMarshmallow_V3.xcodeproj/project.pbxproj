@@ -135,6 +135,7 @@
 		0EDB05B32A0DADB9009E46A8 /* FileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDB05B22A0DADB9009E46A8 /* FileViewController.swift */; };
 		0EDB05F52A0E3FBA009E46A8 /* WiFiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDB05F42A0E3FBA009E46A8 /* WiFiViewController.swift */; };
 		0EEFAF962A5916CA00D00B1B /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEFAF952A5916CA00D00B1B /* KeychainManager.swift */; };
+		0EEFAF982A592DA800D00B1B /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEFAF972A592DA800D00B1B /* LoginPageViewController.swift */; };
 		0EFE31D229DF9EFE00725EEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFE31D129DF9EFE00725EEE /* AppDelegate.swift */; };
 		0EFE31D429DF9EFE00725EEE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFE31D329DF9EFE00725EEE /* SceneDelegate.swift */; };
 		0EFE31E129DF9EFF00725EEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EFE31DF29DF9EFF00725EEE /* LaunchScreen.storyboard */; };
@@ -318,6 +319,7 @@
 		0EDB05B22A0DADB9009E46A8 /* FileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileViewController.swift; sourceTree = "<group>"; };
 		0EDB05F42A0E3FBA009E46A8 /* WiFiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFiViewController.swift; sourceTree = "<group>"; };
 		0EEFAF952A5916CA00D00B1B /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
+		0EEFAF972A592DA800D00B1B /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
 		0EFE31CE29DF9EFE00725EEE /* SecureMarshmallow_V3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecureMarshmallow_V3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EFE31D129DF9EFE00725EEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0EFE31D329DF9EFE00725EEE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -557,6 +559,7 @@
 			children = (
 				0ED7C4D02A502C0F00131DDE /* SignUp */,
 				0ED7C4CF2A502BFB00131DDE /* Login */,
+				0EEFAF972A592DA800D00B1B /* LoginPageViewController.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -1485,6 +1488,7 @@
 				0E71B8F82A2CB28500C6CEF0 /* LoginViewController.swift in Sources */,
 				0E71B8F32A2B5F0800C6CEF0 /* CaptureTrackingPresenter.swift in Sources */,
 				0E09A62F2A01F70300EC6AE1 /* ImageCollectionViewCell.swift in Sources */,
+				0EEFAF982A592DA800D00B1B /* LoginPageViewController.swift in Sources */,
 				0EDB05F52A0E3FBA009E46A8 /* WiFiViewController.swift in Sources */,
 				0E09A62529FF7DB600EC6AE1 /* DevelopersViewController.swift in Sources */,
 				0E85AA582A1EF0C7000676C2 /* BagPresenter.swift in Sources */,

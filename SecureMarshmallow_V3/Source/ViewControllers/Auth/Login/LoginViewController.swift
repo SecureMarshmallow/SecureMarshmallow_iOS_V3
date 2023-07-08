@@ -149,13 +149,15 @@ class LoginViewController: UIViewController {
             print("No token found")
         }
     }
-    
     private func showLoginStatusAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
+            let tapBarViewController = TapBarViewController()
+            tapBarViewController.modalPresentationStyle = .fullScreen
+            self.present(tapBarViewController, animated: true)
+        }))
         present(alert, animated: true, completion: nil)
     }
-    
     private func showErrorAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "확인", style: .default, handler: nil))
