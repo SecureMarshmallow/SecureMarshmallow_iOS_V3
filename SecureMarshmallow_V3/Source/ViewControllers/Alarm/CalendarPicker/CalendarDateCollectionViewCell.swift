@@ -1,30 +1,24 @@
 import UIKit
+import SnapKit
+import Then
 
 class CalendarDateCollectionViewCell: UICollectionViewCell {
     
-    private lazy var selectionBackgroundView: UIView = {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.clipsToBounds = true
-        view.backgroundColor = .systemRed
-        return view
-    }()
+    private lazy var selectionBackgroundView = UIView().then {
+        $0.clipsToBounds = true
+        $0.backgroundColor = .systemRed
+    }
     
-    private lazy var numberLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.textAlignment = .center
-        label.font = UIFont.systemFont(ofSize: 18, weight: .medium)
-        label.textColor = .label
-        return label
-    }()
+    private lazy var numberLabel = UILabel().then {
+        $0.textAlignment = .center
+        $0.font = UIFont.systemFont(ofSize: 18, weight: .medium)
+        $0.textColor = .label
+    }
     
-    private lazy var accessibilityDateFormatter: DateFormatter = {
-        let dateFormatter = DateFormatter()
-        dateFormatter.calendar = Calendar(identifier: .gregorian)
-        dateFormatter.setLocalizedDateFormatFromTemplate("EEEE, MMMM d")
-        return dateFormatter
-    }()
+    private lazy var accessibilityDateFormatter = DateFormatter().then {
+        $0.calendar = Calendar(identifier: .gregorian)
+        $0.setLocalizedDateFormatFromTemplate("EEEE, MMMM d")
+    }
     
     static let reuseIdentifier = String(describing: CalendarDateCollectionViewCell.self)
     

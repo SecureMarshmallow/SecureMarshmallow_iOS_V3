@@ -7,14 +7,11 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     private let secretKey = SymmetricKey(size: .bits256)
     
-    private lazy var navLabel: UILabel = {
-        let label = UILabel()
-        label.textColor = UIColor.black
-        label.text = "SecureMarshmallow"
-        label.font = .systemFont(ofSize: 24.0, weight: .bold)
-        label.numberOfLines = 0
-        return label
-    }()
+    private lazy var navLabel = UILabel().then {
+        $0.textColor = UIColor.black
+        $0.text = "SecureMarshmallow"
+        $0.font = .systemFont(ofSize: 24.0, weight: .bold)
+    }
     
     var collectionView: UICollectionView!
     var items: [[Double]] = [

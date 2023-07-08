@@ -1,28 +1,25 @@
 import UIKit
+import SnapKit
+import Then
 
 class ExplanationCollectionViewCell: UICollectionViewCell {
     static var height: CGFloat { 70.0 }
     
     static let identifier = "ExplanationCollectionViewCell"
 
-    var titleLabel: UILabel = {
-        let label = UILabel()
-        label.text = "안녕"
-        label.font = .systemFont(ofSize: 17.0, weight: .semibold)
-        label.textColor = .black
-        label.numberOfLines = 2
-        
-        return label
-    }()
+    var titleLabel = UILabel().then {
+        $0.text = "안녕"
+        $0.font = .systemFont(ofSize: 17.0, weight: .semibold)
+        $0.textColor = .black
+        $0.numberOfLines = 2
+    }
 
-    var descriptionLabel: UILabel = {
-        let label = UILabel()
-        label.text = "흐흐흐흐"
-        label.numberOfLines = 1
-        label.font = .systemFont(ofSize: 17.0, weight: .semibold)
-        label.textColor = .secondaryLabel
-        return label
-     }()
+    var descriptionLabel = UILabel().then {
+        $0.text = "흐흐흐흐"
+        $0.numberOfLines = 1
+        $0.font = .systemFont(ofSize: 17.0, weight: .semibold)
+        $0.textColor = .secondaryLabel
+    }
     
     public func layout() {
         

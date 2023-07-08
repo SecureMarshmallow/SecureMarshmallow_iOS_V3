@@ -1,4 +1,6 @@
 import UIKit
+import SnapKit
+import Then
 
 class ClockController: UIViewController {
     
@@ -14,11 +16,7 @@ class ClockController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
-    private let containerView: UIView = {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
+    private let containerView = UIView()
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -2,6 +2,7 @@ import Foundation
 import RealmSwift
 
 class Memo: Object {
+    //로컬 저장
     @Persisted(primaryKey: true) var _id: ObjectId
     @Persisted(indexed: true) var title: String
     @Persisted var content: String?

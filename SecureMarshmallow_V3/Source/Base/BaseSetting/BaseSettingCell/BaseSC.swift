@@ -14,12 +14,10 @@ class BaseSC<T>: UITableViewCell {
         $0.font = .systemFont(ofSize: 18, weight: .regular)
     }
     
-    internal let switchControl: UISwitch = {
-        let switchControl = UISwitch()
-        switchControl.onTintColor = .systemGreen
-        switchControl.isHidden = true
-        return switchControl
-    }()
+    internal let switchControl = UISwitch().then {
+        $0.onTintColor = .systemGreen
+        $0.isHidden = true
+    }
     
     internal lazy var stackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [iconImageView, titleLabel, UIView(), switchControl])
