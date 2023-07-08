@@ -4,6 +4,8 @@ import Then
 
 class SignupViewController: UIViewController {
     
+    private let baseURL = "https://2c33-2001-4430-c03f-3e17-b453-85f4-c1a8-643f.ngrok-free.app/"
+    
     private let marshmallowImage = UIImageView().then {
         $0.image = UIImage(named: "TransparentLogo")
     }
@@ -27,7 +29,6 @@ class SignupViewController: UIViewController {
         $0.borderStyle = .roundedRect
         $0.backgroundColor = .cellColor
         $0.setPlaceholder(color: .cellTitleColor)
-        $0.isSecureTextEntry = true
     }
     
     private let passwordTextField = UITextField().then {
@@ -98,25 +99,75 @@ class SignupViewController: UIViewController {
     }
     
     @objc private func signupButtonTapped() {
-        let enteredUsername = idTextField.text ?? ""
-        let enteredPassword = passwordTextField.text ?? ""
-        
-        if enteredPassword == "password" {
-            showSignupSuccessAlert(username: enteredUsername)
-        } else {
-            moveSignupButtonToRandomPosition()
-            showLoginFailureAlert()
+        guard let id = idTextField.text,
+              let email = emailTextField.text,
+              let nickname = nicknameTextField.text,
+              let password = passwordTextField.text else { return }
+
+        let parameters = [
+            "id": id,
+            "password": password,
+            "email": email,
+            "nickname": nickname
+        ]
+
+        guard let url = URL(string: baseURL + "api/signup") else { return }
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+
+        do {
+            let jsonData = try JSONSerialization.data(withJSONObject: parameters, options: .prettyPrinted)
+            request.httpBody = jsonData
+        } catch {
+            print("Error creating JSON data: \(error.localizedDescription)")
+            return
         }
+
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let data = data, error == nil else {
+                print("Error getting data: \(error?.localizedDescription ?? "No data")")
+                return
+            }
+
+            if let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode != 200 {
+                print("Server responded with status code \(httpResponse.statusCode)")
+                return
+            }
+
+            do {
+                if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: AnyObject] {
+                    DispatchQueue.main.async {
+                        if let success = json["success"] as? Bool {
+                            if success {
+                                self.showSignupSuccessAlert(username: id)
+                                print("signup 성공 \(id)")
+                            } else {
+                                self.showLoginFailureAlert()
+                                self.moveSignupButtonToRandomPosition()
+                            }
+                        } else {
+                            print("Error parsing JSON: 'success' key missing")
+                        }
+                    }
+                }
+            } catch {
+                print("Error decoding JSON: \(error.localizedDescription)")
+                return
+            }
+        }
+
+        task.resume()
     }
     
     private func showSignupSuccessAlert(username: String) {
-        let alert = UIAlertController(title: "Login 성공", message: "Welcome, \(username)!", preferredStyle: .alert)
+        let alert = UIAlertController(title: "sign 성공", message: "Welcome, \(username)!", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
     }
     
     private func showLoginFailureAlert() {
-        let alert = UIAlertController(title: "Login 실패", message: "Invalid username or password", preferredStyle: .alert)
+        let alert = UIAlertController(title: "sign 실패", message: "Invalid username or password", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
     }

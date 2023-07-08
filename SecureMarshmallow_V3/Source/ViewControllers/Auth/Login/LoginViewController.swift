@@ -4,6 +4,8 @@ import Then
 
 class LoginViewController: UIViewController {
     
+    private let baseURL = "https://2c33-2001-4430-c03f-3e17-b453-85f4-c1a8-643f.ngrok-free.app/"
+    
     private let marshmallowImage = UIImageView().then {
         $0.image = UIImage(named: "TransparentLogo")
     }
@@ -69,15 +71,49 @@ class LoginViewController: UIViewController {
     }
     
     @objc private func loginButtonTapped() {
-        let enteredUsername = usernameTextField.text ?? ""
-        let enteredPassword = passwordTextField.text ?? ""
         
-        if enteredPassword == "password" {
-            showLoginSuccessAlert(username: enteredUsername)
-        } else {
-            moveLoginButtonToRandomPosition()
-            showLoginFailureAlert()
+        guard let username = usernameTextField.text,
+              let password = passwordTextField.text else { return }
+              
+        let parameters = [
+            "id": username,
+            "password": password
+        ]
+        
+        guard let url = URL(string: baseURL + "api/login") else { return }
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        do {
+            let jsonData = try JSONSerialization.data(withJSONObject: parameters, options: .prettyPrinted)
+            request.httpBody = jsonData
+        } catch {
+            print("Error creating JSON data")
+            return
         }
+        
+        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+            guard let data = data else { return }
+            do {
+                if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
+                    DispatchQueue.main.async {
+                        if let success = json["success"] as? Bool, success {
+                            self.showLoginSuccessAlert(username: username)
+                            print("login 성공 \(username)")
+                        } else {
+                            self.moveLoginButtonToRandomPosition()
+                            self.showLoginFailureAlert()
+                        }
+                    }
+                }
+            } catch {
+                print("Error decoding JSON: \(error.localizedDescription)")
+                print("Failed JSON data: \(String(data: data, encoding: .utf8) ?? "")")
+            }
+        }
+        
+        task.resume()
     }
     
     private func showLoginSuccessAlert(username: String) {
