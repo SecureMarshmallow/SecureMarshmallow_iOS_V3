@@ -15,7 +15,6 @@ class WriteViewController: BaseVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     

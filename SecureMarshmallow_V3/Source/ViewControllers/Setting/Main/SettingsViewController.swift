@@ -40,27 +40,21 @@ class SettingsViewController: BaseSV {
         let section1 = [SettingsItem(type: .gmailInformation),
                         SettingsItem(type: .idInformation)]
         let section2 = [SettingsItem(type: .appPassword),
-                        SettingsItem(type: .intrusionInformation),
                         SettingsItem(type: .appTracking),
                         SettingsItem(type: .captureTracking)
         ]
 
-        let section3 = [SettingsItem(type: .changeAppIcon),
-                        SettingsItem(type: .changeAppTheme)]
+        let section3 = [SettingsItem(type: .changeAppIcon)]
 
         let section4 = [SettingsItem(type: .help),
                         SettingsItem(type: .bugReport)]
 
-        let section5 = [SettingsItem(type: .feedback)]
-
         let section6 = [SettingsItem(type: .appShare),
-                        SettingsItem(type: .privacyPolicy),
-                        SettingsItem(type: .termsofUse)]
+                        SettingsItem(type: .privacyPolicy)]
 
-        let section7 = [SettingsItem(type: .howToUse),
-                        SettingsItem(type: .developerIformation)]
+        let section7 = [SettingsItem(type: .developerIformation)]
 
-        settingsItems = [section1, section2, section3, section4, section5, section6, section7]
+        settingsItems = [section1, section2, section3, section4, section6, section7]
     }
 }
 

@@ -197,11 +197,6 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
             cell.layout()
             cell.layer.cornerRadius = 20.0
             return cell
-        case 7:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MiddleAlamCollectionViewCell.identifier, for: indexPath) as! MiddleAlamCollectionViewCell
-            cell.backgroundColor = .white
-            cell.layout()
-            return cell
         case 7.1:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AlarmCollectionViewCell.identifier, for: indexPath) as! AlarmCollectionViewCell
             cell.backgroundColor = .white
