@@ -30,6 +30,8 @@
 		0E181EB02A32FAA8003B9A67 /* ImageFileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E181EAF2A32FAA8003B9A67 /* ImageFileCollectionViewCell.swift */; };
 		0E38B8952A41BAFC00520784 /* Clocks.json in Resources */ = {isa = PBXBuildFile; fileRef = 0E38B8942A41BAFC00520784 /* Clocks.json */; };
 		0E40E15029F3F36000615E86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E40E14F29F3F36000615E86 /* Assets.xcassets */; };
+		0E49B7DA2A5A606F003AEB48 /* ExplanationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E49B7D92A5A606F003AEB48 /* ExplanationViewController.swift */; };
+		0E49B7DC2A5A6604003AEB48 /* DetailExplanationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E49B7DB2A5A6604003AEB48 /* DetailExplanationViewController.swift */; };
 		0E4B28932A5685E200769510 /* PrivacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4B28922A5685E200769510 /* PrivacyViewController.swift */; };
 		0E54CC972A1742FF00AFAA7D /* TaskCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E54CC962A1742FF00AFAA7D /* TaskCollectionViewCell.swift */; };
 		0E5686FC29FA341100EEEBD3 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5686FB29FA341100EEEBD3 /* CoreDataManager.swift */; };
@@ -214,6 +216,8 @@
 		0E181EAF2A32FAA8003B9A67 /* ImageFileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFileCollectionViewCell.swift; sourceTree = "<group>"; };
 		0E38B8942A41BAFC00520784 /* Clocks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Clocks.json; path = "../../../../../../../Downloads/Swift_alarm_clock-master/myClock/Data/Clocks.json"; sourceTree = "<group>"; };
 		0E40E14F29F3F36000615E86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Assets.xcassets/Assets.xcassets; sourceTree = "<group>"; };
+		0E49B7D92A5A606F003AEB48 /* ExplanationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplanationViewController.swift; sourceTree = "<group>"; };
+		0E49B7DB2A5A6604003AEB48 /* DetailExplanationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailExplanationViewController.swift; sourceTree = "<group>"; };
 		0E4B28922A5685E200769510 /* PrivacyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyViewController.swift; sourceTree = "<group>"; };
 		0E54CC962A1742FF00AFAA7D /* TaskCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCollectionViewCell.swift; sourceTree = "<group>"; };
 		0E5686FB29FA341100EEEBD3 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
@@ -508,6 +512,15 @@
 				0E6C19D82A31AC0C00487114 /* BaseView.swift */,
 			);
 			path = BaseView;
+			sourceTree = "<group>";
+		};
+		0E49B7D82A5A605B003AEB48 /* Explanation */ = {
+			isa = PBXGroup;
+			children = (
+				0E49B7D92A5A606F003AEB48 /* ExplanationViewController.swift */,
+				0E49B7DB2A5A6604003AEB48 /* DetailExplanationViewController.swift */,
+			);
+			path = Explanation;
 			sourceTree = "<group>";
 		};
 		0E4B28942A5685FE00769510 /* Privacy */ = {
@@ -1023,6 +1036,7 @@
 		0EFE320A29DFA1A500725EEE /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				0E49B7D82A5A605B003AEB48 /* Explanation */,
 				0E6C19C52A31AB5300487114 /* RealmMemo(now) */,
 				0E71B8FB2A2CBAEA00C6CEF0 /* Error */,
 				0E71B8F62A2CB27900C6CEF0 /* Auth */,
@@ -1476,6 +1490,7 @@
 				0EFE31D429DF9EFE00725EEE /* SceneDelegate.swift in Sources */,
 				0E54CC972A1742FF00AFAA7D /* TaskCollectionViewCell.swift in Sources */,
 				0E6C19D22A31ABBF00487114 /* FixListViewController.swift in Sources */,
+				0E49B7DA2A5A606F003AEB48 /* ExplanationViewController.swift in Sources */,
 				0E09A61429FD110700EC6AE1 /* BaseSV.swift in Sources */,
 				0EC03D9C2A10EF3E007CD53C /* StartViewModel.swift in Sources */,
 				0EFE323B29DFCDFB00725EEE /* MemoListViewControllerOld.swift in Sources */,
@@ -1496,6 +1511,7 @@
 				0E09A62529FF7DB600EC6AE1 /* DevelopersViewController.swift in Sources */,
 				0E85AA582A1EF0C7000676C2 /* BagPresenter.swift in Sources */,
 				0EC03DAE2A10F308007CD53C /* RingtoneTableViewController.swift in Sources */,
+				0E49B7DC2A5A6604003AEB48 /* DetailExplanationViewController.swift in Sources */,
 				0EC03D8D2A10E942007CD53C /* Extensions+Array.swift in Sources */,
 				0E181EB02A32FAA8003B9A67 /* ImageFileCollectionViewCell.swift in Sources */,
 				0ECEF8BB29FBA771008E848E /* BaseSC.swift in Sources */,

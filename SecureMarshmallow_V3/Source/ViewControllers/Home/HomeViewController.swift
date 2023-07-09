@@ -98,8 +98,8 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
 
     @objc func buttonTapped() {
         print("마쉬멜로~~야아아ㅏ")
-        let modalViewController = AddMainCollectionViewController()
-        self.present(modalViewController, animated: true)
+        let modalViewController = ExplanationViewController()
+        self.navigationController?.pushViewController(modalViewController, animated: true)
     }
 
     
