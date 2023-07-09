@@ -17,7 +17,7 @@ public class DetailExplanationViewController: UIViewController {
     
     var nameTitle = UILabel().then {
         $0.textColor = .black
-        $0.text = "정의"
+        $0.numberOfLines = 3
         $0.font = .systemFont(ofSize: 24.0, weight: .bold)
     }
     
