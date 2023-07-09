@@ -9,6 +9,13 @@ class BaseWebView: UIViewController, UIScrollViewDelegate {
         super.viewDidLoad()
         let url: URL = URL(string: "https://ddddddd//ddddd")!
         setupWebView(with: url)
+        
+        self.navigationItem.largeTitleDisplayMode = .never
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = .white
+        self.navigationController?.navigationBar.standardAppearance = appearance
+        self.navigationController?.navigationBar.scrollEdgeAppearance = appearance
     }
     
     func setupWebView(with url: URL) {
@@ -22,7 +29,7 @@ class BaseWebView: UIViewController, UIScrollViewDelegate {
             view.addSubview(webView)
             
             webView.snp.makeConstraints {
-                $0.top.equalTo(view.safeAreaLayoutGuide)
+                $0.top.equalToSuperview()
                 $0.trailing.leading.equalToSuperview()
                 $0.bottom.equalToSuperview()
             }
@@ -33,7 +40,7 @@ class BaseWebView: UIViewController, UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let offsetY = scrollView.contentOffset.y
         let navigationBar = navigationController?.navigationBar
-        
+
         if offsetY > 0 && !navigationBarHidden {
             navigationBar?.isHidden = true
             navigationBarHidden = true
