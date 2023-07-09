@@ -12,35 +12,33 @@ public class DetailExplanationViewController: UIViewController {
     
     var mainTitle = UILabel().then {
         $0.textColor = .black
-        $0.font = .systemFont(ofSize: 40.0, weight: .bold)
+        $0.font = .systemFont(ofSize: 36.0, weight: .bold)
     }
     
     var nameTitle = UILabel().then {
         $0.textColor = .black
         $0.text = "정의"
-        $0.font = .systemFont(ofSize: 25.0, weight: .bold)
+        $0.font = .systemFont(ofSize: 24.0, weight: .bold)
     }
     
     var nameDetailTitle = UILabel().then {
         $0.textColor = .black
         $0.numberOfLines = 0
-        $0.font = .systemFont(ofSize: 18.0, weight: .bold)
+        $0.font = .systemFont(ofSize: 16.0, weight: .regular)
     }
     
     var explanationTitle = UILabel().then {
         $0.textColor = .black
         $0.text = "사용 이유"
-        $0.font = .systemFont(ofSize: 25.0, weight: .bold)
+        $0.font = .systemFont(ofSize: 24.0, weight: .bold)
     }
     
-    // Explanation Detail Title Label
     var explanationDetailTitle = UILabel().then {
         $0.textColor = .black
         $0.numberOfLines = 0
-        $0.font = .systemFont(ofSize: 18.0, weight: .bold)
+        $0.font = .systemFont(ofSize: 16.0, weight: .regular)
     }
     
-    // Section divider
     var sectionDivider: UIView = {
         let divider = UIView()
         divider.backgroundColor = UIColor.lightGray.withAlphaComponent(0.5)
@@ -48,7 +46,6 @@ public class DetailExplanationViewController: UIViewController {
         return divider
     }()
     
-    // ScrollView for scrolling the content
     let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.backgroundColor = .white
@@ -61,13 +58,10 @@ public class DetailExplanationViewController: UIViewController {
     public init(mainTitleText: String, explanationTitleText: String, nameDetailTitleText: String, explanationDetailTitleText: String, imageView: UIImage) {
         super.init(nibName: nil, bundle: nil)
         
-        // Set the text for each label
-        self.mainTitle.text = mainTitleText
+        self.nameTitle.text = mainTitleText
         self.nameDetailTitle.text = nameDetailTitleText
         self.explanationTitle.text = explanationTitleText
         self.explanationDetailTitle.text = explanationDetailTitleText
-        
-        // Set the image for the imageView
         self.imageView.image = imageView
     }
     
@@ -77,7 +71,6 @@ public class DetailExplanationViewController: UIViewController {
     
     public override func viewDidLoad() {
         super.viewDidLoad()
-        
         layout()
     }
     
@@ -90,9 +83,9 @@ public class DetailExplanationViewController: UIViewController {
         
         let stackView = UIStackView()
         stackView.axis = .vertical
-        stackView.spacing = 20
+        stackView.spacing = 16
         scrollView.addSubview(stackView)
-        
+
         stackView.snp.makeConstraints {
             $0.top.equalTo(scrollView).offset(25.0)
             $0.bottom.equalTo(scrollView).offset(-25.0)
@@ -118,28 +111,28 @@ public class DetailExplanationViewController: UIViewController {
         
         mainTitle.snp.makeConstraints {
             $0.centerY.equalTo(imageView.snp.bottom)
-            $0.leading.equalToSuperview().offset(30.0)
+            $0.leading.equalToSuperview().offset(16.0)
         }
         
         nameTitle.snp.makeConstraints {
-            $0.leading.equalToSuperview().offset(20.0)
-        }
-        
-        nameDetailTitle.snp.makeConstraints {
-            $0.leading.trailing.equalToSuperview().inset(20.0)
+            $0.leading.equalToSuperview().offset(16.0)
         }
 
+        nameDetailTitle.snp.makeConstraints {
+            $0.leading.trailing.equalToSuperview().inset(16.0)
+        }
+        
         sectionDivider.snp.makeConstraints {
             $0.height.equalTo(1)
             $0.width.equalTo(stackView).multipliedBy(0.9)
         }
         
         explanationTitle.snp.makeConstraints {
-            $0.leading.equalToSuperview().offset(20.0)
+            $0.leading.equalToSuperview().offset(16.0)
         }
         
         explanationDetailTitle.snp.makeConstraints {
-            $0.leading.trailing.equalToSuperview().inset(20.0)
+            $0.leading.trailing.equalToSuperview().inset(16.0)
         }
     }
 }
