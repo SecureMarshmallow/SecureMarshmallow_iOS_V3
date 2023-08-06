@@ -101,7 +101,7 @@ extension ExplanationViewController: UITableViewDelegate, UITableViewDataSource 
         case 0:
             switch indexPath.row {
             case 0:
-                self.navigationController?.pushViewController(DetailExplanationViewController(mainTitleText: "SHH란?", explanationTitleText: "사용 이유", nameDetailTitleText: "- SSH란 Secure Shell Protocol의 약자로 네트워크 프로토콜 중 하나입니다.\n\n- Public Network를 통해 서로 통신을 할 때 보안적으로 안전하게 통신을 하기 위해 사용하는 프로토콜입니다.", explanationDetailTitleText: "SSH 검사를 통해 보안이 안전한 URL을 사용함으로써 개인정보를 지킬 수 있습니다.", imageView: UIImage(named: "WhiteAppIcon")!), animated: true)
+                self.navigationController?.pushViewController(DetailExplanationViewController(mainTitleText: "SHH란?", explanationTitleText: "사용 이유", nameDetailTitleText: "- Secure Shell Protocol의 약자로 네트워크 프로토콜 중 하나입니다.\n\n- Public Network를 통해 서로 통신을 할 때 보안적으로 안전하게 통신을 하기 위해 사용하는 프로토콜입니다.", explanationDetailTitleText: "SSH 검사를 통해 보안이 안전한 URL을 사용함으로써 개인정보를 지킬 수 있습니다.", imageView: UIImage(named: "WhiteAppIcon")!), animated: true)
             case 1:
                 self.navigationController?.pushViewController(DetailExplanationViewController(mainTitleText: "HMAC란?", explanationTitleText: "메소드 확인 방법", nameDetailTitleText: "- Hash based Message Authentication의 약자로 MAC 기술의 일종으로, 원본 메시지가 변하면 그 해시값도 변하는 해싱(Hashing)의 특징을 활용하여 메시지의 변조 여부를 확인(인증) 하여 무결성과 기밀성을 제공하는 기술\n\n- HMAC이란 메시지 인증을 위한 Keyed-Hashing입니다.", explanationDetailTitleText: """
 메서드 내부에서는 메세지가 변조됐는지 나타내는 불리언 값에 따라 검증할 메시지를 설정합니다. 불리언 값이 `true`인 경우, "This is a tampered message."라는 변조된 메시지로 설정됩니다. `false`인 경우, "This is the original message."라는 원본 메시지로 설정됩니다.
