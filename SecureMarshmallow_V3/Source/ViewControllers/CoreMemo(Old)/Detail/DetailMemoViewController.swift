@@ -13,7 +13,7 @@
 //    }()
 //        
 //    private lazy var presenter = DetailMemoPresenter(viewController: self, navigationController: navigationController!)
-//    
+//
 //    private var titleText: String?
 //    private var contentsText: String?
 //    

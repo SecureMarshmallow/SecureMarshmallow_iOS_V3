@@ -4,6 +4,9 @@ import Then
 
 class SignupViewController: UIViewController {
     
+    private lazy var presenter = SignupPresenter(viewController: self, navigationController: navigationController!)
+
+    
     private let baseURL = "https://2c33-2001-4430-c03f-3e17-b453-85f4-c1a8-643f.ngrok-free.app/"
     
     private let marshmallowImage = UIImageView().then {
@@ -49,53 +52,7 @@ class SignupViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupUI()
-    }
-    
-    private func setupUI() {
-        view.backgroundColor = .white
-        
-        view.addSubview(marshmallowImage)
-        marshmallowImage.snp.makeConstraints {
-            $0.top.equalTo(view.safeAreaLayoutGuide).offset(80.0)
-            $0.centerX.equalToSuperview()
-            $0.height.width.equalTo(200.0)
-        }
-        
-        view.addSubview(idTextField)
-        idTextField.snp.makeConstraints {
-            $0.top.equalTo(marshmallowImage.snp.bottom).offset(50)
-            $0.leading.trailing.equalToSuperview().inset(50)
-            $0.height.equalTo(40)
-        }
-        
-        view.addSubview(emailTextField)
-        emailTextField.snp.makeConstraints {
-            $0.top.equalTo(idTextField.snp.bottom).offset(20)
-            $0.leading.trailing.equalToSuperview().inset(50)
-            $0.height.equalTo(40)
-        }
-        
-        view.addSubview(nicknameTextField)
-        nicknameTextField.snp.makeConstraints {
-            $0.top.equalTo(emailTextField.snp.bottom).offset(20)
-            $0.leading.trailing.equalToSuperview().inset(50)
-            $0.height.equalTo(40)
-        }
-        
-        view.addSubview(passwordTextField)
-        passwordTextField.snp.makeConstraints {
-            $0.top.equalTo(nicknameTextField.snp.bottom).offset(20)
-            $0.leading.trailing.equalToSuperview().inset(50)
-            $0.height.equalTo(40)
-        }
-        
-        view.addSubview(signupButton)
-        signupButton.snp.makeConstraints {
-            $0.top.equalTo(passwordTextField.snp.bottom).offset(50)
-            $0.leading.trailing.equalToSuperview().inset(50)
-            $0.height.equalTo(40)
-        }
+        presenter.viewDidLoad()
     }
     
     @objc private func signupButtonTapped() {
@@ -140,7 +97,7 @@ class SignupViewController: UIViewController {
                     DispatchQueue.main.async {
                         if let success = json["success"] as? Bool {
                             if success {
-                                self.showSignupSuccessAlert(username: id)
+                                self.showSignupSuccessAlert(userName: id)
                                 print("signup 성공 \(id)")
                             } else {
                                 self.showLoginFailureAlert()
@@ -159,20 +116,22 @@ class SignupViewController: UIViewController {
 
         task.resume()
     }
-    
-    private func showSignupSuccessAlert(username: String) {
+}
+
+extension SignupViewController: SignProtocol {
+    public func showSignupSuccessAlert(userName username: String) {
         let alert = UIAlertController(title: "sign 성공", message: "Welcome, \(username)!", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
     }
     
-    private func showLoginFailureAlert() {
+    public func showLoginFailureAlert() {
         let alert = UIAlertController(title: "sign 실패", message: "Invalid username or password", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
     }
     
-    private func moveSignupButtonToRandomPosition() {
+    public func moveSignupButtonToRandomPosition() {
         let screenWidth = view.bounds.width
         let screenHeight = view.bounds.height
         
@@ -192,6 +151,53 @@ class SignupViewController: UIViewController {
         
         UIView.animate(withDuration: 0.3) {
             self.view.layoutIfNeeded()
+        }
+    }
+    
+    
+    internal func setupUI() {
+        view.backgroundColor = .white
+        
+        view.addSubview(marshmallowImage)
+        marshmallowImage.snp.makeConstraints {
+            $0.top.equalTo(view.safeAreaLayoutGuide).offset(80.0)
+            $0.centerX.equalToSuperview()
+            $0.height.width.equalTo(200.0)
+        }
+        
+        view.addSubview(idTextField)
+        idTextField.snp.makeConstraints {
+            $0.top.equalTo(marshmallowImage.snp.bottom).offset(50)
+            $0.leading.trailing.equalToSuperview().inset(50)
+            $0.height.equalTo(40)
+        }
+        
+        view.addSubview(emailTextField)
+        emailTextField.snp.makeConstraints {
+            $0.top.equalTo(idTextField.snp.bottom).offset(20)
+            $0.leading.trailing.equalToSuperview().inset(50)
+            $0.height.equalTo(40)
+        }
+        
+        view.addSubview(nicknameTextField)
+        nicknameTextField.snp.makeConstraints {
+            $0.top.equalTo(emailTextField.snp.bottom).offset(20)
+            $0.leading.trailing.equalToSuperview().inset(50)
+            $0.height.equalTo(40)
+        }
+        
+        view.addSubview(passwordTextField)
+        passwordTextField.snp.makeConstraints {
+            $0.top.equalTo(nicknameTextField.snp.bottom).offset(20)
+            $0.leading.trailing.equalToSuperview().inset(50)
+            $0.height.equalTo(40)
+        }
+        
+        view.addSubview(signupButton)
+        signupButton.snp.makeConstraints {
+            $0.top.equalTo(passwordTextField.snp.bottom).offset(50)
+            $0.leading.trailing.equalToSuperview().inset(50)
+            $0.height.equalTo(40)
         }
     }
 }
