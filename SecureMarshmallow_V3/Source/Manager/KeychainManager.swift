@@ -1,14 +1,14 @@
 import Foundation
 import UIKit
 
-class KeychainManager {
+public class KeychainManager {
     private let service: String
     
-    init(service: String) {
+    public init(service: String) {
         self.service = service
     }
     
-    func storeToken(_ token: String, forKey key: String) -> OSStatus {
+    public func storeToken(_ token: String, forKey key: String) -> OSStatus {
         guard let data = token.data(using: .utf8) else { return errSecParam }
         
         let query: [String: Any] = [
@@ -23,7 +23,7 @@ class KeychainManager {
         return SecItemAdd(query as CFDictionary, nil)
     }
     
-    func token(forKey key: String) -> String? {
+    public func token(forKey key: String) -> String? {
         let query: [String: Any] = [
             kSecClass as String: kSecClassGenericPassword,
             kSecAttrService as String: service,
@@ -42,7 +42,7 @@ class KeychainManager {
         }
     }
     
-    func getToken(forKey key: String) -> String? {
+    public func getToken(forKey key: String) -> String? {
         let query: [String: Any] = [
             kSecClass as String: kSecClassGenericPassword,
             kSecAttrService as String: service,

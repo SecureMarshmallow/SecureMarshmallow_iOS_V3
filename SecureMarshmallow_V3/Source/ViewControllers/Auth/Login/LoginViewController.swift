@@ -1,14 +1,10 @@
 import UIKit
-import SnapKit
 import Then
+import SnapKit
 
 class LoginViewController: UIViewController {
     
-    private let baseURL = "https://2c33-2001-4430-c03f-3e17-b453-85f4-c1a8-643f.ngrok-free.app/"
-    
-    private var failedLoginAttempts = 0
-    
-    private lazy var keychainManager = KeychainManager(service: "com.secureMarshmallow-V3")
+    private var presenter: LoginPresenter!
     
     private let marshmallowImage = UIImageView().then {
         $0.image = UIImage(named: "TransparentLogo")
@@ -38,11 +34,21 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
-        
+        presenter = LoginPresenter(view: self)
+        presenter.viewDidLoad()
     }
     
-    private func setupUI() {
+    @objc private func loginButtonTapped() {
+        guard let username = usernameTextField.text,
+              let password = passwordTextField.text else { return }
+        
+        presenter.loginButtonTapped(username: username, password: password)
+    }
+}
+
+extension LoginViewController: LoginProtocol {
+    
+    func setUI() {
         view.backgroundColor = .white
         
         view.addSubview(marshmallowImage)
@@ -74,122 +80,21 @@ class LoginViewController: UIViewController {
         }
     }
     
-    @objc private func loginButtonTapped() {
-            
-        guard let username = usernameTextField.text,
-              let password = passwordTextField.text else { return }
-        
-        let parameters = [
-            "id": username,
-            "password": password
-        ]
-        
-        guard let url = URL(string: baseURL + "api/login") else { return }
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        
-        do {
-            let jsonData = try JSONSerialization.data(withJSONObject: parameters, options: .prettyPrinted)
-            request.httpBody = jsonData
-        } catch {
-            print("Error creating JSON data")
-            return
-        }
-        
-        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
-            guard let data = data else { return }
-            do {
-                if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
-                    DispatchQueue.main.async {
-                        if let success = json["success"] as? Bool, success {
-                            if let token = json["access_token"] as? String {
-                                let status = self.keychainManager.storeToken(token, forKey: "access_token")
-                                if status == errSecSuccess {
-                                    print("Token saved in Keychain")
-                                } else {
-                                    print("Failed to save token in Keychain, OSStatus: \(status)")
-                                }
-                                print("Token: \(token)")
-                                self.printStoredToken()
-                                self.showLoginStatusAlert(title: "Login 성공", message: "Welcome, \(username)!")
-                            } else {
-                                if let errorDescription = json["error"] as? String {
-                                    switch errorDescription {
-                                    case "Invalid Request.":
-                                        self.showErrorAlert(title: "에러 발생", message: "요청한 데이터가 누락되거나 적정 길이를 초과했습니다.")
-                                    case "Invalid request method":
-                                        self.showErrorAlert(title: "에러 발생", message: "허용되지 않는 메서드를 사용했습니다.")
-                                    default:
-                                        self.showLoginStatusAlert(title: "Login 실패", message: "Invalid username or password")
-                                    }
-                                } else {
-                                    self.showLoginStatusAlert(title: "Login 실패", message: "Invalid username or password")
-                                }
-                                
-                                self.failedLoginAttempts += 1
-                                
-                                if self.failedLoginAttempts == 5 {
-                                    self.presentErrorViewController(time: 1)
-                                }
-                                
-                                if self.failedLoginAttempts == 10 {
-                                    self.presentErrorViewController(time: 3)
-                                }
-                                
-                                if self.failedLoginAttempts == 15 {
-                                    self.presentErrorViewController(time: 5)
-                                }
-                                self.moveSignupButtonToRandomPosition()
-                            }
-                        } else {
-                            self.failedLoginAttempts += 1
-                            
-                            if self.failedLoginAttempts == 5 {
-                                self.presentErrorViewController(time: 1)
-                            }
-                            
-                            if self.failedLoginAttempts == 10 {
-                                self.presentErrorViewController(time: 3)
-                            }
-                            
-                            if self.failedLoginAttempts == 15 {
-                                self.presentErrorViewController(time: 5)
-                            }
-                            
-                            self.moveSignupButtonToRandomPosition()
-                            self.showErrorAlert(title: "에러 발생", message: "서버 응답을 처리하는 도중 문제가 발생했습니다.")
-                        }
-                    }
-                }
-            } catch {
-                print("Error decoding JSON: \(error.localizedDescription)")
-                print("Failed JSON data: \(String(data: data, encoding: .utf8) ?? "")")
-                DispatchQueue.main.async {
-                    self.showErrorAlert(title: "에러 발생", message: "서버 응답을 처리하는 도중 문제가 발생했습니다.")
-                }
-            }
-        }
-        
-        task.resume()
-    }
-
-    
-    private func presentErrorViewController(time: Int) {
+    internal func presentErrorViewController(time: Int) {
         let errorViewController = ErrorViewController()
         errorViewController.errorTime = time * 60
         errorViewController.modalPresentationStyle = .fullScreen
         self.present(errorViewController, animated: true)
     }
     
-    private func printStoredToken() {
-        if let accessToken = keychainManager.getToken(forKey: "access_token") {
-            print("Stored Token: \(accessToken)")
-        } else {
-            print("No token found")
-        }
+    internal func printStoredToken() {
+//        if let accessToken = KeychainManager.getToken(forKey: "access_token") {
+//            print("Stored Token: \(accessToken)")
+//        } else {
+//            print("No token found")
+//        }
     }
-    private func showLoginStatusAlert(title: String, message: String) {
+    internal func showLoginStatusAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
             let tapBarViewController = TapBarViewController()
@@ -198,13 +103,13 @@ class LoginViewController: UIViewController {
         }))
         present(alert, animated: true, completion: nil)
     }
-    private func showErrorAlert(title: String, message: String) {
+    internal func showErrorAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "확인", style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
     }
     
-    private func moveSignupButtonToRandomPosition() {
+    internal func moveSignupButtonToRandomPosition() {
         let screenWidth = view.bounds.width
         let screenHeight = view.bounds.height
         
@@ -226,4 +131,5 @@ class LoginViewController: UIViewController {
             self.view.layoutIfNeeded()
         }
     }
+    
 }

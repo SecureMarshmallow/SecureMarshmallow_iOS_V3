@@ -89,6 +89,8 @@
 		0E85AA5D2A1F05FA000676C2 /* Extensions+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E85AA5C2A1F05FA000676C2 /* Extensions+UIImage.swift */; };
 		0E85AA5F2A1F0A30000676C2 /* MiddleCalculatorColloectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E85AA5E2A1F0A30000676C2 /* MiddleCalculatorColloectionViewCell.swift */; };
 		0E85AA6B2A1F946F000676C2 /* MiddleAlamCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E85AA6A2A1F946F000676C2 /* MiddleAlamCollectionViewCell.swift */; };
+		0E9262AB2ABA73F9006D4D73 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9262AA2ABA73F9006D4D73 /* LoginPresenter.swift */; };
+		0E9262AD2ABA83AC006D4D73 /* LoginNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9262AC2ABA83AC006D4D73 /* LoginNetworkManager.swift */; };
 		0EA5FA682ABA67EC00CE6551 /* ExplanationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA5FA672ABA67EC00CE6551 /* ExplanationPresenter.swift */; };
 		0EA5FA6D2ABA6AB900CE6551 /* SignupPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA5FA6C2ABA6AB900CE6551 /* SignupPresenter.swift */; };
 		0EC03D782A10E630007CD53C /* RepeatTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC03D772A10E630007CD53C /* RepeatTableViewController.swift */; };
@@ -273,6 +275,8 @@
 		0E85AA5C2A1F05FA000676C2 /* Extensions+UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIImage.swift"; sourceTree = "<group>"; };
 		0E85AA5E2A1F0A30000676C2 /* MiddleCalculatorColloectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleCalculatorColloectionViewCell.swift; sourceTree = "<group>"; };
 		0E85AA6A2A1F946F000676C2 /* MiddleAlamCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleAlamCollectionViewCell.swift; sourceTree = "<group>"; };
+		0E9262AA2ABA73F9006D4D73 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		0E9262AC2ABA83AC006D4D73 /* LoginNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginNetworkManager.swift; sourceTree = "<group>"; };
 		0EA5FA672ABA67EC00CE6551 /* ExplanationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplanationPresenter.swift; sourceTree = "<group>"; };
 		0EA5FA6C2ABA6AB900CE6551 /* SignupPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPresenter.swift; sourceTree = "<group>"; };
 		0EC03D772A10E630007CD53C /* RepeatTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatTableViewController.swift; sourceTree = "<group>"; };
@@ -806,7 +810,9 @@
 		0ED7C4CF2A502BFB00131DDE /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				0E9262AC2ABA83AC006D4D73 /* LoginNetworkManager.swift */,
 				0E71B8F72A2CB28500C6CEF0 /* LoginViewController.swift */,
+				0E9262AA2ABA73F9006D4D73 /* LoginPresenter.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -1456,6 +1462,7 @@
 				0E6C19D42A31ABCE00487114 /* FixListView.swift in Sources */,
 				0EFE323729DFC23600725EEE /* HomeViewController.swift in Sources */,
 				0E09A60E29FD0FA800EC6AE1 /* SupportViewController.swift in Sources */,
+				0E9262AB2ABA73F9006D4D73 /* LoginPresenter.swift in Sources */,
 				0EDB05A12A0CC4E0009E46A8 /* Extensions+UIColor.swift in Sources */,
 				0EFE31D229DF9EFE00725EEE /* AppDelegate.swift in Sources */,
 				0E85AA6B2A1F946F000676C2 /* MiddleAlamCollectionViewCell.swift in Sources */,
@@ -1529,6 +1536,7 @@
 				0E6275462A14D53F00E8F8E9 /* AlarmCollectionViewCell.swift in Sources */,
 				0EC03D7D2A10E6FB007CD53C /* MonthMetadata.swift in Sources */,
 				0E85AA4F2A1EEDBD000676C2 /* BagBackendWebViewController.swift in Sources */,
+				0E9262AD2ABA83AC006D4D73 /* LoginNetworkManager.swift in Sources */,
 				0E6C19C02A31AAF900487114 /* Extensions+UILabel.swift in Sources */,
 				0E09A62929FF7E5B00EC6AE1 /* Extensions+NSObject.swift in Sources */,
 				0ECEF8B129FB98A2008E848E /* AppLogoViewController.swift in Sources */,
