@@ -6,18 +6,18 @@ class LoginViewController: UIViewController {
     
     private var presenter: LoginPresenter!
     
-    private let marshmallowImage = UIImageView().then {
+    internal let marshmallowImage = UIImageView().then {
         $0.image = UIImage(named: "TransparentLogo")
     }
     
-    private let usernameTextField = UITextField().then {
+    internal let usernameTextField = UITextField().then {
         $0.placeholder = "Username"
         $0.borderStyle = .roundedRect
         $0.backgroundColor = .cellColor
         $0.setPlaceholder(color: .cellTitleColor)
     }
     
-    private let passwordTextField = UITextField().then {
+    internal let passwordTextField = UITextField().then {
         $0.placeholder = "Password"
         $0.borderStyle = .roundedRect
         $0.backgroundColor = .cellColor
@@ -25,7 +25,7 @@ class LoginViewController: UIViewController {
         $0.isSecureTextEntry = true
     }
     
-    private let loginButton = UIButton().then {
+    internal let loginButton = UIButton().then {
         $0.setTitle("Login", for: .normal)
         $0.backgroundColor = .black
         $0.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)

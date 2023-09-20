@@ -4,6 +4,8 @@ import Then
 
 class LoginPageViewController: UIViewController {
     
+    private var presenter: LoginPagePresenter!
+    
     let marshmallowImages = UIImageView().then {
         $0.image = UIImage(named: "TransparentLogo")
     }
@@ -37,7 +39,23 @@ class LoginPageViewController: UIViewController {
         super.viewDidLoad()
         
         self.view.backgroundColor = .white
-        
+        presenter.viewDidLoad()
+    }
+    
+    @objc func loginTapped() {
+        self.navigationController?.pushViewController(LoginViewController(), animated: true)
+    }
+    
+    @objc func signUpTapped() {
+        self.navigationController?.pushViewController(SignupViewController(), animated: true)
+    }
+    
+    @objc func resetTapped() {
+    }
+}
+
+extension LoginPageViewController: LoginPageProtocol {
+    func setUI() {
         [
             marshmallowImages,
             loginButton,
@@ -72,17 +90,5 @@ class LoginPageViewController: UIViewController {
             $0.width.equalTo(370)
             $0.height.equalTo(54)
         }
-    }
-    
-    @objc func loginTapped() {
-        self.navigationController?.pushViewController(LoginViewController(), animated: true)
-    }
-    
-    @objc func signUpTapped() {
-        self.navigationController?.pushViewController(SignupViewController(), animated: true)
-    }
-    
-    @objc func resetTapped() {
-        // 비밀번호 초기화 버튼을 눌렀을 때 실행되는 함수를 여기에 구현합니다.
     }
 }

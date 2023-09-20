@@ -91,6 +91,7 @@
 		0E85AA6B2A1F946F000676C2 /* MiddleAlamCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E85AA6A2A1F946F000676C2 /* MiddleAlamCollectionViewCell.swift */; };
 		0E9262AB2ABA73F9006D4D73 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9262AA2ABA73F9006D4D73 /* LoginPresenter.swift */; };
 		0E9262AD2ABA83AC006D4D73 /* LoginNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9262AC2ABA83AC006D4D73 /* LoginNetworkManager.swift */; };
+		0E9262AF2ABA8CF7006D4D73 /* LoginPagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9262AE2ABA8CF7006D4D73 /* LoginPagePresenter.swift */; };
 		0EA5FA682ABA67EC00CE6551 /* ExplanationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA5FA672ABA67EC00CE6551 /* ExplanationPresenter.swift */; };
 		0EA5FA6D2ABA6AB900CE6551 /* SignupPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA5FA6C2ABA6AB900CE6551 /* SignupPresenter.swift */; };
 		0EC03D782A10E630007CD53C /* RepeatTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC03D772A10E630007CD53C /* RepeatTableViewController.swift */; };
@@ -277,6 +278,7 @@
 		0E85AA6A2A1F946F000676C2 /* MiddleAlamCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleAlamCollectionViewCell.swift; sourceTree = "<group>"; };
 		0E9262AA2ABA73F9006D4D73 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		0E9262AC2ABA83AC006D4D73 /* LoginNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginNetworkManager.swift; sourceTree = "<group>"; };
+		0E9262AE2ABA8CF7006D4D73 /* LoginPagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPagePresenter.swift; sourceTree = "<group>"; };
 		0EA5FA672ABA67EC00CE6551 /* ExplanationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplanationPresenter.swift; sourceTree = "<group>"; };
 		0EA5FA6C2ABA6AB900CE6551 /* SignupPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPresenter.swift; sourceTree = "<group>"; };
 		0EC03D772A10E630007CD53C /* RepeatTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatTableViewController.swift; sourceTree = "<group>"; };
@@ -576,6 +578,7 @@
 				0ED7C4D02A502C0F00131DDE /* SignUp */,
 				0ED7C4CF2A502BFB00131DDE /* Login */,
 				0EEFAF972A592DA800D00B1B /* LoginPageViewController.swift */,
+				0E9262AE2ABA8CF7006D4D73 /* LoginPagePresenter.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -1477,6 +1480,7 @@
 				0EC03DA12A10F1FC007CD53C /* CalendarPickerFooterView.swift in Sources */,
 				0E6C19CD2A31AB9500487114 /* MemoListViewController.swift in Sources */,
 				0E6C19D92A31AC0C00487114 /* BaseView.swift in Sources */,
+				0E9262AF2ABA8CF7006D4D73 /* LoginPagePresenter.swift in Sources */,
 				0EC03D932A10EA9D007CD53C /* DateFunctions.swift in Sources */,
 				0E09A62729FF7DCA00EC6AE1 /* DevelopersTableViewCell.swift in Sources */,
 				0E09A62C2A01EDF800EC6AE1 /* ImageCollectionViewController.swift in Sources */,
