@@ -38,8 +38,11 @@
 
 # 기술 스택
 ## 💾Mysql 
-- 1번 설명
-- 2번 설명
+- SnapKit
+- Then
+- lottie-ios
+- IOSSecuritySuite
+- RealmSwift
 
 # 디렉토리 구조
 ```
