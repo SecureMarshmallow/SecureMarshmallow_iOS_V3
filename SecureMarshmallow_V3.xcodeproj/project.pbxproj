@@ -117,7 +117,6 @@
 		0ECEF8B529FB98C6008E848E /* AppLogoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECEF8B429FB98C6008E848E /* AppLogoCell.swift */; };
 		0ECEF8BB29FBA771008E848E /* BaseSC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECEF8BA29FBA771008E848E /* BaseSC.swift */; };
 		0ECEF8C129FC22A9008E848E /* CommonItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECEF8C029FC22A9008E848E /* CommonItemType.swift */; };
-		0ECEF90129FCD331008E848E /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECEF90029FCD331008E848E /* ImageCache.swift */; };
 		0ED7C4CC2A4E645700131DDE /* LargeBluetoothCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED7C4CB2A4E645700131DDE /* LargeBluetoothCollectionViewCell.swift */; };
 		0ED7C4CE2A4E79DF00131DDE /* TimerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED7C4CD2A4E79DF00131DDE /* TimerCollectionViewCell.swift */; };
 		0ED7C4D22A502C3300131DDE /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED7C4D12A502C3300131DDE /* SignupViewController.swift */; };
@@ -296,7 +295,6 @@
 		0ECEF8C029FC22A9008E848E /* CommonItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonItemType.swift; sourceTree = "<group>"; };
 		0ECEF8C929FCCFCE008E848E /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		0ECEF8CB29FCCFCF008E848E /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
-		0ECEF90029FCD331008E848E /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		0ED7C4CB2A4E645700131DDE /* LargeBluetoothCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeBluetoothCollectionViewCell.swift; sourceTree = "<group>"; };
 		0ED7C4CD2A4E79DF00131DDE /* TimerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerCollectionViewCell.swift; sourceTree = "<group>"; };
 		0ED7C4D12A502C3300131DDE /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
@@ -1000,7 +998,6 @@
 				0E09A62D2A01F6F200EC6AE1 /* Photo */,
 				0E8409B729E38CF8005EB879 /* Setting */,
 				0E62753F2A146E7200E8F8E9 /* Home */,
-				0ECEF90029FCD331008E848E /* ImageCache.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -1364,7 +1361,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0ECEF90129FCD331008E848E /* ImageCache.swift in Sources */,
 				0E85AA0E2A1C62E6000676C2 /* DevelopersPresenter.swift in Sources */,
 				0E6C19C42A31AB3B00487114 /* Results+Extension.swift in Sources */,
 				0E85AA182A1CA98C000676C2 /* BatteryPresenter.swift in Sources */,
