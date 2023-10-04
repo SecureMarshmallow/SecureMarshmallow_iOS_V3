@@ -1,18 +1,12 @@
 import UIKit
-import RxSwift
 import SnapKit
 import Then
 import Lottie
 
 class ErrorViewController: UIViewController {
     
-    //MVP에서 이벤트관련을 방출해줍니다.
     private lazy var presenter = ErrorPresenter(viewController: self)
-    
-    //비동기 처리를 할 떄 RX를 구현하면서 메모리 낭비를 막아주는 것입니다.
-    internal let disposeBag = DisposeBag()
-    
-    //불이 을렁이는 애니메이션을 주는 것이 animationView 입니다.
+        
     internal var animationView: LottieAnimationView?
     
     var errorTime: Int = 180
@@ -25,14 +19,12 @@ class ErrorViewController: UIViewController {
     
     var userErrorCount = 0
     
-    //errorTimer를 선언하는데 errorTimer는 말그대로 Timer Label을 말합니다.
     internal let errorTimer = UILabel().then {
         $0.textAlignment = .center
         $0.textColor = .white
         $0.font = .systemFont(ofSize: 40, weight: .bold)
     }
     
-    //waitLabel은 몇회 경고를 받았는지 보여주는 label입니다.
     internal lazy var waitLabel = UILabel().then {
         $0.textAlignment = .center
         $0.textColor = .white
@@ -41,21 +33,18 @@ class ErrorViewController: UIViewController {
         $0.numberOfLines = 0
     }
     
-    //view의 생명 주기에서 view의 layout을 담당합니다.
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
         presenter.viewDidLayoutSubviews()
     }
     
-    //view에 생명주기에서 view가 나타나기 직전 호출됩니다.
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         presenter.viewDidAppear()
     }
     
-    //view의 생명주기에서 view가 메로리에 로드된 후 호출됩니다.
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.viewDidLoad()
@@ -64,7 +53,6 @@ class ErrorViewController: UIViewController {
 
 extension ErrorViewController: ErrorProtocol {
     
-    //setupViews는 layout을 처리하는데 사용합니다.
     func setupViews() {
         self.view.addSubview(animationView!)
         [errorTimer,waitLabel].forEach { self.view.addSubview($0) }
@@ -86,7 +74,6 @@ extension ErrorViewController: ErrorProtocol {
         }
     }
     
-    //타이머의 시작을 담당합니다.
     func startTimer(){
         self.errorTimer.text = "00:00"
         
@@ -98,11 +85,9 @@ extension ErrorViewController: ErrorProtocol {
             lapTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(lapTimerUpdate), userInfo: nil, repeats: true)
             RunLoop.current.add(lapTimer!, forMode: .common)
         }
-        //타이머가 시작되면 애니메이션이 실행됩니다.
         animationView!.play()
     }
     
-    //애니메이션의 속도, 시간, 위치 등등을 선언합니다.
     func animationViewEvent() {
         animationView = .init(name: "fire")
         
@@ -115,13 +100,11 @@ extension ErrorViewController: ErrorProtocol {
         animationView!.contentMode = .scaleAspectFill
     }
     
-    //customaBackgroundColor는 바탕화면의 색을 선언합니다.
     func customaBackgroundColor() {
         self.view.backgroundColor = .errorColor
     }
 }
 
-//연산관련 함수들
 extension ErrorViewController {
     
     func errorTimerText(_ errorCountText: Int) -> Int {
@@ -129,7 +112,6 @@ extension ErrorViewController {
         return userErrorCount
     }
     
-    //라벨의 초를 움직입니다.
     func updateLabel( label : UILabel, counter : Int, time: Int){
         let threeMinutes: Int = time
         errorTimer.text = secondsToHourMinuteSecond(seconds: Int(threeMinutes - counter))
@@ -139,7 +121,6 @@ extension ErrorViewController {
         let minute = seconds / 60 % 60
         let second = seconds % 60
         
-        // 둘다 0이면 끝났으니 화면 전환 코드를 수행합니다.
         if minute == 0 && second == 0 {
             lapTimer?.invalidate()
             mainLapTimer?.invalidate()

@@ -1,12 +1,8 @@
 import UIKit
 import SnapKit
 import Then
-import RxSwift
-import RxCocoa
 
 public class DetailExplanationViewController: UIViewController {
-    
-    var disposebag = DisposeBag()
     
     var imageView = UIImageView()
     
