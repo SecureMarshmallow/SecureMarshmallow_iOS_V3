@@ -37,12 +37,93 @@
 |  **배터리 확인** | **저장공간 확인**  | **메모 내용** |
 
 # 기술 스택
-## 💾Mysql 
-- SnapKit
-- Then
-- lottie-ios
-- IOSSecuritySuite
-- RealmSwift
+## 🔨SnapKit
+- 간결한 layout을 하기 위해서 사용
+## 🔧Then
+- 코드를 간결하게 보기 위해서 사용
+## 🔐IOSSecuritySuite
+- ### 기능
+
+- **탈옥 탐지 모듈**
+    - 기기가 탈옥이 되어있는지 아닌지 확인
+- **연결된** **디버거 감지기 모듈**
+- **앱이 에뮬레이터에서 실행됐는지 아닌지 확인**
+- **리버스 엔지니어링 도구 감지**
+
+### 탈옥 감지 모듈
+
+- True/False 반환
+
+```swift
+if IOSSecuritySuite.amIJailbroken() {
+	print(“This device is jailbroken”)
+} else {
+	print(“This device is not jailbroken”)
+}
+```
+
+- 어떤 경로로 탈옥 되었는지 알고싶을 때 사용
+- 파일 경로 확인 가능
+
+```swift
+let jailbreakStatus = IOSSecuritySuite.amIJailbrokenWithFailMessage()
+if jailbreakStatus.jailbroken {
+print(“This device is jailbroken”)
+print(“Because: (jailbreakStatus.failMessage)”)
+} else {
+print(“This device is not jailbroken”)
+}
+```
+
+- 과거에 탈옥 했었고, 지금도 탈옥이 되어있는 경우
+
+```swift
+let jailbreakStatus = IOSSecuritySuite.amIJailbrokenWithFailedChecks()
+if jailbreakStatus.jailbroken {
+if (jailbreakStatus.failedChecks.contains { $0.check == 
+.existenceOfSuspiciousFiles }) && (jailbreakStatus.failedChecks.contains 
+{ $0.check == .suspiciousFilesCanBeOpened }) {
+print(“This is real jailbroken device”)
+}
+}
+```
+
+### 디버거 탐지기
+
+- 디버거 탐지기 모듈
+
+```swift
+let amIDebugged: Bool = IOSSecuritySuite.amIDebugged()
+```
+
+- 모든 디버거를 거부
+
+```swift
+IOSSecuritySuite.denyDebugger()
+```
+
+- 에뮬레이터(가상머신) 탐지 모듈
+
+```swift
+let runInEmulator: Bool = IOSSecuritySuite.amIRunInEmulator()
+```
+
+- 리버스 엔지니어링 도구 검출기 모듈
+
+```swift
+var amIReverseEngineered = Securing.IOSSecuritySuite.AmIReverseEngineered() ? true : false;
+```
+## 📀RealmSwift
+1. SQLite와 CoreData보다 작업 속도가 빠르고
+2. Cross Platform을 지원해서 안드로이드 OS와 DB 파일을 공유할 수 있고
+3. Realm Studio를 통해서 DB 상태를 편하게 확인할 수 있고
+4. 직관적인 코드로 작업할 수 있고
+5. Rx를 지원하는 RxRealm이 존재
+
+## ⚠️LLDB
+- LLVM이 컴파일한 애플리케이션을 디버깅할 때 쓰는 툴
+- 프로젝트의 컴포넌트 중 디버깅과 관련된 LLVM의 서브 프로젝트
+- [LLDB 보고서](https://www.notion.so/LLDB-070998f0207c4c13813c1e5214639e7a?pvs=4)
 
 # 디렉토리 구조
 ```
