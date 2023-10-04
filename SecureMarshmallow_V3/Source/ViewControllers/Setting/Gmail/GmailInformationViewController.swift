@@ -18,8 +18,6 @@ class GmailInformationViewController: BaseSV {
     
 }
 
-// MARK: - UITableViewDataSource
-
 extension GmailInformationViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return gmailItems[section].count
@@ -36,8 +34,6 @@ extension GmailInformationViewController {
         return cell
     }
 }
-
-// MARK: - UITableViewDelegate
 
 extension GmailInformationViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

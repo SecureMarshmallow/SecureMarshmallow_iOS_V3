@@ -11,9 +11,7 @@ class TimeOfAppViewController: UIViewController, UITableViewDelegate, UITableVie
         
         presenter.viewDidLoad()
     }
-    
-    // MARK: - Table view methods
-    
+        
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return times.count
     }

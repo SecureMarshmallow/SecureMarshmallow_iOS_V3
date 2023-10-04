@@ -3,8 +3,6 @@ import WebKit
 import Then
 
 class SettingsViewController: BaseSV {
-
-    // MARK: - Properties
     
     private var settingsItems: [[SettingsItem]] = []
     
@@ -14,16 +12,11 @@ class SettingsViewController: BaseSV {
         $0.font = .systemFont(ofSize: 24.0, weight: .bold)
     }
     
-
-    // MARK: - Lifecycle
-
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .SettingCollectionViewBackgorund
         configureSettingsItems()        
     }
-
-    // MARK: - Helpers
     
     override func configureUI() {
         self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(customView: navLabel)
@@ -58,8 +51,6 @@ class SettingsViewController: BaseSV {
     }
 }
 
-// MARK: - UITableViewDataSource
-
 extension SettingsViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -86,8 +77,6 @@ extension SettingsViewController {
         return cell
     }
 }
-
-// MARK: - UITableViewDelegate
 
 extension SettingsViewController {
 
