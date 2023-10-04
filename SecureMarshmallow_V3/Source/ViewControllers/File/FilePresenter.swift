@@ -82,23 +82,19 @@ extension FilePresenter: UICollectionViewDelegateFlowLayout, UICollectionViewDat
     
 }
 
-//파일 데이터 관련 코드
 extension FilePresenter {
     func getAppDataSize() -> UInt64? {
-        // 앱 내부 데이터 크기를 반환합니다.
         let documentsDirectory = applicationDocumentsDirectory()
         return sizeOfDirectory(documentsDirectory)
     }
     
     func applicationDocumentsDirectory() -> URL {
-        // 앱 내부의 데이터가 저장되는 경로를 반환합니다.
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         let documentsDirectory = paths[0]
         return documentsDirectory
     }
 
     func sizeOfDirectory(_ directory: URL) -> UInt64? {
-        // 지정된 경로의 폴더 크기
         do {
             let files = try FileManager.default.contentsOfDirectory(atPath: directory.path)
             var fileSize: UInt64 = 0
@@ -114,7 +110,6 @@ extension FilePresenter {
     }
 
     func deviceTotalCapacity() -> UInt64? {
-        // 기기의 전체 디스크 용량
         if let attributes = try? FileManager.default.attributesOfFileSystem(forPath: NSHomeDirectory()) {
             return attributes[.systemSize] as? UInt64
         }
@@ -122,7 +117,6 @@ extension FilePresenter {
     }
 
     func deviceAvailableCapacity() -> UInt64? {
-        // 기기의 사용 가능한 디스크 용량
         if let attributes = try? FileManager.default.attributesOfFileSystem(forPath: NSHomeDirectory()) {
             return attributes[.systemFreeSize] as? UInt64
         }

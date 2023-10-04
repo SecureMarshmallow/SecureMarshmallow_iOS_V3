@@ -88,16 +88,13 @@ class ImageCollectionViewController: UIViewController {
             let timestamp = Date()
             self?.screenshotTimestamps.append(timestamp)
             
-            // UserDefaults에서 기존 데이터 가져오기
             if let savedTimesData = UserDefaults.standard.data(forKey: "CaptureTimes"),
                var savedTimes = try? NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(savedTimesData) as? [Date] {
                 savedTimes.append(timestamp)
                 
-                // 데이터를 직렬화하여 UserDefaults에 저장
                 let encodedTimestamps = try? NSKeyedArchiver.archivedData(withRootObject: savedTimes, requiringSecureCoding: false)
                 UserDefaults.standard.set(encodedTimestamps, forKey: "CaptureTimes")
             } else {
-                // 최초 데이터 저장
                 let encodedTimestamps = try? NSKeyedArchiver.archivedData(withRootObject: [timestamp], requiringSecureCoding: false)
                 UserDefaults.standard.set(encodedTimestamps, forKey: "CaptureTimes")
             }

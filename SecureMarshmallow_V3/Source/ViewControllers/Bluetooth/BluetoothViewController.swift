@@ -2,7 +2,7 @@ import UIKit
 import CoreBluetooth
 import SnapKit
 
-//보류
+//코드 사용하지 않음
 class BluetoothViewController: UIViewController, CBCentralManagerDelegate, UITableViewDelegate, UITableViewDataSource {
     
     private var centralManager: CBCentralManager!

@@ -86,14 +86,7 @@ extension LoginViewController: LoginProtocol {
         errorViewController.modalPresentationStyle = .fullScreen
         self.present(errorViewController, animated: true)
     }
-    
-    internal func printStoredToken() {
-//        if let accessToken = KeychainManager.getToken(forKey: "access_token") {
-//            print("Stored Token: \(accessToken)")
-//        } else {
-//            print("No token found")
-//        }
-    }
+
     internal func showLoginStatusAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in

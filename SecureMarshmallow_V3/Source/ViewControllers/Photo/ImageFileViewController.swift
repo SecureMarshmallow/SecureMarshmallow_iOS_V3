@@ -150,9 +150,7 @@ extension ImageFileViewController: UICollectionViewDataSource {
         let cellData = imageCellData[indexPath.item]
         cell.titleLabel.text = cellData.title
         cell.imageView.image = UIImage(named: "TestFile")
-        // cell.imageView.image = loadImage(named: cellData.imageName)
-        
-        // Highlight cell in delete mode
+
         cell.isHighlighted = isDeleteModeEnabled
 
         return cell
@@ -183,7 +181,7 @@ extension ImageFileViewController: UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if isDeleteModeEnabled {
-            // Delete mode is enabled, show delete confirmation alert
+
             let alertController = UIAlertController(title: "삭제", message: "이미지를 삭제하시겠습니까?", preferredStyle: .alert)
             let deleteAction = UIAlertAction(title: "삭제", style: .destructive) { [weak self] _ in
                 self?.imageCellData.remove(at: indexPath.item)

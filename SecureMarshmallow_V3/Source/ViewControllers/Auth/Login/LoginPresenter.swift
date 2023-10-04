@@ -5,7 +5,6 @@ import UIKit
 protocol LoginProtocol: AnyObject {
     func setUI()
     func presentErrorViewController(time: Int)
-    func printStoredToken()
     func showLoginStatusAlert(title: String, message: String)
     func showErrorAlert(title: String, message: String)
     func moveSignupButtonToRandomPosition()
@@ -26,7 +25,6 @@ class LoginPresenter: NSObject {
         NetworkManager.shared.login(username: username, password: password) { [weak self] result in
             switch result {
             case .success(let token):
-                self?.view?.printStoredToken()
                 self?.view?.showLoginStatusAlert(title: "Login 성공", message: "Welcome, \(username)!")
                 
             case .failure(let error):
