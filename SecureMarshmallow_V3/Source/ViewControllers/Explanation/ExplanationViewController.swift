@@ -1,7 +1,6 @@
 import UIKit
 import SnapKit
 
-// ViewController (View)
 class ExplanationViewController: UIViewController {
     
     private var tableView = UITableView(frame: .zero, style: .grouped)

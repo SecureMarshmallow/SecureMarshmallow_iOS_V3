@@ -5,7 +5,6 @@ import Then
 class SignupViewController: UIViewController {
     
     private lazy var presenter = SignupPresenter(viewController: self, navigationController: navigationController!)
-
     
     private let baseURL = "https://2c33-2001-4430-c03f-3e17-b453-85f4-c1a8-643f.ngrok-free.app/"
     
