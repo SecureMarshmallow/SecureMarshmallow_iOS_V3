@@ -10,7 +10,7 @@ class TapBarViewController: UITabBarController {
         return navigationView
     }()
     
-    private lazy var LockViewController: UIViewController = {
+    private lazy var lockViewController: UIViewController = {
         let viewController = MemoListViewController()
         let tabBarItem = UITabBarItem(title: "", image: UIImage(named: "Password_TapBar_Gray"), tag: 1)
         viewController.tabBarItem = tabBarItem
@@ -18,7 +18,7 @@ class TapBarViewController: UITabBarController {
         return navigationView
     }()
     
-    private lazy var PhotoViewController: UIViewController = {
+    private lazy var photoViewController: UIViewController = {
         let viewController = ImageFileViewController()
         let tabBarItem = UITabBarItem(title: "", image: UIImage(named: "Photo_TapBar_Gray"), tag: 2)
         viewController.tabBarItem = tabBarItem
@@ -26,7 +26,7 @@ class TapBarViewController: UITabBarController {
         return navigationView
     }()
     
-    private lazy var SettingsViewController: UIViewController = {
+    private lazy var settingsViewController: UIViewController = {
         let viewController = SecureMarshmallow_V3.SettingsViewController()
         let tabBarItem = UITabBarItem(title: "", image: UIImage(named: "Setting_TapBar_Gray"), tag: 3)
         viewController.tabBarItem = tabBarItem
@@ -38,9 +38,9 @@ class TapBarViewController: UITabBarController {
         super.viewDidLoad()
         
         viewControllers = [homeViewController,
-                           LockViewController,
-                           PhotoViewController,
-                           SettingsViewController]
+                           lockViewController,
+                           photoViewController,
+                           settingsViewController]
         configureTabBar()
     }
 }
