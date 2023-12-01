@@ -8,14 +8,12 @@ class ExplanationCollectionViewCell: UICollectionViewCell {
     static let identifier = "ExplanationCollectionViewCell"
 
     var titleLabel = UILabel().then {
-        $0.text = "안녕"
         $0.font = .systemFont(ofSize: 17.0, weight: .semibold)
         $0.textColor = .black
         $0.numberOfLines = 2
     }
 
     var descriptionLabel = UILabel().then {
-        $0.text = "흐흐흐흐"
         $0.numberOfLines = 1
         $0.font = .systemFont(ofSize: 17.0, weight: .semibold)
         $0.textColor = .secondaryLabel

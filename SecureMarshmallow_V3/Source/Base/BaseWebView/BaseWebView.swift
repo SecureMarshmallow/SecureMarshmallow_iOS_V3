@@ -36,7 +36,6 @@ class BaseWebView: UIViewController, UIScrollViewDelegate {
         }
     }
     
-    // UIScrollViewDelegate 메서드 구현
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let offsetY = scrollView.contentOffset.y
         let navigationBar = navigationController?.navigationBar

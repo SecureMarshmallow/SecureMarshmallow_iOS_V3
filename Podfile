@@ -9,12 +9,7 @@ target 'SecureMarshmallow_V3' do
 	pod 'SnapKit', '~> 5.6.0'
 	pod 'Then'
 	pod 'Kingfisher', '~> 5.0'
-	pod 'RxSwift', '6.5.0'
-	pod 'RxCocoa', '6.5.0'
-	pod 'RxFlow'
 	pod 'lottie-ios'
-	pod 'RxFlow'
-	pod 'Moya', '~> 15.0'
 	pod 'IOSSecuritySuite'
 	pod ‘RealmSwift’
 
