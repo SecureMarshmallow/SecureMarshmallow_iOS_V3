@@ -125,7 +125,7 @@ var amIReverseEngineered = Securing.IOSSecuritySuite.AmIReverseEngineered() ? tr
 - 프로젝트의 컴포넌트 중 디버깅과 관련된 LLVM의 서브 프로젝트
 - [LLDB 보고서](https://www.notion.so/LLDB-070998f0207c4c13813c1e5214639e7a?pvs=4)
 
-# 기술 스택
+# 동작 화면
 
 https://github.com/SecureMarshmallow/SecureMarshmallow_iOS_V3/assets/102890390/650e1e00-1e1a-4b28-9eed-55575d7c7dcc
 
